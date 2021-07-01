@@ -1,1 +1,1 @@
-# industryx
+# Industry X
