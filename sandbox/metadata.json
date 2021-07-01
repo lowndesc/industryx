@@ -1,0 +1,10 @@
+{
+  "$schema": "https://aka.ms/azure-quickstart-templates-metadata-schema#",
+  "itemDisplayName": "Use ARM template to create Azure IoT sandbox for Industry X.",
+  "description": "Use this template to deploy an IoT Hub and other components required.",
+  "summary": "This template creates an components needed for an Azure IoT Sandbox.",
+  "githubUsername": "lowndesc",
+  "docOwner": "lowndesc",
+  "dateUpdated": "2021-07-01",
+  "type": "QuickStart"
+}
