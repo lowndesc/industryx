@@ -6,17 +6,12 @@
 	2. [Creating Your Sandbox Resource Group](#creating-your-sandbox-resource-group)
 2. [Azure IoT Hub Instance](#azure-iot-hub-instance)
 	1. [Creating an IoT Hub](#creating-an-iot-hub)
-	2. [Routing events](#routing-events)
 3. [IoT Devices](#iot-devices)
 	1. [Simulating telemetry](#simulating-telemetry)
 	2. [Creating simulated devices](#creating-simulated-devices)
 	3. [Connecting devices to the hub](#connecting-devices-to-the-hub)
 	4. [Running simulated devices](#running-simulated-devices)
-4. [Azure IoT Hub Instance](#azure-iot-hub-instance)
-	1. [Creating an IoT Hub](#creating-an-iot-hub)
-	2. [Connecting devices to the hub](#connecting-devices-to-the-hub)
-	3. [Routing events](#routing-events)
-5. [Azure Digital Twins Instance](#azure-digital-twins-instance)
+4. [Azure Digital Twins Instance](#azure-digital-twins-instance)
 	1. [ADT Modelling](#adt-modelling)
 	2. [Manufacturing Ontology](#manufacturing-ontology)
 	3. [Creating the ADT Instance](#creating-the-adt-instance)
@@ -24,19 +19,19 @@
 	5. [Creating an asset twin](#creating-an-asset-twin)
 	6. [Creating a process twin](#creating-a-process-twin)
 	7. [Updating a twin](#updating-a-twin)
-6. [Azure TwinSync Functions](#azure-twinsync-functions)
+5. [Azure TwinSync Functions](#azure-twinsync-functions)
 	1. [Using Azure Functions for TwinSync](#using-azure-functions-for-twinsync)
 	2. [Subscribing to events](#subscribing-to-events)
 	3. [Deploying functions](#deploying-functions)
-7. [AnyLogic Simulation](#anylogic-simulation)
+6. [AnyLogic Simulation](#anylogic-simulation)
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
 	3. [Attaching AnyLogic telemetry by querying ADT](#attaching-anylogic-telemetry-by-querying-adt)
-8. [Databricks Simulation](#databricks-simulation)
+7. [Databricks Simulation](#databricks-simulation)
 	1. [Creating a Databricks simulation](#creating-a-databricks-simulation)
 	2. [Preparing the Databricks simulation for Bonsai](#preparing-the-databricks-simulation-for-bonsai)
 	2. [Attaching Databricks telemetry by querying ADT](#attaching-databricks-telemetry-by-querying-adt)
-9. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
+8. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
 	1. [Testing the simulation](#testing-the-simulation)
 	2. [Importing the simulation](#importing-the-simulation)
 	3. [Creating the brain](#creating-the-brain)
@@ -73,10 +68,6 @@ To create the IoT Hub instance follow these steps:
 az deployment group create --resource-group <<your-sandbox-name>> --template-uri https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/IoTHub/azuredeploy.json
 ```
 2. Navigate to your sandbox resource group within the Azure Portal. You should see two resources similar to this image ![image](https://user-images.githubusercontent.com/1761529/125631131-6d02ef16-9057-406a-aaa4-e1d6bc44f177.png)  
-#### Routing Events ####
-To create an event route, follow these steps:
-1. Step 1
-2. Step 2
 ### IoT Devices ###
 #### Simulating Telemetry ####
 For our sandbox, we will create 3 simulated devices, each transmitting the same range of telemetry on a schedule, using randomisation to vary the values transmitted and the scheduling.
