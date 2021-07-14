@@ -43,7 +43,7 @@
 	7. [Other scenarios for using the trained brain](#OtherScenariosForUsingTheTrainedBrain)
 
 >Because we do not have access to production IoT devices, we will be using simulated devices to create the IoT telemetry for our sandbox environment. These are independent code functions which run within Azure Containers, emulating physical devices, which are registered with an IoT Hub.
-<h3 id="AzureIoTHubInstance">Azure IoT Hub Instance</h3>
+### Azure IoT Hub Instance ###
 <h4 id="CreatingAnIoTHub">Creating An IoT Hub</h4>
 To create an IoT Hub, instance follow these steps:<br />  
 1. Step 1
