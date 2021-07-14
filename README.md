@@ -1,15 +1,19 @@
 # Industry X #
 ## Sandbox for Azure IoT, Azure Digital Twins and Bonsai Simulation Teaching ##
 ### Summary ###
-1. [IoT Devices](#IoTDevices)
+1. [Azure IoT Hub Instance](#AzureIoTHubInstance)
+	1. [Creating an IoT Hub](#CreatingAnIoTHub)
+	2. [Routing events](#RoutingEvents)
+2. [IoT Devices](#IoTDevices)
 	1. [Simulating telemetry](#SimulatingTelemetry)
 	2. [Creating simulated devices](#CreatingSimulatedDevices)
-	3. [Running simulated devices](#RunningSimulatedDevices)
-2. [Azure IoT Hub Instance](#AzureIoTHubInstance)
-	1. [Creating an IoT Hub](#CreatingAnIoTHub)
 	3. [Connecting devices to the hub](#ConnectingDevicesToTheHub)
-	4. [Routing events](#RoutingEvents)
-3. [Azure Digital Twins Instance](#AzureDigitalTwinsInstance)
+	4. [Running simulated devices](#RunningSimulatedDevices)
+3. [Azure IoT Hub Instance](#AzureIoTHubInstance)
+	1. [Creating an IoT Hub](#CreatingAnIoTHub)
+	2. [Connecting devices to the hub](#ConnectingDevicesToTheHub)
+	3. [Routing events](#RoutingEvents)
+4. [Azure Digital Twins Instance](#AzureDigitalTwinsInstance)
 	1. [ADT Modelling](#ADTModelling)
 	2. [Manufacturing Ontology](#ManufacturingOntology)
 	3. [Creating the ADT Instance](#CreatingTheADTInstance)
@@ -17,15 +21,15 @@
 	5. [Creating an asset twin](#CreatingAnAssetTwin)
 	6. [Creating a process twin](#CreatingAProcessTwin)
 	7. [Updating a twin](#UpdatingATwin)
-4. [Azure TwinSync Functions](#AzureTwinSyncFunctions)
+5. [Azure TwinSync Functions](#AzureTwinSyncFunctions)
 	1. [Using Azure Functions for TwinSync](#UsingAzureFunctionsForTwinSync)
 	2. [Subscribing to events](#SubscribingToEvents)
 	3. [Deploying functions](#DeployingFunctions)
-5. [AnyLogic Simulation](#AnyLogicSimulation)
+6. [AnyLogic Simulation](#AnyLogicSimulation)
 	1. [Creating an AnyLogic simulation](#CreatingAnAnyLogicSimulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#PreparingTheAnyLogicSimulationForBonsai)
 	3. [Attaching AnyLogic telemetry by querying ADT](#AttachingAnyLogicTelemetryByQueryingADT)
-6. [Databricks Simulation](#DatabricksSimulation)
+7. [Databricks Simulation](#DatabricksSimulation)
 	1. [Creating a Databricks simulation](#CreatingADatabricksSimulation)
 	2. [Preparing the Databricks simulation for Bonsai](#PreparingTheDatabricksSimulationForBonsai)
 	2. [Attaching Databricks telemetry by querying ADT](#AttachingDatabricksTelemetryByQueryingADT)
@@ -38,14 +42,31 @@
 	6. [Running a simulation using the brain](#RunningASimulationUsingTheBrain)
 	7. [Other scenarios for using the trained brain](#OtherScenariosForUsingTheTrainedBrain)
 
-<h3 id="IoTDevices">IoT Devices</h3>
-<h4 id="SimulatingTelemetry">Simulating Telemetry</h4>
-<h4 id="CreatingSimulatedDevices">Creating Simulated Devices</h4>
-<h4 id="RunningSimulatedDevices">Running Simulated Devices</h4>
+>Because we do not have access to production IoT devices, we will be using simulated devices to create the IoT telemetry for our sandbox environment. These are independent code functions which run within Azure Containers, emulating physical devices, which are registered with an IoT Hub.
 <h3 id="AzureIoTHubInstance">Azure IoT Hub Instance</h3>
 <h4 id="CreatingAnIoTHub">Creating An IoT Hub</h4>
-<h4 id="ConnectingDevicesToTheHub">Connecting Devices To The Hub</h4> 
+To create an IoT Hub, instance follow these steps:<br />  
+1. Step 1
+2. Step 2
 <h4 id="RoutingEvents">Routing Events</h4>
+To create an event route, follow these steps:
+1. Step 1
+2. Step 2
+<h3 id="IoTDevices">IoT Devices</h3>
+<h4 id="SimulatingTelemetry">Simulating Telemetry</h4>
+For our sandbox, we will create 3 simulated devices, each transmitting the same range of telemetry on a schedule, using randomisation to vary the values transmitted and the scheduling.
+<h4 id="CreatingSimulatedDevices">Creating Simulated Devices</h4>
+To create the simulated devices, follow these steps:
+1. Step 1
+2. Step 2
+<h4 id="ConnectingDevicesToTheHub">Connecting Devices To The Hub</h4> 
+To connect the simulated devices to the event hub, follow these steps:
+1. Step 1
+2. Step 2
+<h4 id="RunningSimulatedDevices">Running Simulated Devices</h4>
+To run the simulated devices, follow these steps:
+1. Step 1
+2. Step 2
 <h3 id="AzureDigitalTwinsInstance">Azure Digital Twins Instance</h3>
 <h4 id="ADTModelling">ADT Modelling</h4>
 <h4 id="ManufacturingOntology">Manufacturing Ontology</h4>
