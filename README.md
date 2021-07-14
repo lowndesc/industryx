@@ -25,7 +25,7 @@
 	1. [Using Azure Functions for TwinSync](#using-azure-functions-for-twinsync)
 	2. [Subscribing to events](#subscribing-to-events)
 	3. [Deploying functions](#deploying-functions)
-6. [AnyLogic Simulation](#anyLogic-simulation)
+6. [AnyLogic Simulation](#anylogic-simulation)
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
 	3. [Attaching AnyLogic telemetry by querying ADT](#attaching-anylogic-telemetry-by-querying-adt)
@@ -77,7 +77,7 @@ To run the simulated devices, follow these steps:
 #### Updating A Twin ####
 ### Azure TwinSync Functions ###
 #### Using Azure Functions For TwinSync ####
-#### SubscribingToEvents ####
+#### Subscribing To Events ####
 #### Deploying Functions ####
 ### AnyLogic Simulation ###
 #### Creating An AnyLogic Simulation ####
