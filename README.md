@@ -57,9 +57,9 @@ To create your own sandbox environment, you will execute various commands in the
 6. Once the Cloud Shell opens at the bottom of your browser, switch from Bash mode to PowerShell mode ![image](https://user-images.githubusercontent.com/1761529/125626532-02f2a11e-2146-4586-bb43-5181583962b4.png)
 #### Creating Your Sandbox Resource Group ####
 To create a resource group to hold all of your sandbox resources, follow these steps:
-1. Your sandbox name is your choice, but should follow this pattern. Please make a note of your sandbox name as you will be using it frequently:
+1. Your sandbox name is your choice, but should follow this pattern:
 ```zsh
-industryx-sandbox-<<your-initials-or-name>>
+industryx-sandbox-<<your-initials-or-name>> #this is your sandbox name. Please copy it as you will be using it frequently 
 ```
 2. Execute the following command in the Cloud Shell
 ```zsh
