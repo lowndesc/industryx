@@ -2,10 +2,10 @@
 ## Sandbox for Azure IoT, Azure Digital Twins and Bonsai Simulation Teaching ##
 ### Summary ###
 1. [Azure IoT Hub Instance](#azure-iot-hub-instance)
-	1. [Creating an IoT Hub](#CreatingAnIoTHub)
-	2. [Routing events](#RoutingEvents)
-2. [IoT Devices](#IoTDevices)
-	1. [Simulating telemetry](#SimulatingTelemetry)
+	1. [Creating an IoT Hub](#creating-an-iot-hub)
+	2. [Routing events](#routing-events)
+2. [IoT Devices](#iot-devices)
+	1. [Simulating telemetry](#simulating-telemetry)
 	2. [Creating simulated devices](#CreatingSimulatedDevices)
 	3. [Connecting devices to the hub](#ConnectingDevicesToTheHub)
 	4. [Running simulated devices](#RunningSimulatedDevices)
@@ -44,16 +44,16 @@
 
 >Because we do not have access to production IoT devices, we will be using simulated devices to create the IoT telemetry for our sandbox environment. These are independent code functions which run within Azure Containers, emulating physical devices, which are registered with an IoT Hub.
 ### Azure IoT Hub Instance ###
-<h4 id="CreatingAnIoTHub">Creating An IoT Hub</h4>
-To create an IoT Hub, instance follow these steps:<br />  
+#### Creating An IoT Hub ####
+To create an IoT Hub, instance follow these steps:  
 1. Step 1
 2. Step 2
-<h4 id="RoutingEvents">Routing Events</h4>
+#### Routing Events ####
 To create an event route, follow these steps:
 1. Step 1
 2. Step 2
-<h3 id="IoTDevices">IoT Devices</h3>
-<h4 id="SimulatingTelemetry">Simulating Telemetry</h4>
+### IoT Devices ###
+#### Simulating Telemetry ####
 For our sandbox, we will create 3 simulated devices, each transmitting the same range of telemetry on a schedule, using randomisation to vary the values transmitted and the scheduling.
 <h4 id="CreatingSimulatedDevices">Creating Simulated Devices</h4>
 To create the simulated devices, follow these steps:
