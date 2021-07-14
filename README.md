@@ -22,10 +22,14 @@
 	2. [Subscribing to events](#SubscribingToEvents)
 	3. [Deploying functions](#DeployingFunctions)
 5. [AnyLogic Simulation](#AnyLogicSimulation)
-	1. [Creating a simulation](#CreatingASimulation)
-	2. [Preparing for Bonsai](#PreparingForBonsai)
-	3. [Attaching telemetry by querying ADT](#AttachingTelemetryByQueryingADT)
-6. [Microsoft Bonsai Teaching](#MicrosoftBonsaiTeaching)
+	1. [Creating an AnyLogic simulation](#CreatingAnAnyLogicSimulation)
+	2. [Preparing the AnyLogic simulation for Bonsai](#PreparingTheAnyLogicSimulationForBonsai)
+	3. [Attaching AnyLogic telemetry by querying ADT](#AttachingAnyLogicTelemetryByQueryingADT)
+6. [Databricks Simulation](#DatabricksSimulation)
+	1. [Creating a Databricks simulation](#CreatingADatabricksSimulation)
+	2. [Preparing the Databricks simulation for Bonsai](#PreparingTheDatabricksSimulationForBonsai)
+	2. [Attaching Databricks telemetry by querying ADT](#AttachingDatabricksTelemetryByQueryingADT)
+7. [Microsoft Bonsai Teaching](#MicrosoftBonsaiTeaching)
 	1. [Testing the simulation](#TestingTheSimulation)
 	2. [Importing the simulation](#ImportingTheSimulation)
 	3. [Creating the brain](#CreatingTheBrain)
@@ -55,9 +59,13 @@
 <h4 id="SubscribingToEvents">SubscribingToEvents</h4>
 <h4 id="DeployingFunctions">Deploying Functions</h4>
 <h3 id="AnyLogicSimulation">AnyLogic Simulation</h3>
-<h4 id="CreatingASimulation">Creating A Simulation</h4>
-<h4 id="PreparingForBonsai">Preparing For Bonsai</h4>
-<h4 id="AttachingTelemetryByQueryingADT">AttachingTelemetryByQueryingADT</h4>
+<h4 id="CreatingAnAnyLogicSimulation">Creating An AnyLogic Simulation</h4>
+<h4 id="PreparingTheAnyLogicSimulationForBonsai">Preparing The AnyLogic Simulation For Bonsai</h4>
+<h4 id="AttachingAnyLogicTelemetryByQueryingADT">Attaching AnyLogic Telemetry By Querying ADT</h4>
+<h3 id="DatabricksSimulation">Databricks Simulation</h3>
+<h4 id="CreatingADatabricksSimulation">Creating a Databricks simulation</h4>
+<h4 id="PreparingTheDatabricksSimulationForBonsai">Preparing the Databricks simulation for Bonsai</h4>
+<h4 id="AttachingDatabricksTelemetryByQueryingADT">Attaching Databricks telemetry by querying ADT</h4>
 <h3 id="MicrosoftBonsaiTeaching">Microsoft Bonsai Teaching</h3>
 <h4 id="TestingTheSimulation">Testing The Simulation</h4>
 <h4 id="ImportingTheSimulation">Importing The Simulation</h4>
