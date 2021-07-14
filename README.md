@@ -46,8 +46,11 @@
 ### Azure IoT Hub Instance ###
 #### Creating An IoT Hub ####
 To create an IoT Hub, instance follow these steps:  
-1. Step 1
-2. Step 2
+1. Execute the following command using the Azure CLI
+```lang-bsh
+az deployment group create --resource-group industryx-sandbox-cl1 --template-uri https://raw.githubusercontent.com/lowndesc/industryx/24c2315c216368c33028a94487193865a21b8eb3/sandbox/azuredeploy.json
+```
+3. Step 2
 #### Routing Events ####
 To create an event route, follow these steps:
 1. Step 1
