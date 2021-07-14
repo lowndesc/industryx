@@ -72,7 +72,7 @@ To create the IoT Hub instance follow these steps:
 ```zsh
 az deployment group create --resource-group <<your-sandbox-name>> --template-uri https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/IoTHub/azuredeploy.json
 ```
-2. Step 2
+2. Navigate to your sandbox resource group within the Azure Portal. You should see two resources similar to this image ![image](https://user-images.githubusercontent.com/1761529/125631131-6d02ef16-9057-406a-aaa4-e1d6bc44f177.png)  
 #### Routing Events ####
 To create an event route, follow these steps:
 1. Step 1
