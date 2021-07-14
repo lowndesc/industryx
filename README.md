@@ -1,7 +1,7 @@
 # Industry X #
 ## Sandbox for Azure IoT, Azure Digital Twins and Bonsai Simulation Teaching ##
 ### Summary ###
-1. [Azure IoT Hub Instance](#AzureIoTHubInstance)
+1. [Azure IoT Hub Instance](#azure-iot-hub-instance)
 	1. [Creating an IoT Hub](#CreatingAnIoTHub)
 	2. [Routing events](#RoutingEvents)
 2. [IoT Devices](#IoTDevices)
