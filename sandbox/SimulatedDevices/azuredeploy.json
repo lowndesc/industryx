@@ -76,14 +76,8 @@
                                     "value": "5000"
                                 },
                                 {
-                                    "name": "Header"
-                                },
-                                {
                                     "name": "FixPayloadSize",
                                     "value": "0"
-                                },
-                                {
-                                    "name": "FixPayload"
                                 }
                             ],
                             "resources": {
