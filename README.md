@@ -73,12 +73,22 @@ az deployment group create --resource-group <<your-sandbox-name>> --template-uri
 For our sandbox, we will create 3 simulated devices, each transmitting the same range of telemetry on a schedule, using randomisation to vary the values transmitted and the scheduling.
 #### Creating Simulated Devices ####
 To create the simulated devices, follow these steps:
-1. Download 
-2. In the Azure Cloud Shell, click on the 'Upload Files' button ![image](https://user-images.githubusercontent.com/1761529/125726411-95674d95-0e83-48aa-8177-ab852080aadd.png)
-3. Execute the following command using the Azure Cloud Shell
+1. Navigate to your IoT Hub instance
+2. On the left-hand menu, under 'Settings', click 'Shared access policies'
+3. On the list of Shared access policies, click the policy named 'device'
+4. On the policy keys panel, copy the 'Primary connection string' and keep it for later use ![image](https://user-images.githubusercontent.com/1761529/125727559-4678cfb4-211d-4d7d-a16e-d844771c84ba.png)
+5. In the Azure Cloud Shell, click on the 'Upload Files' button ![image](https://user-images.githubusercontent.com/1761529/125726411-95674d95-0e83-48aa-8177-ab852080aadd.png)
+6. In the 'Open' dialog, post the following file URL into the 'File name:' field
 ```zsh
-az deployment group create --resource-group <<your-sandbox-name>> --template-uri https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/SimulatedDevices/azuredeploy.json
+https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/SimulatedDevices/SimulatorCloudRunner.ps1
 ```
+3. This will copy a PowerShell script file from GitHub to your AZure Cloud Shell session
+4. Execute the following command in Azure Cloud Shell to run the PowerHell script 
+```zsh
+./SimulatorCloudRunner.ps1
+```
+5. When prompted for an IoTHubConnectionString, paste the connection string you copied in step 4
+6.  
 #### Connecting Devices To The Hub #### 
 To connect the simulated devices to the event hub, follow these steps:
 1. Navigate to your IoT Hub instance
