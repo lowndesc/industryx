@@ -63,7 +63,7 @@ az group create --name <<your-sandbox-name>> --location japaneast
 ### Azure IoT Hub Instance ###
 #### Creating An IoT Hub ####
 To create the IoT Hub instance follow these steps:  
-1. Execute the following command using the Azure CLI
+1. Execute the following command using the Azure Cloud Shell
 ```zsh
 az deployment group create --resource-group <<your-sandbox-name>> --template-uri https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/IoTHub/azuredeploy.json
 ```
@@ -73,8 +73,11 @@ az deployment group create --resource-group <<your-sandbox-name>> --template-uri
 For our sandbox, we will create 3 simulated devices, each transmitting the same range of telemetry on a schedule, using randomisation to vary the values transmitted and the scheduling.
 #### Creating Simulated Devices ####
 To create the simulated devices, follow these steps:
-1. Step 1
-2. Step 2
+1. Execute the following command using the Azure Cloud Shell
+```zsh
+az deployment group create --resource-group <<your-sandbox-name>> --template-uri https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/SimulatedDevices/azuredeploy.json
+```
+3. Step 2
 #### Connecting Devices To The Hub #### 
 To connect the simulated devices to the event hub, follow these steps:
 1. Step 1
