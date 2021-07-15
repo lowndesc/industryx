@@ -87,10 +87,11 @@ https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/SimulatedDevic
 ```zsh
 ./SimulatorCloudRunner.ps1
 ```
-5. When prompted for an IoTHubConnectionString, paste the connection string you copied in step 4
-6.  
+5. When prompted for an IoTHubConnectionString, paste the connection string you copied in step 4, and press 'Enter'
+6. After a few seconds, you should see a JSON confirmation that the process has started
+7. After around 1 minute, the 3 simulated device containers will have been deployed. Check your resource group to confirm.
 #### Connecting Devices To The Hub #### 
-To connect the simulated devices to the event hub, follow these steps:
+To connect the simulated devices to the IoT Hub, follow these steps:
 1. Navigate to your IoT Hub instance
 2. In the left-hand menu, under 'Explorers', click 'IoT Devices'
 3. Click 'New' to add a new device
