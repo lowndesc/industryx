@@ -1,0 +1,104 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "container_name": {
+            "type": "String",
+            "defaultValue": "iotsimulator-1",
+			"metadata": {
+				"description": "The name of the container group and container."
+			}
+        },
+		"location": {
+			"type": "string",
+			"defaultValue": "[resourceGroup().location]",
+			"metadata": {
+				"description": "The azure region to use for the deployment."
+			}
+		},
+		"skuName": {
+			"type": "string",
+			"defaultValue": "Standard",
+			"metadata": {
+				"description": "The SKU to use for the container group."
+			}
+		},		
+		"iotHubConnectionString": {
+			"type": "string",
+			"defaultValue": "HostName=oltivaHubzkikr4mh7zaqg.azure-devices.net;SharedAccessKeyName=device;SharedAccessKey=5tYbCJKV9WX1kQOJPzcgcWn3k45QshCRSIppqGYWLpQ=",
+			"metadata": {
+				"description": "The connection string to register the device with the IoT Hub."
+			}
+		}		
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.ContainerInstance/containerGroups",
+            "apiVersion": "2021-03-01",
+            "name": "[parameters('container_name')]",
+            "location": "[parameters('location')]",
+            "properties": {
+                "sku": "[parameters('skuName')]",
+                "containers": [
+                    {
+                        "name": "[parameters('container_name')]",
+                        "properties": {
+                            "image": "iottelemetrysimulator/azureiot-telemetrysimulator:latest",
+                            "ports": [],
+                            "environmentVariables": [
+                                {
+                                    "name": "IotHubConnectionString",
+                                    "value": "[parameters('iotHubConnectionString')]"
+                                },
+                                {
+                                    "name": "Template",
+                                    "value": "{ \"deviceId\": \"$.DeviceId\", \"temperature\": \"$.Temperature\", \"humidity\": \"$.Humidity\", \"power\": \"$.Power\", \"vibration\": \"$.Vibration\", \"uptime\": \"$.Uptime\", \"capacity\": \"$.Capacity\", \"wait\": \"$.Wait\", \"delay\": \"$.Delay\", \"arrivalRate\": \"$.ArrivalRate\", \"Ticks\": \"$.Ticks\", \"Counter\": \"$.Counter\", \"time\": \"$.Time\", \"engine\": \"$.Engine\", \"source\": \"$.MachineName\" }"
+                                },
+                                {
+                                    "name": "Variables",
+                                    "value": "[[{name: \"Temperature\", random: true, max: 3187, min: 1971}, {name: \"Humidity\", random: true, max: 5425, min: 4781}, {name: \"Power\", random: false, max: 358701, min: 129699}, {name: \"Vibration\", random: true, max: 949, min: 401}, {name: \"Uptime\", random: true, max: 10000, min: 8901}, {name: \"Capacity\", random: true, max: 1200, min: 100}, {name: \"Wait\", random: true, max: 36000, min: 1000}, {name: \"Delay\", random: true, max: 144000, min: 36000}, {name: \"ArrivalRate\", random: true, max: 200, min: 50}, {name: \"Counter\", min:100}, {name: \"Engine\", values: [\"on\", \"off\"]}]"
+                                },
+                                {
+                                    "name": "DeviceCount",
+                                    "value": "1"
+                                },
+                                {
+                                    "name": "MessageCount",
+                                    "value": "0"
+                                },
+                                {
+                                    "name": "DeviceIndex",
+                                    "value": "1"
+                                },
+                                {
+                                    "name": "Interval",
+                                    "value": "5000"
+                                },
+                                {
+                                    "name": "Header"
+                                },
+                                {
+                                    "name": "FixPayloadSize",
+                                    "value": "0"
+                                },
+                                {
+                                    "name": "FixPayload"
+                                }
+                            ],
+                            "resources": {
+                                "requests": {
+                                    "memoryInGB": 1.5,
+                                    "cpu": 1
+                                }
+                            }
+                        }
+                    }
+                ],
+                "initContainers": [],
+                "restartPolicy": "Never",
+                "osType": "Linux"
+            }
+        }
+    ]
+}
