@@ -73,7 +73,9 @@ az deployment group create --resource-group <<your-sandbox-name>> --template-uri
 For our sandbox, we will create 3 simulated devices, each transmitting the same range of telemetry on a schedule, using randomisation to vary the values transmitted and the scheduling.
 #### Creating Simulated Devices ####
 To create the simulated devices, follow these steps:
-1. Execute the following command using the Azure Cloud Shell
+1. Download 
+2. In the Azure Cloud Shell, click on the 'Upload Files' button ![image](https://user-images.githubusercontent.com/1761529/125726411-95674d95-0e83-48aa-8177-ab852080aadd.png)
+3. Execute the following command using the Azure Cloud Shell
 ```zsh
 az deployment group create --resource-group <<your-sandbox-name>> --template-uri https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/SimulatedDevices/azuredeploy.json
 ```
@@ -92,7 +94,7 @@ To run the simulated devices, follow these steps:
 2. Click on 'Start' to start the container ![image](https://user-images.githubusercontent.com/1761529/125723618-60df3054-253b-4be9-855b-7d7108a8829d.png)
 4. Repeat for each of your simulated device containers
 5. Once each container has started, the onboard functions will connect a device to the IoTHub using the registered device names you created in the previous task
-6. To verify that the connection is good. navigate back to the IoT Hub insatnce, and on the 'Overview' pane check the 'Iot Hub Usage' panel and it should show 'Iot Devices: 3' and 'Messages used today:' should be a number greater than 0
+6. To verify that the connection is good. navigate back to the IoT Hub insatnce, and on the 'Overview' pane check the 'Iot Hub Usage' panel and it should show 'Iot Devices: 3' and 'Messages used today:' should be a number greater than 0 ![image](https://user-images.githubusercontent.com/1761529/125726261-a9581972-7e9b-4dae-8715-ae68b9cef872.png)
 ### Azure Digital Twins Instance ###
 #### ADT Modelling ####
 #### Manufacturing Ontology ####
