@@ -77,10 +77,9 @@ To create the simulated devices, follow these steps:
 ```zsh
 az deployment group create --resource-group <<your-sandbox-name>> --template-uri https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/SimulatedDevices/azuredeploy.json
 ```
-2. Once the deployment has completed, navigate to each of your simulated device containers and start the simulated device. This will register the device with the IoTHub and begin transmitting random telemetry on a schedule. ![image](https://user-images.githubusercontent.com/1761529/125714362-d3cc88e1-f7f6-47ff-83b5-da7ba1ea4bc5.png)
 #### Connecting Devices To The Hub #### 
 To connect the simulated devices to the event hub, follow these steps:
-1. Step 1
+1. Once the deployment of devices is complete, navigate to each of your simulated device containers in turn and start the simulated device. This will register the device with the IoTHub and begin transmitting random telemetry on a schedule.
 2. Step 2
 #### Running Simulated Devices ####
 To run the simulated devices, follow these steps:
