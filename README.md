@@ -88,8 +88,11 @@ To connect the simulated devices to the event hub, follow these steps:
 7. Your device list should now look like this ![image](https://user-images.githubusercontent.com/1761529/125725341-6e205aaa-bc36-4768-9abb-f011ac7477ae.png)
 #### Running Simulated Devices ####
 To run the simulated devices, follow these steps:
-1. Step 1 ![image](https://user-images.githubusercontent.com/1761529/125723618-60df3054-253b-4be9-855b-7d7108a8829d.png)
-2. Step 2
+1. Navigate to the first simulated device container
+2. Click on 'Start' to start the container ![image](https://user-images.githubusercontent.com/1761529/125723618-60df3054-253b-4be9-855b-7d7108a8829d.png)
+4. Repeat for each of your simulated device containers
+5. Once each container has started, the onboard functions will connect a device to the IoTHub using the registered device names you created in the previous task
+6. To verify that the connection is good. navigate back to the IoT Hub insatnce, and on the 'Overview' pane check the 'Iot Hub Usage' panel and it should show 'Iot Devices: 3' and 'Messages used today:' should be a number greater than 0
 ### Azure Digital Twins Instance ###
 #### ADT Modelling ####
 #### Manufacturing Ontology ####
