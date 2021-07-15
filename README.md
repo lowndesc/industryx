@@ -79,11 +79,16 @@ az deployment group create --resource-group <<your-sandbox-name>> --template-uri
 ```
 #### Connecting Devices To The Hub #### 
 To connect the simulated devices to the event hub, follow these steps:
-1. Once the deployment of devices is complete, navigate to each of your simulated device containers in turn and start the simulated device. This will register the device with the IoTHub and begin transmitting random telemetry on a schedule.
-2. Step 2
+1. Navigate to your IoT Hub instance
+2. In the left-hand menu, under 'Explorers', click 'IoT Devices'
+3. Click 'New' to add a new device
+4. For 'Device ID', type 'sim000001'
+5. Leave all other fields unchanged, and click 'Save'
+6. Repeat for two more devices, 'sim000002' and 'sim000003'
+7. Your device list should now look like this ![image](https://user-images.githubusercontent.com/1761529/125725341-6e205aaa-bc36-4768-9abb-f011ac7477ae.png)
 #### Running Simulated Devices ####
 To run the simulated devices, follow these steps:
-1. Step 1
+1. Step 1 ![image](https://user-images.githubusercontent.com/1761529/125723618-60df3054-253b-4be9-855b-7d7108a8829d.png)
 2. Step 2
 ### Azure Digital Twins Instance ###
 #### ADT Modelling ####
