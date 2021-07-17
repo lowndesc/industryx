@@ -1,0 +1,9 @@
+{
+	"@id": "dtmi:isa95:device:LogicalGateway;1",
+	"@type": "Interface",
+	"displayName": {
+		"en": "Logical Gateway"
+	},
+	"extends": "dtmi:isa95:core:LogicalDevice;1",
+	"@context": "dtmi:dtdl:context;2"
+}

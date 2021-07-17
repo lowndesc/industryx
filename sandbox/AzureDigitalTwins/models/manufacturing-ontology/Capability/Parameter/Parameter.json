@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:capability:Parameter;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:Capability;1"
+	],
+	"displayName": {
+		"en": "Parameter",
+		"jp": "パラメーター"
+	},
+	"description": {
+		"en": "Parameter entities configure some capability or system",
+		"jp": "パラメータ エンティティは、ある機能またはシステムを構成します"
+	}
+}

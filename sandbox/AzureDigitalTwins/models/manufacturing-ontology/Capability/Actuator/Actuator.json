@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:capability:Actuator;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:Capability;1"
+	],
+	"displayName": {
+		"en": "Actuator",
+		"jp": "アクチュエータ"
+	},
+	"description": {
+		"en": "Actuator entities accept commands from a digital twin platform",
+		"jp": "アクチュエータエンティティは、デジタルツインプラットフォームからのコマンドを受け入れます"
+	}
+}

@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:space:StorageUnit;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:space:Unit;1"
+	],
+	"displayName": {
+		"en": "Storage Unit",
+		"jp": "貯蔵単位"
+	},
+	"description": {
+		"en": "Storage units are low level of material movement equipment typically scheduled by the Level 4 and Level 3 functions for discrete, batch and continuous manufacturing processes",
+		"jp": "貯蔵単位は、通常、不連続、バッチ、連続製造プロセスのレベル 4 およびレベル 3 の機能によってスケジュールされる低レベルの材料移動装置です"
+	}
+}

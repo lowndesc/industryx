@@ -1,0 +1,14 @@
+{
+	"@id": "dtmi:isa95:work:DiscreteProduction;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:ProductionClass;1"
+	],
+	"displayName": {
+		"en": "Discrete Production",
+		"jp": "離散生産"
+	}
+}

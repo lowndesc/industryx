@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:space:Area;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:Space;1"
+	],
+	"displayName": {
+		"en": "Area",
+		"jp": "領域"
+	},
+	"description": {
+		"en": "An area is a physical, geographical, or logical grouping determined by the site. It may contain work centres such as process cells, production units, production lines, and storage zones.",
+		"jp": "エリアは、サイトによって決定される物理的、地理的、または論理的なグループです。プロセスセル、生産ユニット、生産ライン、保管ゾーンなどのワークセンターを含めることができます。"
+	}
+}

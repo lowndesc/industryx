@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:space:Zone;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:Space;1"
+	],
+	"description": {
+		"en": "A zone is a logical grouping of production equipment to undertake complete production processes",
+		"jp": "ゾーンは、生産設備を論理的にグループ化して、生産プロセス全体を遂行します"
+	},
+	"displayName": {
+		"en": "Zone",
+		"jp": "地帯"
+	}
+}

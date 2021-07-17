@@ -1,0 +1,20 @@
+[
+	{
+		"@id": "dtmi:isa95:core:Module;1",
+		"@context": [
+			"dtmi:dtdl:context;2"
+		],
+		"@type": "Interface",
+		"displayName": {
+			"en": "Module",
+			"jp": "モジュール"
+		},
+		"description": {
+			"en": "A functional group of equipment or controls that can carry out a finite number of specific minor processing activities",
+			"jp": "特定のマイナー処理アクティビティの限られた数を実行できる装置または制御の機能グループ"
+		},
+		"extends": [
+			"dtmi:isa95:core:Space;1"
+		]
+	}
+]

@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:space:Unit;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:Space;1"
+	],	
+	"displayName": {
+		"en": "Unit",
+		"jp": "単位"
+	},
+	"description": {
+		"en": "A unit is a logical low-level grouping of production equipment to undertake distinct parts of production processes",
+		"jp": "ユニットは、生産プロセスの異なる部分を引き受ける生産設備の論理的な低レベルのグループです"
+	}
+}

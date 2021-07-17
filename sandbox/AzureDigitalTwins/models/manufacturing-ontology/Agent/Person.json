@@ -1,0 +1,31 @@
+{
+	"@id": "dtmi:isa95:agent:Person;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:Agent;1"
+	],
+	"displayName": {
+		"en": "Person",
+		"jp": "人"
+	},
+	"description": {
+		"en": "A natural person (i.e., an individual human being).",
+		"jp": "自然人(すなわち、個人の人間)"
+	},
+	"contents": [
+		{
+			"@type": "Relationship",
+			"description": {
+				"en": "Indicates the Organization(s) that this Person is a member of."
+			},
+			"displayName": {
+				"en": "is member of"
+			},
+			"name": "isMemberOf",
+			"target": "dtmi:isa95:agent:Organization;1"
+		}
+	]
+}

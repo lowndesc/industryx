@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:agent:Enterprise;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:Agent;1"
+	],
+	"displayName": {
+		"en": "Enterprise",
+		"jp": "企業"
+	},
+	"description": {
+		"en": "An enterprise is a collection of sites and areas and represents the top level of a role based equipment hierarchy.",
+		"jp": "エンタープライズは、サイトとエリアの集合であり、ロールベースの機器階層の最上位レベルを表します"
+	}
+}

@@ -1,0 +1,67 @@
+{
+	"@id": "dtmi:isa95:core:Space;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"displayName": {
+		"en": "Space",
+		"jp": "無効"
+	},
+	"description": {
+		"en": "A contiguous part of the physical world that has a spatial extent and that contains or can contain sub-spaces.",
+		"jp": "空間範囲を持ち、サブスペースを含む、または含むことができる物理ワールドの連続した部分"
+	},
+	"contents": [
+		{
+		  "@type": "Relationship",
+		  "description": {
+			"en": "Indicates a the owning entity of this space. Inverse of: owns"
+		  },
+		  "displayName": {
+			"en": "is owned by"
+		  },
+		  "name": "isOwnedBy",
+		  "target": "dtmi:isa95:core:Agent;1"
+		},
+		{
+		  "@type": "Relationship",
+		  "description": {
+			"en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents). Inverse of: hasPart"
+		  },
+		  "displayName": {
+			"en": "is part of"
+		  },
+		  "name": "isPartOf",
+		  "target": "dtmi:isa95:core:Space;1"
+		},
+		{
+		  "@type": "Relationship",
+		  "description": {
+			"en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts). Inverse of: isPartOf"
+		  },
+		  "displayName": {
+			"en": "has part"
+		  },
+		  "name": "hasPart",
+		  "target": "dtmi:isa95:core:Space;1"
+		},
+		{
+		  "@type": "Relationship",
+		  "displayName": {
+			"en": "has capability"
+		  },
+		  "name": "hasCapability",
+		  "target": "dtmi:isa95:core:Capability;1"
+		},
+		{
+		  "@type": "Property",
+		  "displayName": {
+			"en": "name"
+		  },
+		  "name": "name",
+		  "schema": "string",
+		  "writable": true
+		}
+	]
+}

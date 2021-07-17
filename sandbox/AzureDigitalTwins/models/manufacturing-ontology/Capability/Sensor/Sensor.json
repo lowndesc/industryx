@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:capability:Sensor;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:Capability;1"
+	],
+	"displayName": {
+		"en": "Sensor",
+		"jp": "センサー"
+	},
+	"description": {
+		"en": "Sensor entities harvest data from the real world",
+		"jp": "センサーエンティティは、現実世界からデータを収集します"
+	}
+}

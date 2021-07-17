@@ -1,0 +1,31 @@
+[
+	{
+		"@id": "dtmi:isa95:space:EquipmentModule;1",
+		"@context": [
+			"dtmi:dtdl:context;2"
+		],
+		"@type": "Interface",
+		"displayName": {
+			"en": "Equipment Module",
+			"jp": "機器モジュール"
+		},
+		"description": {
+			"en": "A functional group of equipment that can carry out a finite number of specific minor processing activities",
+			"jp": "特定のマイナー処理アクティビティの限られた数を実行できる装置または制御の機能グループ"
+		},
+		"extends": [
+			"dtmi:isa95:core:Module;1"
+		],
+		"contents": [
+			{
+				  "@type": "Relationship",
+				  "displayName": {
+					"en": "located in"
+				  },
+				  "minMultiplicity": 0,
+				  "name": "locatedIn",
+				  "target": "dtmi:isa95:space:Unit;1"
+			}
+		]
+	}
+]

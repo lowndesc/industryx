@@ -1,0 +1,53 @@
+{
+	"@id": "dtmi:isa95:agent:Organization;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:Agent;1"
+	],
+	"displayName": {
+		"en": "Organization",
+		"jp": "組織"
+	},
+	"description": {
+		"en": "An organization of any sort (e.g., a business, association, project, consortium, tribe, etc.)",
+		"jp": "あらゆる種類の組織(例えば、ビジネス、協会、プロジェクト、コンソーシアム、部族など)"
+	},
+	"contents": [
+		{
+			"@type": "Relationship",
+			"description": {
+				"en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
+			},
+			"displayName": {
+				"en": "is part of"
+			},
+			"name": "isPartOf",
+			"target": "dtmi:isa95:agent:Organization;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
+			},
+			"displayName": {
+				"en": "has part"
+			},
+			"name": "hasPart",
+			"target": "dtmi:isa95:agent:Organization;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"en": "Indicates the individual Persons that are members of an Organization. For member Organizations, use hasPart."
+			},
+			"displayName": {
+				"en": "has member"
+			},
+			"name": "hasMember",
+			"target": "dtmi:isa95:agent:Person;1"
+		}
+	]
+}

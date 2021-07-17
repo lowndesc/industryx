@@ -1,0 +1,9 @@
+{
+	"@id": "dtmi:isa95:device:LogicalController;1",
+	"@type": "Interface",
+	"displayName": {
+		"en": "Logical Controller"
+	},
+	"extends": "dtmi:isa95:core:LogicalDevice;1",
+	"@context": "dtmi:dtdl:context;2"
+}

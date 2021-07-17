@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:space:ManufacturingHub;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:space:Site;1"
+	],
+	"displayName": {
+		"en": "Manufacturing Hub",
+		"jp": "跡地"
+	},
+	"description": {
+		"en": "A manufacturing hub converts raw materials and parts into products.",
+		"jp": "サイトは、企業によって決定される物理的、地理的、または論理的なグループです。領域、生産ライン、プロセス セル、および生産単位を含めることができます"
+	}
+}

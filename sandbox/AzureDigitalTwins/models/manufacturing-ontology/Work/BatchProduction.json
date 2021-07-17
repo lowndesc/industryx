@@ -1,0 +1,14 @@
+{
+	"@id": "dtmi:isa95:work:BatchProduction;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:core:ProductionClass;1"
+	],
+	"displayName": {
+		"en": "Batch Production",
+		"jp": "バッチ生産"
+	}
+}

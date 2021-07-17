@@ -1,0 +1,69 @@
+{
+	"@id": "dtmi:isa95:core:LogicalDevice;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"displayName": {
+		"en": "Logical Device",
+		"jp": "論理デバイス"
+	},
+	"description": {
+		"en": "A thing made or adapted for a particular purpose, specifically a piece of electronic equipment. A Device can contain subdevices or be part of superdevices. It is subclassed into more specific device types, e.g., Sensor, Actuator, etc",
+		"jp": "貯蔵単位は、通常、不連続、バッチ、連続製造プロセスのレベル 4 およびレベル 3 の機能によってスケジュールされる低レベルの材料移動装置です"
+	},
+	"contents": [
+		{
+			"@type": "Property",
+			"name": "name",
+			"displayName": {
+				"en": "Name",
+				"jp": "名前"
+			},
+			"schema": "string"
+		},
+		{
+			  "@type": "Relationship",
+			  "description": {
+				"en": "Indicates a super-entity of the same base type (i.e., Spaces only have Spaces as parents, Organizations only have Organizations, etc). Inverse of: hasPart"
+			  },
+			  "displayName": {
+				"en": "is part of"
+			  },
+			  "maxMultiplicity": 1,
+			  "name": "isPartOf",
+			  "target": "dtmi:isa95:core:LogicalDevice;1"
+		},
+		{
+			  "@type": "Relationship",
+			  "description": {
+				"en": "Points to sub-entities that share the same base type (i.e., Spaces only have Spaces as parts, Assets only have Assets as parts, etc.). Inverse of: isPartOf"
+			  },
+			  "displayName": {
+				"en": "has part"
+			  },
+			  "name": "hasPart",
+			  "target": "dtmi:isa95:core:LogicalDevice;1"
+		},
+		{
+			  "@type": "Relationship",
+			  "displayName": {
+				"en": "has capability"
+			  },
+			  "name": "hasCapability",
+			  "target": "dtmi:isa95:core:Capability;1"
+		},
+		{
+			  "@type": "Relationship",
+			  "description": {
+				"en": "Indicates the physical hardware asset that a given logical device is hosted and executed on. Inverse of: hosts"
+			  },
+			  "displayName": {
+				"en": "hosted by"
+			  },
+			  "maxMultiplicity": 1,
+			  "name": "hostedBy",
+			  "target": "dtmi:isa95:core:Asset;1"
+		}
+	]
+}

@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:space:WorkUnit;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:space:Unit;1"
+	],
+	"displayName": {
+		"en": "Work Unit",
+		"jp": "仕事単位"
+	},
+	"description": {
+		"en": "Work units are low levels of equipment typically scheduled by the Level 4 and Level 3 functions for continuous manufacturing processes",
+		"jp": "作業単位は、通常、継続的な製造プロセスのレベル 4 およびレベル 3 の機能によってスケジュールされる装置の低レベルです"
+	}
+}

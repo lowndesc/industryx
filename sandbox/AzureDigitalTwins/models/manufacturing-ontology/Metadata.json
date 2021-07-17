@@ -1,0 +1,29 @@
+{
+	"@id": "dtmi:isa95:core:Metadata;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"displayName": "Metadata",
+    "contents": [
+        {
+            "@type": "Property",
+            "displayName": {
+				"en": "Metadata Items"
+			},
+			"name": "metadataItems",
+			"dtmi:dtdl:property:schema;2": {
+				"@type": "Map",
+				"dtmi:dtdl:property:mapKey;2": {
+					"name": "metadataKey",
+					"schema": "string"
+				},
+				"dtmi:dtdl:property:mapValue;2": {
+					"name": "metadataValue",
+					"schema": "string"
+				}
+			},
+			"writable": true
+        }
+	]
+}

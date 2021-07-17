@@ -1,0 +1,9 @@
+{
+	"@id": "dtmi:isa95:device:LogicalServer;1",
+	"@type": "Interface",
+	"displayName": {
+		"en": "Logical Server"
+	},
+	"extends": "dtmi:isa95:core:LogicalDevice;1",
+	"@context": "dtmi:dtdl:context;2"
+}

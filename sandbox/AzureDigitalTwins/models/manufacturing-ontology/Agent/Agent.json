@@ -1,0 +1,27 @@
+{
+	"@id": "dtmi:isa95:core:Agent;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"displayName": {
+		"en": "Agent",
+		"jp": "代行者"
+	},
+	"description": {
+		"en": "The human, group, or machine that consumes or acts upon an object or data. This higher-level grouping allows properties that are shared among its subclasses (Person, Organization, Group) to be anchord in one joint place.",
+		"jp": "オブジェクトまたはデータを使用または処理する人間、グループ、またはマシン。この上位レベルのグループ化により、サブクラス (個人、組織、グループ) 間で共有されるプロパティを、1 つのジョイントの場所に固定できます"
+	},
+	"contents": [
+		{
+			"@type": "Relationship",
+			"description": {
+				"en": "Indicates ownership "
+			},
+			"displayName": {
+				"en": "owns"
+			},
+			"name": "owns"
+		}
+	]
+}

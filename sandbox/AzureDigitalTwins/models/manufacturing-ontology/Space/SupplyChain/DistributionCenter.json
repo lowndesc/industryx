@@ -1,0 +1,57 @@
+{
+	"@id": "dtmi:isa95:space:DistributionCenter;3",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:space:Site;1"
+	],
+	"displayName": {
+		"en": "Distribution Center",
+		"jp": "跡地"
+	},
+	"description": {
+		"en": "A distribution center receives products from the supply chain, holding invetory for further distruibutrion.",
+		"jp": "サイトは、企業によって決定される物理的、地理的、または論理的なグループです。領域、生産ライン、プロセス セル、および生産単位を含めることができます"
+	},
+	"contents": [
+		{
+		  "@type": "Property",
+		  "displayName": {
+			"en": "Max Products Storage"
+		  },
+		  "name": "MaxProductsStorage",
+		  "schema": "integer",
+		  "writable": true
+		},
+		{
+		  "@type": "Property",
+		  "displayName": {
+			"en": "Current Inventory"
+		  },
+		  "name": "CurrentInventory",
+		  "schema": "integer",
+		  "writable": true
+		},
+		{
+		  "@type": "Property",
+		  "displayName": {
+			"en": "Last Order Number"
+		  },
+		  "name": "LastOrderNumber",
+		  "schema": "string",
+		  "writable": true
+		},
+		{
+		  "@type": "Property",
+		  "displayName": {
+			"en": "Last Order Quantity"
+		  },
+		  "name": "LastOrderQuantity",
+		  "schema": "integer",
+		  "writable": true
+		}
+	]
+	
+}

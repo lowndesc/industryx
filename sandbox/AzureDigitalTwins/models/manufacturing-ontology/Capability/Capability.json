@@ -1,0 +1,26 @@
+{
+	"@id": "dtmi:isa95:core:Capability;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"displayName": {
+		"en": "Capability",
+		"jp": "技術力"
+	},
+	"description": {
+		"en": "A capability indicates the capacity of an entity, be it a Space, an Asset, or a LogicalDevice, to produce or ingest data. Specific subclasses specialize this behavior: Sensor entities harvest data from the real world, Actuator entities accept commands from a digital twin platform, and Parameter entities configure some capability or system",
+		"jp": "機能は、エンティティの容量 (スペース、アセット、または論理デバイス) を示し、データを生成または取り込みます。特定のサブクラスは、この動作を特化: センサー エンティティは、現実世界からデータを収集し、アクチュエータ エンティティはデジタル ツイン プラットフォームからコマンドを受け入れ、パラメーター エンティティは、ある機能またはシステムを構成します"
+	},
+	"contents": [
+		{
+			"@type": "Property",
+			"name": "name",
+			"displayName": {
+				"en": "Name",
+				"jp": "名前"
+			},
+			"schema": "string"
+		}
+	]
+}

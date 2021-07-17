@@ -1,0 +1,14 @@
+{
+	"@id": "dtmi:isa95:asset:Machine;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"displayName": {
+		"en": "Machine",
+		"jp": "機械"
+	},
+	"extends": [
+		"dtmi:isa95:asset:Equipment;1"
+	]
+}

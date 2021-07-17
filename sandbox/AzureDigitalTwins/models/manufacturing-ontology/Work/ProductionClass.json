@@ -1,0 +1,11 @@
+{
+	"@id": "dtmi:isa95:core:ProductionClass;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"displayName": {
+		"en": "Production Class",
+		"jp": "生産分類"
+	}
+}
