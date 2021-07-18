@@ -41,6 +41,9 @@
 	7. [Other scenarios for using the trained brain](#other-scenarios-for-using-the-trained-brain)
 
 >Because we do not have access to production IoT devices, we will be using simulated devices to create the IoT telemetry for our sandbox environment. These are independent code functions which run within Azure Containers, emulating physical devices, which are registered with an IoT Hub.
+
+Before you begin, you may want to clone this entire repository to your local machine, to make some of the steps below more straightforward.
+
 ### Create Sandbox Resource Group ###
 #### Access Azure Cloud Shell ####
 To create your own sandbox environment, you will execute various commands in the Azure Cloud Shell. To access the Azure Cloud Shell, follow these steps:
@@ -120,7 +123,7 @@ From this, we have derived a basic manufacturing ontology as captured in this di
 ![Screenshot 2021-06-15 120456](https://user-images.githubusercontent.com/1761529/126053677-82c4351f-5e61-4971-88e4-5201c23e4736.jpg)  
 Take a moment to examine the manufacturing ontology in its raw JSON DTDL form at this location in this repository:
 > ./sandbox/AzureDigitalTwins/models/manufacturing-ontology
-Copy this entire folder/files structure to your local drive for later use
+This entire folder/file structure is in the clone on your local drive for later use
 #### Creating The ADT Instance ####
 To create your ADT instance within your sandbox, execute the following steps:
 1. Execute the following command in the Azure Cloud Shell:
@@ -151,6 +154,21 @@ Execute the following steps to upload the manufacturing ontology into the ADT mo
 5. You should see the entire manufacturing ontology with relationships and inheritance depicted.
 ![image](https://user-images.githubusercontent.com/1761529/126057790-15b6ddfd-e381-47a5-8dea-900bc1dbd698.png)
 #### Creating An Asset Twin ####
+We will now create sample digital twins of an entire manufacturing operation.
+
+Execute the following steps to create the sample digital twins:
+1. In Azure Digital Twins Explorer, at the top of the centre pane, click the 'TWIN GRAPH' tab.
+2. At the top of the Twin Graph pane, click the 'Import Graph' button
+![image](https://user-images.githubusercontent.com/1761529/126058503-fda241c7-771a-4f87-98df-5bbeb00b5efb.png)
+3. In the file dialog, navigate to the file:
+> ./sandbox/AzureDigitalTwins/logistics-twin.xlsx
+4. The initial twin graph should load
+5. On the 'Graph Preview Only' screen, click the save icon in the top right-hand corner.
+6. The system will now process the graph, loading the nodes into ADT.
+7. This should process OK. If there are any errors, use the Output screen to determine where the errors may be occuring.
+8. Once processed, you can view a visualisation of the digital twins by returning to the 'TWIN GRAPH' tab and clicking 'Run Query' in the top right-hand corner.
+9. You can switch layout style for your graph using the 'Choose Layout' button at the top of the 'TWIN GRAPH' pane.
+![image](https://user-images.githubusercontent.com/1761529/126058709-229b416f-3a7d-4f56-9477-9027f88d61f1.png)
 #### Creating A Process Twin ####
 #### Updating A Twin ####
 ### Azure TwinSync Functions ###
