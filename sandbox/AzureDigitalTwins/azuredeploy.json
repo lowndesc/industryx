@@ -1,0 +1,36 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sandbox_name": {
+            "defaultValue": "industryx-sandbox",
+            "type": "String"
+        },
+		"location": {
+			"type": "string",
+			"defaultValue": "southeastasia",
+			"metadata": {
+				"description": "The datacenter to use for the deployment."
+			}
+		}
+    },
+	"variables": {
+		"adtInstanceName": "[concat(parameters('sandbox_name'), 'ADT', uniqueString(resourceGroup().id))]"
+	},
+    "resources": [
+        {
+            "type": "Microsoft.DigitalTwins/digitalTwinsInstances",
+            "apiVersion": "2020-12-01",
+            "name": "[variables('storageAccountName')]",
+            "location": "[parameters('location')]",
+            "tags": {
+                "Offering": "IndustryX",
+                "Sub-Offering": "Sandbox"
+            },
+            "properties": {
+                "privateEndpointConnections": [],
+                "publicNetworkAccess": "Enabled"
+            }
+        }
+    ]
+}
