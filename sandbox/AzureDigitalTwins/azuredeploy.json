@@ -21,7 +21,7 @@
         {
             "type": "Microsoft.DigitalTwins/digitalTwinsInstances",
             "apiVersion": "2020-12-01",
-            "name": "[variables('storageAccountName')]",
+            "name": "[variables('adtInstanceName')]",
             "location": "[parameters('location')]",
             "tags": {
                 "Offering": "IndustryX",
