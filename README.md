@@ -107,8 +107,15 @@ To run the simulated devices, follow these steps:
 5. Once each container has started, the onboard functions will connect a device to the IoTHub using the registered device names you created in the previous task
 6. To verify that the connection is good. navigate back to the IoT Hub insatnce, and on the 'Overview' pane check the 'Iot Hub Usage' panel and it should show 'Iot Devices: 3' and 'Messages used today:' should be a number greater than 0 ![image](https://user-images.githubusercontent.com/1761529/125726261-a9581972-7e9b-4dae-8715-ae68b9cef872.png)
 ### Azure Digital Twins Instance ###
+Within our sadnbox, we require a single Azure Digital Twins (ADT) instance. Each instance can support many different digital twins based on many different models. For simplicity, it is best practice to use a separate ADT instance for each solution domain. ADT hosts the definitions of digital twins, based on underlying models, as well as the data describing the digital twins, including twin insances, components, relationships and properties. It does not, however, store underlying property and telemetry values, which are accessed from underlying storage. This makes ADT a highly performant abstraction of the digital twins it hosts.
 #### ADT Modelling ####
+ADT uses models to define digital twin types. Modelling is defined in a JSON-LD-based descriptive language called DTDL (Digital Twins Definition Language). Each DTDL model is an interface which defines the permissible structure of a digital twin. DTDL supports inheritance, such that one or more interfaces can be a base for other derived interfaces. A model is a definition which can be instantiated as a digital twin. A model can alternatively be a component, used to compose other models, but not intended for instantiation by itself. An example would be a smartphone device, defined as containing components defining a front camera and a rear camera.
 #### Manufacturing Ontology ####
+For manufaturing scenarios, we need a set of base models which can form the foundation for describing manufacturing assets and processes. These base models need to be extendible to problem-specific scenrios, such as production monitoring, optimization and simulation, as well as wider scenarios such as materials handling and supply chain modelling. These base models need to follow industry-specific standards, such as ISA-95 and ISA-88, and be gathered into an overall model known as a manufacturing ontology. 
+The starting point for our ontology is this basic data model as defined by the Industrial Automation standard ISA-95:
+<img width="395" alt="Equipment-hierarchy-model-11-p-26" src="https://user-images.githubusercontent.com/1761529/126053643-c941d7fb-ca29-41b0-b5ac-ab6922ea58a8.png">
+From this, we have derived a basic manufacturing ontology as captured in this diagram. We are to use this ontology within our sandbox environments:
+![Screenshot 2021-06-15 120456](https://user-images.githubusercontent.com/1761529/126053677-82c4351f-5e61-4971-88e4-5201c23e4736.jpg)
 #### Creating The ADT Instance ####
 #### Uploading Your Models ####
 #### Creating An Asset Twin ####
