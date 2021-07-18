@@ -118,8 +118,36 @@ From this, we have derived a basic manufacturing ontology as captured in this di
 ![Screenshot 2021-06-15 120456](https://user-images.githubusercontent.com/1761529/126053677-82c4351f-5e61-4971-88e4-5201c23e4736.jpg)  
 Take a moment to examine the manufacturing ontology in its raw JSON DTDL form at this location in this repository:
 > ./sandbox/AzureDigitalTwins/models/manufacturing-ontology
+Copy this entire folder/files structure to your local drive for later use
 #### Creating The ADT Instance ####
+To create your ADT instance within your sandbox, execute the following steps:
+1. Execute the following command in the Azure Cloud Shell:
+```zsh
+az deployment group create --resource-group <<your-sandbox-name>> --template-uri https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/AzureDigitalTwins/azuredeploy.json
+```
+2. When execution has finished, navigate to your sandbox ADT instance, on the Overview pain, copy the host name URL. You will need this later.
+In order to create permissions for you to access your ADT instance, you need to add yourself as an owner of this instance. 
+3. On the left-hand menu, select 'Access Control (IAM)'
+4. On the 'Access Control (IAM)' pane, click +Add, and then 'Add role sssignment'
+5. In the 'Add role assignment' panel, in the Role dropdown, select the 'Azure Digital Twins Data Owner' role
+6. In the 'Select' field, type the start of your name, then select your user account from the list to add your user account to the 'Selected members' list
+7. Click Save to create the role assignment
+8. To verify that you can now access your ADT instance, navigate to the [online ADT explorer](https://explorer.digitaltwins.azure.net).
+9. In the pop-up that asks for an Azure Digital Twins URL, type 'https://<<your host name URL from step 2 above>>' and click Save.
+![image](https://user-images.githubusercontent.com/1761529/126057453-02e80a2c-aade-4aaf-8f97-3a5c1f971570.png)
+10. On the top bar, click the cog icon to go to Settings. Set the Console and Output toggles to on.
+![image](https://user-images.githubusercontent.com/1761529/126057497-a8db831e-e0df-43d3-a5e8-185e17167a28.png)
+11. Now, when you click 'Run Query' in the top right, you should see a message in the centre pain that states 'No Results Found'.
+![image](https://user-images.githubusercontent.com/1761529/126057561-36dcb0c2-877b-4b8f-96dd-4aaec329ca0b.png)
 #### Uploading Your Models ####
+Execute the following steps to upload the manufacturing ontology into the ADT model library: 
+1. At the top of the left-hand Models panel, click the 'Upload a directory of Models' button:
+![image](https://user-images.githubusercontent.com/1761529/126057655-7b97dfc5-c61a-48dd-b4b0-e5e702e02575.png)
+2. Select the folder at the head of your local copy of the manufacturing ontology 'manufacturing-ontology'
+3. Click Upload, and then OK when the system reminds you that you are uploading 40 models.
+4. When these have uploaded, on the centre pane, click the 'MODEL GRAPH' tab.
+5. You should see the entire manufacturing ontology with relationships and inheritance depicted.
+![image](https://user-images.githubusercontent.com/1761529/126057790-15b6ddfd-e381-47a5-8dea-900bc1dbd698.png)
 #### Creating An Asset Twin ####
 #### Creating A Process Twin ####
 #### Updating A Twin ####
