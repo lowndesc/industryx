@@ -113,9 +113,11 @@ ADT uses models to define digital twin types. Modelling is defined in a JSON-LD-
 #### Manufacturing Ontology ####
 For manufaturing scenarios, we need a set of base models which can form the foundation for describing manufacturing assets and processes. These base models need to be extendible to problem-specific scenrios, such as production monitoring, optimization and simulation, as well as wider scenarios such as materials handling and supply chain modelling. These base models need to follow industry-specific standards, such as ISA-95 and ISA-88, and be gathered into an overall model known as a manufacturing ontology. 
 The starting point for our ontology is this basic data model as defined by the Industrial Automation standard ISA-95: 
-![image](https://user-images.githubusercontent.com/1761529/126053763-ffbe065d-d0d1-48d3-a434-666afd45f4bf.png)
-From this, we have derived a basic manufacturing ontology as captured in this diagram. We are to use this ontology within our sandbox environments:
-![Screenshot 2021-06-15 120456](https://user-images.githubusercontent.com/1761529/126053677-82c4351f-5e61-4971-88e4-5201c23e4736.jpg)
+![image](https://user-images.githubusercontent.com/1761529/126053763-ffbe065d-d0d1-48d3-a434-666afd45f4bf.png)  
+From this, we have derived a basic manufacturing ontology as captured in this diagram. We are to use this ontology within our sandbox environments:  
+![Screenshot 2021-06-15 120456](https://user-images.githubusercontent.com/1761529/126053677-82c4351f-5e61-4971-88e4-5201c23e4736.jpg)  
+Take a moment to examine the manufacturing ontology in its raw JSON DTDL form at this location in this repository:
+
 #### Creating The ADT Instance ####
 #### Uploading Your Models ####
 #### Creating An Asset Twin ####
