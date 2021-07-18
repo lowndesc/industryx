@@ -162,7 +162,7 @@ Execute the following steps to create the sample digital twins:
 ![image](https://user-images.githubusercontent.com/1761529/126058503-fda241c7-771a-4f87-98df-5bbeb00b5efb.png)
 3. In the file dialog, navigate to the file:
 > ./sandbox/AzureDigitalTwins/logistics-twin.xlsx
-4. The initial twin graph should load
+4. Click Upload. The initial twin graph should load
 5. On the 'Graph Preview Only' screen, click the save icon in the top right-hand corner.
 6. The system will now process the graph, loading the nodes into ADT.
 7. This should process OK. If there are any errors, use the Output screen to determine where the errors may be occuring.
