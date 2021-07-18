@@ -1,0 +1,18 @@
+{
+	"@id": "dtmi:isa95:space:UpstreamSupplier;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:space:Site;1"
+	],
+	"displayName": {
+		"en": "Upstream Supplier",
+		"jp": ""
+	},
+	"description": {
+		"en": "An upstream supplier supplies raw materials or sub-assemblies or parts into a process.",
+		"jp": ""
+	}
+}
