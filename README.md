@@ -170,6 +170,18 @@ Execute the following steps to create the sample digital twins:
 9. You can switch layout style for your graph using the 'Choose Layout' button at the top of the 'TWIN GRAPH' pane.
 ![image](https://user-images.githubusercontent.com/1761529/126058709-229b416f-3a7d-4f56-9477-9027f88d61f1.png)
 #### Creating A Process Twin ####
+Now that we have created our digital twins of assets and spaces, we can add digital twins of the processes we wish to model. For our sandbox, we will model an end-to-end supply chain process, incorporating the manufacturing assets and spaces we have previously modelled.
+To create digital twins of an end-to-end supply chain, execute the following steps:
+1. In Azure Digital Twins Explorer, in the 'TWIN GRAPH' pane, click the 'Import Graph' button
+2. Select the file:
+> ./sandbox/AzureDigitalTwins/logistics-supply-chain-twin.xlsx
+3. After the twins have loaded, click the Save icon in the top right-hand corner
+4. The system will process the supply chain twins
+5. To display only the supply chain process twins, copy the following SQL Query into the Azure Digitral Twins Explorer query field. This query is filtering the view to only those nodes and their relationships which inherit from the Supply Chain interface.
+```sql
+SELECT * FROM DIGITALTWINS WHERE IS_OF_MODEL('dtmi:isa95:core:SupplyChain;1')
+```
+6. Run the query by clicking the 'Run Query' button.
 #### Updating A Twin ####
 ### Azure TwinSync Functions ###
 #### Using Azure Functions For TwinSync ####
