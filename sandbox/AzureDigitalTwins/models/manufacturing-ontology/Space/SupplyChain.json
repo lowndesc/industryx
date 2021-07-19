@@ -1,0 +1,39 @@
+{
+	"@id": "dtmi:isa95:core:SupplyChain;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"displayName": {
+		"en": "Supply Chain",
+		"jp": ""
+	},
+	"description": {
+		"en": "A node within the supply chain.",
+		"jp": ""
+	},
+	"contents": [
+		{
+		  "@type": "Relationship",
+		  "description": {
+			"en": "Indicates the upstream entity supplies the downstream entity. Inverse of: isSuppliedBy"
+		  },
+		  "displayName": {
+			"en": "supplies"
+		  },
+		  "name": "supplies",
+		  "target": "dtmi:isa95:core:SupplyChain;1"
+		},
+		{
+		  "@type": "Relationship",
+		  "description": {
+			"en": "Indicates the downstream entity is supplied by the upstream entity. Inverse of: supplies"
+		  },
+		  "displayName": {
+			"en": "isSuppliedBy"
+		  },
+		  "name": "isSuppliedBy",
+		  "target": "dtmi:isa95:core:SupplyChain;1"
+		}
+	]
+}

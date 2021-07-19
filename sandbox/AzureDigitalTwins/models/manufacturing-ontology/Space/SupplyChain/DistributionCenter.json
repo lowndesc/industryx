@@ -5,7 +5,8 @@
 	],
 	"@type": "Interface",
 	"extends": [
-		"dtmi:isa95:space:Site;1"
+		"dtmi:isa95:space:Site;1",
+		"dtmi:isa95:core:SupplyChain;1"		
 	],
 	"displayName": {
 		"en": "Distribution Center",
