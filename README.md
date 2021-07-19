@@ -184,6 +184,15 @@ SELECT * FROM DIGITALTWINS WHERE IS_OF_MODEL('dtmi:isa95:core:SupplyChain;1')
 6. Run the query by clicking the 'Run Query' button.
 #### Updating A Twin ####
 To update a twin once it is created, you can either use the tools within the Azure Digital Twins explorer or prefereably refer to [this article about using the ADT API](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-use-postman?tabs=data-plane) 
+Here, we will explain how to use the tools in Azure Digital Twins Explorer to make a simple change to an existing twin. Execute the following steps:
+1. In Azure Digital Twins Explorer, run the following SQL Query to return only assets and their relationships:
+```sql
+SELECT * FROM DIGITAL TWINS WHERE IS_OF_MODEL('dtmi:isa95:core:Asset;1')
+```
+2. In the results view, find and click on the node for our simulated device 'sim000001'
+3. Notice in the PROPERTIES panel on the right-hand side, there is a Property of the 'sim000001' twin called 'Name' for which the value is 'undefined'
+4. Edit the 'Name' property to be 'sim000001'.
+5. Notice that, after making this change, there is a record of the change added to the digital twin properties. All changes to digital twins are audited. ![image](https://user-images.githubusercontent.com/1761529/126096562-7138b3ed-655c-4e97-80da-a2a210218f3a.png)
 ### Azure TwinSync Functions ###
 #### Using Azure Functions For TwinSync ####
 #### Subscribing To Events ####
