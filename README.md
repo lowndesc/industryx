@@ -183,6 +183,7 @@ SELECT * FROM DIGITALTWINS WHERE IS_OF_MODEL('dtmi:isa95:core:SupplyChain;1')
 ```
 6. Run the query by clicking the 'Run Query' button.
 #### Updating A Twin ####
+To update a twin once it is created, you can either use the tools within the Azure Digital Twins explorer or prefereably refer to [this article about using the ADT API](https://docs.microsoft.com/en-us/azure/digital-twins/how-to-use-postman?tabs=data-plane) 
 ### Azure TwinSync Functions ###
 #### Using Azure Functions For TwinSync ####
 #### Subscribing To Events ####
