@@ -86,13 +86,12 @@ To create the simulated devices, follow these steps:
 https://raw.githubusercontent.com/lowndesc/industryx/main/sandbox/SimulatedDevices/SimulatorCloudRunner.ps1
 ```
 3. This will copy a PowerShell script file from GitHub to your AZure Cloud Shell session
-4. Execute the following command in Azure Cloud Shell to run the PowerHell script 
+4. Execute the following command in Azure Cloud Shell to run the PowerShell script, using the values copied earler 
 ```zsh
-./SimulatorCloudRunner.ps1
+./SimulatorCloudRunner.ps1 -ResourceGroup <<your-sandbox-name>> -IotHubConnectionString <<your-iothub-connection-string>>
 ```
-5. When prompted for an IoTHubConnectionString, paste the connection string you copied in step 4, and press 'Enter'
-6. After a few seconds, you should see a JSON confirmation that the process has started
-7. After around 1 minute, the 3 simulated device containers will have been deployed. Check your resource group to confirm.
+5. After a few seconds, you should see a JSON confirmation that the process has started
+6. After around 1 minute, the 3 simulated device containers will have been deployed. Check your resource group to confirm.
 #### Connecting Devices To The Hub #### 
 To connect the simulated devices to the IoT Hub, follow these steps:
 1. Navigate to your IoT Hub instance
