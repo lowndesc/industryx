@@ -1,7 +1,7 @@
 
 param (
     [string]$Location = "japaneast",
-    [string]$ResourceGroup = "industryx-sandbox-cl2",
+    [Parameter(Mandatory=$true)][string]$ResourceGroup,
     [int]$DeviceCount = 3,
     [int]$ContainerCount = 3,
     [int]$MessageCount = 0,
