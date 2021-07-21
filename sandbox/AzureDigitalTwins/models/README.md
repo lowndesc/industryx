@@ -8,6 +8,10 @@ This academic research paper lays out analysis conducted across the entire knowl
 
 Our work incorporates some of the key findings of this paper, with a view to how these apply to digital twins and simulation.
 #### ISA-95 ####
+TBC
 #### ISA-88 ####
+TBC
 #### OPC-UA ####
+TBC
 #### DTC Manufacturing WG ####
+TBC
