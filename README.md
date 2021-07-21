@@ -316,8 +316,18 @@ namespace Avanade.Japan.Device.Simulation.Sync
     }
 }
 ```
-#### Subscribing To Events ####
+#### Creating Function App ####
+
 #### Deploying Functions ####
+
+#### Subscribing To Events ####
+
+#### Verifying End-to-End Telemetry #### 
+Once the events are flowing to our function app, they should be flowing into our ADT twins. 
+To verify the end-to-end flow, execute the following steps:
+1. Verify that telemetry events are flowing to our function
+2. Verify that the function is processing the telemetry events without errors
+3. Verify that properties of ADT sensor twins are being updated
 ### AnyLogic Simulation ###
 #### Creating An AnyLogic Simulation ####
 #### Preparing The AnyLogic Simulation For Bonsai ####
