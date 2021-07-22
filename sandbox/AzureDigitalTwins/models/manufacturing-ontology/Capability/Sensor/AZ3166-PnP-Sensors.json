@@ -1,0 +1,248 @@
+[
+	{
+		"@id": "dtmi:azurertos:devkit:gsgmxchip;2",
+		"@context": [
+			"dtmi:dtdl:context;2"
+		],
+		"@type": "Interface",
+		"extends": [
+			"dtmi:isa95:capability:Sensor;1"
+		],
+		"displayName": {
+			"en": "MXCHIP AZ3166 PnP-Sensors",
+			"jp": ""
+		},
+		"description": {
+			"en": "Model for the Azure RTOS MXCHIP AZ3166 PnP-Sensors",
+			"jp": ""
+		},
+		"contents": [
+			{
+				"@type": [
+					"Telemetry",
+					"Temperature"
+				],
+				"name": "temperature",
+				"displayName": "Temperature",
+				"unit": "degreeCelsius",
+				"schema": "double"
+			},
+			{
+				"@type": [
+					"Telemetry",
+					"RelativeHumidity"
+				],
+				"name": "humidity",
+				"displayName": "Humidity",
+				"unit": "percent",
+				"schema": "double"
+			},
+			{
+				"@type": [
+					"Telemetry",
+					"Pressure"
+				],
+				"name": "pressure",
+				"displayName": "Pressure",
+				"unit": "kilopascal",
+				"schema": "double"
+			},
+			{
+				"@type": "Telemetry",
+				"name": "magnetometerX",
+				"displayName": "Magnetometer X / mgauss",
+				"schema": "double"
+			},
+			{
+				"@type": "Telemetry",
+				"name": "magnetometerY",
+				"displayName": "Magnetometer Y / mgauss",
+				"schema": "double"
+			},
+			{
+				"@type": "Telemetry",
+				"name": "magnetometerZ",
+				"displayName": "Magnetometer Z / mgauss",
+				"schema": "double"
+			},
+			{
+				"@type": [
+					"Telemetry",
+					"Acceleration"
+				],
+				"name": "accelerometerX",
+				"displayName": "Accelerometer X",
+				"schema": "double",
+				"unit": "gForce"
+			},
+			{
+				"@type": [
+					"Telemetry",
+					"Acceleration"
+				],
+				"name": "accelerometerY",
+				"displayName": "Accelerometer Y",
+				"schema": "double",
+				"unit": "gForce"
+			},
+			{
+				"@type": [
+					"Telemetry",
+					"Acceleration"
+				],
+				"name": "accelerometerZ",
+				"displayName": "Accelerometer Z",
+				"schema": "double",
+				"unit": "gForce"
+			},
+			{
+				"@type": [
+					"Telemetry",
+					"AngularVelocity"
+				],
+				"name": "gyroscopeX",
+				"displayName": "Gyroscope X",
+				"schema": "double",
+				"unit": "degreePerSecond"
+			},
+			{
+				"@type": [
+					"Telemetry",
+					"AngularVelocity"
+				],
+				"name": "gyroscopeY",
+				"displayName": "Gyroscope Y",
+				"schema": "double",
+				"unit": "degreePerSecond"
+			},
+			{
+				"@type": [
+					"Telemetry",
+					"AngularVelocity"
+				],
+				"name": "gyroscopeZ",
+				"displayName": "Gyroscope Z",
+				"schema": "double",
+				"unit": "degreePerSecond"
+			},
+			{
+				"@type": "Property",
+				"name": "telemetryInterval",
+				"displayName": "Telemetry Interval",
+				"description": "Control the frequency of the telemetry loop.",
+				"schema": "integer",
+				"writable": true
+			},
+			{
+				"@type": "Property",
+				"name": "ledState",
+				"displayName": "LED state",
+				"description": "Returns the current state of the onboard LED.",
+				"schema": "boolean"
+			},
+			{
+				"@type": "Command",
+				"name": "setLedState",
+				"displayName": "Set LED state",
+				"description": "Sets the state of the onboard LED.",
+				"request": {
+					"name": "state",
+					"displayName": "State",
+					"description": "True is LED on, false is LED off.",
+					"schema": "boolean"
+				}
+			},
+			{
+				"@type": "Command",
+				"name": "setDisplayText",
+				"displayName": "Display Text",
+				"description": "Display text on screen.",
+				"request": {
+					"name": "text",
+					"displayName": "Text",
+					"description": "Text displayed on the screen.",
+					"schema": "string"
+				}
+			},
+			{
+				"@type": "Component",
+				"schema": "dtmi:azure:DeviceManagement:DeviceInformation;1",
+				"name": "deviceInformation",
+				"displayName": "Device Information",
+				"description": "Interface with basic device hardware information."
+			}
+		]
+	},
+	{
+		"@context": "dtmi:dtdl:context;2",
+		"@id": "dtmi:azure:DeviceManagement:DeviceInformation;1",
+		"@type": "Interface",
+		"displayName": "Device Information",
+		"contents": [
+			{
+				"@type": "Property",
+				"name": "manufacturer",
+				"displayName": "Manufacturer",
+				"schema": "string",
+				"writable": true,
+				"description": "Company name of the device manufacturer. This could be the same as the name of the original equipment manufacturer (OEM). Ex. Contoso."
+			},
+			{
+				"@type": "Property",
+				"name": "model",
+				"displayName": "Device model",
+				"schema": "string",
+				"writable": true,
+				"description": "Device model name or ID. Ex. Surface Book 2."
+			},
+			{
+				"@type": "Property",
+				"name": "swVersion",
+				"displayName": "Software version",
+				"schema": "string",
+				"writable": true,
+				"description": "Version of the software on your device. This could be the version of your firmware. Ex. 1.3.45"
+			},
+			{
+				"@type": "Property",
+				"name": "osName",
+				"displayName": "Operating system name",
+				"schema": "string",
+				"writable": true,
+				"description": "Name of the operating system on the device. Ex. Windows 10 IoT Core."
+			},
+			{
+				"@type": "Property",
+				"name": "processorArchitecture",
+				"displayName": "Processor architecture",
+				"schema": "string",
+				"writable": true,
+				"description": "Architecture of the processor on the device. Ex. x64 or ARM."
+			},
+			{
+				"@type": "Property",
+				"name": "processorManufacturer",
+				"displayName": "Processor manufacturer",
+				"schema": "string",
+				"writable": true,
+				"description": "Name of the manufacturer of the processor on the device. Ex. Intel."
+			},
+			{
+				"@type": "Property",
+				"name": "totalStorage",
+				"displayName": "Total storage",
+				"schema": "double",
+				"writable": true,
+				"description": "Total available storage on the device in kilobytes. Ex. 2048000 kilobytes."
+			},
+			{
+				"@type": "Property",
+				"name": "totalMemory",
+				"displayName": "Total memory",
+				"schema": "double",
+				"writable": true,
+				"description": "Total available memory on the device in kilobytes. Ex. 256000 kilobytes."
+			}
+		]
+	}
+]

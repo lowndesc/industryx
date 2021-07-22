@@ -1,0 +1,131 @@
+{
+	"@id": "dtmi:isa95:capability:SimulatedSensor;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	],
+	"@type": "Interface",
+	"extends": [
+		"dtmi:isa95:capability:Sensor;1"
+	],
+	"displayName": {
+		"en": "Simulated Sensor",
+		"jp": "温度センサ"
+	},
+	"description": {
+		"en": "A generic sensor capability used for testing simulated sensor data",
+		"jp": ""
+	},
+	"contents": [
+		{
+            "@type": "Property",
+            "name": "Capacity",
+            "schema": "integer",
+            "writable": true
+		},
+		{
+            "@type": ["Property","TimeSpan"],
+            "name": "Wait",
+            "schema": "double",
+			"unit": "second",
+            "writable": true
+		},
+		{
+            "@type": ["Property","TimeSpan"],
+            "name": "Delay",
+            "schema": "double",
+			"unit": "second",
+            "writable": true
+		},
+		{
+            "@type": "Property",
+            "name": "ArrivalRate",
+            "schema": "double",
+            "writable": true
+		},
+		{
+			"@type": ["Property","Temperature"],
+			"name": "Temperature",
+			"schema": "double",
+			"unit": "degreeCelsius",
+            "writable": true
+		},
+		{
+			"@type": ["Property","RelativeHumidity"],
+			"name": "Humidity",
+			"schema": "double",
+			"unit": "percent",
+            "writable": true
+		},
+		{
+			"@type": ["Property","Energy"],
+			"name": "Power",
+			"schema": "double",
+			"unit": "kilowattHour",
+            "writable": true
+		},
+		{
+			"@type": ["Property","Distance"],
+			"name": "Vibration",
+			"schema": "double",
+			"unit": "millimetre",
+            "writable": true
+		},
+		{
+			"@type": "Property",
+			"name": "Uptime",
+			"schema": "double",
+            "writable": true
+		},
+		{
+            "@type": "Telemetry",
+            "name": "Capacity",
+            "schema": "integer"
+		},
+		{
+            "@type": ["Telemetry","TimeSpan"],
+            "name": "Wait",
+            "schema": "double",
+			"unit": "second"
+		},
+		{
+            "@type": ["Telemetry","TimeSpan"],
+            "name": "Delay",
+            "schema": "double",
+			"unit": "second"
+		},
+		{
+            "@type": "Telemetry",
+            "name": "ArrivalRate",
+            "schema": "double"
+		},
+		{
+			"@type": ["Telemetry","Temperature"],
+			"name": "Temperature",
+			"schema": "double",
+			"unit": "degreeCelsius"
+		},
+		{
+			"@type": ["Telemetry","RelativeHumidity"],
+			"name": "Humidity",
+			"schema": "double",
+			"unit": "percent"
+		},
+		{
+			"@type": ["Telemetry","Energy"],
+			"name": "Power",
+			"schema": "double",
+			"unit": "kilowattHour"
+		},
+		{
+			"@type": ["Telemetry","Distance"],
+			"name": "Vibration",
+			"schema": "double",
+			"unit": "millimetre"
+		},
+		{
+			"@type": "Telemetry",
+			"name": "Uptime",
+			"schema": "double"
+		}
+	]
+}
