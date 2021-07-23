@@ -174,7 +174,9 @@ Execute the following steps to create the sample digital twins:
 7. This should process OK. If there are any errors, use the Output screen to determine where the errors may be occuring.
 8. Once processed, you can view a visualisation of the digital twins by returning to the 'TWIN GRAPH' tab and clicking 'Run Query' in the top right-hand corner.
 9. You can switch layout style for your graph using the 'Choose Layout' button at the top of the 'TWIN GRAPH' pane.
-![image](https://user-images.githubusercontent.com/1761529/126058709-229b416f-3a7d-4f56-9477-9027f88d61f1.png)
+![image](https://user-images.githubusercontent.com/1761529/126751910-5a180732-82db-45c5-b761-59fa27ba6f6f.png)
+10. Note that we have included a number of Azure IoT Plug-and-PLay devices into this sample digital twins. One such device is shown in detail on the attached image - an MXCHIP AZ3166 device named 'PnP-Sensors', contains multiple sensors, and will be the subject of auto-provisiioning later.
+![image](https://user-images.githubusercontent.com/1761529/126752423-32141e63-8289-4944-a1fa-ea0851713bc8.png) 
 #### Creating A Process Twin ####
 Now that we have created our digital twins of assets and spaces, we can add digital twins of the processes we wish to model. For our sandbox, we will model an end-to-end supply chain process, incorporating the manufacturing assets and spaces we have previously modelled.
 To create digital twins of an end-to-end supply chain, execute the following steps:
