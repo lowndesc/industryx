@@ -337,11 +337,15 @@ To verify the end-to-end flow, execute the following steps:
 3. Verify that properties of ADT sensor twins are being updated
 ### Plug-and-Play IoT Devices ###
 #### PnP IoT and ADT Architecture ####
+![image](https://user-images.githubusercontent.com/1761529/126741034-73f3cf50-1a98-43be-b3e5-61973fda29a0.png)
 #### Deploying PnP Functions ####
 #### Auto-Provisioning a Simlated PnP Device ####
+![image](https://user-images.githubusercontent.com/1761529/126741050-98ee91d1-aed3-48d4-9b2d-2d3e39787ab2.png)
 #### Provisioning a Physical PnP Device ####
+![20210723_143419](https://user-images.githubusercontent.com/1761529/126741223-2aece734-8cf3-4645-8c86-84f253656995.jpg)
 #### Verifying PnP Telemetry in ADT ####
 #### Auto-Retiring PnP Devices ####
+![image](https://user-images.githubusercontent.com/1761529/126741148-e32ee60f-8018-44ca-b21d-8c4d7084f704.png)
 ### AnyLogic Simulation ###
 #### Creating An AnyLogic Simulation ####
 #### Preparing The AnyLogic Simulation For Bonsai ####
