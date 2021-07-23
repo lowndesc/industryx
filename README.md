@@ -23,8 +23,13 @@
 	1. [Using Azure Functions for TwinSync](#using-azure-functions-for-twinsync)
 	2. [Subscribing to events](#subscribing-to-events)
 	3. [Deploying functions](#deploying-functions)
-6. [Plug-and-Play IoT Device](#plug-and-play-iot-device)
-	1. 
+6. [Plug-and-Play IoT Device](#plug-and-play-iot-device)  
+	1. PnP IoT and ADT Architecture
+	2. Deploying PnP Functions
+	3. Auto-Provisioning a Simlated PnP Device
+	4. Provisioning a Physical PnP Device
+	5. Verifying PnP Telemetry in ADT
+	6. Auto-Retiring PnP Devices
 7. [AnyLogic Simulation](#anylogic-simulation)
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
