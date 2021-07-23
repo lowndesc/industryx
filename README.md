@@ -23,7 +23,7 @@
 	1. [Using Azure Functions for TwinSync](#using-azure-functions-for-twinsync)
 	2. [Subscribing to events](#subscribing-to-events)
 	3. [Deploying functions](#deploying-functions)
-6. [Plug-and-Play IoT Device](#plug-and-play-iot-device)  
+6. [Plug-and-Play IoT Devices](#plug-and-play-iot-devices)  
 	1. PnP IoT and ADT Architecture
 	2. Deploying PnP Functions
 	3. Auto-Provisioning a Simlated PnP Device
@@ -335,6 +335,13 @@ To verify the end-to-end flow, execute the following steps:
 1. Verify that telemetry events are flowing to our function
 2. Verify that the function is processing the telemetry events without errors
 3. Verify that properties of ADT sensor twins are being updated
+### Plug-and-Play IoT Devices ###
+#### PnP IoT and ADT Architecture ####
+#### Deploying PnP Functions ####
+#### Auto-Provisioning a Simlated PnP Device ####
+#### Provisioning a Physical PnP Device ####
+#### Verifying PnP Telemetry in ADT ####
+#### Auto-Retiring PnP Devices ####
 ### AnyLogic Simulation ###
 #### Creating An AnyLogic Simulation ####
 #### Preparing The AnyLogic Simulation For Bonsai ####
