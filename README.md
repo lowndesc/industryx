@@ -348,8 +348,13 @@ To verify the end-to-end flow, execute the following steps:
 ![image](https://user-images.githubusercontent.com/1761529/126741148-e32ee60f-8018-44ca-b21d-8c4d7084f704.png)
 ### AnyLogic Simulation ###
 #### Creating An AnyLogic Simulation ####
+![image](https://user-images.githubusercontent.com/1761529/126741509-cf675124-da8a-4429-b766-df7961304bfe.png)
+![image](https://user-images.githubusercontent.com/1761529/126746438-32286441-8764-407c-99cc-c3d71f2c161a.png)
+![image](https://user-images.githubusercontent.com/1761529/126746510-6719d66d-0936-4c1d-8554-047960a6f879.png)
 #### Preparing The AnyLogic Simulation For Bonsai ####
+![image](https://user-images.githubusercontent.com/1761529/126746628-0d08b23a-9908-42b6-abc4-84e9f82e05c9.png)
 #### Attaching AnyLogic Telemetry By Querying ADT ####
+![image](https://user-images.githubusercontent.com/1761529/126746710-f46365e5-986d-48cd-b051-aa91b73ee38d.png)
 ### Databricks Simulation ###
 #### Creating a Databricks simulation ####
 #### Preparing the Databricks simulation for Bonsai ####
