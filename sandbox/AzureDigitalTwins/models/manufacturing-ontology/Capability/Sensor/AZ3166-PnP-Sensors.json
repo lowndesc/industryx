@@ -127,6 +127,22 @@
 			},
 			{
 				"@type": "Property",
+				"name": "HubRegistrationId",
+				"writable": true,
+				"schema": "string"
+			},
+			{
+				"@type": [
+					"Property",
+					"Temperature"
+				],
+				"name": "Temperature",
+				"displayName": "Temperature",
+				"unit": "degreeCelsius",
+				"schema": "double"
+			},
+			{
+				"@type": "Property",
 				"name": "telemetryInterval",
 				"displayName": "Telemetry Interval",
 				"description": "Control the frequency of the telemetry loop.",
