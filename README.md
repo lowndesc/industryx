@@ -1,5 +1,5 @@
-# Industry X #
-## Sandbox for Azure IoT, PnP, Azure Digital Twins and Bonsai Simulation Teaching ##
+# Industry X Sandbox #
+## Azure IoT, PnP, Azure Digital Twins and Bonsai Simulation Teaching ##
 ### Summary ###
 1. [Create Sandbox Resource Group](#create-sandbox-resource-group)
 	1. [Access Azure Cloud Shell](#access-azure-cloud-shell)
