@@ -26,7 +26,7 @@
 6. [Plug-and-Play IoT Devices](#plug-and-play-iot-devices)  
 	1. PnP IoT and ADT Architecture
 	2. Deploying PnP Functions
-	3. Auto-Provisioning a Simlated PnP Device
+	3. Auto-Provisioning a Simulated PnP Device
 	4. Provisioning a Physical PnP Device
 	5. Verifying PnP Telemetry in ADT
 	6. Auto-Retiring PnP Devices
@@ -699,7 +699,7 @@ namespace Samples.AdtIothub
     }
 }
 ```
-#### Auto-Provisioning a Simlated PnP Device ####
+#### Auto-Provisioning a Simulated PnP Device ####
 ![image](https://user-images.githubusercontent.com/1761529/126741050-98ee91d1-aed3-48d4-9b2d-2d3e39787ab2.png)
 #### Provisioning a Physical PnP Device ####
 ![20210723_143419](https://user-images.githubusercontent.com/1761529/126741223-2aece734-8cf3-4645-8c86-84f253656995.jpg)
