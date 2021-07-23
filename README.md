@@ -1,12 +1,12 @@
-# Industry X #
-## Sandbox for Azure IoT, Azure Digital Twins and Bonsai Simulation Teaching ##
+# Industry X Sandbox #
+## Azure IoT, PnP, Azure Digital Twins and Bonsai Simulation Teaching ##
 ### Summary ###
 1. [Create Sandbox Resource Group](#create-sandbox-resource-group)
 	1. [Access Azure Cloud Shell](#access-azure-cloud-shell)
 	2. [Creating Your Sandbox Resource Group](#creating-your-sandbox-resource-group)
 2. [Azure IoT Hub Instance](#azure-iot-hub-instance)
 	1. [Creating an IoT Hub](#creating-an-iot-hub)
-3. [IoT Devices](#iot-devices)
+3. [Simulated IoT Devices](#iot-devices)
 	1. [Simulating telemetry](#simulating-telemetry)
 	2. [Creating simulated devices](#creating-simulated-devices)
 	3. [Connecting devices to the hub](#connecting-devices-to-the-hub)
@@ -23,15 +23,22 @@
 	1. [Using Azure Functions for TwinSync](#using-azure-functions-for-twinsync)
 	2. [Subscribing to events](#subscribing-to-events)
 	3. [Deploying functions](#deploying-functions)
-6. [AnyLogic Simulation](#anylogic-simulation)
+6. [Plug-and-Play IoT Devices](#plug-and-play-iot-devices)  
+	1. PnP IoT and ADT Architecture
+	2. Deploying PnP Functions
+	3. Auto-Provisioning a Simulated PnP Device
+	4. Provisioning a Physical PnP Device
+	5. Verifying PnP Telemetry in ADT
+	6. Auto-Retiring PnP Devices
+7. [AnyLogic Simulation](#anylogic-simulation)
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
 	3. [Attaching AnyLogic telemetry by querying ADT](#attaching-anylogic-telemetry-by-querying-adt)
-7. [Databricks Simulation](#databricks-simulation)
+8. [Databricks Simulation](#databricks-simulation)
 	1. [Creating a Databricks simulation](#creating-a-databricks-simulation)
 	2. [Preparing the Databricks simulation for Bonsai](#preparing-the-databricks-simulation-for-bonsai)
 	2. [Attaching Databricks telemetry by querying ADT](#attaching-databricks-telemetry-by-querying-adt)
-8. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
+9. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
 	1. [Testing the simulation](#testing-the-simulation)
 	2. [Importing the simulation](#importing-the-simulation)
 	3. [Creating the brain](#creating-the-brain)
@@ -113,12 +120,12 @@ For our sandbox environment, we will be implementing digital twins using Microso
 
 Within our sandbox, we therefore require a single Azure Digital Twins (ADT) instance. Each instance can support many different digital twins based on many different models. For simplicity, it is best practice to use a separate ADT instance for each solution domain. ADT hosts the definitions of digital twins, based on underlying models, as well as the data describing the digital twins, including twin instances, components, relationships and properties. It does not, however, store underlying property and telemetry values, which are accessed from underlying storage. This makes ADT a highly performant abstraction of the digital twins it hosts.
 #### ADT Modelling ####
-ADT uses models to define digital twin types. Modelling is defined in a JSON-LD-based descriptive language called DTDL (Digital Twins Definition Language). Each DTDL model is an interface which defines the permissible structure of a digital twin. DTDL supports inheritance, such that one or more interfaces can be a base for other derived interfaces. A model is a generally a definition which can be instantiated as a digital twin. Howevere, a model can also be a component, used to compose other models, but not intended for instantiation by itself. An example would be a smartphone device, defined as containing components defining a front camera and a rear camera.
+ADT uses models to define digital twin types. Modelling is defined in a JSON-LD-based descriptive language called DTDL (Digital Twins Definition Language). DTDL models are interchangeble between device twins used in IoT Plug-and-Play scenarios and digital twins of those devices within Azure Digital Twins. Each DTDL model is an interface which defines the permissible structure of a digital twin. DTDL supports inheritance, such that one or more interfaces can be a base for other derived interfaces. A model is a generally a definition which can be instantiated as a digital twin. Howevere, a model can also be a component, used to compose other models, but not intended for instantiation by itself. An example would be a smartphone device, defined as containing components defining a front camera and a rear camera.
 #### Manufacturing Ontology ####
 For manufaturing scenarios, we need a set of base models which can form the foundation for describing manufacturing assets and processes. These base models need to be extendible to problem-specific scenrios, such as production monitoring, optimization and simulation, as well as wider scenarios such as materials handling and supply chain modelling. These base models need to follow industry-specific standards, such as ISA-95 and ISA-88, and be gathered into an overall model known as a manufacturing ontology. 
 The starting point for our ontology is this basic data model as defined by the Industrial Automation standard ISA-95: 
 ![image](https://user-images.githubusercontent.com/1761529/126053763-ffbe065d-d0d1-48d3-a434-666afd45f4bf.png)  
-From this, we have derived a basic manufacturing ontology as captured in this diagram. We are to use this ontology within our sandbox environments:  
+From this, we have derived a basic manufacturing ontology as captured in this diagram. We have incuded a few example Azure IoT Plug-and-PLay devices into our ontology, to illustrate how these interact with the manufacturing assets and processes. We are to use this ontology within our sandbox environments:  
 ![Screenshot 2021-06-15 120456](https://user-images.githubusercontent.com/1761529/126053677-82c4351f-5e61-4971-88e4-5201c23e4736.jpg)  
 Take a moment to examine the manufacturing ontology in its raw JSON DTDL form at this location in this repository:
 > ./sandbox/AzureDigitalTwins/models/manufacturing-ontology
@@ -167,7 +174,9 @@ Execute the following steps to create the sample digital twins:
 7. This should process OK. If there are any errors, use the Output screen to determine where the errors may be occuring.
 8. Once processed, you can view a visualisation of the digital twins by returning to the 'TWIN GRAPH' tab and clicking 'Run Query' in the top right-hand corner.
 9. You can switch layout style for your graph using the 'Choose Layout' button at the top of the 'TWIN GRAPH' pane.
-![image](https://user-images.githubusercontent.com/1761529/126058709-229b416f-3a7d-4f56-9477-9027f88d61f1.png)
+![image](https://user-images.githubusercontent.com/1761529/126751910-5a180732-82db-45c5-b761-59fa27ba6f6f.png)
+10. Note that we have included a number of Azure IoT Plug-and-PLay devices into this sample digital twins. One such device is shown in detail on the attached image - an MXCHIP AZ3166 device named 'PnP-Sensors', contains multiple sensors, and will be the subject of auto-provisiioning later.
+![image](https://user-images.githubusercontent.com/1761529/126752423-32141e63-8289-4944-a1fa-ea0851713bc8.png) 
 #### Creating A Process Twin ####
 Now that we have created our digital twins of assets and spaces, we can add digital twins of the processes we wish to model. For our sandbox, we will model an end-to-end supply chain process, incorporating the manufacturing assets and spaces we have previously modelled.
 To create digital twins of an end-to-end supply chain, execute the following steps:
@@ -328,10 +337,386 @@ To verify the end-to-end flow, execute the following steps:
 1. Verify that telemetry events are flowing to our function
 2. Verify that the function is processing the telemetry events without errors
 3. Verify that properties of ADT sensor twins are being updated
+### Plug-and-Play IoT Devices ###
+#### PnP IoT and ADT Architecture ####
+![image](https://user-images.githubusercontent.com/1761529/126741034-73f3cf50-1a98-43be-b3e5-61973fda29a0.png)
+#### Deploying PnP Functions ####
+##### PnP Auto-Provisioning Function #####
+```cs
+using System;
+using System.IO;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Azure;
+using Azure.Core.Pipeline;
+using Azure.DigitalTwins.Core;
+using Azure.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Azure.WebJobs.Extensions.Http;
+using Microsoft.Azure.Devices.Shared;
+using Microsoft.Azure.Devices.Provisioning.Service;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+
+namespace Samples.AdtIothub
+{
+    public static class DpsAdtAllocationFunc
+    {
+        private const string adtAppId = "https://digitaltwins.azure.net";
+        private static string adtInstanceUrl = Environment.GetEnvironmentVariable("ADT_SERVICE_URL");
+        private static readonly HttpClient singletonHttpClientInstance = new HttpClient();
+
+        [FunctionName("DpsAdtAllocationFunc")]
+        public static async Task<IActionResult> Run(
+            [HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequest req, ILogger log)
+        {
+            // Get request body
+            string requestBody = await new StreamReader(req.Body).ReadToEndAsync();
+            log.LogDebug($"Request.Body: {requestBody}");
+            dynamic data = JsonConvert.DeserializeObject(requestBody);
+
+            // Get registration ID of the device
+            string regId = data?.deviceRuntimeContext?.registrationId;
+
+            bool fail = false;
+            string message = "Uncaught error";
+            var response = new ResponseObj();
+
+            // Must have unique registration ID on DPS request
+            if (regId == null)
+            {
+                message = "Registration ID not provided for the device.";
+                log.LogInformation("Registration ID: NULL");
+                fail = true;
+            }
+            else
+            {
+                string[] hubs = data?.linkedHubs.ToObject<string[]>();
+
+                // Must have hubs selected on the enrollment
+                if (hubs == null
+                    || hubs.Length < 1)
+                {
+                    message = "No hub group defined for the enrollment.";
+                    log.LogInformation("linkedHubs: NULL");
+                    fail = true;
+                }
+                else
+                {
+                    // Find or create twin based on the provided registration ID and model ID
+                    dynamic payloadContext = data?.deviceRuntimeContext?.payload;
+                    string dtmi = payloadContext.modelId;
+                    log.LogDebug($"payload.modelId: {dtmi}");
+                    string dtId = await FindOrCreateTwinAsync(dtmi, regId, log);
+
+                    // Get first linked hub (TODO: select one of the linked hubs based on policy)
+                    response.iotHubHostName = hubs[0];
+
+                    // Specify the initial tags for the device.
+                    var tags = new TwinCollection();
+                    tags["dtmi"] = dtmi;
+                    tags["dtId"] = dtId;
+
+                    // Specify the initial desired properties for the device.
+                    var properties = new TwinCollection();
+
+                    // Add the initial twin state to the response.
+                    var twinState = new TwinState(tags, properties);
+                    response.initialTwin = twinState;
+                }
+            }
+
+            log.LogDebug("Response: " + ((response.iotHubHostName != null)? JsonConvert.SerializeObject(response) : message));
+
+            return fail
+                ? new BadRequestObjectResult(message)
+                : (ActionResult)new OkObjectResult(response);
+        }
+
+        public static async Task<string> FindOrCreateTwinAsync(string dtmi, string regId, ILogger log)
+        {
+            // Create Digital Twins client
+            var cred = new ManagedIdentityCredential(adtAppId);
+            var client = new DigitalTwinsClient(
+                new Uri(adtInstanceUrl),
+                cred,
+                new DigitalTwinsClientOptions
+                {
+                    Transport = new HttpClientTransport(singletonHttpClientInstance)
+                });
+
+            // Find existing DigitalTwin with registration ID
+            try
+            {
+                // Get DigitalTwin with Id 'regId'
+                BasicDigitalTwin existingDt = await client.GetDigitalTwinAsync<BasicDigitalTwin>(regId).ConfigureAwait(false);
+
+                // Check to make sure it is of the correct model type
+                if (StringComparer.OrdinalIgnoreCase.Equals(dtmi, existingDt.Metadata.ModelId))
+                {
+                    log.LogInformation($"DigitalTwin {existingDt.Id} already exists");
+                    return existingDt.Id;
+                }
+
+                // Found DigitalTwin but it is not of the correct model type
+                log.LogInformation($"Found DigitalTwin {existingDt.Id} but it is not of model {dtmi}");
+            }
+            catch(RequestFailedException ex) when (ex.Status == (int)HttpStatusCode.NotFound)
+            {
+                log.LogDebug($"Did not find DigitalTwin {regId}");
+            }
+
+            // Either the DigitalTwin was not found, or we found it but it is of a different model type
+            // Create or replace it with what it needs to be, meaning if it was not found a brand new DigitalTwin will be created
+            // and if it was of a different model, it will replace that existing DigitalTwin
+            // If it was intended to only create the DigitalTwin if there is no matching DigitalTwin with the same Id,
+            // ETag.All could have been used as the ifNonMatch parameter to the CreateOrReplaceDigitalTwinAsync method call.
+            // Read more in the CreateOrReplaceDigitalTwinAsync documentation here:
+            // https://docs.microsoft.com/en-us/dotnet/api/azure.digitaltwins.core.digitaltwinsclient.createorreplacedigitaltwinasync?view=azure-dotnet
+            BasicDigitalTwin dt = await client.CreateOrReplaceDigitalTwinAsync(
+                regId, 
+                new BasicDigitalTwin
+                {
+                    Metadata = { ModelId = dtmi },
+                    Contents = 
+                    {
+                        { "Temperature", 0.0 },
+                        {
+                            "deviceInformation",
+                            new BasicDigitalTwinComponent
+                            {
+                                Metadata = {},
+                                Contents =
+                                {
+                                    { "manufacturer", "MXCHIP" }
+                                }
+                            }
+                        }
+                    }
+                }
+            ).ConfigureAwait(false);
+
+            log.LogInformation($"Digital Twin {dt.Id} created.");
+            return dt.Id;
+        }
+    }
+
+    /// <summary>
+    /// Expected function result format
+    /// </summary>
+    public class ResponseObj
+    {
+        public string iotHubHostName { get; set; }
+        public TwinState initialTwin { get; set; }
+    }
+}
+```
+##### PnP Telemetry to Twin Function #####
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
+using Azure;
+using Azure.Core.Pipeline;
+using Azure.DigitalTwins.Core;
+using Azure.Identity;
+using Microsoft.Azure.EventHubs;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Extensions.Logging;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+namespace Samples.AdtIothub
+{
+    public static class DeviceTelemetryToTwinFunc
+    {
+        private static string adtAppId = "https://digitaltwins.azure.net";
+        private static readonly string adtInstanceUrl = Environment.GetEnvironmentVariable("ADT_SERVICE_URL", EnvironmentVariableTarget.Process);
+        private static readonly HttpClient singletonHttpClientInstance = new HttpClient();
+
+        [FunctionName("DeviceTelemetryToTwinFunc")]
+        public static async Task Run(
+            [EventHubTrigger("deviceevents", Connection = "EVENTHUB_CONNECTIONSTRING")] EventData eventData, ILogger log)
+        {
+            log.LogInformation($"C# function triggered to process a message: {eventData}");
+            log.LogInformation($"C# function triggered to process a message: {Encoding.UTF8.GetString(eventData.Body)}");
+            // Metadata accessed by binding to EventData
+            log.LogInformation($"EnqueuedTimeUtc={eventData.SystemProperties.EnqueuedTimeUtc}");
+            log.LogInformation($"SequenceNumber={eventData.SystemProperties.SequenceNumber}");
+            log.LogInformation($"Offset={eventData.SystemProperties.Offset}");
+
+            //var exceptions = new List<Exception>(events.Length);
+
+            // Create Digital Twin client
+            var cred = new ManagedIdentityCredential(adtAppId);
+            var client = new DigitalTwinsClient(
+                new Uri(adtInstanceUrl),
+                cred,
+                new DigitalTwinsClientOptions
+                {
+                    Transport = new HttpClientTransport(singletonHttpClientInstance)
+                });
+
+            try
+            {
+                log.LogInformation($"EventData: {System.Text.Json.JsonSerializer.Serialize(eventData)}");
+
+                // Get message body
+                string messageBody = Encoding.UTF8.GetString(eventData.Body.Array, eventData.Body.Offset, eventData.Body.Count);
+                log.LogInformation($"MessageBody: {messageBody}");
+
+                // Reading Device ID from message headers
+                JObject jbody = (JObject)JsonConvert.DeserializeObject(messageBody);
+                string deviceId = eventData.SystemProperties["iothub-connection-device-id"].ToString();
+                log.LogInformation($"DeviceId: {deviceId}");
+
+                // Extracting temperature from device telemetry
+                double temperature = Convert.ToDouble(jbody["temperature"].ToString());
+
+                // Update device Temperature property
+                var updateTwinData = new JsonPatchDocument();
+                updateTwinData.AppendReplace("/Temperature", temperature);
+                log.LogInformation($"ADT Patch Document: {updateTwinData.ToString()}");
+                await client.UpdateDigitalTwinAsync(deviceId, updateTwinData);
+
+                log.LogInformation($"Updated Temperature of device Twin {deviceId} to: {temperature}");
+            }
+            catch (Exception e)
+            {
+                // We need to keep processing the rest of the batch - capture this exception and continue.
+               log.LogError(e, "Function error");
+            }
+        }
+    }
+}
+```
+##### PnP Device Auto-Retiring Function #####
+```cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Azure;
+using Azure.Core.Pipeline;
+using Azure.DigitalTwins.Core;
+using Azure.Identity;
+using Microsoft.Azure.EventHubs;
+using Microsoft.Azure.WebJobs;
+using Microsoft.Extensions.Logging;
+
+namespace Samples.AdtIothub
+{
+    public static class DeleteDeviceInTwinFunc
+    {
+        private static string adtAppId = "https://digitaltwins.azure.net";
+        private static readonly string adtInstanceUrl = Environment.GetEnvironmentVariable("ADT_SERVICE_URL", EnvironmentVariableTarget.Process);
+        private static readonly HttpClient singletonHttpClientInstance = new HttpClient();
+
+        [FunctionName("DeleteDeviceInTwinFunc")]
+        public static async Task Run(
+            [EventHubTrigger("lifecycleevents", Connection = "EVENTHUB_CONNECTIONSTRING")] EventData[] events, ILogger log)
+        {
+            var exceptions = new List<Exception>(events.Length);
+
+            // Create Digital Twin client
+            var cred = new ManagedIdentityCredential(adtAppId);
+            var client = new DigitalTwinsClient(
+                new Uri(adtInstanceUrl),
+                cred,
+                new DigitalTwinsClientOptions
+                {
+                    Transport = new HttpClientTransport(singletonHttpClientInstance)
+                });
+
+            foreach (EventData eventData in events)
+            {
+                try
+                {
+                    //log.LogDebug($"EventData: {System.Text.Json.JsonSerializer.Serialize(eventData)}");
+
+                    string opType = eventData.Properties["opType"] as string;
+                    if (opType == "deleteDeviceIdentity")
+                    {
+                        string deviceId = eventData.Properties["deviceId"] as string;
+
+                        try
+                        {
+                            // Find twin based on the original Registration ID
+                            BasicDigitalTwin digitalTwin = await client.GetDigitalTwinAsync<BasicDigitalTwin>(deviceId);
+
+                            // In order to delete the twin, all relationships must first be removed
+                            await DeleteAllRelationshipsAsync(client, digitalTwin.Id, log);
+
+                            // Delete the twin
+                            await client.DeleteDigitalTwinAsync(digitalTwin.Id, digitalTwin.ETag);
+                            log.LogInformation($"Twin {digitalTwin.Id} deleted in DT");
+                        }
+                        catch (RequestFailedException e) when (e.Status == (int)HttpStatusCode.NotFound)
+                        {
+                            log.LogWarning($"Twin {deviceId} not found in DT");
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    // We need to keep processing the rest of the batch - capture this exception and continue.
+                    exceptions.Add(e);
+                }
+            }
+
+            if (exceptions.Count > 1)
+                throw new AggregateException(exceptions);
+
+            if (exceptions.Count == 1)
+                throw exceptions.Single();
+        }
+
+        /// <summary>
+        /// Deletes all outgoing and incoming relationships from a specified digital twin
+        /// </summary>
+        public static async Task DeleteAllRelationshipsAsync(DigitalTwinsClient client, string dtId, ILogger log)
+        {
+            AsyncPageable<BasicRelationship> relationships = client.GetRelationshipsAsync<BasicRelationship>(dtId);
+            await foreach (BasicRelationship relationship in relationships)
+            {
+                await client.DeleteRelationshipAsync(dtId, relationship.Id, relationship.ETag);
+                log.LogInformation($"Twin {dtId} relationship {relationship.Id} deleted in DT");
+            }
+
+            AsyncPageable<IncomingRelationship> incomingRelationships = client.GetIncomingRelationshipsAsync(dtId);
+            await foreach (IncomingRelationship incomingRelationship in incomingRelationships)
+            {
+                await client.DeleteRelationshipAsync(incomingRelationship.SourceId, incomingRelationship.RelationshipId);
+                log.LogInformation($"Twin {dtId} incoming relationship {incomingRelationship.RelationshipId} from {incomingRelationship.SourceId} deleted in DT");
+            }
+        }
+    }
+}
+```
+#### Auto-Provisioning a Simulated PnP Device ####
+![image](https://user-images.githubusercontent.com/1761529/126741050-98ee91d1-aed3-48d4-9b2d-2d3e39787ab2.png)
+#### Provisioning a Physical PnP Device ####
+![20210723_143419](https://user-images.githubusercontent.com/1761529/126741223-2aece734-8cf3-4645-8c86-84f253656995.jpg)
+#### Verifying PnP Telemetry in ADT ####
+#### Auto-Retiring PnP Devices ####
+![image](https://user-images.githubusercontent.com/1761529/126741148-e32ee60f-8018-44ca-b21d-8c4d7084f704.png)
 ### AnyLogic Simulation ###
 #### Creating An AnyLogic Simulation ####
+![image](https://user-images.githubusercontent.com/1761529/126741509-cf675124-da8a-4429-b766-df7961304bfe.png)
+![image](https://user-images.githubusercontent.com/1761529/126746438-32286441-8764-407c-99cc-c3d71f2c161a.png)
+![image](https://user-images.githubusercontent.com/1761529/126746510-6719d66d-0936-4c1d-8554-047960a6f879.png)
 #### Preparing The AnyLogic Simulation For Bonsai ####
+![image](https://user-images.githubusercontent.com/1761529/126746628-0d08b23a-9908-42b6-abc4-84e9f82e05c9.png)
 #### Attaching AnyLogic Telemetry By Querying ADT ####
+![image](https://user-images.githubusercontent.com/1761529/126746710-f46365e5-986d-48cd-b051-aa91b73ee38d.png)
 ### Databricks Simulation ###
 #### Creating a Databricks simulation ####
 #### Preparing the Databricks simulation for Bonsai ####
