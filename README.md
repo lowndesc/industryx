@@ -102,7 +102,7 @@ az deployment group create --resource-group <<your-sandbox-name>> --template-uri
 2. Navigate to your sandbox resource group within the Azure Portal. You should see two resources similar to this image ![image](https://user-images.githubusercontent.com/1761529/125631131-6d02ef16-9057-406a-aaa4-e1d6bc44f177.png)  
 ### IoT Devices ###
 #### Simulating Telemetry ####
-For our sandbox, we will first create 3 simulated devices, each transmitting the same range of telemetry on a schedule, using randomisation to vary the values transmitted and the scheduling.
+For our sandbox, we will first create code-based 3 simulated devices, each transmitting the same range of telemetry on a schedule, using randomisation to vary the values transmitted and the scheduling.
 #### Creating Simulated Devices ####
 To create the simulated devices, follow these steps:
 1. Navigate to your IoT Hub instance
