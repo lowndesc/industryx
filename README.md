@@ -68,7 +68,7 @@ In this tutorial, you will create a sandbox environment in which you can further
 - Apply the Bonsai Brain to a digital twin 
 
 Before you begin, you may want to clone this entire repository to your local machine, to make some of the steps below more straightforward.
-
+This is a collaborative tutorial and sample. Please use the Issues feature of Github to notify others and get help if you run into issues with the instructions or and of the code samples. Issues can be addresses by anyone on the team. Please feel free to submit improvements to the repository, but please document any changes.
 ### Prerequisites ###
 - An Avanade or Accenture domain account
 - Authorization to create a sandbox obtained from chris.lowndes@avanade.com
