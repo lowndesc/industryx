@@ -55,6 +55,7 @@ In this tutorial, you will create a sandbox environment in which you can further
 - Create Simulated IoT Devices
 - Create an Azure Digital Twins instance
 - Learn to use the Manufacturing Ontology to create digital twins for a typical Manufacturer
+- Use Azure Functions to synchronise data between components
 - Auto-Provision Simulated Plug-and-Play IoT Devices
 - Auto-Provision Physical Plug-and-Play IoT Devices (in this case, an MXCHIP AZ3166 multi-sensor device)
 - Auto-Retire IoT Devices
