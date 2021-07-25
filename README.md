@@ -26,12 +26,12 @@
 	2. [Subscribing to events](#subscribing-to-events)
 	3. [Deploying functions](#deploying-functions)
 8. [Plug-and-Play IoT Devices](#plug-and-play-iot-devices)  
-	1. PnP IoT and ADT Architecture
-	2. Deploying PnP Functions
-	3. Auto-Provisioning a Simulated PnP Device
-	4. Provisioning a Physical PnP Device
-	5. Verifying PnP Telemetry in ADT
-	6. Auto-Retiring PnP Devices
+	1. [PnP IoT and ADT Architecture](#pnp-iot-and-adt-architecture)
+	2. [Deploying PnP Functions](#deploying-pnp-functions)
+	3. [Auto-Provisioning a Simulated PnP Device](#auto-provisioning-a-simulated-pnp-device)
+	4. [Provisioning a Physical PnP Device](#provisioning-a-physical-pnp-device)
+	5. [Verifying PnP Telemetry in ADT](#verifying-pnp-telemetry-in-adt)
+	6. [Auto-Retiring PnP Devices](#auto-retiring-pnp-devices)
 9. [AnyLogic Simulation](#anylogic-simulation)
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
