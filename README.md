@@ -49,7 +49,21 @@
 	7. [Other scenarios for using the trained brain](#other-scenarios-for-using-the-trained-brain)
 
 ### Overview ###
->Because we do not have access to production IoT devices, we will be using simulated devices to create the IoT telemetry for our sandbox environment. These are independent code functions which run within Azure Containers, emulating physical devices, which are registered with an IoT Hub.
+In this tutorial, you will create a sandbox environment in which you can further explore the architectural components of a specific Azure IoT architecture aimed at teaching AI through digital twin simulation. You will be completing the following tasks:  
+- Create an Azure IoT Hub
+- Use Azure IoT Explorer to register IoT devices
+- Create Simulated IoT Devices
+- Create an Azure Digital Twins instance
+- Learn to use the Manufacturing Ontology to create digital twins for a typical Manufacturer
+- Auto-Provision Simulated Plug-and-Play IoT Devices
+- Auto-Provision Physical Plug-and-Play IoT Devices (in this case, an MXCHIP AZ3166 multi-sensor device)
+- Auto-Retire IoT Devices
+- Create an AnyLogic Simulation
+- Create a Databricks Simulation
+- Extend Simulations to integrate with Microsoft Bonsai
+- Use Bonsai to teach an AI 'Brain' from a Simulation
+- Apply the Bonsai Brain to a Simulation for verification 
+- Apply the Bonsai Brain to a digital twin 
 
 Before you begin, you may want to clone this entire repository to your local machine, to make some of the steps below more straightforward.
 
