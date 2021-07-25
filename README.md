@@ -1,7 +1,8 @@
 # Industry X Sandbox #
 ## Azure IoT, PnP, Azure Digital Twins and Bonsai Simulation Teaching ##
 ### Summary ###
-1. [Create Sandbox Resource Group](#create-sandbox-resource-group)
+1. [Overview](#Overview)
+2. [Create Sandbox Resource Group](#create-sandbox-resource-group)
 	1. [Access Azure Cloud Shell](#access-azure-cloud-shell)
 	2. [Creating Your Sandbox Resource Group](#creating-your-sandbox-resource-group)
 2. [Azure IoT Hub Instance](#azure-iot-hub-instance)
@@ -47,6 +48,7 @@
 	6. [Running a simulation using the brain](#running-a-simulation-using-the-brain)
 	7. [Other scenarios for using the trained brain](#other-scenarios-for-using-the-trained-brain)
 
+### Overview ###
 >Because we do not have access to production IoT devices, we will be using simulated devices to create the IoT telemetry for our sandbox environment. These are independent code functions which run within Azure Containers, emulating physical devices, which are registered with an IoT Hub.
 
 Before you begin, you may want to clone this entire repository to your local machine, to make some of the steps below more straightforward.
