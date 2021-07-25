@@ -1,18 +1,19 @@
 # Industry X Sandbox #
 ## Azure IoT, PnP, Azure Digital Twins and Bonsai Simulation Teaching ##
 ### Summary ###
-1. [Overview](#Overview)
-2. [Create Sandbox Resource Group](#create-sandbox-resource-group)
+1. [Overview](#overview)
+2. [Prerequisites](#prerequisites)
+3. [Create Sandbox Resource Group](#create-sandbox-resource-group)
 	1. [Access Azure Cloud Shell](#access-azure-cloud-shell)
 	2. [Creating Your Sandbox Resource Group](#creating-your-sandbox-resource-group)
-2. [Azure IoT Hub Instance](#azure-iot-hub-instance)
+4. [Azure IoT Hub Instance](#azure-iot-hub-instance)
 	1. [Creating an IoT Hub](#creating-an-iot-hub)
-3. [Simulated IoT Devices](#iot-devices)
+5. [Simulated IoT Devices](#iot-devices)
 	1. [Simulating telemetry](#simulating-telemetry)
 	2. [Creating simulated devices](#creating-simulated-devices)
 	3. [Connecting devices to the hub](#connecting-devices-to-the-hub)
 	4. [Running simulated devices](#running-simulated-devices)
-4. [Azure Digital Twins Instance](#azure-digital-twins-instance)
+6. [Azure Digital Twins Instance](#azure-digital-twins-instance)
 	1. [ADT Modelling](#adt-modelling)
 	2. [Manufacturing Ontology](#manufacturing-ontology)
 	3. [Creating the ADT Instance](#creating-the-adt-instance)
@@ -20,26 +21,26 @@
 	5. [Creating an asset twin](#creating-an-asset-twin)
 	6. [Creating a process twin](#creating-a-process-twin)
 	7. [Updating a twin](#updating-a-twin)
-5. [Azure TwinSync Functions](#azure-twinsync-functions)
+7. [Azure TwinSync Functions](#azure-twinsync-functions)
 	1. [Using Azure Functions for TwinSync](#using-azure-functions-for-twinsync)
 	2. [Subscribing to events](#subscribing-to-events)
 	3. [Deploying functions](#deploying-functions)
-6. [Plug-and-Play IoT Devices](#plug-and-play-iot-devices)  
+8. [Plug-and-Play IoT Devices](#plug-and-play-iot-devices)  
 	1. PnP IoT and ADT Architecture
 	2. Deploying PnP Functions
 	3. Auto-Provisioning a Simulated PnP Device
 	4. Provisioning a Physical PnP Device
 	5. Verifying PnP Telemetry in ADT
 	6. Auto-Retiring PnP Devices
-7. [AnyLogic Simulation](#anylogic-simulation)
+9. [AnyLogic Simulation](#anylogic-simulation)
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
 	3. [Attaching AnyLogic telemetry by querying ADT](#attaching-anylogic-telemetry-by-querying-adt)
-8. [Databricks Simulation](#databricks-simulation)
+10. [Databricks Simulation](#databricks-simulation)
 	1. [Creating a Databricks simulation](#creating-a-databricks-simulation)
 	2. [Preparing the Databricks simulation for Bonsai](#preparing-the-databricks-simulation-for-bonsai)
 	2. [Attaching Databricks telemetry by querying ADT](#attaching-databricks-telemetry-by-querying-adt)
-9. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
+11. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
 	1. [Testing the simulation](#testing-the-simulation)
 	2. [Importing the simulation](#importing-the-simulation)
 	3. [Creating the brain](#creating-the-brain)
@@ -67,6 +68,11 @@ In this tutorial, you will create a sandbox environment in which you can further
 - Apply the Bonsai Brain to a digital twin 
 
 Before you begin, you may want to clone this entire repository to your local machine, to make some of the steps below more straightforward.
+
+### Prerequisites ###
+- An Avanade or Accenture domain account
+- Authorization to create a sandbox obtained from chris.lowndes@avanade.com
+- (Optional) An MXCHIP AZ3166 multi-sensor device 
 
 ### Create Sandbox Resource Group ###
 #### Access Azure Cloud Shell ####
