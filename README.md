@@ -30,8 +30,9 @@
 	2. [Deploying PnP Functions](#deploying-pnp-functions)
 	3. [Auto-Provisioning a Simulated PnP Device](#auto-provisioning-a-simulated-pnp-device)
 	4. [Provisioning a Physical PnP Device](#provisioning-a-physical-pnp-device)
-	5. [Verifying PnP Telemetry in ADT](#verifying-pnp-telemetry-in-adt)
-	6. [Auto-Retiring PnP Devices](#auto-retiring-pnp-devices)
+    5. [Adding EventHubs](#adding-eventhubs)
+	6. [Verifying PnP Telemetry in ADT](#verifying-pnp-telemetry-in-adt)
+	7. [Auto-Retiring PnP Devices](#auto-retiring-pnp-devices)
 9. [AnyLogic Simulation](#anylogic-simulation)
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
@@ -724,9 +725,58 @@ namespace Samples.AdtIothub
 }
 ```
 #### Auto-Provisioning a Simulated PnP Device ####
+The Azure Device Provisioning Service (DPS) for IoT Hub automatically provisions registered devices so that they will communicate with the correct IoT Hub. The DPS can also be customized to do additional tasks. In our case, we will customize it to also create a Twin in Azure Digital Twins for every device provisioned.
+
 ![image](https://user-images.githubusercontent.com/1761529/126741050-98ee91d1-aed3-48d4-9b2d-2d3e39787ab2.png)
+
+1. When the device is freshly manufactured, it is configured to first communicate with the DPS. 
+2. The DPS then validates the device by checking if the device is in the enrollment list.
+3. Custom: If the device is deemed valid, the Azure Function (DpsAdtAllocationFunc) creates a Twin for the device in Azure Digital Twins.
+4. If the device is deemed valid, it is added as a device in the appropriate IoTHub.
+5. The device is given back connection details for the appropriate IoTHub where it will then start sending telemetry data.
+
+ The DPS acts like a 'front desk' in a hotel setting, where it identifies the 'guest' (device) and if the 'guest' has a 'booking' / 'reservation' (enrollment) directs him/her to the appropriate 'room' (IoTHub).
+
+ *** Setting up a DPS ***:
+
+ 1. Create a resource 'Device Provisioning Services'. Provide the appropriate Subscription, Resource Group, Name, and Region. <br>
+![image](https://user-images.githubusercontent.com/12861152/131145432-4f47e3c0-56dd-4a8d-80d8-c9912122fbad.png)
+ 2. Once it is done creating, go to the resource and select 'Linked IoT Hubs'. In here, we will add the IoTHub/s where our devices will be directed to. <br>
+![image](https://user-images.githubusercontent.com/12861152/131146194-afc87d8e-1410-4d51-85df-5e550f8511a0.png)
+ 3. Provide the details of the IoTHub to be added then click 'Save'. <br>
+![image](https://user-images.githubusercontent.com/12861152/131146698-04f699cb-b044-46fd-9835-db3856c088cb.png)
+ 4. Go to 'Manage Enrollments' then select 'Add Individual Enrollment'. In here, we will add an individual device to the enrollment list. <br>
+![image](https://user-images.githubusercontent.com/12861152/131147457-870e2a24-67cb-4b33-9c31-23b9f8af83c3.png)
+ 5. Fill in the details of the enrollment:
+   * Use 'Symmetric Key' and provide a 'Registration ID' for the device. Copy and save the Registration ID since it will be used later when configuring the IoT Device.<br>
+   ![image](https://user-images.githubusercontent.com/12861152/131149482-3d729b04-ac8f-4400-8592-5fe263d91473.png)
+   * Select 'Custom (Use Azure Function)' in assigning devices to hubs, since we will run 'DpsAdtAllocationFunc'. Also make sure the device will be assigned to the correct IoTHub if you have multiple IoTHubs.<br>
+   ![image](https://user-images.githubusercontent.com/12861152/131150120-9634b038-7223-4bff-82cc-b82962c7eef5.png)
+   * Select the provisioned 'DpsAdtAllocationFunc' then save the enrollment.<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131150808-6cac3f2e-50c5-4326-ba52-04fd26594259.png)
+  1. Click on the newly enrolled device then copy and save the 'Primary Key'. This will be used later when configuring the IoT Device.<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131151786-5d791c00-bb06-4083-9822-16fdb967cd2a.png)<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131152229-358a1a22-2661-468f-8ce1-9dfd02feec9d.png)
+  7. Go to 'Overview' then copy and save 'Service Endpoint' and 'ID Scope'. These will also be used in configuring the IoT Device.<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131153247-1627738f-2297-4cc6-91f0-918227be74ae.png)
+
+Next we will be setting up a simulated device that's supposedly freshly manufactured. The simulator can be run on your local machine.<br>
+
+*** Setting up a simulated freshly manufactured device ***:
+  1. Install nodejs on your local machine. https://nodejs.org/en/download/
+  2. The IoT device simulator can be found in ./sandbox/PnPDevices/azure-iot-rpisimulator
+  3. Open index.js and fill in the values saved earlier.<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131158199-7d5378bb-2c41-4afd-94c5-79d98ccb400f.png)<br>
+  * the 'modelId' corresponds to the modelId for in Azure Digital Twins.
+
+*** Testing the DPS ***
+
 #### Provisioning a Physical PnP Device ####
 ![20210723_143419](https://user-images.githubusercontent.com/1761529/126741223-2aece734-8cf3-4645-8c86-84f253656995.jpg)
+
+#### Adding EventHubs ####
+Azure EventHub is a service for ingesting streams of data from various sources including IoT telemetry. 
+
 #### Verifying PnP Telemetry in ADT ####
 #### Auto-Retiring PnP Devices ####
 ![image](https://user-images.githubusercontent.com/1761529/126741148-e32ee60f-8018-44ca-b21d-8c4d7084f704.png)
