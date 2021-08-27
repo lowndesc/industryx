@@ -767,7 +767,7 @@ Next we will be setting up a simulated device that's supposedly freshly manufact
   2. The IoT device simulator can be found in ./sandbox/PnPDevices/azure-iot-rpisimulator
   3. Open index.js and fill in the values saved earlier.<br>
   ![image](https://user-images.githubusercontent.com/12861152/131158199-7d5378bb-2c41-4afd-94c5-79d98ccb400f.png)<br>
-  * the 'modelId' corresponds to the modelId for in Azure Digital Twins.
+  * the 'modelId' corresponds to the MXCHIP AZ3166 multi-sensor device model in Azure Digital Twins. (Don't change it)
 
 *** Testing the DPS ***
 
