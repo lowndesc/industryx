@@ -790,20 +790,48 @@ SELECT * FROM DIGITALTWINS WHERE IS_OF_MODEL('dtmi:azurertos:devkit:gsgmxchip;2'
 npm start
 ```
  * The logs should look like this if successfully run. <br>
- ![image](https://user-images.githubusercontent.com/12861152/131337492-f1034672-9d54-4d49-a21e-3790859c01c8.png)
+ ![image](https://user-images.githubusercontent.com/12861152/131337492-f1034672-9d54-4d49-a21e-3790859c01c8.png) <br>
  * An error message will appear if there is a problem in provisioning. This is usually a problem in the Azure Function configuration and role. <br>
  ![image](https://user-images.githubusercontent.com/12861152/131337954-6c2b2ef7-46b4-4771-90b6-aa5044216495.png)
  * The ff. logs should appear when the simulated device is successfully provisioned and is sending telemetry data to the correct IoTHub. <br>
- ![image](https://user-images.githubusercontent.com/12861152/131338735-967b1449-5086-4135-b3d5-e83804947581.png)
+ ![image](https://user-images.githubusercontent.com/12861152/131338735-967b1449-5086-4135-b3d5-e83804947581.png) <br>
 
   3. Run the query in step 1 again in Azure Digital Twins. The simulated device should now appear in the twin graph. <br>
- ![image](https://user-images.githubusercontent.com/12861152/131339386-3f81ece1-88a7-47af-bbd9-3503a043d877.png)
+ ![image](https://user-images.githubusercontent.com/12861152/131339386-3f81ece1-88a7-47af-bbd9-3503a043d877.png) <br>
 
 #### Provisioning a Physical PnP Device ####
 ![20210723_143419](https://user-images.githubusercontent.com/1761529/126741223-2aece734-8cf3-4645-8c86-84f253656995.jpg)
 
 #### Adding EventHubs ####
-Azure EventHub is a service for ingesting streams of data from various sources including IoT telemetry. 
+Azure EventHub is a service for ingesting streams of data from various sources including IoT telemetry. This data can be used by various consumers for further processing and analysis. In our case, we will be using EventHub to:
+
+1. Send telemetry data to ADT to update twins. This is somewhat similar to TwinSync, except now, telemetry data is coming from EventHub instead of EventGrid.
+2. Delete a device's twin in ADT whenever the device is deleted in IoTHub.
+
+*** Creating an EventHub *** <br>
+
+1. In order to create an event hub, we first need an event hubs namespace. Create a resource named 'Event Hubs' and fill in the appropriate Subscription, Resource Group, Location, and Pricing Tier. Also provide a namespace name. <br>
+![image](https://user-images.githubusercontent.com/12861152/131370727-b00c43b5-b895-485b-b726-8ba690207a35.png) <br>
+2. Once the eventhub namespace is created, we'll need to add a policy so that we can read messages being sent to the EventHubs belonging to this namespace. Go to the resource, select 'Shared access policies', and click 'Add' to add a new SAS Policy. <br>
+![image](https://user-images.githubusercontent.com/12861152/131377947-fca882a7-efea-43cd-8cd9-88611932f094.png) <br>
+3. Provide a name for the policy, then select the 'Listen' checkbox. This allows us to read events coming in to the EventHubs in this namespace. <br>
+![image](https://user-images.githubusercontent.com/12861152/131378048-878a1d88-e8c1-4cc7-958b-56980f0f55dc.png) <br>
+4. Once the SAS policy is created, click it, copy the 'Connection string-primary key', then save this connection string. This is the connection string that will be used by our Azure Functions to read data from the EventHubs. <br>
+![image](https://user-images.githubusercontent.com/12861152/131378594-cecc5cb5-391b-42d4-9768-64e278094db7.png) <br>
+5. Time to finally create an EventHub. Go to 'Event Hubs' then click '+ Event Hub'. <br>
+![image](https://user-images.githubusercontent.com/12861152/131379207-5cf72edf-9e59-4732-9cde-4e976d767b32.png) <br>
+6. Give the EventHub a name then click 'Create'. Make sure this name matches with the EventHub name in the Azure Function EventHubTrigger Attribute. <br>
+![image](https://user-images.githubusercontent.com/12861152/131379644-4f0ced11-a41f-4256-8fb2-ea412adf7ef7.png) <br>
+
+*** Setting up Azure Functions ***
+1. The only thing we need to setup in Azure Functions is the connection string which will give the function read access to EventHubs. In Azure Functions, select 'Configuration'. <br>
+![image](https://user-images.githubusercontent.com/12861152/131380928-da7039e0-9fd9-45eb-9bc2-8c8da8e36820.png) <br>
+2. In here we'll add a new application setting that corresponds to the event hub connection string. <br>
+![image](https://user-images.githubusercontent.com/12861152/131381284-45449b2f-369d-4703-b471-8c29fcf23696.png) <br>
+3. Fill in the name of the application setting and the value of the connection string. The name must match the application setting name being referred to in the code. <br>
+![image](https://user-images.githubusercontent.com/12861152/131381597-2066fca5-6c1e-43c7-a5b9-a2d20701fddb.png)
+4. Click 'OK' then click 'Save' to restart the function app.
+
 
 #### Verifying PnP Telemetry in ADT ####
 #### Auto-Retiring PnP Devices ####
