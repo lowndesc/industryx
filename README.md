@@ -737,7 +737,7 @@ The Azure Device Provisioning Service (DPS) for IoT Hub automatically provisions
 
  The DPS acts like a 'front desk' in a hotel setting, where it identifies the 'guest' (device) and if the 'guest' has a 'booking' / 'reservation' (enrollment) directs him/her to the appropriate 'room' (IoTHub).
 
- *** Setting up a DPS ***:
+ *** Setting up a DPS ***
 
  1. Create a resource 'Device Provisioning Services'. Provide the appropriate Subscription, Resource Group, Name, and Region. <br>
 ![image](https://user-images.githubusercontent.com/12861152/131145432-4f47e3c0-56dd-4a8d-80d8-c9912122fbad.png)
@@ -762,14 +762,42 @@ The Azure Device Provisioning Service (DPS) for IoT Hub automatically provisions
 
 Next we will be setting up a simulated device that's supposedly freshly manufactured. The simulator can be run on your local machine.<br>
 
-*** Setting up a simulated freshly manufactured device ***:
+*** Setting up a simulated freshly manufactured device ***
   1. Install nodejs on your local machine. https://nodejs.org/en/download/
-  2. The IoT device simulator can be found in ./sandbox/PnPDevices/azure-iot-rpisimulator
+  2. The IoT device simulator can be found in 
+  > ./sandbox/PnPDevices/azure-iot-rpisimulator
   3. Open index.js and fill in the values saved earlier.<br>
   ![image](https://user-images.githubusercontent.com/12861152/131158199-7d5378bb-2c41-4afd-94c5-79d98ccb400f.png)<br>
-  * the 'modelId' corresponds to the MXCHIP AZ3166 multi-sensor device model in Azure Digital Twins. (Don't change it)
+  * insert the 'Service Endpoint' in 'provisioningHost'
+  * insert the 'ID Scope' in 'idScope'
+  * insert the device's registration id in 'registrationId'
+  * insert the primary symmetric key for the device in 'symmetricKey'
+  * the 'modelId' corresponds to the MXCHIP AZ3166 multi-sensor device model in Azure Digital Twins. (don't change it)
+  4. Run the ff. command in the IoT device simulator directory:
+```zsh
+npm install
+```
 
 *** Testing the DPS ***
+  1. Open Azure Digital Twins and run this query.
+```sql
+SELECT * FROM DIGITALTWINS WHERE IS_OF_MODEL('dtmi:azurertos:devkit:gsgmxchip;2')
+```
+ * Currently, only one MXCHIP AZ3166 named 'PnP-Sensors' has an existing twin. This was the one imported to ADT [earlier](#creating-an-asset-twin).<br>
+    ![image](https://user-images.githubusercontent.com/12861152/131300892-b012282a-0400-4f8f-b4e6-ee80535389fe.png)
+  2. Run the simulator using the ff. command:
+```zsh
+npm start
+```
+ * The logs should look like this if successfully run. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131337492-f1034672-9d54-4d49-a21e-3790859c01c8.png)
+ * An error message will appear if there is a problem in provisioning. This is usually a problem in the Azure Function configuration and role. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131337954-6c2b2ef7-46b4-4771-90b6-aa5044216495.png)
+ * The ff. logs should appear when the simulated device is successfully provisioned and is sending telemetry data to the correct IoTHub. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131338735-967b1449-5086-4135-b3d5-e83804947581.png)
+
+  3. Run the query in step 1 again in Azure Digital Twins. The simulated device should now appear in the twin graph. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131339386-3f81ece1-88a7-47af-bbd9-3503a043d877.png)
 
 #### Provisioning a Physical PnP Device ####
 ![20210723_143419](https://user-images.githubusercontent.com/1761529/126741223-2aece734-8cf3-4645-8c86-84f253656995.jpg)
