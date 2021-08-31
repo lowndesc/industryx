@@ -853,7 +853,7 @@ In IoTHub, we need to route messages towards the appropriate EventHub. To do thi
 
 #### Verifying PnP Telemetry in ADT ####
 We can verify that we are updating our twin using the telemetry data from the simulated device. In ADT, we can see that our provisioned device initially has 0 for the value of temperature. <br>
-![image](https://user-images.githubusercontent.com/12861152/131546687-66e9c48b-1425-44ba-8135-eadb06d8cd66.png) <br>
+![image](https://user-images.githubusercontent.com/12861152/131551289-25b17941-f3ac-434d-8d62-0d687cdce3cd.png) <br>
 
 After running the simulated device, we should get the following logs for 'DeviceTelemetryToTwinFunc' (enable 'Application Insights' to see function logs). We should see that the temperature is being set to the value 2195. <br>
 ![image](https://user-images.githubusercontent.com/12861152/131547618-8dc98713-b6b0-46b2-9acc-36ac16af806f.png) <br>
