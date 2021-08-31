@@ -837,16 +837,19 @@ In the following steps, we'll be showing how to setup an event hub for use case 
 4. Click 'OK' then click 'Save' to restart the function app. <br>
 
 *** Setting up IoTHub *** <br>
-There are different ways we can configure IoTHub to send data to EventHubs: message routing and event subscriptions.
+In IoTHub, we need to route messages towards the appropriate EventHub. To do this, we'll use IoTHub's built-in message routing.
 
- In this approach, we'll use Event Subscriptions.
-
- 1. Go to the IoTHub instance, click on 'Events', and click '+ Event Subscription'. <br>
- ![image](https://user-images.githubusercontent.com/12861152/131436669-4ea506e1-8b13-456d-817e-1298954d85c0.png) <br>
- 2. Provide a name for the subscription, a topic name (if it's not yet created), and the event type. For DeviceTelemetryToTwinFunc, make sure only 'Device Telemetry' is checked. For DeleteDeviceInTwinFunc, make sure only 'Device Deleted' event is checked.<br>
- ![image](https://user-images.githubusercontent.com/12861152/131438935-28141966-4357-4d7e-851b-001a33a64b78.png) <br>
- 3. In Endpoint Details, select 'Event Hubs' as endpoint type then select the appropriate EventHub name for the endpoint (in this case, 'deviceevents' for DeviceTelemetryToTwinFunc). Click 'Create'. <br>
- ![image](https://user-images.githubusercontent.com/12861152/131439284-957e32b3-dbd0-49d3-bee6-f936fbe01263.png) <br>
+ 1. Go to the IoTHub instance, click on 'Message Routing' and select 'Custom Endpoints'. In here we will add our EventHubs as custom endpoints where messages will be sent. Click '+Add' and select 'Event hubs'. <br>
+![image](https://user-images.githubusercontent.com/12861152/131543132-4d609a02-3b6e-4961-a2f0-ef274391caf1.png) <br>
+ 2. Provide a name for the custom endpoint and specify the EventHub namespace and instance. (do the same for 'lifecycleevents')<br>
+ ![image](https://user-images.githubusercontent.com/12861152/131542680-4364f6d8-0a4d-41d5-9f88-3dc0d737d77e.png) <br>
+ 3. Go to 'Routes' and click on '+ Add'. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131543313-f6d3cb5a-347b-4841-85b3-d7887cd988b1.png)<br>
+ 4. Provide a name for the route and specify appropriate custom endpoint and data source. (for lifecycleevents, select 'Device Lifecycle Events') <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131543613-0be134bd-03e4-4437-b51d-8d1c94ec8e8c.png)<br>
+   * You could also specify a routing query which will filter the messages being routed. For both 'deviceevents' and 'lifecycleevents', we'll just use the default query 'true'. This means no filter will be applied and all messages will be routed. <br>
+   ![image](https://user-images.githubusercontent.com/12861152/131544711-fae8aa73-3394-494d-98cd-97abad188550.png)
+ 5. Click 'Save'.
 
 
 
