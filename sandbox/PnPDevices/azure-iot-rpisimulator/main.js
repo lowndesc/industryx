@@ -60,6 +60,8 @@ exports.run = async({provisioningHost, idScope, registrationId, symmetricKey, mo
           let data = await IO.readSensorData();
           data.deviceId = deviceId;
           let message = new Message(JSON.stringify(data));
+          message.contentType = 'application/json';
+          message.contentEncoding = 'UTF-8';
 
           client.sendEvent(message, function (err) {
             if (err) {
