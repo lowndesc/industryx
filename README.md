@@ -858,10 +858,20 @@ We can verify that we are updating our twin using the telemetry data from the si
 After running the simulated device, we should get the following logs for 'DeviceTelemetryToTwinFunc' (enable 'Application Insights' to see function logs). We should see that the temperature is being set to the value 2195. <br>
 ![image](https://user-images.githubusercontent.com/12861152/131547618-8dc98713-b6b0-46b2-9acc-36ac16af806f.png) <br>
 Upon reloading the query in ADT, we can see that the value for temperature of the twin is also updated. <br>
-![image](https://user-images.githubusercontent.com/12861152/131547637-660b57a8-3f45-4a31-8c2b-6eac1171970a.png)
+![image](https://user-images.githubusercontent.com/12861152/131547637-660b57a8-3f45-4a31-8c2b-6eac1171970a.png) <br>
 
 #### Auto-Retiring PnP Devices ####
-![image](https://user-images.githubusercontent.com/1761529/126741148-e32ee60f-8018-44ca-b21d-8c4d7084f704.png)
+![image](https://user-images.githubusercontent.com/1761529/126741148-e32ee60f-8018-44ca-b21d-8c4d7084f704.png) <br>
+
+Given that we've already [added an EventHub for 'lifecycleevents'](#adding-eventhubs), we can now perform auto-retiring on the simulated device, i.e., when a device is deleted in IoTHub, its twin in ADT should also be deleted. To test this, we'll simply delete our provisioned simulated device from IoTHub. <br>
+![image](https://user-images.githubusercontent.com/12861152/131549073-4a807e40-08fe-4165-acba-11a984168a1a.png) <br>
+
+We can verify in the DeleteDeviceInTwinFunc function logs that deletion on ADT was performed.
+ <br>
+![image](https://user-images.githubusercontent.com/12861152/131550231-dcd1fe85-4a04-4c79-b3d5-4af148c5ed9d.png) <br>
+
+We can also verify in ADT that our simulated device's twin no longer exists. <br>
+![image](https://user-images.githubusercontent.com/12861152/131550681-bb6d92da-15dc-449f-8254-bb33e1d46ce6.png) <br>
 ### AnyLogic Simulation ###
 #### Creating An AnyLogic Simulation ####
 ![image](https://user-images.githubusercontent.com/1761529/126741509-cf675124-da8a-4429-b766-df7961304bfe.png)
