@@ -805,10 +805,12 @@ npm start
 #### Adding EventHubs ####
 Azure EventHub is a service for ingesting streams of data from various sources including IoT telemetry. This data can be used by various consumers for further processing and analysis. In our case, we will be using EventHub to:
 
-1. Send telemetry data to ADT to update twins. This is somewhat similar to TwinSync, except now, telemetry data is coming from EventHub instead of EventGrid.
-2. Delete a device's twin in ADT whenever the device is deleted in IoTHub.
+1. Send telemetry data to ADT to update twins (DeviceTelemetryToTwinFunc). This is somewhat similar to TwinSync, except now, telemetry data is coming from EventHub instead of EventGrid.
+2. Delete a device's twin in ADT whenever the device is deleted in IoTHub (DeleteDeviceInTwinFunc).
 
-*** Creating an EventHub *** <br>
+In the following steps, we'll be showing how to setup an event hub for use case 1, i.e., for the DeviceTelemetryToTwinFunc function. You can use the same steps for setting up use case 2 (DeleteDeviceInTwinFunc).
+
+*** Creating an EventHub Namespace *** <br>
 
 1. In order to create an event hub, we first need an event hubs namespace. Create a resource named 'Event Hubs' and fill in the appropriate Subscription, Resource Group, Location, and Pricing Tier. Also provide a namespace name. <br>
 ![image](https://user-images.githubusercontent.com/12861152/131370727-b00c43b5-b895-485b-b726-8ba690207a35.png) <br>
@@ -818,19 +820,35 @@ Azure EventHub is a service for ingesting streams of data from various sources i
 ![image](https://user-images.githubusercontent.com/12861152/131378048-878a1d88-e8c1-4cc7-958b-56980f0f55dc.png) <br>
 4. Once the SAS policy is created, click it, copy the 'Connection string-primary key', then save this connection string. This is the connection string that will be used by our Azure Functions to read data from the EventHubs. <br>
 ![image](https://user-images.githubusercontent.com/12861152/131378594-cecc5cb5-391b-42d4-9768-64e278094db7.png) <br>
-5. Time to finally create an EventHub. Go to 'Event Hubs' then click '+ Event Hub'. <br>
+
+*** Creating an EventHub *** <br>
+1. Go to 'Event Hubs' then click '+ Event Hub'. <br>
 ![image](https://user-images.githubusercontent.com/12861152/131379207-5cf72edf-9e59-4732-9cde-4e976d767b32.png) <br>
-6. Give the EventHub a name then click 'Create'. Make sure this name matches with the EventHub name in the Azure Function EventHubTrigger Attribute. <br>
+2. Give the EventHub a name then click 'Create'. Make sure this name matches with the EventHub name in the Azure Function EventHubTrigger Attribute. <br>
 ![image](https://user-images.githubusercontent.com/12861152/131379644-4f0ced11-a41f-4256-8fb2-ea412adf7ef7.png) <br>
 
-*** Setting up Azure Functions ***
+*** Setting up Azure Functions *** <br>
 1. The only thing we need to setup in Azure Functions is the connection string which will give the function read access to EventHubs. In Azure Functions, select 'Configuration'. <br>
 ![image](https://user-images.githubusercontent.com/12861152/131380928-da7039e0-9fd9-45eb-9bc2-8c8da8e36820.png) <br>
 2. In here we'll add a new application setting that corresponds to the event hub connection string. <br>
 ![image](https://user-images.githubusercontent.com/12861152/131381284-45449b2f-369d-4703-b471-8c29fcf23696.png) <br>
 3. Fill in the name of the application setting and the value of the connection string. The name must match the application setting name being referred to in the code. <br>
-![image](https://user-images.githubusercontent.com/12861152/131381597-2066fca5-6c1e-43c7-a5b9-a2d20701fddb.png)
-4. Click 'OK' then click 'Save' to restart the function app.
+![image](https://user-images.githubusercontent.com/12861152/131381597-2066fca5-6c1e-43c7-a5b9-a2d20701fddb.png) <br>
+4. Click 'OK' then click 'Save' to restart the function app. <br>
+
+*** Setting up IoTHub *** <br>
+There are different ways we can configure IoTHub to send data to EventHubs: message routing and event subscriptions.
+
+ In this approach, we'll use Event Subscriptions.
+
+ 1. Go to the IoTHub instance, click on 'Events', and click '+ Event Subscription'. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131436669-4ea506e1-8b13-456d-817e-1298954d85c0.png) <br>
+ 2. Provide a name for the subscription, a topic name (if it's not yet created), and the event type. For DeviceTelemetryToTwinFunc, make sure only 'Device Telemetry' is checked. For DeleteDeviceInTwinFunc, make sure only 'Device Deleted' event is checked.<br>
+ ![image](https://user-images.githubusercontent.com/12861152/131438935-28141966-4357-4d7e-851b-001a33a64b78.png) <br>
+ 3. In Endpoint Details, select 'Event Hubs' as endpoint type then select the appropriate EventHub name for the endpoint (in this case, 'deviceevents' for DeviceTelemetryToTwinFunc). Click 'Create'. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131439284-957e32b3-dbd0-49d3-bee6-f936fbe01263.png) <br>
+
+
 
 
 #### Verifying PnP Telemetry in ADT ####
