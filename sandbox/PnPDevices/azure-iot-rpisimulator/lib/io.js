@@ -10,6 +10,7 @@ exports.readSensorData = async () => {
     "wait": "33346",
     "delay": "43054",
     "arrivalRate": "113",
+    "Counter": "12",
   };
 
   return data;
