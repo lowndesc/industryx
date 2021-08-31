@@ -849,19 +849,26 @@ In IoTHub, we need to route messages towards the appropriate EventHub. To do thi
  ![image](https://user-images.githubusercontent.com/12861152/131543613-0be134bd-03e4-4437-b51d-8d1c94ec8e8c.png)<br>
    * You could also specify a routing query which will filter the messages being routed. For both 'deviceevents' and 'lifecycleevents', we'll just use the default query 'true'. This means no filter will be applied and all messages will be routed. <br>
    ![image](https://user-images.githubusercontent.com/12861152/131544711-fae8aa73-3394-494d-98cd-97abad188550.png)
- 5. Click 'Save'.
-
-
-
+ 5. Click 'Save'. <br>
 
 #### Verifying PnP Telemetry in ADT ####
+We can verify that we are updating our twin using the telemetry data from the simulated device. In ADT, we can see that our provisioned device initially has 0 for the value of temperature. <br>
+![image](https://user-images.githubusercontent.com/12861152/131546687-66e9c48b-1425-44ba-8135-eadb06d8cd66.png) <br>
+
+After running the simulated device, we should get the following logs for 'DeviceTelemetryToTwinFunc' (enable 'Application Insights' to see function logs). We should see that the temperature is being set to the value 2195. <br>
+![image](https://user-images.githubusercontent.com/12861152/131547618-8dc98713-b6b0-46b2-9acc-36ac16af806f.png) <br>
+Upon reloading the query in ADT, we can see that the value for temperature of the twin is also updated. <br>
+![image](https://user-images.githubusercontent.com/12861152/131547637-660b57a8-3f45-4a31-8c2b-6eac1171970a.png)
+
 #### Auto-Retiring PnP Devices ####
 ![image](https://user-images.githubusercontent.com/1761529/126741148-e32ee60f-8018-44ca-b21d-8c4d7084f704.png)
 ### AnyLogic Simulation ###
 #### Creating An AnyLogic Simulation ####
 ![image](https://user-images.githubusercontent.com/1761529/126741509-cf675124-da8a-4429-b766-df7961304bfe.png)
 ![image](https://user-images.githubusercontent.com/1761529/126746438-32286441-8764-407c-99cc-c3d71f2c161a.png)
-![image](https://user-images.githubusercontent.com/1761529/126746510-6719d66d-0936-4c1d-8554-047960a6f879.png)
+![image](https://user-images.githubusercontent.com/1761529/126746510-6719d66d-0936-4c1d-8554-047960a6f879.png) <br>
+
+
 #### Preparing The AnyLogic Simulation For Bonsai ####
 ![image](https://user-images.githubusercontent.com/1761529/126746628-0d08b23a-9908-42b6-abc4-84e9f82e05c9.png)
 #### Attaching AnyLogic Telemetry By Querying ADT ####
