@@ -217,7 +217,7 @@ To update a twin once it is created, you can either use the tools within the Azu
 Here, we will explain how to use the tools in Azure Digital Twins Explorer to make a simple change to an existing twin. Execute the following steps:
 1. In Azure Digital Twins Explorer, run the following SQL Query to return only assets and their relationships:
 ```sql
-SELECT * FROM DIGITAL TWINS WHERE IS_OF_MODEL('dtmi:isa95:core:Asset;1')
+SELECT * FROM DIGITALTWINS WHERE IS_OF_MODEL('dtmi:isa95:core:Asset;1')
 ```
 2. In the results view, find and click on the node for our simulated device 'sim000001'
 3. Notice in the PROPERTIES panel on the right-hand side, there is a Property of the 'sim000001' twin called 'Name' for which the value is 'undefined'
