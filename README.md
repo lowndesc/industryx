@@ -740,20 +740,10 @@ namespace Samples.AdtIothub
 #### Attaching AnyLogic Telemetry By Querying ADT ####
 ![image](https://user-images.githubusercontent.com/1761529/126746710-f46365e5-986d-48cd-b051-aa91b73ee38d.png)
 ### Databricks Simulation ###
-#### Creating a Databricks simulation ####
+#### Attaching ADT telemetry to a Databricks Notebook by querying ADT ####
 1. Create a Databricks workspace
-2. Add an Interface document to the Databricks Workspace
-3. Create a new Cluster
-4. Add Environment Variables to the Cluster
-5. Start the Cluster
-6. Create a new Simulation Notebook
-7. Attach the Notebook to the Cluster
-8. Add the following cells to the Notebook
-9. Execute each cell until the Simulation is registered with Microsoft Bonsai
-10. Create a new Brain in Microsoft Bonsai
-11. Add Inkling code to the new Brain
-12. Train the Brain using the registered Databricks Simulation
-13. Observe the Brain as teaching takes place
+2. Create a new Python Notebook
+3. Add the following cells to the Notebook
 ```zsh
 %pip install azure-digitaltwins-core azure-identity
 ```
@@ -791,8 +781,30 @@ print('DigitalTwins:')
 for twin in query_result:
     print(twin)
 ```
+```python
+# Query ADT for the Process Delay telemetry for the Coating Station
+import time
+query_expression = 'SELECT Device.Delay FROM DigitalTwins Device WHERE $dtId=\'sim000001\''
+txt = '{}:{}'
+for x in range(49):
+  query_result = service_client.query_twins(query_expression)
+  for value in query_result:
+    print(txt.format(x,value))
+    time.sleep(5)
+```
+3. Create a new Cluster
+4. Add ADT Environment Variables to the Cluster
+5. Start the Cluster
+6. Attach the Notebook to the Cluster
+8. Execute each cell until you see ADT telemetry streaming
+#### Creating a Databricks simulation ####
+2. Add an Interface document to the Databricks Workspace
+4. Add the following cells to the Notebook
+10. Create a new Brain in Microsoft Bonsai
+11. Add Inkling code to the new Brain
+12. Train the Brain using the registered Databricks Simulation
+13. Observe the Brain as teaching takes place
 #### Preparing the Databricks simulation for Bonsai ####
-#### Attaching Databricks telemetry by querying ADT ####
 ### Microsoft Bonsai Teaching ###
 #### Testing The Simulation ####
 #### Importing The Simulation ####
