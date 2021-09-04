@@ -741,6 +741,19 @@ namespace Samples.AdtIothub
 ![image](https://user-images.githubusercontent.com/1761529/126746710-f46365e5-986d-48cd-b051-aa91b73ee38d.png)
 ### Databricks Simulation ###
 #### Creating a Databricks simulation ####
+1. Create a Databricks workspace
+2. Add an Interface document to the Databricks Workspace
+3. Create a new Cluster
+4. Add Environment Variables to the Cluster
+5. Start the Cluster
+6. Create a new Simulation Notebook
+7. Attach the Notebook to the Cluster
+8. Add the following cells to the Notebook
+9. Execute each cell until the Simulation is registered with Microsoft Bonsai
+10. Create a new Brain in Microsoft Bonsai
+11. Add Inkling code to the new Brain
+12. Train the Brain using the registered Databricks Simulation
+13. Observe the Brain as teaching takes place
 ```zsh
 %pip install azure-digitaltwins-core azure-identity
 ```
