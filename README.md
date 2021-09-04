@@ -794,10 +794,16 @@ for x in range(49):
     print(txt.format(x,value))
     time.sleep(5)
 ```
-3. Create a new Cluster
-4. Add ADT Environment Variables to the Cluster
-5. Start the Cluster
-6. Attach the Notebook to the Cluster
+6. Create a new Cluster
+7. Add ADT Environment Variables to the Cluster
+```zsh
+AZURE_ADT_URL=<The URL for your ADT in Azure, including 'https://'>
+AZURE_TENANT_ID=<The tenant ID of your Azure Active Directory>
+AZURE_CLIENT_ID=<The application (client) ID registered in the AAD tenant>
+AZURE_CLIENT_SECRET=<The client secret for the registered application>
+```
+6. Start the Cluster
+7. Attach the Notebook to the Cluster
 8. Execute each cell until you see ADT telemetry streaming
 #### Creating a Databricks simulation ####
 2. Add an Interface document to the Databricks Workspace
