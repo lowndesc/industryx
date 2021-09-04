@@ -825,8 +825,8 @@ SIM_ACCESS_KEY=<the access key from your Bonsai workspace>
 ```
 2. Add the following codeblock to the Notebook in a new cell. This codeblock checks that the path to the Interface document is correct.
 ```python
-interface_file_path = "/dbfs/FileStore/tables/cartpole-py/cartpole_interface.json"
-display(dbutils.fs.ls("/FileStore/tables/cartpole-py/cartpole_interface.json"))
+interface_file_path = "/FileStore/tables/cartpole-py/cartpole_interface.json"
+display(dbutils.fs.ls("dbfs:" + interface_file_path))
 ```
 3. Add the following codeblock to the Notebook in a new cell. This codeblock is the Python simulation. It includes code which registers the simulation 
 ```python
@@ -951,9 +951,8 @@ class CartPoleModel(SimulatorSession):
         return self.state()
 
     def get_interface(self) -> SimulatorInterface:
-        interface_file_path = "/dbfs/FileStore/tables/cartpole-py/cartpole_interface.json"
-        with open(interface_file_path, "r") as file:
-            json_interface = file.read()
+        with open("/dbfs" + interface_file_path, "r") as file:
+	    json_interface = file.read()
         interface = json.loads(json_interface)
         return SimulatorInterface(
             name=interface["name"],
