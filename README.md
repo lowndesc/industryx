@@ -37,9 +37,9 @@
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
 	3. [Attaching AnyLogic telemetry by querying ADT](#attaching-anylogic-telemetry-by-querying-adt)
 10. [Databricks Simulation](#databricks-simulation)
-	1. [Creating a Databricks simulation](#creating-a-databricks-simulation)
-	2. [Preparing the Databricks simulation for Bonsai](#preparing-the-databricks-simulation-for-bonsai)
-	2. [Attaching Databricks telemetry by querying ADT](#attaching-databricks-telemetry-by-querying-adt)
+	1. [Attaching ADT telemetry to a Databricks Notebook](#attaching-adt-telemetry-to-a-databricks-notebook)
+	2. [Creating a Databricks simulation](#creating-a-databricks-simulation)
+	3. [Preparing the Databricks simulation for Bonsai](#preparing-the-databricks-simulation-for-bonsai)
 11. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
 	1. [Testing the simulation](#testing-the-simulation)
 	2. [Importing the simulation](#importing-the-simulation)
@@ -740,14 +740,14 @@ namespace Samples.AdtIothub
 #### Attaching AnyLogic Telemetry By Querying ADT ####
 ![image](https://user-images.githubusercontent.com/1761529/126746710-f46365e5-986d-48cd-b051-aa91b73ee38d.png)
 ### Databricks Simulation ###
-#### Attaching ADT telemetry to a Databricks Notebook by querying ADT ####
+#### Attaching ADT telemetry to a Databricks Notebook ####
 1. Create a Databricks workspace
 2. Create a new Python Notebook
 3. Add the following codeblock in a new cell in the Notebook. This codeblock installs the required ADT and Azure Identity Python packages 
 ```zsh
 %pip install azure-digitaltwins-core azure-identity
 ```
-4. Add the following codeblock in a new cell under the previous. This codeblock creates the ADT client and uses it to query models
+4. Add the following codeblock in a new cell under the previous. This codeblock creates the ADT client and uses it to query models or to query digital twins matching a relationship to another digital twin. 
 ```python
 # Establish a client connection to ADT
 
