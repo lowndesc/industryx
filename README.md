@@ -744,6 +744,40 @@ namespace Samples.AdtIothub
 ```zsh
 %pip install azure-digitaltwins-core azure-identity
 ```
+```python
+# Establish a client connection to ADT
+
+# DefaultAzureCredential supports different authentication mechanisms and determines the appropriate credential type based of the environment it is executing in.
+# It attempts to use multiple credential types in an order until it finds a working credential.
+import os
+import azure.identity
+import azure.digitaltwins.core
+
+# - AZURE_ADT_URL: The URL to the ADT in Azure
+url = os.getenv("AZURE_ADT_URL")
+
+# DefaultAzureCredential expects the following three environment variables:
+# - AZURE_TENANT_ID: The tenant ID in Azure Active Directory
+# - AZURE_CLIENT_ID: The application (client) ID registered in the AAD tenant
+# - AZURE_CLIENT_SECRET: The client secret for the registered application
+credential = azure.identity.DefaultAzureCredential()
+service_client = azure.digitaltwins.core.DigitalTwinsClient(url, credential)
+
+# List ADT models
+# listed_models = service_client.list_models()
+# for model in listed_models:
+#     print(model)
+    
+# print()
+# print()
+
+# Query ADT for the Process Twin
+query_expression ='SELECT Station FROM DIGITALTWINS Station JOIN Process RELATED Station.isStepOf Relationship WHERE Process.$dtId = \'pp_BodyPanelProduction_01\''
+query_result = service_client.query_twins(query_expression)
+print('DigitalTwins:')
+for twin in query_result:
+    print(twin)
+```
 #### Preparing the Databricks simulation for Bonsai ####
 #### Attaching Databricks telemetry by querying ADT ####
 ### Microsoft Bonsai Teaching ###
