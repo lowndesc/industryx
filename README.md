@@ -741,6 +741,9 @@ namespace Samples.AdtIothub
 ![image](https://user-images.githubusercontent.com/1761529/126746710-f46365e5-986d-48cd-b051-aa91b73ee38d.png)
 ### Databricks Simulation ###
 #### Creating a Databricks simulation ####
+```zsh
+%pip install azure-digitaltwins-core azure-identity
+```
 #### Preparing the Databricks simulation for Bonsai ####
 #### Attaching Databricks telemetry by querying ADT ####
 ### Microsoft Bonsai Teaching ###
