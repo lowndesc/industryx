@@ -743,12 +743,11 @@ namespace Samples.AdtIothub
 #### Attaching ADT telemetry to a Databricks Notebook by querying ADT ####
 1. Create a Databricks workspace
 2. Create a new Python Notebook
-3. Add the following cells to the Notebook
-The below codeblock installs the required ADT and Azure Identity Python packages 
+3. Add the following codeblock in a new cell in the Notebook. This codeblock installs the required ADT and Azure Identity Python packages 
 ```zsh
 %pip install azure-digitaltwins-core azure-identity
 ```
-The below codeblock creates the ADT client and uses it to query models
+4. Add the following codeblock in a new cell under the previous. This codeblock creates the ADT client and uses it to query models
 ```python
 # Establish a client connection to ADT
 
@@ -783,7 +782,7 @@ print('DigitalTwins:')
 for twin in query_result:
     print(twin)
 ```
-The below codeblock uses the ADT client to query the telemetry of one sensor, obtaining a value every 5 seconds
+5. Add the following codeblock in a new cell under the previous. This codeblock uses the ADT client to query the telemetry of one sensor, obtaining a value every 5 seconds.
 ```python
 # Query ADT for the Process Delay telemetry for the Coating Station
 import time
