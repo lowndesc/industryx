@@ -30,8 +30,9 @@
 	2. [Deploying PnP Functions](#deploying-pnp-functions)
 	3. [Auto-Provisioning a Simulated PnP Device](#auto-provisioning-a-simulated-pnp-device)
 	4. [Provisioning a Physical PnP Device](#provisioning-a-physical-pnp-device)
-	5. [Verifying PnP Telemetry in ADT](#verifying-pnp-telemetry-in-adt)
-	6. [Auto-Retiring PnP Devices](#auto-retiring-pnp-devices)
+    5. [Adding EventHubs](#adding-eventhubs)
+	6. [Verifying PnP Telemetry in ADT](#verifying-pnp-telemetry-in-adt)
+	7. [Auto-Retiring PnP Devices](#auto-retiring-pnp-devices)
 9. [AnyLogic Simulation](#anylogic-simulation)
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
@@ -724,17 +725,160 @@ namespace Samples.AdtIothub
 }
 ```
 #### Auto-Provisioning a Simulated PnP Device ####
+The Azure Device Provisioning Service (DPS) for IoT Hub automatically provisions registered devices so that they will communicate with the correct IoT Hub. The DPS can also be customized to do additional tasks. In our case, we will customize it to also create a Twin in Azure Digital Twins for every device provisioned.
+
 ![image](https://user-images.githubusercontent.com/1761529/126741050-98ee91d1-aed3-48d4-9b2d-2d3e39787ab2.png)
+
+1. When the device is freshly manufactured, it is configured to first communicate with the DPS. 
+2. The DPS then validates the device by checking if the device is in the enrollment list.
+3. Custom: If the device is deemed valid, the Azure Function (DpsAdtAllocationFunc) creates a Twin for the device in Azure Digital Twins.
+4. If the device is deemed valid, it is added as a device in the appropriate IoTHub.
+5. The device is given back connection details for the appropriate IoTHub where it will then start sending telemetry data.
+
+ The DPS acts like a 'front desk' in a hotel setting, where it identifies the 'guest' (device) and if the 'guest' has a 'booking' / 'reservation' (enrollment) directs him/her to the appropriate 'room' (IoTHub).
+
+ *** Setting up a DPS ***
+
+ 1. Create a resource 'Device Provisioning Services'. Provide the appropriate Subscription, Resource Group, Name, and Region. <br>
+![image](https://user-images.githubusercontent.com/12861152/131145432-4f47e3c0-56dd-4a8d-80d8-c9912122fbad.png)
+ 2. Once it is done creating, go to the resource and select 'Linked IoT Hubs'. In here, we will add the IoTHub/s where our devices will be directed to. <br>
+![image](https://user-images.githubusercontent.com/12861152/131146194-afc87d8e-1410-4d51-85df-5e550f8511a0.png)
+ 3. Provide the details of the IoTHub to be added then click 'Save'. <br>
+![image](https://user-images.githubusercontent.com/12861152/131146698-04f699cb-b044-46fd-9835-db3856c088cb.png)
+ 4. Go to 'Manage Enrollments' then select 'Add Individual Enrollment'. In here, we will add an individual device to the enrollment list. <br>
+![image](https://user-images.githubusercontent.com/12861152/131147457-870e2a24-67cb-4b33-9c31-23b9f8af83c3.png)
+ 5. Fill in the details of the enrollment:
+   * Use 'Symmetric Key' and provide a 'Registration ID' for the device. Copy and save the Registration ID since it will be used later when configuring the IoT Device.<br>
+   ![image](https://user-images.githubusercontent.com/12861152/131149482-3d729b04-ac8f-4400-8592-5fe263d91473.png)
+   * Select 'Custom (Use Azure Function)' in assigning devices to hubs, since we will run 'DpsAdtAllocationFunc'. Also make sure the device will be assigned to the correct IoTHub if you have multiple IoTHubs.<br>
+   ![image](https://user-images.githubusercontent.com/12861152/131150120-9634b038-7223-4bff-82cc-b82962c7eef5.png)
+   * Select the provisioned 'DpsAdtAllocationFunc' then save the enrollment.<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131150808-6cac3f2e-50c5-4326-ba52-04fd26594259.png)
+  1. Click on the newly enrolled device then copy and save the 'Primary Key'. This will be used later when configuring the IoT Device.<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131151786-5d791c00-bb06-4083-9822-16fdb967cd2a.png)<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131152229-358a1a22-2661-468f-8ce1-9dfd02feec9d.png)
+  7. Go to 'Overview' then copy and save 'Service Endpoint' and 'ID Scope'. These will also be used in configuring the IoT Device.<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131153247-1627738f-2297-4cc6-91f0-918227be74ae.png)
+
+Next we will be setting up a simulated device that's supposedly freshly manufactured. The simulator can be run on your local machine.<br>
+
+*** Setting up a simulated freshly manufactured device ***
+  1. Install nodejs on your local machine. https://nodejs.org/en/download/
+  2. The IoT device simulator can be found in 
+  > ./sandbox/PnPDevices/azure-iot-rpisimulator
+  3. Open index.js and fill in the values saved earlier.<br>
+  ![image](https://user-images.githubusercontent.com/12861152/131158199-7d5378bb-2c41-4afd-94c5-79d98ccb400f.png)<br>
+  * insert the 'Service Endpoint' in 'provisioningHost'
+  * insert the 'ID Scope' in 'idScope'
+  * insert the device's registration id in 'registrationId'
+  * insert the primary symmetric key for the device in 'symmetricKey'
+  * the 'modelId' corresponds to the MXCHIP AZ3166 multi-sensor device model in Azure Digital Twins. (don't change it)
+  4. Run the ff. command in the IoT device simulator directory:
+```zsh
+npm install
+```
+
+*** Testing the DPS ***
+  1. Open Azure Digital Twins and run this query.
+```sql
+SELECT * FROM DIGITALTWINS WHERE IS_OF_MODEL('dtmi:azurertos:devkit:gsgmxchip;2')
+```
+ * Currently, only one MXCHIP AZ3166 named 'PnP-Sensors' has an existing twin. This was the one imported to ADT [earlier](#creating-an-asset-twin).<br>
+    ![image](https://user-images.githubusercontent.com/12861152/131300892-b012282a-0400-4f8f-b4e6-ee80535389fe.png)
+  2. Run the simulator using the ff. command:
+```zsh
+npm start
+```
+ * The logs should look like this if successfully run. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131337492-f1034672-9d54-4d49-a21e-3790859c01c8.png) <br>
+ * An error message will appear if there is a problem in provisioning. This is usually a problem in the Azure Function configuration and role. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131337954-6c2b2ef7-46b4-4771-90b6-aa5044216495.png)
+ * The ff. logs should appear when the simulated device is successfully provisioned and is sending telemetry data to the correct IoTHub. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131338735-967b1449-5086-4135-b3d5-e83804947581.png) <br>
+
+  3. Run the query in step 1 again in Azure Digital Twins. The simulated device should now appear in the twin graph. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131339386-3f81ece1-88a7-47af-bbd9-3503a043d877.png) <br>
+
 #### Provisioning a Physical PnP Device ####
 ![20210723_143419](https://user-images.githubusercontent.com/1761529/126741223-2aece734-8cf3-4645-8c86-84f253656995.jpg)
+
+#### Adding EventHubs ####
+Azure EventHub is a service for ingesting streams of data from various sources including IoT telemetry. This data can be used by various consumers for further processing and analysis. In our case, we will be using EventHub to:
+
+1. Send telemetry data to ADT to update twins (DeviceTelemetryToTwinFunc). This is somewhat similar to TwinSync, except now, telemetry data is coming from EventHub instead of EventGrid.
+2. Delete a device's twin in ADT whenever the device is deleted in IoTHub (DeleteDeviceInTwinFunc).
+
+In the following steps, we'll be showing how to setup an event hub for use case 1, i.e., for the DeviceTelemetryToTwinFunc function. You can use the same steps for setting up use case 2 (DeleteDeviceInTwinFunc).
+
+*** Creating an EventHub Namespace *** <br>
+
+1. In order to create an event hub, we first need an event hubs namespace. Create a resource named 'Event Hubs' and fill in the appropriate Subscription, Resource Group, Location, and Pricing Tier. Also provide a namespace name. <br>
+![image](https://user-images.githubusercontent.com/12861152/131370727-b00c43b5-b895-485b-b726-8ba690207a35.png) <br>
+2. Once the eventhub namespace is created, we'll need to add a policy so that we can read messages being sent to the EventHubs belonging to this namespace. Go to the resource, select 'Shared access policies', and click 'Add' to add a new SAS Policy. <br>
+![image](https://user-images.githubusercontent.com/12861152/131377947-fca882a7-efea-43cd-8cd9-88611932f094.png) <br>
+3. Provide a name for the policy, then select the 'Listen' checkbox. This allows us to read events coming in to the EventHubs in this namespace. <br>
+![image](https://user-images.githubusercontent.com/12861152/131378048-878a1d88-e8c1-4cc7-958b-56980f0f55dc.png) <br>
+4. Once the SAS policy is created, click it, copy the 'Connection string-primary key', then save this connection string. This is the connection string that will be used by our Azure Functions to read data from the EventHubs. <br>
+![image](https://user-images.githubusercontent.com/12861152/131378594-cecc5cb5-391b-42d4-9768-64e278094db7.png) <br>
+
+*** Creating an EventHub *** <br>
+1. Go to 'Event Hubs' then click '+ Event Hub'. <br>
+![image](https://user-images.githubusercontent.com/12861152/131379207-5cf72edf-9e59-4732-9cde-4e976d767b32.png) <br>
+2. Give the EventHub a name then click 'Create'. Make sure this name matches with the EventHub name in the Azure Function EventHubTrigger Attribute. <br>
+![image](https://user-images.githubusercontent.com/12861152/131379644-4f0ced11-a41f-4256-8fb2-ea412adf7ef7.png) <br>
+
+*** Setting up Azure Functions *** <br>
+1. The only thing we need to setup in Azure Functions is the connection string which will give the function read access to EventHubs. In Azure Functions, select 'Configuration'. <br>
+![image](https://user-images.githubusercontent.com/12861152/131380928-da7039e0-9fd9-45eb-9bc2-8c8da8e36820.png) <br>
+2. In here we'll add a new application setting that corresponds to the event hub connection string. <br>
+![image](https://user-images.githubusercontent.com/12861152/131381284-45449b2f-369d-4703-b471-8c29fcf23696.png) <br>
+3. Fill in the name of the application setting and the value of the connection string. The name must match the application setting name being referred to in the code. <br>
+![image](https://user-images.githubusercontent.com/12861152/131381597-2066fca5-6c1e-43c7-a5b9-a2d20701fddb.png) <br>
+4. Click 'OK' then click 'Save' to restart the function app. <br>
+
+*** Setting up IoTHub *** <br>
+In IoTHub, we need to route messages towards the appropriate EventHub. To do this, we'll use IoTHub's built-in message routing.
+
+ 1. Go to the IoTHub instance, click on 'Message Routing' and select 'Custom Endpoints'. In here we will add our EventHubs as custom endpoints where messages will be sent. Click '+Add' and select 'Event hubs'. <br>
+![image](https://user-images.githubusercontent.com/12861152/131543132-4d609a02-3b6e-4961-a2f0-ef274391caf1.png) <br>
+ 2. Provide a name for the custom endpoint and specify the EventHub namespace and instance. (do the same for 'lifecycleevents')<br>
+ ![image](https://user-images.githubusercontent.com/12861152/131542680-4364f6d8-0a4d-41d5-9f88-3dc0d737d77e.png) <br>
+ 3. Go to 'Routes' and click on '+ Add'. <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131543313-f6d3cb5a-347b-4841-85b3-d7887cd988b1.png)<br>
+ 4. Provide a name for the route and specify appropriate custom endpoint and data source. (for lifecycleevents, select 'Device Lifecycle Events') <br>
+ ![image](https://user-images.githubusercontent.com/12861152/131543613-0be134bd-03e4-4437-b51d-8d1c94ec8e8c.png)<br>
+   * You could also specify a routing query which will filter the messages being routed. For both 'deviceevents' and 'lifecycleevents', we'll just use the default query 'true'. This means no filter will be applied and all messages will be routed. <br>
+   ![image](https://user-images.githubusercontent.com/12861152/131544711-fae8aa73-3394-494d-98cd-97abad188550.png)
+ 5. Click 'Save'. <br>
+
 #### Verifying PnP Telemetry in ADT ####
+We can verify that we are updating our twin using the telemetry data from the simulated device. In ADT, we can see that our provisioned device initially has 0 for the value of temperature. <br>
+![image](https://user-images.githubusercontent.com/12861152/131551289-25b17941-f3ac-434d-8d62-0d687cdce3cd.png) <br>
+
+After running the simulated device, we should get the following logs for 'DeviceTelemetryToTwinFunc' (enable 'Application Insights' to see function logs). We should see that the temperature is being set to the value 2195. <br>
+![image](https://user-images.githubusercontent.com/12861152/131547618-8dc98713-b6b0-46b2-9acc-36ac16af806f.png) <br>
+Upon reloading the query in ADT, we can see that the value for temperature of the twin is also updated. <br>
+![image](https://user-images.githubusercontent.com/12861152/131547637-660b57a8-3f45-4a31-8c2b-6eac1171970a.png) <br>
+
 #### Auto-Retiring PnP Devices ####
-![image](https://user-images.githubusercontent.com/1761529/126741148-e32ee60f-8018-44ca-b21d-8c4d7084f704.png)
+![image](https://user-images.githubusercontent.com/1761529/126741148-e32ee60f-8018-44ca-b21d-8c4d7084f704.png) <br>
+
+Given that we've already [added an EventHub for 'lifecycleevents'](#adding-eventhubs), we can now perform auto-retiring on the simulated device, i.e., when a device is deleted in IoTHub, its twin in ADT should also be deleted. To test this, we'll simply delete our provisioned simulated device from IoTHub. <br>
+![image](https://user-images.githubusercontent.com/12861152/131549073-4a807e40-08fe-4165-acba-11a984168a1a.png) <br>
+
+We can verify in the DeleteDeviceInTwinFunc function logs that deletion on ADT was performed.
+ <br>
+![image](https://user-images.githubusercontent.com/12861152/131550231-dcd1fe85-4a04-4c79-b3d5-4af148c5ed9d.png) <br>
+
+We can also verify in ADT that our simulated device's twin no longer exists. <br>
+![image](https://user-images.githubusercontent.com/12861152/131550681-bb6d92da-15dc-449f-8254-bb33e1d46ce6.png) <br>
 ### AnyLogic Simulation ###
 #### Creating An AnyLogic Simulation ####
 ![image](https://user-images.githubusercontent.com/1761529/126741509-cf675124-da8a-4429-b766-df7961304bfe.png)
 ![image](https://user-images.githubusercontent.com/1761529/126746438-32286441-8764-407c-99cc-c3d71f2c161a.png)
-![image](https://user-images.githubusercontent.com/1761529/126746510-6719d66d-0936-4c1d-8554-047960a6f879.png)
+![image](https://user-images.githubusercontent.com/1761529/126746510-6719d66d-0936-4c1d-8554-047960a6f879.png) <br>
+
+
 #### Preparing The AnyLogic Simulation For Bonsai ####
 ![image](https://user-images.githubusercontent.com/1761529/126746628-0d08b23a-9908-42b6-abc4-84e9f82e05c9.png)
 #### Attaching AnyLogic Telemetry By Querying ADT ####
