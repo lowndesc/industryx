@@ -65,6 +65,7 @@ In this tutorial, you will create a sandbox environment in which you can further
 - Auto-Provision Physical Plug-and-Play IoT Devices (in this case, an MXCHIP AZ3166 multi-sensor device)
 - Auto-Retire IoT Devices
 - Create an AnyLogic Simulation
+- Create a Python Simulation
 - Create a Databricks Simulation
 - Extend Simulations to integrate with Microsoft Bonsai
 - Use Bonsai to teach an AI 'Brain' from a Simulation
