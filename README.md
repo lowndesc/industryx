@@ -37,11 +37,14 @@
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
 	3. [Attaching AnyLogic telemetry by querying ADT](#attaching-anylogic-telemetry-by-querying-adt)
-10. [Databricks Simulation](#databricks-simulation)
+10. [Python Simulation](#python-simulation)
+	1. [Creating a Python Simulation](#creating-a-python-simulation)
+	2. [Preparing the Python simulation for Bonsai](#preparing-the-python-simulation-for-bonsai)
+11. [Databricks Simulation](#databricks-simulation)
 	1. [Attaching ADT telemetry to a Databricks Notebook](#attaching-adt-telemetry-to-a-databricks-notebook)
 	2. [Creating a Databricks simulation](#creating-a-databricks-simulation)
 	3. [Preparing the Databricks simulation for Bonsai](#preparing-the-databricks-simulation-for-bonsai)
-11. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
+12. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
 	1. [Testing the simulation](#testing-the-simulation)
 	2. [Importing the simulation](#importing-the-simulation)
 	3. [Creating the brain](#creating-the-brain)
@@ -883,6 +886,9 @@ We can also verify in ADT that our simulated device's twin no longer exists. <br
 ![image](https://user-images.githubusercontent.com/1761529/126746628-0d08b23a-9908-42b6-abc4-84e9f82e05c9.png)
 #### Attaching AnyLogic Telemetry By Querying ADT ####
 ![image](https://user-images.githubusercontent.com/1761529/126746710-f46365e5-986d-48cd-b051-aa91b73ee38d.png)
+### Python Simulation ###
+#### Creating a Python Simulation ####
+#### Preparing the Python simulation for Bonsai ####
 ### Databricks Simulation ###
 #### Attaching ADT telemetry to a Databricks Notebook ####
 1. Create a Databricks workspace
