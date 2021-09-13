@@ -38,11 +38,14 @@
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
 	3. [Attaching AnyLogic telemetry by querying ADT](#attaching-anylogic-telemetry-by-querying-adt)
     4. [Exporting the AnyLogic Model for Bonsai](#exporting-the-anylogic-model-for-bonsai)
-10. [Databricks Simulation](#databricks-simulation)
+10. [Python Simulation](#python-simulation)
+	1. [Creating a Python Simulation](#creating-a-python-simulation)
+	2. [Preparing the Python simulation for Bonsai](#preparing-the-python-simulation-for-bonsai)
+11. [Databricks Simulation](#databricks-simulation)
 	1. [Attaching ADT telemetry to a Databricks Notebook](#attaching-adt-telemetry-to-a-databricks-notebook)
 	2. [Creating a Databricks simulation](#creating-a-databricks-simulation)
 	3. [Preparing the Databricks simulation for Bonsai](#preparing-the-databricks-simulation-for-bonsai)
-11. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
+12. [Microsoft Bonsai Teaching](#microsoft-bonsai-teaching)
 	1. [Testing the simulation](#testing-the-simulation)
 	2. [Importing the simulation](#importing-the-simulation)
 	3. [Creating the brain](#creating-the-brain)
@@ -63,6 +66,7 @@ In this tutorial, you will create a sandbox environment in which you can further
 - Auto-Provision Physical Plug-and-Play IoT Devices (in this case, an MXCHIP AZ3166 multi-sensor device)
 - Auto-Retire IoT Devices
 - Create an AnyLogic Simulation
+- Create a Python Simulation
 - Create a Databricks Simulation
 - Extend Simulations to integrate with Microsoft Bonsai
 - Use Bonsai to teach an AI 'Brain' from a Simulation
@@ -908,6 +912,9 @@ The fields' values are mapped from the **Top-level agent** which is being refere
 3. Finish the export. <br>
 ![3](https://user-images.githubusercontent.com/12861152/132813275-e52a359f-e8ec-43de-ac4c-34115790d02f.png)<br>
 
+### Python Simulation ###
+#### Creating a Python Simulation ####
+#### Preparing the Python simulation for Bonsai ####
 ### Databricks Simulation ###
 #### Attaching ADT telemetry to a Databricks Notebook ####
 1. Create a Databricks workspace
