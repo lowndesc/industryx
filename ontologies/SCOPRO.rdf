@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/indonto/ontologies/2014/0/SCOPRO#"
+<rdf:RDF xmlns="http://www.semanticweb.org/indonto/ontologies/2014/0/SCOPRO"
      xml:base="http://www.semanticweb.org/indonto/ontologies/2014/0/SCOPRO"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
