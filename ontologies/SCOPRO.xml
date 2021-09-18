@@ -1,0 +1,2331 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/indonto/ontologies/2014/0/SCOPRO#"
+     xml:base="http://www.semanticweb.org/indonto/ontologies/2014/0/SCOPRO"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:p1="http://www.owl-ontologies.com/assert.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xsp="http://www.owl-ontologies.com/2005/08/07/xsp.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:dcterms="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#"
+     xmlns:indonto="http://www.semanticweb.org/indonto/ontologies/2014/0/SCOPRO"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/indonto/ontologies/2014/0/SCOPRO">
+        <dc:contributor xml:lang="en">Gabriela P. Henning</dc:contributor>
+        <dc:contributor xml:lang="en">Horacio P. Leone</dc:contributor>
+        <dc:contributor>Marcela Vegetti</dc:contributor>
+        <dc:creator xml:lang="en">Alicia C. Böhm</dc:creator>
+        <dc:title xml:lang="en">SCOPRO</dc:title>
+        <terms:license>CreativeCommons V4.0 https://creativecommons.org/licenses/by/4.0/legalcode</terms:license>
+    </owl:Ontology>
+    <owl:ObjectProperty rdf:about="IsTargetOf">
+        <owl:inverseOf rdf:resource="isTargetedAt"/>
+        <rdfs:domain rdf:resource="Market"/>
+        <rdfs:range rdf:resource="Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversa de isTargetAt</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="areaPerforms">
+        <rdfs:domain rdf:resource="Functional_Area"/>
+        <rdfs:range rdf:resource="Process"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="entails">
+        <owl:inverseOf rdf:resource="isEntailedBy"/>
+        <rdfs:domain rdf:resource="Process"/>
+        <rdfs:range rdf:resource="Utilization"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre un proceso y una de las utilizaciones que origina</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasBeforAsPart">
+        <rdfs:subPropertyOf rdf:resource="hasTempRelatAsPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Composite_Temporal_Relationship"/>
+        <rdfs:range rdf:resource="Before"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasDependentOU">
+        <owl:inverseOf rdf:resource="isDependentOUOf"/>
+        <rdfs:domain rdf:resource="Organizational_Unit"/>
+        <rdfs:range rdf:resource="Dependent_OU"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasDestinationFacility">
+        <owl:inverseOf rdf:resource="isDestinationFacilityOf"/>
+        <rdfs:domain rdf:resource="Transportation_"/>
+        <rdfs:range rdf:resource="Facility"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasDuringAsPart">
+        <rdfs:subPropertyOf rdf:resource="hasTempRelatAsPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Composite_Temporal_Relationship"/>
+        <rdfs:range rdf:resource="During"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasElement">
+        <rdfs:domain rdf:resource="Market"/>
+        <rdfs:range rdf:resource="Customer_Role"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasEqualAsPart">
+        <rdfs:subPropertyOf rdf:resource="hasTempRelatAsPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Composite_Temporal_Relationship"/>
+        <rdfs:range rdf:resource="Equal"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasFunctionalArea">
+        <owl:inverseOf rdf:resource="isFunctionalAreaOf"/>
+        <rdfs:domain rdf:resource="Organizational_Unit"/>
+        <rdfs:range rdf:resource="Functional_Area"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasFuntionalSubArea">
+        <owl:inverseOf rdf:resource="isFuntionalSubAreaOf"/>
+        <rdfs:domain rdf:resource="Functional_Area"/>
+        <rdfs:range rdf:resource="Functional_SubArea"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasMeetsAsPart">
+        <rdfs:subPropertyOf rdf:resource="hasTempRelatAsPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Composite_Temporal_Relationship"/>
+        <rdfs:range rdf:resource="Meets"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasMember">
+        <owl:inverseOf rdf:resource="isMemberOf"/>
+        <rdfs:domain rdf:resource="Supply_Chain"/>
+        <rdfs:range rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre una CS y una de las perspectivas de organización que es miembro de la cadena</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasOURole">
+        <owl:inverseOf rdf:resource="isORoleOf"/>
+        <rdfs:domain rdf:resource="Organizational_Unit"/>
+        <rdfs:range rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversa de orgUnitPerspective</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasOverlapsAsPart">
+        <rdfs:subPropertyOf rdf:resource="hasTempRelatAsPart"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Composite_Temporal_Relationship"/>
+        <rdfs:range rdf:resource="Overlaps"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasResourceRole">
+        <owl:inverseOf rdf:resource="isResourceRoleOf"/>
+        <rdfs:domain rdf:resource="Resource"/>
+        <rdfs:range rdf:resource="Resource_Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversa de isResourceRoleOf</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasSourceFacility">
+        <owl:inverseOf rdf:resource="isSourceFacilityOf"/>
+        <rdfs:domain rdf:resource="Transportation_"/>
+        <rdfs:range rdf:resource="Facility"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="hasTempRelatAsPart">
+        <owl:inverseOf rdf:resource="isPartOfTempRelat"/>
+        <rdfs:domain rdf:resource="Composite_Temporal_Relationship"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="Before"/>
+                    <rdf:Description rdf:about="During"/>
+                    <rdf:Description rdf:about="Equal"/>
+                    <rdf:Description rdf:about="Meets"/>
+                    <rdf:Description rdf:about="Overlaps"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre una relación temporal compuesta y una de sus partes</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="involves">
+        <owl:inverseOf rdf:resource="isInvolvedIn"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Utilization"/>
+        <rdfs:range rdf:resource="Resource_Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre una utilización y el rol de recurso sobre el cual influye</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isComposedOfPE_ReserveInventoryAndDetermineDeliveryDate">
+        <rdfs:subPropertyOf rdf:resource="isComprisedOfPE"/>
+        <rdfs:domain rdf:resource="Deliver_Stocked_Product"/>
+        <rdfs:range rdf:resource="Reserve_Inventory_and_Determine_Delivery_Date"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isComposedOfPE_ShipProduct">
+        <rdfs:subPropertyOf rdf:resource="isComprisedOfPE"/>
+        <rdfs:domain rdf:resource="Deliver_Stocked_Product"/>
+        <rdfs:range rdf:resource="Ship_Product"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isComprisedOfPE">
+        <rdfs:subPropertyOf rdf:resource="isComprisedOfSubProcess"/>
+        <owl:inverseOf rdf:resource="isPartOfBP"/>
+        <rdfs:domain rdf:resource="Business_Process"/>
+        <rdfs:range rdf:resource="Process_Element"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación de agregación entre un proceso de negocio y uno de los elementos de proceso que lo componen</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isComprisedOfST">
+        <rdfs:subPropertyOf rdf:resource="isComprisedOfSubProcess"/>
+        <owl:inverseOf rdf:resource="isPartOfCT"/>
+        <rdfs:domain rdf:resource="Composite_Task"/>
+        <rdfs:range rdf:resource="Task"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversa de isPartOfCT</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isComprisedOfSubProcess">
+        <owl:inverseOf rdf:resource="isSubProcessOf"/>
+        <rdfs:domain rdf:resource="Process"/>
+        <rdfs:range rdf:resource="Process"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversa de isSubProcessOf</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isComprisedOfTask">
+        <rdfs:subPropertyOf rdf:resource="isComprisedOfSubProcess"/>
+        <owl:inverseOf rdf:resource="isPartOfPE"/>
+        <rdfs:domain rdf:resource="Process_Element"/>
+        <rdfs:range rdf:resource="Task"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación de agregación entre un elemento de proceso y una de las tareas que lo componen</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isDependentOUOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Dependent_OU"/>
+        <rdfs:range rdf:resource="Organizational_Unit"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isDependentSubOUOf">
+        <rdfs:domain rdf:resource="Dependent_OU"/>
+        <rdfs:range rdf:resource="Dependent_OU"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isDestinationFacilityOf">
+        <rdfs:domain rdf:resource="Facility"/>
+        <rdfs:range rdf:resource="Transportation_"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isEntailedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Utilization"/>
+        <rdfs:range rdf:resource="Process"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversa de entails</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isFunctionalAreaOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Functional_Area"/>
+        <rdfs:range rdf:resource="Organizational_Unit"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isFuntionalSubAreaOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Functional_SubArea"/>
+        <rdfs:range rdf:resource="Functional_Area"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isInvolvedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Resource_Role"/>
+        <rdfs:range rdf:resource="Utilization"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inversa de involves</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isMemberOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:range rdf:resource="Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversa de hasMember</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isORoleOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:range rdf:resource="Organizational_Unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre un rol de una organización y la unidad organizacional que tiene como rol dicha perspectiva</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isPartOfBP">
+        <rdfs:subPropertyOf rdf:resource="isSubProcessOf"/>
+        <rdfs:domain rdf:resource="Process_Element"/>
+        <rdfs:range rdf:resource="Business_Process"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isPartOfCT">
+        <rdfs:subPropertyOf rdf:resource="isSubProcessOf"/>
+        <rdfs:domain rdf:resource="Task"/>
+        <rdfs:range rdf:resource="Composite_Task"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación de agregación entre una tarea y una tarea compuesta de la cual es parte</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isPartOfPE">
+        <rdfs:subPropertyOf rdf:resource="isSubProcessOf"/>
+        <rdfs:domain rdf:resource="Task"/>
+        <rdfs:range rdf:resource="Process_Element"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isPartOfTempRelat">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="Before"/>
+                    <rdf:Description rdf:about="During"/>
+                    <rdf:Description rdf:about="Equal"/>
+                    <rdf:Description rdf:about="Meets"/>
+                    <rdf:Description rdf:about="Overlaps"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="Composite_Temporal_Relationship"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isPerformedBy">
+        <owl:inverseOf rdf:resource="performs"/>
+        <rdfs:domain rdf:resource="Process"/>
+        <rdfs:range rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inversa de performs</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isPerformedBySubArea">
+        <owl:inverseOf rdf:resource="subAreaPerforms"/>
+        <rdfs:domain rdf:resource="Task"/>
+        <rdfs:range rdf:resource="Functional_SubArea"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isProvidedBy">
+        <owl:inverseOf rdf:resource="provides"/>
+        <rdfs:domain rdf:resource="Material_Resource"/>
+        <rdfs:range rdf:resource="Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre un producto y una de las cadenas de suministros que lo proveen</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isRelativeTo">
+        <owl:inverseOf rdf:resource="withRespectTo"/>
+        <rdfs:domain rdf:resource="Process"/>
+        <rdfs:range rdf:resource="Temporal_Relationship"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isResourceRObtainedBy">
+        <owl:inverseOf rdf:resource="obtainsResourceR"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Resource_Role"/>
+        <rdfs:range rdf:resource="Organizational_Unit"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isResourceRProvidedBy">
+        <owl:inverseOf rdf:resource="providesResourceR"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Resource_Role"/>
+        <rdfs:range rdf:resource="Organizational_Unit"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isResourceRoleOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Resource_Role"/>
+        <rdfs:range rdf:resource="Resource"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre un rol de recurso y el recurso</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isRestrainedBy">
+        <owl:inverseOf rdf:resource="restrains"/>
+        <rdfs:domain rdf:resource="Process"/>
+        <rdfs:range rdf:resource="Temporal_Relationship"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre un proceso y una relación temporal que lo vincula con otro proceso</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isSourceFacilityOf">
+        <rdfs:domain rdf:resource="Facility"/>
+        <rdfs:range rdf:resource="Transportation_"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isSubProcessOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="Process"/>
+        <rdfs:range rdf:resource="Process"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relación de agregación entre un proceso y uno de los procesos de los cual es parte</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="isTargetedAt">
+        <rdfs:domain rdf:resource="Supply_Chain"/>
+        <rdfs:range rdf:resource="Market"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre una cadena de suministros y uno de los mercados a los que pretende servir</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="materializesProcess">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="Process_Occurrence"/>
+        <rdfs:range rdf:resource="Process"/>
+    </owl:ObjectProperty>
+   <owl:ObjectProperty rdf:about="obtainsResourceR">
+        <rdfs:domain rdf:resource="Organizational_Unit"/>
+        <rdfs:range rdf:resource="Resource_Role"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="performs">
+        <rdfs:domain rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:range rdf:resource="Process"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre una perspectiva de la organización y uno de los procesos que ésta ejecuta</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="provides">
+        <rdfs:domain rdf:resource="Supply_Chain"/>
+        <rdfs:range rdf:resource="Material_Resource"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inversa de isProvidedBy</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="providesResourceR">
+        <rdfs:domain rdf:resource="Organizational_Unit"/>
+        <rdfs:range rdf:resource="Resource_Role"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="restrains">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Temporal_Relationship"/>
+        <rdfs:range rdf:resource="Process"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inversa de isRestrainedBy</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="subAreaPerforms">
+        <rdfs:domain rdf:resource="Functional_SubArea"/>
+        <rdfs:range rdf:resource="Task"/>
+    </owl:ObjectProperty>
+    <owl:ObjectProperty rdf:about="withRespectTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="Temporal_Relationship"/>
+        <rdfs:range rdf:resource="Process"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asociación entre una relación temporal y el proceso respecto al cual se restringe el orden temporal de otro proceso</rdfs:comment>
+    </owl:ObjectProperty>
+    <owl:Class rdf:about="Actualization">
+        <rdfs:subClassOf rdf:resource="Information_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom rdf:resource="Modification"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de la información que es requerida para la ejecución de un proceso, o alguna parte del mismo, y que como resultado de la ejecución sufre alguna modificación</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Atomic_Task">
+        <rdfs:subClassOf rdf:resource="Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Composite_Task"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tarea que no se descompone en otras tareas</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Atomic_Temporal_Relationship">
+        <rdfs:subClassOf rdf:resource="Temporal_Relationship"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="restrains"/>
+                                        <owl:someValuesFrom rdf:resource="Process"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:complementOf>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="withRespectTo"/>
+                                        <owl:someValuesFrom rdf:resource="Process"/>
+                                    </owl:Restriction>
+                                </owl:complementOf>
+                            </owl:Class>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="restrains"/>
+                                <owl:someValuesFrom rdf:resource="Process"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="withRespectTo"/>
+                                <owl:someValuesFrom rdf:resource="Process"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="restrains"/>
+                                        <owl:someValuesFrom rdf:resource="Process"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="withRespectTo"/>
+                                        <owl:someValuesFrom rdf:resource="Process"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="isPartOfTempRelat"/>
+                                <owl:someValuesFrom rdf:resource="Composite_Temporal_Relationship"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Composite_Temporal_Relationship"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relación temporal entre dos procesos mediante la cual el espacio de tiempo de ejecución de uno de ellos se restringe con respecto a la realización del otro. Una relación temporal atómica no está compuesta por otras relaciones temporales</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Before">
+        <rdfs:subClassOf rdf:resource="Atomic_Temporal_Relationship"/>
+        <owl:disjointWith rdf:resource="During"/>
+        <owl:disjointWith rdf:resource="Equal"/>
+        <owl:disjointWith rdf:resource="Meets"/>
+        <owl:disjointWith rdf:resource="Overlaps"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relación temporal atómica entre dos procesos que prescribe que el primero de los procesos debe terminar antes que comience el segundo</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Branch">
+        <rdfs:subClassOf rdf:resource="Dependent_OU"/>
+    </owl:Class>
+    <owl:Class rdf:about="Broker_Role">
+        <rdfs:subClassOf rdf:resource="Intermediary_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="Business_Group">
+        <rdfs:subClassOf rdf:resource="Independent_OU"/>
+        <owl:disjointWith rdf:resource="Company"/>
+        <owl:disjointWith rdf:resource="Corporation"/>
+        <owl:disjointWith rdf:resource="Enterprise"/>
+        <owl:disjointWith rdf:resource="Society"/>
+    </owl:Class>
+    <owl:Class rdf:about="Business_Process">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="Process_Element"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isSubProcessOf"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">0</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Process_Element"/>
+        <owl:disjointWith rdf:resource="Task"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estructura lógica de actividades de agregado de valor, diseñada para la acción, enfocada en la satisfacción de los clientes finales y en la gestión de flujos relativos a productos, información, activos financieros, conocimiento e ideas</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Business_Unit">
+        <rdfs:subClassOf rdf:resource="Dependent_OU"/>
+    </owl:Class>
+    <owl:Class rdf:about="Capital_Asset">
+        <rdfs:subClassOf rdf:resource="Material_Resource"/>
+    </owl:Class>
+    <owl:Class rdf:about="Carrier_Role">
+        <rdfs:subClassOf rdf:resource="Service_Provider_Role"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="performs"/>
+                        <owl:someValuesFrom rdf:resource="Source"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="performs"/>
+                <owl:someValuesFrom rdf:resource="Deliver"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="Company">
+        <rdfs:subClassOf rdf:resource="Independent_OU"/>
+        <owl:disjointWith rdf:resource="Corporation"/>
+        <owl:disjointWith rdf:resource="Enterprise"/>
+        <owl:disjointWith rdf:resource="Society"/>
+    </owl:Class>
+    <owl:Class rdf:about="Composite_Task">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="Task"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="Task"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tarea que posee como componentes a otras tareas</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Composite_Temporal_Relationship">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasTempRelatAsPart"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="Temporal_Relationship"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="Temporal_Relationship"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="restrains"/>
+                <owl:someValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="withRespectTo"/>
+                <owl:someValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasTempRelatAsPart"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="Before"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasTempRelatAsPart"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="During"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasTempRelatAsPart"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="Equal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasTempRelatAsPart"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="Meets"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasTempRelatAsPart"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="Overlaps"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relación temporal entre dos procesos compuesta por otras relaciones temporales. La ejecución de uno de los procesos se restringe con respecto a la realización del otro. El primero de los procesos debe cumplir, con respecto al segundo, con alguna de las relaciones temporales que forman parte de la relación temporal compuesta.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Corporation">
+        <rdfs:subClassOf rdf:resource="Independent_OU"/>
+        <owl:disjointWith rdf:resource="Enterprise"/>
+        <owl:disjointWith rdf:resource="Society"/>
+    </owl:Class>
+    <owl:Class rdf:about="Creation">
+        <rdfs:subClassOf rdf:resource="Utilization"/>
+        <owl:disjointWith rdf:resource="Elimination"/>
+        <owl:disjointWith rdf:resource="Material_Transfer"/>
+        <owl:disjointWith rdf:resource="Modification"/>
+        <owl:disjointWith rdf:resource="Use"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Generación de un recurso durante un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Cross-docking_Facility">
+        <rdfs:subClassOf rdf:resource="Facility"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:someValuesFrom rdf:resource="Cross-docking_Point"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Cross-docking_Point"/>
+                            <rdf:Description rdf:about="Vehicle_Terminal"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="Cross-docking_Point">
+        <rdfs:subClassOf rdf:resource="Facility_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un establecimiento que se utiliza en un proceso para realizar la transferencia de la carga de un vehículo a otro sin apelar a un
+almacenamiento intermedio</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Customer_Role">
+        <rdfs:subClassOf rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="performs"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="Deliver"/>
+                                    <rdf:Description rdf:about="Deliver_Return"/>
+                                    <rdf:Description rdf:about="Make"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Primary_Producer_Role"/>
+        <owl:disjointWith rdf:resource="Secondary_Producer_Role"/>
+        <owl:disjointWith rdf:resource="Service_Provider_Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol que asume una unidad organizacional que, en su participación en una determinada cadena de suministros, realiza actividades vinculadas con la compra de bienes para uso, consumo o explotación</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="DR_Def_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Deliver_Return_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="DR_Excess_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Deliver_Return_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="DR_MRO_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Deliver_Return_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="D_E-t-O_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Deliver_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="D_M-t-O_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Deliver_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="D_R_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Deliver_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="D_S_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Deliver_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Dealer_Role">
+        <rdfs:subClassOf rdf:resource="Reseller_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="Defective_Product">
+        <rdfs:subClassOf rdf:resource="Material_Resource"/>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver">
+        <rdfs:subClassOf rdf:resource="Business_Process"/>
+        <owl:disjointWith rdf:resource="Deliver_Return"/>
+        <owl:disjointWith rdf:resource="Make"/>
+        <owl:disjointWith rdf:resource="Plan"/>
+        <owl:disjointWith rdf:resource="Source"/>
+        <owl:disjointWith rdf:resource="Source_Return"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que consiste en la gestión de órdenes de clientes, incluyendo la recepción de los pedidos y su validación, las actividades vinculadas a la entrega de los productos y la facturación</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Engineer-to-Order_Product">
+        <rdfs:subClassOf rdf:resource="Deliver"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="D_E-t-O_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Deliver_Make-to-Order_Product"/>
+        <owl:disjointWith rdf:resource="Deliver_Retail_Product"/>
+        <owl:disjointWith rdf:resource="Deliver_Stocked_Product"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso de entrega donde se acuerda, se da respuesta y se asignan recursos a una orden de un cliente que tiene requerimientos o especificaciones únicas</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Make-to-Order_Product">
+        <rdfs:subClassOf rdf:resource="Deliver"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="D_M-t-O_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Deliver_Retail_Product"/>
+        <owl:disjointWith rdf:resource="Deliver_Stocked_Product"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso de entrega de productos que son abastecidos, configurados, elaborados y/o ensamblados a partir de materiales estándar sin procesar, partes, ingredientes o subensambles, en respuesta a una orden en particular de un cliente</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Process_Element">
+        <rdfs:subClassOf rdf:resource="Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Retail_Product">
+        <rdfs:subClassOf rdf:resource="Deliver"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="D_R_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Deliver_Stocked_Product"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso para adquirir bienes terminados, localizarlos en posiciones de stock, venderlos, cobrarlos y entregarlos, en un negocio donde se comercializan productos o servicios usando un procedimiento de punto de venta con capacidad de cobro</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Return">
+        <rdfs:subClassOf rdf:resource="Business_Process"/>
+        <owl:disjointWith rdf:resource="Make"/>
+        <owl:disjointWith rdf:resource="Plan"/>
+        <owl:disjointWith rdf:resource="Source"/>
+        <owl:disjointWith rdf:resource="Source_Return"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que consiste en acordar con un cliente las condiciones de devolución de un producto, o lote del mismo, y la recepción en el lugar convenido</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Return_Defective_Product">
+        <rdfs:subClassOf rdf:resource="Deliver_Return"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="DR_Def_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Deliver_Return_Excess_Product"/>
+        <owl:disjointWith rdf:resource="Deliver_Return_MRO_Product"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso mediante el cual se gestiona la recepción de productos defectuosos remitidos por los clientes, se determina su disposición y su apropiado reemplazo. Se pueden considerar productos defectuosos aquéllos que no cumplen con las especificaciones (incluyendo no conformidad de la orden, tal como el retraso en la entrega o envío inapropiado)</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Return_Excess_Product">
+        <rdfs:subClassOf rdf:resource="Deliver_Return"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="DR_Excess_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Deliver_Return_MRO_Product"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso mediante el cual se gestiona la recepción de productos devueltos por los clientes por encontrarse en exceso, envejecidos u obsoletos, de acuerdo a los términos y condiciones pactadas</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Return_MRO_Product">
+        <rdfs:subClassOf rdf:resource="Deliver_Return"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="DR_MRO_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso mediante el cual se gestiona la recepción de productos o activos que son enviados por los clientes para su mantenimiento, reparación o revisión. Generalmente se espera que los activos que se gestionan a través de este
+proceso sean reacondicionados y que retornen al servicio</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Return_Process_Element">
+        <rdfs:subClassOf rdf:resource="Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Deliver_Stocked_Product">
+        <rdfs:subClassOf rdf:resource="Deliver"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="D_S_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso de entrega de productos de tipo estándar que son abastecidos o fabricados en base a una agregación de órdenes de clientes, a la proyección de la demanda o a parámetros de reabastecimiento de inventario</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Dependent_OU">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isDependentOUOf"/>
+                <owl:someValuesFrom rdf:resource="Organizational_Unit"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="Organizational_Unit"/>
+        <owl:disjointWith rdf:resource="Independent_OU"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad organizacional que está subordinada a otra, de la cual es dependiente o semi-dependiente, pero que tiene su propia administración y funciones</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Disposition_Excess_Product">
+        <rdfs:subClassOf rdf:resource="SR_Excess_Product_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Distribution_Center">
+        <rdfs:subClassOf rdf:resource="Facility"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:someValuesFrom rdf:resource="Point_of_Storage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Point_of_Purchase"/>
+                            <rdf:Description rdf:about="Point_of_Storage"/>
+                            <rdf:Description rdf:about="Vehicle_Terminal"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="Distributor_Role">
+        <rdfs:subClassOf rdf:resource="Reseller_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="During">
+        <rdfs:subClassOf rdf:resource="Atomic_Temporal_Relationship"/>
+        <owl:disjointWith rdf:resource="Equal"/>
+        <owl:disjointWith rdf:resource="Meets"/>
+        <owl:disjointWith rdf:resource="Overlaps"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relación temporal atómica entre dos procesos que dispone que el primero de los procesos comienza y termina durante la ejecución del segundo</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="E-t-O_Process_Element">
+        <rdfs:subClassOf rdf:resource="Make_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Elimination">
+        <rdfs:subClassOf rdf:resource="Utilization"/>
+        <owl:disjointWith rdf:resource="Material_Transfer"/>
+        <owl:disjointWith rdf:resource="Modification"/>
+        <owl:disjointWith rdf:resource="Use"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remoción o consumo de un recurso durante un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Engineer-to-Order">
+        <rdfs:subClassOf rdf:resource="Make"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:someValuesFrom rdf:resource="Finalize_Production_Engineering"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:someValuesFrom rdf:resource="Issue_Sourced_or_In-Process_Product"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:someValuesFrom rdf:resource="Produce_and_Test"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:someValuesFrom rdf:resource="Release_Product_to_Delivery"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="E-t-O_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Make-to-Order"/>
+        <owl:disjointWith rdf:resource="Make-to-Stock"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso de desarrollo, diseño, validación y elaboración de productos o servicios basados en los requerimientos de una orden de un cliente en particular. Las instrucciones de trabajo, las recetas y/o las rutas de los materiales deben definirse por completo o refinarse. Los productos son parcial o totalmente diseñados, rediseñados, manufacturados y/o ensamblados con
+una lista de materiales o receta que incluye una o más partes o ingredientes hechos a medida</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Enterprise">
+        <rdfs:subClassOf rdf:resource="Independent_OU"/>
+        <owl:disjointWith rdf:resource="Society"/>
+    </owl:Class>
+    <owl:Class rdf:about="Equal">
+        <rdfs:subClassOf rdf:resource="Atomic_Temporal_Relationship"/>
+        <owl:disjointWith rdf:resource="Meets"/>
+        <owl:disjointWith rdf:resource="Overlaps"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relación temporal atómica entre dos procesos que indica que el primero de los procesos se ejecuta al mismo tiempo que el segundo</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Equipment">
+        <rdfs:subClassOf rdf:resource="Material_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom rdf:resource="Use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Load"/>
+        <owl:disjointWith rdf:resource="Material_Input"/>
+        <owl:disjointWith rdf:resource="Material_Output"/>
+        <owl:disjointWith rdf:resource="Passive_Object"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un recurso material que posibilita la realización de un proceso aportando medios mecánicos, electrónicos y/o informáticos para su
+ejecución</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Executor">
+        <rdfs:subClassOf rdf:resource="Human_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de una persona o grupo de personas que se encargan de realizar un proceso o parte del mismo</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Facility">
+        <rdfs:subClassOf rdf:resource="Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom rdf:resource="Facility_RR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Financial_Resource"/>
+        <owl:disjointWith rdf:resource="Human_Resource"/>
+        <owl:disjointWith rdf:resource="Information_Resource"/>
+        <owl:disjointWith rdf:resource="Material_Resource"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sitio donde se desarrollan actividades de una cadena de suministros</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Facility_RR">
+        <rdfs:subClassOf rdf:resource="Resource_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom rdf:resource="Use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Financial_RR"/>
+        <owl:disjointWith rdf:resource="Human_RR"/>
+        <owl:disjointWith rdf:resource="Information_RR"/>
+        <owl:disjointWith rdf:resource="Material_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Función con la cual un establecimiento participa en un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Finalize_Production_Engineering">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Issue_Sourced_or_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_Make_Equipements_and_Facilities"/>
+        <owl:disjointWith rdf:resource="Manage_Make_Information"/>
+        <owl:disjointWith rdf:resource="Manage_Make_Regulatory_Environment"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Network"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Performance"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Rules"/>
+        <owl:disjointWith rdf:resource="Manage_Supply_Chain_Make_Risk"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Finance">
+        <rdfs:subClassOf rdf:resource="Functional_Area"/>
+    </owl:Class>
+    <owl:Class rdf:about="Financial_RR">
+        <rdfs:subClassOf rdf:resource="Resource_Role"/>
+        <owl:disjointWith rdf:resource="Human_RR"/>
+        <owl:disjointWith rdf:resource="Information_RR"/>
+        <owl:disjointWith rdf:resource="Material_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Función con la cual un recurso financiero participa en un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Financial_Resource">
+        <rdfs:subClassOf rdf:resource="Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom rdf:resource="Financial_RR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Human_Resource"/>
+        <owl:disjointWith rdf:resource="Information_Resource"/>
+        <owl:disjointWith rdf:resource="Material_Resource"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medio de retribución monetario, tal como efectivo, depósito bancario, cheque, etc., que puede ser empleado para la adquisición de bienes y servicios, y que participa en uno o más procesos de una cadena de suministros</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="FourthPL_Provider_Role">
+        <rdfs:subClassOf rdf:resource="Service_Provider_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="performs"/>
+                <owl:someValuesFrom rdf:resource="Plan"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="Freight_Forwarder_Role">
+        <rdfs:subClassOf rdf:resource="Intermediary_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="Functional_Area">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isFunctionalAreaOf"/>
+                <owl:someValuesFrom rdf:resource="Organizational_Unit"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="SC_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="areaPerforms"/>
+                <owl:someValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="areaPerforms"/>
+                <owl:allValuesFrom rdf:resource="Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Functional_SubArea"/>
+        <owl:disjointWith rdf:resource="Organizational_Unit"/>
+        <owl:disjointWith rdf:resource="Process"/>
+        <owl:disjointWith rdf:resource="Process_Occurrence"/>
+        <owl:disjointWith rdf:resource="Resource"/>
+        <owl:disjointWith rdf:resource="Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agrupación de actividades que, dentro de una unidad organizacional, se ocupa de un tipo de tareas en particular, como contabilidad, marketing o producción</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Functional_SubArea">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isFuntionalSubAreaOf"/>
+                <owl:someValuesFrom rdf:resource="Functional_Area"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="SC_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="subAreaPerforms"/>
+                <owl:someValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="subAreaPerforms"/>
+                <owl:allValuesFrom rdf:resource="Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Organizational_Unit"/>
+        <owl:disjointWith rdf:resource="Process"/>
+        <owl:disjointWith rdf:resource="Process_Occurrence"/>
+        <owl:disjointWith rdf:resource="Resource"/>
+        <owl:disjointWith rdf:resource="Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agrupación de actividades que forman parte de un área funcional y que se ocupan de un tipo de tareas en común dentro del área funcional de la cual forman parte</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Human_RR">
+        <rdfs:subClassOf rdf:resource="Resource_Role"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom rdf:resource="Use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Information_RR"/>
+        <owl:disjointWith rdf:resource="Material_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Función con la cual una persona o un grupo de personas participa en un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Human_Resource">
+        <rdfs:subClassOf rdf:resource="Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom rdf:resource="Human_RR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Information_Resource"/>
+        <owl:disjointWith rdf:resource="Material_Resource"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persona o grupo de personas que participan en uno o más procesos de una cadena de suministros</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Identify_Excess_Product_Condition">
+        <rdfs:subClassOf rdf:resource="SR_Excess_Product_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Independent_OU">
+        <rdfs:subClassOf rdf:resource="Organizational_Unit"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unidad organizacional autónoma de la que dependen, de existir, todas las divisiones, filiales, sucursales, u otros componentes organizacionales, principales o secundarios de un negocio</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Information_RR">
+        <rdfs:subClassOf rdf:resource="Resource_Role"/>
+        <owl:disjointWith rdf:resource="Material_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Función con la cual un recurso de información participa en un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Information_Resource">
+        <rdfs:subClassOf rdf:resource="Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom rdf:resource="Information_RR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Material_Resource"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Datos, información o conocimientos que participan en uno o más procesos
+de una cadena de suministros</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Input">
+        <rdfs:subClassOf rdf:resource="Information_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Elimination"/>
+                            <rdf:Description rdf:about="Use"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de la información que es requerida para la ejecución de un proceso, o alguna parte del mismo. En el proceso la información se elimina o no sufre modificaciones</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Intermediary_Role">
+        <rdfs:subClassOf rdf:resource="Service_Provider_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="Intermodal_Seller_Role">
+        <rdfs:subClassOf rdf:resource="Intermediary_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="Issue_Sourced_or_In-Process_Product">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Manage_Make_Equipements_and_Facilities"/>
+        <owl:disjointWith rdf:resource="Manage_Make_Information"/>
+        <owl:disjointWith rdf:resource="Manage_Make_Regulatory_Environment"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Network"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Performance"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Rules"/>
+        <owl:disjointWith rdf:resource="Manage_Supply_Chain_Make_Risk"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Load">
+        <rdfs:subClassOf rdf:resource="Material_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom rdf:resource="Material_Transfer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Material_Input"/>
+        <owl:disjointWith rdf:resource="Material_Output"/>
+        <owl:disjointWith rdf:resource="Passive_Object"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un recurso material que es trasladado durante un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Load_Product_and_Generate_Shipping_Docs">
+        <rdfs:subClassOf rdf:resource="D_S_Product_Process_Element"/>
+        <owl:disjointWith rdf:resource="Pick_Product"/>
+        <owl:disjointWith rdf:resource="Receive_Enter_and_Validate_Order"/>
+        <owl:disjointWith rdf:resource="Receive_Product_from_Source_or_Make"/>
+        <owl:disjointWith rdf:resource="Receive_and_Verify_Product_by_Customer"/>
+        <owl:disjointWith rdf:resource="Reserve_Inventory_and_Determine_Delivery_Date"/>
+        <owl:disjointWith rdf:resource="Ship_Product"/>
+    </owl:Class>
+    <owl:Class rdf:about="Logistics">
+        <rdfs:subClassOf rdf:resource="Functional_Area"/>
+    </owl:Class>
+    <owl:Class rdf:about="M-t-O_Process_Element">
+        <rdfs:subClassOf rdf:resource="Make_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="M-t-S_Process_Element">
+        <rdfs:subClassOf rdf:resource="Make_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Make">
+        <rdfs:subClassOf rdf:resource="Business_Process"/>
+        <owl:disjointWith rdf:resource="Plan"/>
+        <owl:disjointWith rdf:resource="Source"/>
+        <owl:disjointWith rdf:resource="Source_Return"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que agrega valor a recursos por medio del cultivo, cría, extracción, u otro tipo de explotación de recursos naturales, a través de actividades de procesamiento físico, físico-químico, biotecnológico, etc. y/o de ensamblado</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Make-to-Order">
+        <rdfs:subClassOf rdf:resource="Make"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="M-t-O_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Make-to-Stock"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso de manufactura con el que se generan productos que deben ser completados, ensamblados, configurados o elaborados, en respuesta a la orden de un cliente y de acuerdo a sus requerimientos. El proceso incluye la programación de las operaciones de producción, pero no involucra nuevos desarrollos ingenieriles. El proceso incluye la especificación del producto y la reserva de los recursos necesarios para obtenerlo</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Make-to-Stock">
+        <rdfs:subClassOf rdf:resource="Make"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="M-t-S_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso de manufactura con el que se generan productos estándar que no requieren de adaptaciones o particularizaciones de acuerdo a requerimientos de los clientes. El proceso puede completarse antes que los productos sean solicitados por los clientes y, generalmente, se realiza a partir de una programación basada en los pronósticos de ventas. No se necesita ninguna referencia o detalle de los requerimientos de los clientes durante el proceso, ni se requiere individualizar los productos</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Make_Process_Element">
+        <rdfs:subClassOf rdf:resource="Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Manage_Make_Equipements_and_Facilities">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Manage_Make_Information"/>
+        <owl:disjointWith rdf:resource="Manage_Make_Regulatory_Environment"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Network"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Performance"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Rules"/>
+        <owl:disjointWith rdf:resource="Manage_Supply_Chain_Make_Risk"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Manage_Make_Information">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Manage_Make_Regulatory_Environment"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Network"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Performance"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Rules"/>
+        <owl:disjointWith rdf:resource="Manage_Supply_Chain_Make_Risk"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Manage_Make_Regulatory_Environment">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Network"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Performance"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Rules"/>
+        <owl:disjointWith rdf:resource="Manage_Supply_Chain_Make_Risk"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Manage_Production_Network">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Performance"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Rules"/>
+        <owl:disjointWith rdf:resource="Manage_Supply_Chain_Make_Risk"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Manage_Production_Performance">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Manage_Production_Rules"/>
+        <owl:disjointWith rdf:resource="Manage_Supply_Chain_Make_Risk"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Manage_Production_Rules">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Manage_Supply_Chain_Make_Risk"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Manage_Supply_Chain_Make_Risk">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_In-Process_Product"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Manage_WIP_In-Process_Product">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Manage_WIP_Transportation"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Manage_WIP_Transportation">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Package"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Market">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasElement"/>
+                <owl:someValuesFrom rdf:resource="Customer_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasElement"/>
+                <owl:allValuesFrom rdf:resource="Customer_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="Marketing">
+        <rdfs:subClassOf rdf:resource="Functional_Area"/>
+    </owl:Class>
+    <owl:Class rdf:about="Material_Input">
+        <rdfs:subClassOf rdf:resource="Material_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom rdf:resource="Elimination"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Material_Output"/>
+        <owl:disjointWith rdf:resource="Passive_Object"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un recurso material que participa en un proceso incorporándose en otro bien o transformándose</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Material_Movement_Eq">
+        <rdfs:subClassOf rdf:resource="Equipment"/>
+    </owl:Class>
+    <owl:Class rdf:about="Material_Output">
+        <rdfs:subClassOf rdf:resource="Material_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Creation"/>
+                            <rdf:Description rdf:about="Modification"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Organizational_Unit"/>
+        <owl:disjointWith rdf:resource="Passive_Object"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un recurso material que se obtiene como resultado de la ejecución de un proceso, ya sea por su creación a partir de otros materiales o por la modificación del mismo</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Material_RR">
+        <rdfs:subClassOf rdf:resource="Resource_Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Función con la cual un recurso material participa en un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Material_Resource">
+        <rdfs:subClassOf rdf:resource="Resource"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom rdf:resource="Material_RR"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recurso físico que participa en uno o más procesos de una cadena de
+suministros</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Material_Transfer">
+        <rdfs:subClassOf rdf:resource="Utilization"/>
+        <owl:disjointWith rdf:resource="Modification"/>
+        <owl:disjointWith rdf:resource="Use"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Traslado de un recurso entre dos localizaciones durante un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Meets">
+        <rdfs:subClassOf rdf:resource="Atomic_Temporal_Relationship"/>
+        <owl:disjointWith rdf:resource="Overlaps"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relación temporal atómica entre dos procesos que determina que el primero de los procesos termina justo cuando comienza el segundo</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Modification">
+        <rdfs:subClassOf rdf:resource="Utilization"/>
+        <owl:disjointWith rdf:resource="Use"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alteración de las propiedades de un recurso durante un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Movement">
+        <rdfs:subClassOf rdf:resource="Material_Transfer"/>
+        <owl:disjointWith rdf:resource="Transportation_"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Traslado de un recurso durante un proceso entre dos localizaciones situadas dentro de un mismo establecimiento</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Multimodal_Terminal">
+        <rdfs:subClassOf rdf:resource="Terminal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Organizational_Unit">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="Dependent_OU"/>
+                    <rdf:Description rdf:about="Independent_OU"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="SC_Entity"/>
+        <owl:disjointWith rdf:resource="Process"/>
+        <owl:disjointWith rdf:resource="Process_Occurrence"/>
+        <owl:disjointWith rdf:resource="Resource"/>
+        <owl:disjointWith rdf:resource="Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empresa, organización, compañía, o alguna parte de ellas, que tiene administración y funciones propias</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Organizational_Unit_Role">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isORoleOf"/>
+                <owl:someValuesFrom rdf:resource="Organizational_Unit"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="SC_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isMemberOf"/>
+                <owl:someValuesFrom rdf:resource="Supply_Chain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="performs"/>
+                <owl:someValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="performs"/>
+                <owl:allValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funcionalidad que asume una unidad organizacional en su participación en una dada cadena de suministros en particular</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Output">
+        <rdfs:subClassOf rdf:resource="Information_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom rdf:resource="Creation"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de la información que resulta de la realización de un proceso y que no existía antes de la ejecución del mismo</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Overlaps">
+        <rdfs:subClassOf rdf:resource="Atomic_Temporal_Relationship"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relación temporal atómica entre dos procesos que establece que el primero de los procesos comienza antes que el segundo y termina durante su transcurso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Package">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Produce_and_Test"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Passive_Object">
+        <rdfs:subClassOf rdf:resource="Material_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom rdf:resource="Use"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un recurso material sobre el cual recaen las acciones del proceso que lo utiliza sin que sufra modificaciones físicas, físico-químicas ni de ubicación espacial</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Payment">
+        <rdfs:subClassOf rdf:resource="Financial_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Creation"/>
+                            <rdf:Description rdf:about="Use"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Proceeds"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un recurso financiero que es desembolsado o emitido durante la ejecución de un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Pick_Product">
+        <rdfs:subClassOf rdf:resource="D_S_Product_Process_Element"/>
+        <owl:disjointWith rdf:resource="Receive_Enter_and_Validate_Order"/>
+        <owl:disjointWith rdf:resource="Receive_Product_from_Source_or_Make"/>
+        <owl:disjointWith rdf:resource="Receive_and_Verify_Product_by_Customer"/>
+        <owl:disjointWith rdf:resource="Reserve_Inventory_and_Determine_Delivery_Date"/>
+        <owl:disjointWith rdf:resource="Ship_Product"/>
+    </owl:Class>
+    <owl:Class rdf:about="Plan">
+        <rdfs:subClassOf rdf:resource="Business_Process"/>
+        <owl:disjointWith rdf:resource="Source"/>
+        <owl:disjointWith rdf:resource="Source_Return"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que evalúa las necesidades operativas y los recursos disponibles en una cadena de suministros, o en alguna parte de ella, de manera de desarrollar un curso de acción que sea lo más adecuado posible para alcanzar los objetivos deseados</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_D_Process_Element">
+        <rdfs:subClassOf rdf:resource="Plan_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_Deliver">
+        <rdfs:subClassOf rdf:resource="Plan"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="Plan_D_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Plan_Make"/>
+        <owl:disjointWith rdf:resource="Plan_Return"/>
+        <owl:disjointWith rdf:resource="Plan_Source"/>
+        <owl:disjointWith rdf:resource="Plan_Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que evalúa las necesidades operativas y los recursos disponibles para desarrollar los procesos de entrega de una unidad organizacional durante un período de tiempo específico. Se prevé que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_M_Process_Element">
+        <rdfs:subClassOf rdf:resource="Plan_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_Make">
+        <rdfs:subClassOf rdf:resource="Plan"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="Plan_M_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Plan_Return"/>
+        <owl:disjointWith rdf:resource="Plan_Source"/>
+        <owl:disjointWith rdf:resource="Plan_Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que evalúa las necesidades operativas y los recursos disponibles para desarrollar los procesos de producción de una unidad organizacional durante un período de tiempo específico. Se espera que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_Process_Element">
+        <rdfs:subClassOf rdf:resource="Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_R_Process_Element">
+        <rdfs:subClassOf rdf:resource="Plan_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_Return">
+        <rdfs:subClassOf rdf:resource="Plan"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="Plan_R_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Plan_Source"/>
+        <owl:disjointWith rdf:resource="Plan_Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que evalúa las necesidades operativas y los recursos disponibles para gestionar los procesos de retorno en una unidad organizacional durante un período de tiempo específico. Se espera que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_SC_Process_Element">
+        <rdfs:subClassOf rdf:resource="Plan_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_S_Process_Element">
+        <rdfs:subClassOf rdf:resource="Plan_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_Source">
+        <rdfs:subClassOf rdf:resource="Plan"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="Plan_S_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Plan_Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que evalúa las necesidades operativas y los recursos disponibles para desarrollar los procesos de abastecimiento de una unidad organizacional durante un período de tiempo específico. Se prevé que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Plan_Supply_Chain">
+        <rdfs:subClassOf rdf:resource="Plan"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="Plan_SC_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que evalúa las necesidades operativas y los recursos disponibles en una cadena de suministros, de manera de desarrollar cursos de acción durante un período de tiempo específico. Se espera que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Plant">
+        <rdfs:subClassOf rdf:resource="Facility"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:someValuesFrom rdf:resource="Production_Site"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Point_of_Purchase"/>
+                            <rdf:Description rdf:about="Point_of_Storage"/>
+                            <rdf:Description rdf:about="Production_Site"/>
+                            <rdf:Description rdf:about="Vehicle_Terminal"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="Point_of_Purchase">
+        <rdfs:subClassOf rdf:resource="Facility_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un establecimiento que se utiliza en un proceso para realizar transacciones comerciales de compra</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Point_of_Storage">
+        <rdfs:subClassOf rdf:resource="Facility_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un establecimiento que se utiliza en un proceso para realizar el almacenamiento de materiales</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Port_Terminal">
+        <rdfs:subClassOf rdf:resource="Terminal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Primary_Producer_Role">
+        <rdfs:subClassOf rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="performs"/>
+                        <owl:someValuesFrom rdf:resource="Deliver_Retail_Product"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Secondary_Producer_Role"/>
+        <owl:disjointWith rdf:resource="Service_Provider_Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol que asume una unidad organizacional que, en su participación en una dada cadena de suministros, realiza actividades vinculadas a la producción primaria, tales como la agricultura, ganadería, pesca, minería, extracción de combustibles fósiles, etc.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Proceeds">
+        <rdfs:subClassOf rdf:resource="Financial_RR"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Elimination"/>
+                            <rdf:Description rdf:about="Use"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de recurso financiero que se recibe durante un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Process">
+        <rdfs:subClassOf rdf:resource="SC_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="entails"/>
+                <owl:someValuesFrom rdf:resource="Utilization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isPerformedBy"/>
+                <owl:someValuesFrom rdf:resource="Organizational_Unit_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="entails"/>
+                <owl:allValuesFrom rdf:resource="Utilization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isPerformedBy"/>
+                <owl:allValuesFrom rdf:resource="Organizational_Unit_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isSubProcessOf"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Process_Occurrence"/>
+        <owl:disjointWith rdf:resource="Resource"/>
+        <owl:disjointWith rdf:resource="Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actividad o conjunto de actividades interrelacionadas logicamente, que se realizan para alcanzar un resultado epecífico y predefinido a través de la utilización de recursos</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Process_Element">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isSubProcessOf"/>
+                <owl:someValuesFrom rdf:resource="Business_Process"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="Task"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isSubProcessOf"/>
+                <owl:allValuesFrom rdf:resource="Business_Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Task"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actividad o estructura lógica de actividades que es un componente de un proceso de negocio</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Process_Occurrence">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="materializesProcess"/>
+                <owl:someValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="SC_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="materializesProcess"/>
+                <owl:allValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Resource"/>
+        <owl:disjointWith rdf:resource="Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actividad o conjunto de actividades interrelacionadas que materializan un proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Produce_and_Test">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Release_Product_to_Delivery"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Production">
+        <rdfs:subClassOf rdf:resource="Functional_Area"/>
+    </owl:Class>
+    <owl:Class rdf:about="Production_Eq">
+        <rdfs:subClassOf rdf:resource="Equipment"/>
+        <owl:disjointWith rdf:resource="Transportation_Eq"/>
+    </owl:Class>
+    <owl:Class rdf:about="Production_Site">
+        <rdfs:subClassOf rdf:resource="Facility_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un establecimiento que se utiliza en un proceso como lugar de emplazamiento de un ambiente productivo</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Purchasing">
+        <rdfs:subClassOf rdf:resource="Functional_Area"/>
+    </owl:Class>
+    <owl:Class rdf:about="Rack-jobber_Role">
+        <rdfs:subClassOf rdf:resource="Dealer_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="Railway_Terminal">
+        <rdfs:subClassOf rdf:resource="Terminal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Receive_Enter_and_Validate_Order">
+        <rdfs:subClassOf rdf:resource="D_S_Product_Process_Element"/>
+        <owl:disjointWith rdf:resource="Receive_Product_from_Source_or_Make"/>
+        <owl:disjointWith rdf:resource="Receive_and_Verify_Product_by_Customer"/>
+        <owl:disjointWith rdf:resource="Reserve_Inventory_and_Determine_Delivery_Date"/>
+        <owl:disjointWith rdf:resource="Ship_Product"/>
+    </owl:Class>
+    <owl:Class rdf:about="Receive_Product_from_Source_or_Make">
+        <rdfs:subClassOf rdf:resource="D_S_Product_Process_Element"/>
+        <owl:disjointWith rdf:resource="Receive_and_Verify_Product_by_Customer"/>
+        <owl:disjointWith rdf:resource="Reserve_Inventory_and_Determine_Delivery_Date"/>
+        <owl:disjointWith rdf:resource="Ship_Product"/>
+    </owl:Class>
+    <owl:Class rdf:about="Receive_and_Verify_Product_by_Customer">
+        <rdfs:subClassOf rdf:resource="D_S_Product_Process_Element"/>
+        <owl:disjointWith rdf:resource="Reserve_Inventory_and_Determine_Delivery_Date"/>
+        <owl:disjointWith rdf:resource="Ship_Product"/>
+    </owl:Class>
+    <owl:Class rdf:about="Release_Product_to_Delivery">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Schedule_Production_Activities"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Request_Excess_Product_Return_Authorisation">
+        <rdfs:subClassOf rdf:resource="SR_Excess_Product_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Reseller_Role">
+        <rdfs:subClassOf rdf:resource="Service_Provider_Role"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="performs"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="Deliver_Make-to-Order_Product"/>
+                                    <rdf:Description rdf:about="Deliver_Stocked_Product"/>
+                                    <rdf:Description rdf:about="Make"/>
+                                    <rdf:Description rdf:about="Source"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="Reserch_and_Development">
+        <rdfs:subClassOf rdf:resource="Functional_Area"/>
+    </owl:Class>
+    <owl:Class rdf:about="Reserve_Inventory_and_Determine_Delivery_Date">
+        <rdfs:subClassOf rdf:resource="D_S_Product_Process_Element"/>
+        <owl:disjointWith rdf:resource="Ship_Product"/>
+    </owl:Class>
+    <owl:Class rdf:about="Resource">
+        <rdfs:subClassOf rdf:resource="SC_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:someValuesFrom rdf:resource="Resource_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom rdf:resource="Resource_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Supply_Chain"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medio físico o conceptual que brinda soporte a la ejecución de un proceso, tal como equipamiento, materias primas, información, etc.</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Resource_Role">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isResourceRoleOf"/>
+                <owl:someValuesFrom rdf:resource="Resource"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isInvolvedIn"/>
+                <owl:someValuesFrom rdf:resource="Utilization"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Función o comportamiento asociado con la participación de un recurso en un proceso específico</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Responsible">
+        <rdfs:subClassOf rdf:resource="Human_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de una persona o grupo de personas que tiene la obligación y la capacidad de tomar decisiones, modificar un proceso y velar por su buen desempeño</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Retailer_Role">
+        <rdfs:subClassOf rdf:resource="Dealer_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="SC_Entity">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elemento concreto o abstracto que es parte funcional o estructural de una cadena de suministros</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="SR_Def_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Source_Return_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="SR_Excess_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Source_Return_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="SR_MRO_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Source_Return_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="S_E-t-O_Process_Element">
+        <rdfs:subClassOf rdf:resource="Source_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="S_M-t-O_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Source_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="S_S_Product_Process_Element">
+        <rdfs:subClassOf rdf:resource="Source_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Sales">
+        <rdfs:subClassOf rdf:resource="Functional_Area"/>
+    </owl:Class>
+    <owl:Class rdf:about="Schedule_Production_Activities">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Stage_Finished_Product"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Secondary_Producer_Role">
+        <rdfs:subClassOf rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="performs"/>
+                        <owl:someValuesFrom rdf:resource="Deliver_Retail_Product"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Service_Provider_Role"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol que asume una unidad organizacional que, en su participación en una cadena de suministros en particular, realiza actividades productivas donde se transforman materias primas y/o productos intermedios en productos de mayor valor</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Service_Provider_Role">
+        <rdfs:subClassOf rdf:resource="Organizational_Unit_Role"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="performs"/>
+                        <owl:someValuesFrom rdf:resource="Make"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol que asume una unidad organizacional que, en su participación en una cadena de suministros específica, sólo realiza actividades relacionadas con el transporte, comercialización, almacenamiento, etc., que le agregan valor a un producto sin transformarlo de manera física o físico-química</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Ship_Product">
+        <rdfs:subClassOf rdf:resource="D_S_Product_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Society">
+        <rdfs:subClassOf rdf:resource="Independent_OU"/>
+    </owl:Class>
+    <owl:Class rdf:about="Source">
+        <rdfs:subClassOf rdf:resource="Business_Process"/>
+        <owl:disjointWith rdf:resource="Source_Return"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso asociado con la solicitud, entrega, recepción y transferencia de 
+materias primas, subensambles, productos o servicios, que son adquiridos a una unidad organizacional de una cadena de suministros</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Source_Engineer-to-Order_Product">
+        <rdfs:subClassOf rdf:resource="Source"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="S_E-t-O_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Source_Make-to-Order_Product"/>
+        <owl:disjointWith rdf:resource="Source_Stocked_Product"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que consiste en la adquisición de partes, ensambles, productos o servicios especializados que son diseñados, pedidos y/o construidos en base a los requerimientos o especificaciones técnicas de una orden de un cliente en
+particular. Involucra la identificación y selección de las fuentes de suministros, la negociación con los posibles proveedores, la programación de la/s entregas,así como, la solicitud y recepción de los materiales</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Source_Make-to-Order_Product">
+        <rdfs:subClassOf rdf:resource="Source"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="S_M-t-O_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Source_Stocked_Product"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que consiste en solicitar y recibir productos o materiales (y posiblemente configurarlos) sólo cuando son necesarios para poder satisfacer una orden de un cliente. Los recursos adquiridos mediante este proceso son habituales y/o estándares, pero se individualizan y se vinculan a órdenes específicas de producción o de los clientes</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Source_Process_Element">
+        <rdfs:subClassOf rdf:resource="Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Source_Return">
+        <rdfs:subClassOf rdf:resource="Business_Process"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que consiste en la gestión “in-situ” de la devolución de un producto, o lote del mismo, a un proveedor y el envío al lugar acordado</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Source_Return_Defective_Product">
+        <rdfs:subClassOf rdf:resource="Source_Return"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="SR_Def_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Source_Return_Excess_Product"/>
+        <owl:disjointWith rdf:resource="Sourrce_Return_MRO_Product"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso mediante el cual se devuelven productos defectuosos al proveedor, se define su disposición y se acuerda la compensación a recibir, de acuerdo a lo que indique la garantía, las políticas de retiro de producto no conforme del
+mercado, u otras políticas similares. Se pueden considerar productos defectuosos aquéllos que no cumplen con las especificaciones (incluyendo no conformidad de la orden, tal como el retraso en la entrega o envío inapropiado)</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Source_Return_Excess_Product">
+        <rdfs:subClassOf rdf:resource="Source_Return"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="SR_Excess_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="Sourrce_Return_MRO_Product"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso mediante el cual se retornan al proveedor productos en exceso, envejecidos u obsoletos, de acuerdo a los términos y condiciones pactadas. El propósito del retorno de inventarios en exceso es reubicarlo en una localización en donde se pueda vender el producto que es considerado excesivo en la ubicación en la que actualmente se encuentra</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Source_Return_Process_Element">
+        <rdfs:subClassOf rdf:resource="Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Source_Stocked_Product">
+        <rdfs:subClassOf rdf:resource="Source"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfSubProcess"/>
+                <owl:allValuesFrom rdf:resource="S_S_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso que consiste en solicitar, recibir y transferir materiales sin procesar, subensambles, productos y/o servicios, basándose en requerimientos de demanda agregada. Los recursos adquiridos mediante este proceso son
+genéricos y no están vinculados a órdenes específicas de producción o de los clientes. El propósito de este proceso es mantener un nivel predeterminado de inventario de los productos adquiridos</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Sourrce_Return_MRO_Product">
+        <rdfs:subClassOf rdf:resource="Source_Return"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isComprisedOfPE"/>
+                <owl:allValuesFrom rdf:resource="SR_MRO_Product_Process_Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proceso mediante el cual se retornan productos o activos al proveedor para su mantenimiento, reparación o revisión, tal como se defina en los planes de mantenimiento o por la ocurrencia o anticipación de fallas o riesgos. Generalmente se espera que los activos que se gestionan a través de este proceso sean reacondicionados y que retornen al servicio</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Stage_Finished_Product">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+        <owl:disjointWith rdf:resource="Waste_Disposal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Store">
+        <rdfs:subClassOf rdf:resource="Facility"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:someValuesFrom rdf:resource="Point_of_Purchase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Point_of_Purchase"/>
+                            <rdf:Description rdf:about="Point_of_Storage"/>
+                            <rdf:Description rdf:about="Vehicle_Terminal"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="Subsidiary">
+        <rdfs:subClassOf rdf:resource="Dependent_OU"/>
+    </owl:Class>
+    <owl:Class rdf:about="Supervisor">
+        <rdfs:subClassOf rdf:resource="Human_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de una persona o grupo de personas que en un proceso monitorean y regulan a los recursos humanos que se encargan de ejecutar dicho proceso</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Supply_Chain">
+        <rdfs:subClassOf rdf:resource="SC_Entity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasMember"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Primary_Producer_Role"/>
+                            <rdf:Description rdf:about="Secondary_Producer_Role"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isTargetedAt"/>
+                <owl:someValuesFrom rdf:resource="Market"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="provides"/>
+                <owl:someValuesFrom rdf:resource="Material_Resource"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isTargetedAt"/>
+                <owl:allValuesFrom rdf:resource="Market"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasMember"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="Organizational_Unit_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Red de unidades organizacionales que transforman y/o agregan valor a los materiales, abarcando desde la provisión de materias primas hasta la distribución final de productos en mercados específicos</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Task">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isSubProcessOf"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Composite_Task"/>
+                            <rdf:Description rdf:about="Process_Element"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="Process"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isSubProcessOf"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Composite_Task"/>
+                            <rdf:Description rdf:about="Process_Element"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Actividad o estructura lógica de actividades que es parte de un elemento de proceso en una CS</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Temporal_Relationship">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="Atomic_Temporal_Relationship"/>
+                    <rdf:Description rdf:about="Composite_Temporal_Relationship"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="restrains"/>
+                                <owl:allValuesFrom rdf:resource="Business_Process"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="withRespectTo"/>
+                                <owl:allValuesFrom rdf:resource="Business_Process"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="restrains"/>
+                                        <owl:allValuesFrom rdf:resource="Process_Element"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="withRespectTo"/>
+                                        <owl:allValuesFrom rdf:resource="Process_Element"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="restrains"/>
+                                        <owl:allValuesFrom rdf:resource="Task"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="withRespectTo"/>
+                                        <owl:allValuesFrom rdf:resource="Task"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="restrains"/>
+                <owl:allValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="withRespectTo"/>
+                <owl:allValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relación de orden parcial del tiempo de ejecucion de dos procesos, cualquiera sea su nivel de complejidad</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Terminal">
+        <rdfs:subClassOf rdf:resource="Facility"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:someValuesFrom rdf:resource="Vehicle_Terminal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Cross-docking_Point"/>
+                            <rdf:Description rdf:about="Point_of_Storage"/>
+                            <rdf:Description rdf:about="Vehicle_Terminal"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="ThirdPL_Provider_Role">
+        <rdfs:subClassOf rdf:resource="Service_Provider_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="Transportation_">
+        <rdfs:subClassOf rdf:resource="Material_Transfer"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasDestinationFacility"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasSourceFacility"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Traslado de un recurso durante un proceso entre dos establecimientos</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Transportation_Eq">
+        <rdfs:subClassOf rdf:resource="Equipment"/>
+    </owl:Class>
+    <owl:Class rdf:about="Truck_Terminal">
+        <rdfs:subClassOf rdf:resource="Terminal"/>
+    </owl:Class>
+    <owl:Class rdf:about="Use">
+        <rdfs:subClassOf rdf:resource="Utilization"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Empleo de un recurso en un proceso en el cual no sufre transformaciones (modificación, eliminación, creación o transferencia)</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Utilization">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="involves"/>
+                <owl:someValuesFrom rdf:resource="Resource_Role"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="isEntailedBy"/>
+                <owl:someValuesFrom rdf:resource="Process"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manera en que un proceso afecta a un recurso que participa en una determinada actividad cumpliendo un rol en particular</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Vehicle_Terminal">
+        <rdfs:subClassOf rdf:resource="Facility_RR"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rol de un establecimiento que se utiliza en un proceso como punto de inicio y/o finalización del recorrido de un transporte</rdfs:comment>
+    </owl:Class>
+    <owl:Class rdf:about="Warehouse">
+        <rdfs:subClassOf rdf:resource="Facility"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:someValuesFrom rdf:resource="Point_of_Storage"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="hasResourceRole"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="Point_of_Storage"/>
+                            <rdf:Description rdf:about="Vehicle_Terminal"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class rdf:about="Waste_Disposal">
+        <rdfs:subClassOf rdf:resource="E-t-O_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Wholesaler_Role">
+        <rdfs:subClassOf rdf:resource="Dealer_Role"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Assess_and_Aggregate_Delivery_Resources">
+        <rdfs:subClassOf rdf:resource="Plan_D_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Assess_and_Aggregate_Production_Resources">
+        <rdfs:subClassOf rdf:resource="Plan_M_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Assess_and_Aggregate_Return_Resources">
+        <rdfs:subClassOf rdf:resource="Plan_R_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Assess_and_Aggregate_Source_Resources">
+        <rdfs:subClassOf rdf:resource="Plan_S_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Prioritize_and_Aggregate_Delivery_Requirements">
+        <rdfs:subClassOf rdf:resource="Plan_D_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Prioritize_and_Aggregate_Product_Requirements">
+        <rdfs:subClassOf rdf:resource="Plan_S_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Prioritize_and_Aggregate_Production_Requirements">
+        <rdfs:subClassOf rdf:resource="Plan_M_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Prioritize_and_Aggregate_Return_Requirements">
+        <rdfs:subClassOf rdf:resource="Plan_R_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Prioritize_and_Aggregate_Suply_Cahin_Requirements">
+        <rdfs:subClassOf rdf:resource="Plan_SC_Process_Element"/>
+    </owl:Class>
+    <owl:Class rdf:about="Identify,_Prioritize_and_Aggregate_Suppy_Chain_Resources">
+        <rdfs:subClassOf rdf:resource="Plan_SC_Process_Element"/>
+    </owl:Class>
+</rdf:RDF>
