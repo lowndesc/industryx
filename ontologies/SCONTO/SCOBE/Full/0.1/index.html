@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Supply Chain Benchmarking Ontology (SCOBE)</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1Sew
+EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "http://generic.org/sco/scobe",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>This ontology imports all SCOBE modules and thus gives the fullest expressivity that SCOBE allows. You can use this ontology as-is, or you can construct your own ontology by importing individual SCOBE modules.</p>"
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@id": "https://opensource.org/licenses/MIT"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Supply Chain Benchmarking Ontology (SCOBE)"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.12.0</span>
+  </div>
+  <h1>Supply Chain Benchmarking Ontology (SCOBE)</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>http://generic.org/sco/scobe</code></dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">Publisher</a>(s)</dt>
+        <dd>
+            Avanade<br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+        <dd>
+            Alicia C. B�hm<br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor">Contributor</a>(s)</dt>
+        <dd>
+            Chris Lowndes<br/>
+            Gabriela P. Henning<br/>
+            Horacio P. Leone<br/>
+            Marcela Vegetti<br/>
+        </dd>
+        <dt>Version Information</dt>
+        <dd>0.1</dd>
+        <dt>Version URI</dt>
+        <dd><a href="http://generic.org/sco/scobe/full/0.1/">scobe:</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="http://generic.org/sco/scobe/asset/0.1/">http://generic.org/sco/scobe/asset/0.1/</a><br/>
+        </dd>
+        <dt>License</dt>
+        <dd><a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a></dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="SCOBE.owl">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>This ontology imports all SCOBE modules and thus gives the fullest expressivity that SCOBE allows. You can use this ontology as-is, or you can construct your own ontology by importing individual SCOBE modules.</p>
+    </div>
+    <p><strong>History Note:</strong> <p>Version 0.1 is an initial release that contains the full SCOBE</p></p>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#functionalproperties">Functional Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+      <li><a href="http://generic.org/sco/scobe#Atomic_Criterion">http://generic.org/sco/scobe#Atomic_Criterion</a></li>
+      <li><a href="http://generic.org/sco/scobe#Benchmark">http://generic.org/sco/scobe#Benchmark</a></li>
+      <li><a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a></li>
+      <li><a href="http://generic.org/sco/scobe#Benchmarking_Membership_Property">http://generic.org/sco/scobe#Benchmarking_Membership_Property</a></li>
+      <li><a href="http://generic.org/sco/scobe#Benchmarking_Project">http://generic.org/sco/scobe#Benchmarking_Project</a></li>
+      <li><a href="http://generic.org/sco/scobe#Benchmarking_Transformation_Rule">http://generic.org/sco/scobe#Benchmarking_Transformation_Rule</a></li>
+      <li><a href="http://generic.org/sco/scobe#Composite_Criterion">http://generic.org/sco/scobe#Composite_Criterion</a></li>
+      <li><a href="http://generic.org/sco/scobe#Group_Best_Value_Result">http://generic.org/sco/scobe#Group_Best_Value_Result</a></li>
+      <li><a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a></li>
+      <li><a href="http://generic.org/sco/scobe#Group_Evaluation_Result">http://generic.org/sco/scobe#Group_Evaluation_Result</a></li>
+      <li><a href="http://generic.org/sco/scobe#Group_Inferior_Range">http://generic.org/sco/scobe#Group_Inferior_Range</a></li>
+      <li><a href="http://generic.org/sco/scobe#Group_Mean_Value_Result">http://generic.org/sco/scobe#Group_Mean_Value_Result</a></li>
+      <li><a href="http://generic.org/sco/scobe#Group_Standard_Range">http://generic.org/sco/scobe#Group_Standard_Range</a></li>
+      <li><a href="http://generic.org/sco/scobe#Group_Superior_Range">http://generic.org/sco/scobe#Group_Superior_Range</a></li>
+      <li><a href="http://generic.org/sco/scobe#Membership_Property_Value">http://generic.org/sco/scobe#Membership_Property_Value</a></li>
+      <li><a href="http://generic.org/sco/scobe#Range_Result">http://generic.org/sco/scobe#Range_Result</a></li>
+      <li><a href="http://generic.org/sco/scobe#Reference_Group">http://generic.org/sco/scobe#Reference_Group</a></li>
+      <li><a href="http://generic.org/sco/scobe#Reference_Practice">http://generic.org/sco/scobe#Reference_Practice</a></li>
+      <li><a href="http://generic.org/sco/scobe#Reference_Value">http://generic.org/sco/scobe#Reference_Value</a></li>
+      <li><a href="http://generic.org/sco/scobe#Single_Result">http://generic.org/sco/scobe#Single_Result</a></li>
+      <li><a href="http://generic.org/sco/scobe#Transformed_Measure">http://generic.org/sco/scobe#Transformed_Measure</a></li>
+    </ul>
+    <div class="entity class" id="Atomic_Criterion">
+        <h3>
+          Atomic_Criterion<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Atomic_Criterion" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Atomic_Criterion</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Caracter�stica de desempe�o que no resulta de la composici�n de otros criterios de evaluaci�n. Se utiliza directa o indirectamente para el an�lisis del conjunto de miembros de un grupo de �benchmarking�</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasTransformationRule">http://generic.org/sco/scobe#hasTransformationRule</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Benchmarking_Transformation_Rule">http://generic.org/sco/scobe#Benchmarking_Transformation_Rule</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasTransformationRule">http://generic.org/sco/scobe#hasTransformationRule</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isTransformableInto">http://generic.org/sco/scobe#isTransformableInto</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Benchmark">
+        <h3>
+          Benchmark<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Benchmark" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Benchmark</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Punto de referencia contra el cual se compara el desempe�o o las pr�cticas de cada una de las entidades de la cadena de suministros involucradas en un proyecto de �benchmarking�</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isProducedBy">http://generic.org/sco/scobe#isProducedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Benchmarking_Project">http://generic.org/sco/scobe#Benchmarking_Project</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Reference_Value">http://generic.org/sco/scobe#Reference_Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#Reference_Practice">http://generic.org/sco/scobe#Reference_Practice</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#produce">http://generic.org/sco/scobe#produce</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Benchmarking_Group">
+        <h3>
+          Benchmarking_Group<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Benchmarking_Group" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Benchmarking_Group</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Grupo de entidades que poseen caracter�sticas afines preestablecidas cuyos desempe�os se eval�an en un proyecto de �benchmarking� a efectos de establecer -directa o indirectamente- puntos de comparaci�n</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#numberOfBGEntities">http://generic.org/sco/scobe#numberOfBGEntities</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasEvaluationResult">http://generic.org/sco/scobe#hasEvaluationResult</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Group_Evaluation_Result">http://generic.org/sco/scobe#Group_Evaluation_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasMembershipProperty">http://generic.org/sco/scobe#hasMembershipProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Benchmarking_Membership_Property">http://generic.org/sco/scobe#Benchmarking_Membership_Property</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#informationQuality">http://generic.org/sco/scobe#informationQuality</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasMembershipProperty">http://generic.org/sco/scobe#hasMembershipProperty</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#numberOfBGEntities">http://generic.org/sco/scobe#numberOfBGEntities</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isEvaluationResultOf">http://generic.org/sco/scobe#isEvaluationResultOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasBenchmarkGroup">http://generic.org/sco/scobe#hasBenchmarkGroup</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#isTargetGroupOf">http://generic.org/sco/scobe#isTargetGroupOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Benchmarking_Membership_Property">
+        <h3>
+          Benchmarking_Membership_Property<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Benchmarking_Membership_Property" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Benchmarking_Membership_Property</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Propiedad de los elementos de un grupo de �benchmarking�</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isEquivalentProperty">http://generic.org/sco/scobe#isEquivalentProperty</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Secondary_Attribute">http://generic.org/sco/scome#Secondary_Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasMembershipValue">http://generic.org/sco/scobe#hasMembershipValue</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Membership_Property_Value">http://generic.org/sco/scobe#Membership_Property_Value</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasBValueScale">http://generic.org/sco/scobe#hasBValueScale</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#isMembershipPropertyOf">http://generic.org/sco/scobe#isMembershipPropertyOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasMembershipValue">http://generic.org/sco/scobe#hasMembershipValue</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#isEquivalentProperty">http://generic.org/sco/scobe#isEquivalentProperty</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasBValueScale">http://generic.org/sco/scobe#hasBValueScale</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasMembershipProperty">http://generic.org/sco/scobe#hasMembershipProperty</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Benchmarking_Project">
+        <h3>
+          Benchmarking_Project<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Benchmarking_Project" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Benchmarking_Project</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Proyecto de investigaci�n del desempe�o y/o de la actuaci�n de un grupo de �benchmarking"- con el fin de mejorar la performance de entidades de una cadena de suministros</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasEvaluationCriterion">http://generic.org/sco/scobe#hasEvaluationCriterion</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasBenchmarkGroup">http://generic.org/sco/scobe#hasBenchmarkGroup</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#produce">http://generic.org/sco/scobe#produce</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasBenchmarkGroup">http://generic.org/sco/scobe#hasBenchmarkGroup</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasEvaluationCriterion">http://generic.org/sco/scobe#hasEvaluationCriterion</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isBenchmarkedWith">http://generic.org/sco/scobe#isBenchmarkedWith</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Benchmarking_Transformation_Rule">
+        <h3>
+          Benchmarking_Transformation_Rule<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Benchmarking_Transformation_Rule" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Benchmarking_Transformation_Rule</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Procedimiento para trasladar las medidas de atributos de desempe�o a la escala correspondiente a un criterio at�mico</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isTransformationRuleOf">http://generic.org/sco/scobe#isTransformationRuleOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Atomic_Criterion">http://generic.org/sco/scobe#Atomic_Criterion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isTransformedWith">http://generic.org/sco/scobe#isTransformedWith</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasTransformationRule">http://generic.org/sco/scobe#hasTransformationRule</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Composite_Criterion">
+        <h3>
+          Composite_Criterion<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Composite_Criterion" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Composite_Criterion</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Caracter�stica de desempe�o que resulta de la composici�n de otros criterios de evaluaci�n. Se utiliza directa o indirectamente para el an�lisis del conjunto de miembros de un grupo de �benchmarking�</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasCComponent">http://generic.org/sco/scobe#hasCComponent</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 2 <a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasCComponent">http://generic.org/sco/scobe#hasCComponent</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Group_Best_Value_Result">
+        <h3>
+          Group_Best_Value_Result<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Group_Best_Value_Result" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Group_Best_Value_Result</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Single_Result">http://generic.org/sco/scobe#Single_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Group_Evaluation_Criterion">
+        <h3>
+          Group_Evaluation_Criterion<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Group_Evaluation_Criterion" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Group_Evaluation_Criterion</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Caracter�stica de desempe�o que se utiliza para la evaluaci�n y an�lisis de los miembros de un grupo de �benchmarking�</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasCriterionResult">http://generic.org/sco/scobe#hasCriterionResult</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Group_Evaluation_Result">http://generic.org/sco/scobe#Group_Evaluation_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasGECValueScale">http://generic.org/sco/scobe#hasGECValueScale</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Composite_Criterion">http://generic.org/sco/scobe#Composite_Criterion</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#Atomic_Criterion">http://generic.org/sco/scobe#Atomic_Criterion</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasGECValueScale">http://generic.org/sco/scobe#hasGECValueScale</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasCriterionResult">http://generic.org/sco/scobe#hasCriterionResult</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasEvaluationCriterion">http://generic.org/sco/scobe#hasEvaluationCriterion</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasCComponent">http://generic.org/sco/scobe#hasCComponent</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Group_Evaluation_Result">
+        <h3>
+          Group_Evaluation_Result<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Group_Evaluation_Result" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Group_Evaluation_Result</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Resultado del an�lisis de un grupo de �benchmarking� con respecto a un criterio de evaluaci�n</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isCriterionResultOf">http://generic.org/sco/scobe#isCriterionResultOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#isEvaluationResultOf">http://generic.org/sco/scobe#isEvaluationResultOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Range_Result">http://generic.org/sco/scobe#Range_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#Single_Result">http://generic.org/sco/scobe#Single_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isEvaluationResultOf">http://generic.org/sco/scobe#isEvaluationResultOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#determinesTargetGroup">http://generic.org/sco/scobe#determinesTargetGroup</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasCriterionResult">http://generic.org/sco/scobe#hasCriterionResult</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Group_Inferior_Range">
+        <h3>
+          Group_Inferior_Range<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Group_Inferior_Range" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Group_Inferior_Range</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Range_Result">http://generic.org/sco/scobe#Range_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Group_Mean_Value_Result">
+        <h3>
+          Group_Mean_Value_Result<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Group_Mean_Value_Result" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Group_Mean_Value_Result</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Single_Result">http://generic.org/sco/scobe#Single_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Group_Standard_Range">
+        <h3>
+          Group_Standard_Range<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Group_Standard_Range" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Group_Standard_Range</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Range_Result">http://generic.org/sco/scobe#Range_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Group_Superior_Range">
+        <h3>
+          Group_Superior_Range<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Group_Superior_Range" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Group_Superior_Range</code></td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Range_Result">http://generic.org/sco/scobe#Range_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Membership_Property_Value">
+        <h3>
+          Membership_Property_Value<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Membership_Property_Value" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Membership_Property_Value</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Conjunto de valores de una propiedad que pueden poseer los individuos de un grupo de �benchmarking�</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    (<a href="N58ed0f9b136241ac99056ae628914f68">N58ed0f9b136241ac99056ae628914f68</a><sup class="sup-c" title="class">c</sup> or <a href="N3f5cf2f786b54ccabfd9bff23fe07b12">N3f5cf2f786b54ccabfd9bff23fe07b12</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isMembershipValueOf">http://generic.org/sco/scobe#isMembershipValueOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Benchmarking_Membership_Property">http://generic.org/sco/scobe#Benchmarking_Membership_Property</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#lowerBound">http://generic.org/sco/scobe#lowerBound</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scobe#upperBound">http://generic.org/sco/scobe#upperBound</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scobe#elementValue">http://generic.org/sco/scobe#elementValue</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasMembershipValue">http://generic.org/sco/scobe#hasMembershipValue</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Range_Result">
+        <h3>
+          Range_Result<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Range_Result" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Range_Result</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Resultado del an�lisis de un grupo de �benchmarking� que constituye un rango de valores de un criterio de evaluaci�n</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Result">http://generic.org/sco/scobe#Group_Evaluation_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasRUpperBound">http://generic.org/sco/scobe#hasRUpperBound</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">some</span> (<a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup>)<br/>
+                    <a href="http://generic.org/sco/scobe#hasRLowerBound">http://generic.org/sco/scobe#hasRLowerBound</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">some</span> (<a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Standard_Range">http://generic.org/sco/scobe#Group_Standard_Range</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#Group_Superior_Range">http://generic.org/sco/scobe#Group_Superior_Range</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#Group_Inferior_Range">http://generic.org/sco/scobe#Group_Inferior_Range</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasRUpperBound">http://generic.org/sco/scobe#hasRUpperBound</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Reference_Group">
+        <h3>
+          Reference_Group<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Reference_Group" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Reference_Group</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Subconjunto del grupo de �benchmarking� que se adopta como referencia para identificar buenas pr�cticas</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasReferencePractice">http://generic.org/sco/scobe#hasReferencePractice</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Reference_Practice">http://generic.org/sco/scobe#Reference_Practice</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#isDeterminedBy">http://generic.org/sco/scobe#isDeterminedBy</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Group_Evaluation_Result">http://generic.org/sco/scobe#Group_Evaluation_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#numberOfRGEntities">http://generic.org/sco/scobe#numberOfRGEntities</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasReferencePractice">http://generic.org/sco/scobe#hasReferencePractice</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#numberOfRGEntities">http://generic.org/sco/scobe#numberOfRGEntities</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scobe#isTargetGroupOf">http://generic.org/sco/scobe#isTargetGroupOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#determinesTargetGroup">http://generic.org/sco/scobe#determinesTargetGroup</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Reference_Practice">
+        <h3>
+          Reference_Practice<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Reference_Practice" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Reference_Practice</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Procedimiento; t�cnica; herramienta; metodolog�a o tecnolog�a que ha demostrado producir buenos resultados en un grupo de referencia; que ha sido seleccionada por medio de un proceso sistem�tico y que es considerada como ejemplar para el logro del criterio adoptado</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmark">http://generic.org/sco/scobe#Benchmark</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isReferencePracticeOfRGroup">http://generic.org/sco/scobe#isReferencePracticeOfRGroup</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Reference_Group">http://generic.org/sco/scobe#Reference_Group</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasReferencePractice">http://generic.org/sco/scobe#hasReferencePractice</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Reference_Value">
+        <h3>
+          Reference_Value<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Reference_Value" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Reference_Value</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Nivel de desempe�o de un grupo de �benchmarking� que es reconocido como un punto de comparaci�n para las entidades de la cadena de suministros vinculadas a un proyecto de �benchmarking�</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmark">http://generic.org/sco/scobe#Benchmark</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasReferencesValueSingleResult">http://generic.org/sco/scobe#hasReferencesValueSingleResult</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scobe#Single_Result">http://generic.org/sco/scobe#Single_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isReferenceValue">http://generic.org/sco/scobe#isReferenceValue</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Single_Result">
+        <h3>
+          Single_Result<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Single_Result" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Single_Result</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Resultado del an�lisis de un grupo de �benchmarking� que constituye un valor puntual de un criterio de evaluaci�n</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Result">http://generic.org/sco/scobe#Group_Evaluation_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#hasRValue">http://generic.org/sco/scobe#hasRValue</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> (<a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Best_Value_Result">http://generic.org/sco/scobe#Group_Best_Value_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scobe#Group_Mean_Value_Result">http://generic.org/sco/scobe#Group_Mean_Value_Result</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isReferenceValue">http://generic.org/sco/scobe#isReferenceValue</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#hasRValue">http://generic.org/sco/scobe#hasRValue</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Transformed_Measure">
+        <h3>
+          Transformed_Measure<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Transformed_Measure" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#Transformed_Measure</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Medida de un atributo de desempe�o compatiblizada para que sea comparable con un criterio at�mico</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#originalMeasure">http://generic.org/sco/scobe#originalMeasure</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isTransformedWith">http://generic.org/sco/scobe#isTransformedWith</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scobe#originalMeasure">http://generic.org/sco/scobe#originalMeasure</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#determinesTargetGroup">determinesTargetGroup</a></li>
+        <li><a href="#hasBValueScale">hasBValueScale</a></li>
+        <li><a href="#hasBenchmarkGroup">hasBenchmarkGroup</a></li>
+        <li><a href="#hasBenchmarkedSCEntity">hasBenchmarkedSCEntity</a></li>
+        <li><a href="#hasCComponent">hasCComponent</a></li>
+        <li><a href="#hasCriterionResult">hasCriterionResult</a></li>
+        <li><a href="#hasEvaluationCriterion">hasEvaluationCriterion</a></li>
+        <li><a href="#hasEvaluationResult">hasEvaluationResult</a></li>
+        <li><a href="#hasGECValueScale">hasGECValueScale</a></li>
+        <li><a href="#hasMembershipProperty">hasMembershipProperty</a></li>
+        <li><a href="#hasMembershipValue">hasMembershipValue</a></li>
+        <li><a href="#hasReferencePractice">hasReferencePractice</a></li>
+        <li><a href="#hasReferencesValueSingleResult">hasReferencesValueSingleResult</a></li>
+        <li><a href="#hasTransformationRule">hasTransformationRule</a></li>
+        <li><a href="#isBenchmarkGroupOf">isBenchmarkGroupOf</a></li>
+        <li><a href="#isBenchmarkedWith">isBenchmarkedWith</a></li>
+        <li><a href="#isCriterionResultOf">isCriterionResultOf</a></li>
+        <li><a href="#isDeterminedBy">isDeterminedBy</a></li>
+        <li><a href="#isEquivalentProperty">isEquivalentProperty</a></li>
+        <li><a href="#isEvaluationResultOf">isEvaluationResultOf</a></li>
+        <li><a href="#isMembershipPropertyOf">isMembershipPropertyOf</a></li>
+        <li><a href="#isMembershipValueOf">isMembershipValueOf</a></li>
+        <li><a href="#isProducedBy">isProducedBy</a></li>
+        <li><a href="#isReferencePracticeOfRGroup">isReferencePracticeOfRGroup</a></li>
+        <li><a href="#isReferenceValue">isReferenceValue</a></li>
+        <li><a href="#isTargetGroupOf">isTargetGroupOf</a></li>
+        <li><a href="#isTransformableInto">isTransformableInto</a></li>
+        <li><a href="#isTransformationRuleOf">isTransformationRuleOf</a></li>
+        <li><a href="#isTransformedWith">isTransformedWith</a></li>
+        <li><a href="#originalMeasure">originalMeasure</a></li>
+        <li><a href="#produce">produce</a></li>
+    </ul>
+    <div class="entity property" id="determinesTargetGroup">
+        <h3>determinesTargetGroup<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#determinesTargetGroup" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#determinesTargetGroup</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isDeterminedBy">http://generic.org/sco/scobe#isDeterminedBy</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Result">http://generic.org/sco/scobe#Group_Evaluation_Result</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Reference_Group">http://generic.org/sco/scobe#Reference_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasBValueScale">
+        <h3>hasBValueScale<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasBValueScale" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasBValueScale</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Membership_Property">http://generic.org/sco/scobe#Benchmarking_Membership_Property</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasBenchmarkGroup">
+        <h3>hasBenchmarkGroup<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasBenchmarkGroup" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasBenchmarkGroup</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isBenchmarkGroupOf">http://generic.org/sco/scobe#isBenchmarkGroupOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Project">http://generic.org/sco/scobe#Benchmarking_Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasBenchmarkedSCEntity">
+        <h3>hasBenchmarkedSCEntity<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasBenchmarkedSCEntity" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasBenchmarkedSCEntity</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isBenchmarkedWith">http://generic.org/sco/scobe#isBenchmarkedWith</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasCComponent">
+        <h3>hasCComponent<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasCComponent" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasCComponent</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Composite_Criterion">http://generic.org/sco/scobe#Composite_Criterion</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasCriterionResult">
+        <h3>hasCriterionResult<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasCriterionResult" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasCriterionResult</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isCriterionResultOf">http://generic.org/sco/scobe#isCriterionResultOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Result">http://generic.org/sco/scobe#Group_Evaluation_Result</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasEvaluationCriterion">
+        <h3>hasEvaluationCriterion<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasEvaluationCriterion" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasEvaluationCriterion</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Project">http://generic.org/sco/scobe#Benchmarking_Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasEvaluationResult">
+        <h3>hasEvaluationResult<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasEvaluationResult" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasEvaluationResult</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isEvaluationResultOf">http://generic.org/sco/scobe#isEvaluationResultOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasGECValueScale">
+        <h3>hasGECValueScale<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasGECValueScale" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasGECValueScale</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Criterion">http://generic.org/sco/scobe#Group_Evaluation_Criterion</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasMembershipProperty">
+        <h3>hasMembershipProperty<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasMembershipProperty" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasMembershipProperty</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isMembershipPropertyOf">http://generic.org/sco/scobe#isMembershipPropertyOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Membership_Property">http://generic.org/sco/scobe#Benchmarking_Membership_Property</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasMembershipValue">
+        <h3>hasMembershipValue<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasMembershipValue" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasMembershipValue</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isMembershipValueOf">http://generic.org/sco/scobe#isMembershipValueOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Membership_Property">http://generic.org/sco/scobe#Benchmarking_Membership_Property</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Membership_Property_Value">http://generic.org/sco/scobe#Membership_Property_Value</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasReferencePractice">
+        <h3>hasReferencePractice<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasReferencePractice" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasReferencePractice</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isReferencePracticeOfRGroup">http://generic.org/sco/scobe#isReferencePracticeOfRGroup</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Reference_Group">http://generic.org/sco/scobe#Reference_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Reference_Practice">http://generic.org/sco/scobe#Reference_Practice</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasReferencesValueSingleResult">
+        <h3>hasReferencesValueSingleResult<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasReferencesValueSingleResult" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasReferencesValueSingleResult</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isReferenceValue">http://generic.org/sco/scobe#isReferenceValue</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasTransformationRule">
+        <h3>hasTransformationRule<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasTransformationRule" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasTransformationRule</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#isTransformationRuleOf">http://generic.org/sco/scobe#isTransformationRuleOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Atomic_Criterion">http://generic.org/sco/scobe#Atomic_Criterion</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Transformation_Rule">http://generic.org/sco/scobe#Benchmarking_Transformation_Rule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isBenchmarkGroupOf">
+        <h3>isBenchmarkGroupOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isBenchmarkGroupOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isBenchmarkGroupOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isBenchmarkedWith">
+        <h3>isBenchmarkedWith<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isBenchmarkedWith" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isBenchmarkedWith</code></td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Project">http://generic.org/sco/scobe#Benchmarking_Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isCriterionResultOf">
+        <h3>isCriterionResultOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isCriterionResultOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isCriterionResultOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isDeterminedBy">
+        <h3>isDeterminedBy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isDeterminedBy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isDeterminedBy</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isEquivalentProperty">
+        <h3>isEquivalentProperty<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isEquivalentProperty" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isEquivalentProperty</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Membership_Property">http://generic.org/sco/scobe#Benchmarking_Membership_Property</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Secondary_Attribute">http://generic.org/sco/scome#Secondary_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isEvaluationResultOf">
+        <h3>isEvaluationResultOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isEvaluationResultOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isEvaluationResultOf</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Group_Evaluation_Result">http://generic.org/sco/scobe#Group_Evaluation_Result</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isMembershipPropertyOf">
+        <h3>isMembershipPropertyOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isMembershipPropertyOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isMembershipPropertyOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isMembershipValueOf">
+        <h3>isMembershipValueOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isMembershipValueOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isMembershipValueOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isProducedBy">
+        <h3>isProducedBy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isProducedBy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isProducedBy</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#produce">http://generic.org/sco/scobe#produce</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isReferencePracticeOfRGroup">
+        <h3>isReferencePracticeOfRGroup<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isReferencePracticeOfRGroup" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isReferencePracticeOfRGroup</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isReferenceValue">
+        <h3>isReferenceValue<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isReferenceValue" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isReferenceValue</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Single_Result">http://generic.org/sco/scobe#Single_Result</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Reference_Value">http://generic.org/sco/scobe#Reference_Value</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isTargetGroupOf">
+        <h3>isTargetGroupOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isTargetGroupOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isTargetGroupOf</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Reference_Group">http://generic.org/sco/scobe#Reference_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isTransformableInto">
+        <h3>isTransformableInto<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isTransformableInto" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isTransformableInto</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Performance_Attribute">http://generic.org/sco/scome#Performance_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Atomic_Criterion">http://generic.org/sco/scobe#Atomic_Criterion</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isTransformationRuleOf">
+        <h3>isTransformationRuleOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isTransformationRuleOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isTransformationRuleOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isTransformedWith">
+        <h3>isTransformedWith<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isTransformedWith" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#isTransformedWith</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Transformed_Measure">http://generic.org/sco/scobe#Transformed_Measure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Transformation_Rule">http://generic.org/sco/scobe#Benchmarking_Transformation_Rule</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="originalMeasure">
+        <h3>originalMeasure<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#originalMeasure" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#originalMeasure</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Transformed_Measure">http://generic.org/sco/scobe#Transformed_Measure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="produce">
+        <h3>produce<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#produce" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#produce</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Project">http://generic.org/sco/scobe#Benchmarking_Project</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmark">http://generic.org/sco/scobe#Benchmark</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="functionalproperties">
+    <h2>Functional Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#hasRLowerBound">hasRLowerBound</a></li>
+        <li><a href="#hasRUpperBound">hasRUpperBound</a></li>
+        <li><a href="#lowerBound">lowerBound</a></li>
+        <li><a href="#numberOfBGEntities">numberOfBGEntities</a></li>
+        <li><a href="#numberOfRGEntities">numberOfRGEntities</a></li>
+        <li><a href="#upperBound">upperBound</a></li>
+    </ul>
+    <div class="entity property" id="hasRLowerBound">
+        <h3>hasRLowerBound<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasRLowerBound" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasRLowerBound</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasRUpperBound">
+        <h3>hasRUpperBound<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasRUpperBound" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasRUpperBound</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Range_Result">http://generic.org/sco/scobe#Range_Result</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="lowerBound">
+        <h3>lowerBound<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#lowerBound" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#lowerBound</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Membership_Property_Value">http://generic.org/sco/scobe#Membership_Property_Value</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="numberOfBGEntities">
+        <h3>numberOfBGEntities<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#numberOfBGEntities" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#numberOfBGEntities</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="numberOfRGEntities">
+        <h3>numberOfRGEntities<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#numberOfRGEntities" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#numberOfRGEntities</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Reference_Group">http://generic.org/sco/scobe#Reference_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#integer">xsd:integer</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="upperBound">
+        <h3>upperBound<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#upperBound" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#upperBound</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Membership_Property_Value">http://generic.org/sco/scobe#Membership_Property_Value</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#elementValue">elementValue</a></li>
+        <li><a href="#hasRValue">hasRValue</a></li>
+        <li><a href="#informationQuality">informationQuality</a></li>
+    </ul>
+    <div class="entity property" id="elementValue">
+        <h3>elementValue<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#elementValue" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#elementValue</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Membership_Property_Value">http://generic.org/sco/scobe#Membership_Property_Value</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasRValue">
+        <h3>hasRValue<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasRValue" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#hasRValue</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Single_Result">http://generic.org/sco/scobe#Single_Result</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="informationQuality">
+        <h3>informationQuality<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#informationQuality" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scobe#informationQuality</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scobe#Benchmarking_Group">http://generic.org/sco/scobe#Benchmarking_Group</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>default (scobe)</dt>
+        <dd><code>http://generic.org/sco/scobe/full/0.1/</code></dd>
+        <dt>:</dt>
+        <dd><code>http://generic.org/sco/scobe</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>p1</dt>
+        <dd><code>http://www.owl-ontologies.com/assert.owl#</code></dd>
+        <dt>protege</dt>
+        <dd><code>http://protege.stanford.edu/plugins/owl/protege#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>scome</dt>
+        <dd><code>http://generic.org/sco/scome</code></dd>
+        <dt>sdo</dt>
+        <dd><code>http://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>swrl</dt>
+        <dd><code>http://www.w3.org/2003/11/swrl#</code></dd>
+        <dt>swrlb</dt>
+        <dd><code>http://www.w3.org/2003/11/swrlb#</code></dd>
+        <dt>terms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+        <dt>xsp</dt>
+        <dd><code>http://www.owl-ontologies.com/2005/08/07/xsp.owl#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>
