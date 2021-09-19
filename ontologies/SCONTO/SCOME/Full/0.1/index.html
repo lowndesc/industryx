@@ -1,0 +1,2794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Supply Chain Measurement Ontology (SCOME)</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAC40lEQVRYhe2UT0hUQRzHp6Iss1B3VZKIDbbdfW9mnoi4f3zzjkJQeOgS0SEIb1EWBGGlLLu460zQPQM1unUIIjA6rfpm6ZAhHjoIRVQUFUlEbG+euTsdXG1d3VL3bVD4g+9h+L35fT/8fvN7ADgY9aHY5fpIvK82HO9ysu66wxWOzbkjcekKx0a2ALYA/n2AGi3a6ArFezcidziecQygNhhrcUficjP6PwBqtGijKxy/thnVBePHywYoDsFhl53GV8SEcsTx4usCMLUewTVpc23BNvEzm6Neyf1+KcG2vwqwUjgrOJq2JmHftwmkVBRGTvncFodnbI7vChO/FRznCmHsNM7aHM9Yk7Df5iqsLMw9sMNOK2g+jS4IEz0UJv4iuJZb2RltWnB4UZqH6ioGAgAAGe5vtiZhtzDx7OoRadLmeM7m6IRjhnLMW2Vx1bA5GhAmnhIcz6/xNj4Ujsky8UspwfayjDPjsF2Y6L7N8Vzx/BfP+KPg6LbgSqd8DnfJW2CnbaLhfH5ephpqygJYvQU4Z3P82TLRsDDhUTnmrSq+Y3N0Mg+Xldy/zwEAnLMWZ3pHpNExmfLs/t0dOdVcbT0JeKxUwFP2VljjqiE47Jp53LTXNxhsUZjerTByXWX6VZWRs/4bIQ2ACv+UAomgDzLCISNZxAxZKMhIDjLy1JfsaK+I+eGBUBNk5E2x8RogX/PdcDZUqieWTSh5D6nOVKqfhoycUmlHFFIyu5RXqf7AcQDISCpv/tqbMBqK883RtmpISRoxQyJKPgGn3wNk5NEigDFa6hslqV/Kj+FdBQD0bshIDlKSLlVcoWQo36UhR80BAMB73lulMn0EMpJTqD6qJiOt3mho/8GbkT2BZNgDB/V+RI0fkOrT3kRIVQbaDizJm2hdNbINBxwk5xAj3yEjuV9rZ1iIkgxixkLBA83mz8uCjLwoGwAx0vOnFSy5mtR4VTaAQvVORMnwZgSpzkrV/QmdE2tKe46+MQAAAABJRU5ErkJggg==">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABhklEQVQ4jbWPzStEURjG3yQLirlGKUnKFO45Z+SjmXvnnmthQcpCoVhYmD/AwmJiI3OvZuZc2U3UlKU0/gAslMw9JgvhHxAr2fko7r0jHSsl+TgbTz2Lt5731/MASEiJW9ONml2QyX6rsGalmnT74v8BDf12hxJfpV8d1uwNKUBYszabdFv84L8B9X0rESVmmUup2fme0cVhJWaZHw4NWL1Sew
+EAfDe6H3Dy6Ll456WEJsRZS630MwCAOI20ei5OBpxse5zcBZw8eS4uPpfIuDiCainIg9umBCU0GZzgLZ9Hn31OgoATL+CkLDGB5H1OKj4nFd/FBxUXJ0UZNb4edw/6nLyJXaj5FeCVyPLNIVmYK8TG1IwWb16L1gEACAFV90ftoT8bdOX0EeyY99gxBXZMgRz6qGb1KantAACI0UvE6F5XJqEjpsdURouI0Vt5gGOUkUNnPu7ObGIIMfNaGqDmjDRi9FZldF1lRgYzeqUyeoiY4ag5Iy3RgOYRM8+/M2bG8efsO4hGrpmJseyMAAAAAElFTkSuQmCC">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    
+    <style>
+        #pylode {
+            position: fixed;
+            top: 130px;
+            left: -60px;
+            font-size: small;
+            transform: rotate(-90deg);
+            color: grey;
+        }
+        #pylode a {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+            color: #005A9C;
+        }
+        #pylode a:hover {
+            color: #333;
+        }
+
+        .cardinality {
+            font-style: italic;
+            color: #aa00aa;
+        }
+
+        dt {
+            font-weight: bold;
+            padding: 5px 0 5px 0;
+        }
+
+        ul.hlist {
+            list-style-type: none;
+            border: 1px solid navy;
+            padding:5px;
+            background-color: #F4FFFF;
+        }
+
+        ul.hierarchy {
+            border: 1px solid navy;
+            padding: 5px 25px 5px 25px;
+            background-color: #F4FFFF;
+        }
+
+
+        ul.hlist li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        .entity {
+            border: 1px solid navy;
+            margin:5px 0 5px 0;
+            padding: 5px;
+        }
+
+        .entity th {
+            width: 150px;
+            vertical-align: top;
+        }
+
+        .entity th,
+        .entity td {
+            padding-bottom: 20px;
+        }
+
+        .entity table th {
+            text-align: left;
+        }
+
+        section#overview img {
+            max-width: 1000px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            text-align: left
+        }
+        h1, h2, h3 {
+            color: #005A9C; background: white
+        }
+        h1 {
+            font: 170% sans-serif;
+            line-height: 110%;
+        }
+        h2 {
+            font: 140% sans-serif;
+            margin-top:40px;
+        }
+        h3 {
+            font: 120% sans-serif;
+            margin-top: 3px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid navy;
+        }
+        h4 { font: bold 100% sans-serif }
+        h5 { font: italic 100% sans-serif }
+        h6 { font: small-caps 100% sans-serif }
+
+
+        body {
+            padding: 2em 70px 2em 70px;
+            margin: 0;
+            font-family: sans-serif;
+            color: black;
+            background: white;
+            background-position: top left;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            text-align: justify;
+        }
+
+        section {
+            max-width: 1500px;
+        }
+
+        .figure {
+            margin-bottom: 20px;
+        }
+
+        :link { color: #00C; background: transparent }
+        :visited { color: #609; background: transparent }
+        a:active { color: #C00; background: transparent }
+
+        .sup-c,
+        .sup-op,
+        .sup-fp,
+        .sup-dp,
+        .sup-ap,
+        .sup-p,
+        .sup-ni,
+        .sup-con,
+        .sup-col {
+            cursor:help;
+            margin-left: 3px;
+        }
+
+        .sup-c {
+            color:orange;
+        }
+
+        .sup-op {
+            color:navy;
+        }
+
+        .sup-fp {
+            color:lightskyblue;
+        }
+
+        .sup-dp {
+            color:green;
+        }
+
+        .sup-ap {
+            color:darkred;
+        }
+
+        .sup-p {
+            color:black;
+        }
+
+        .sup-ni {
+            color:brown;
+        }
+
+        .sup-con {
+            color:orange;
+        }
+
+        .sup-col {
+            color:darkred;
+        }
+
+        code {
+            font-size: large;
+            color: darkred;
+        }
+
+        /* less prominent links for properties */
+        .proplink {
+            color: #336;
+            text-decoration: none;
+        }
+    </style>
+    
+    <script type="application/ld+json">
+      [
+  {
+    "@id": "http://generic.org/sco/scome",
+    "@type": [
+      "https://schema.org/DefinedTermSet"
+    ],
+    "https://schema.org/description": [
+      {
+        "@value": "<p>This ontology imports all SCOME modules and thus gives the fullest expressivity that SCOME allows. You can use this ontology as-is, or you can construct your own ontology by importing individual SCOME modules.</p>"
+      }
+    ],
+    "https://schema.org/license": [
+      {
+        "@id": "https://opensource.org/licenses/MIT"
+      }
+    ],
+    "https://schema.org/name": [
+      {
+        "@value": "Supply Chain Measurement Ontology (SCOME)"
+      }
+    ]
+  }
+]
+    </script>
+</head>
+<body>
+  <div id="pylode">made by <a href="http://github.com/rdflib/pyLODE">
+    <span style="color:#329545;">p</span><span style="color:#f9cb33;">y</span>LODE</a>
+    <span style="font-size:smaller;">2.12.0</span>
+  </div>
+  <h1>Supply Chain Measurement Ontology (SCOME)</h1>
+<section id="metadata">
+    <h2 style="display:none;">Metadata</h2>
+    <dl>
+        <dt>URI</dt>
+        <dd><code>http://generic.org/sco/scome</code></dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/publisher">Publisher</a>(s)</dt>
+        <dd>
+            Avanade<br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/creator">Creator</a>(s)</dt>
+        <dd>
+            Alicia C. B�hm<br/>
+        </dd>
+        <dt><a class="proplink" href="https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#http://purl.org/dc/terms/contributor">Contributor</a>(s)</dt>
+        <dd>
+            Chris Lowndes<br/>
+            Gabriela P. Henning<br/>
+            Horacio P. Leone<br/>
+            Marcela Vegetti<br/>
+        </dd>
+        <dt>Version Information</dt>
+        <dd>0.1</dd>
+        <dt>Version URI</dt>
+        <dd><a href="http://generic.org/sco/scome/full/0.1/">scome:</a></dd>
+        <dt>Imports</dt>
+        <dd>
+            <a href="http://generic.org/sco/scome/asset/0.1/">http://generic.org/sco/scome/asset/0.1/</a><br/>
+        </dd>
+        <dt>License</dt>
+        <dd><a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a></dd>
+        <dt>Ontology RDF</dt>
+        <dd><a href="SCOME.owl">RDF (xml)</a></dd>
+    </dl>
+    <h2>Description</h2>
+    <div id="description">
+        <p>This ontology imports all SCOME modules and thus gives the fullest expressivity that SCOME allows. You can use this ontology as-is, or you can construct your own ontology by importing individual SCOME modules.</p>
+    </div>
+    <p><strong>History Note:</strong> <p>Version 0.1 is an initial release that contains the full SCOME</p></p>
+</section>
+<section id="toc">
+    <h2>Table of Contents</h2>
+    <ol>
+        <li><a href="#classes">Classes</a></li>
+        <li><a href="#objectproperties">Object Properties</a></li>
+        <li><a href="#functionalproperties">Functional Properties</a></li>
+        <li><a href="#datatypeproperties">Datatype Properties</a></li>
+        <li><a href="#namedindividuals">Named Individuals</a></li>
+        <li><a href="#namespaces">Namespaces</a></li>
+        <li><a href="#legend">Legend</a></li>
+    </ol>
+</section>
+<section id="overview">
+    <h2>Overview</h2>
+    <div class="figure">
+        <div style="width:500px; height:50px; background-color: lightgrey; border:solid 2px grey; padding:10px;margin-bottom:5px; text-align:center;">Pictures say 1,000 words</div>
+        <div class="caption"><strong>Figure 1:</strong> Ontology overview</div>
+    </div>
+</section>
+  <section id="classes">
+    <h2>Classes <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+      <li><a href="http://generic.org/sco/scome#Allowed_Values">http://generic.org/sco/scome#Allowed_Values</a></li>
+      <li><a href="http://generic.org/sco/scome#Assesment_Activity">http://generic.org/sco/scome#Assesment_Activity</a></li>
+      <li><a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a></li>
+      <li><a href="http://generic.org/sco/scome#Atomic_Metric">http://generic.org/sco/scome#Atomic_Metric</a></li>
+      <li><a href="http://generic.org/sco/scome#Base_Unit">http://generic.org/sco/scome#Base_Unit</a></li>
+      <li><a href="http://generic.org/sco/scome#Benefit_Equity">http://generic.org/sco/scome#Benefit_Equity</a></li>
+      <li><a href="http://generic.org/sco/scome#Categorical">http://generic.org/sco/scome#Categorical</a></li>
+      <li><a href="http://generic.org/sco/scome#Complex_Derived_Unit">http://generic.org/sco/scome#Complex_Derived_Unit</a></li>
+      <li><a href="http://generic.org/sco/scome#Composite_Metric">http://generic.org/sco/scome#Composite_Metric</a></li>
+      <li><a href="http://generic.org/sco/scome#Contribution_Equity">http://generic.org/sco/scome#Contribution_Equity</a></li>
+      <li><a href="http://generic.org/sco/scome#Control_Parameter">http://generic.org/sco/scome#Control_Parameter</a></li>
+      <li><a href="http://generic.org/sco/scome#Derived_Unit">http://generic.org/sco/scome#Derived_Unit</a></li>
+      <li><a href="http://generic.org/sco/scome#Direct_Assessment">http://generic.org/sco/scome#Direct_Assessment</a></li>
+      <li><a href="http://generic.org/sco/scome#Indirect_Assessment">http://generic.org/sco/scome#Indirect_Assessment</a></li>
+      <li><a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a></li>
+      <li><a href="http://generic.org/sco/scome#Measure_Creation">http://generic.org/sco/scome#Measure_Creation</a></li>
+      <li><a href="http://generic.org/sco/scome#Measure_Input">http://generic.org/sco/scome#Measure_Input</a></li>
+      <li><a href="http://generic.org/sco/scome#Measure_Output">http://generic.org/sco/scome#Measure_Output</a></li>
+      <li><a href="http://generic.org/sco/scome#Measure_Use">http://generic.org/sco/scome#Measure_Use</a></li>
+      <li><a href="http://generic.org/sco/scome#Metric">http://generic.org/sco/scome#Metric</a></li>
+      <li><a href="http://generic.org/sco/scome#Metric_Input">http://generic.org/sco/scome#Metric_Input</a></li>
+      <li><a href="http://generic.org/sco/scome#Metric_Use">http://generic.org/sco/scome#Metric_Use</a></li>
+      <li><a href="http://generic.org/sco/scome#Numerical">http://generic.org/sco/scome#Numerical</a></li>
+      <li><a href="http://generic.org/sco/scome#Performance_Attribute">http://generic.org/sco/scome#Performance_Attribute</a></li>
+      <li><a href="http://generic.org/sco/scome#Performance_Information">http://generic.org/sco/scome#Performance_Information</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Agility">http://generic.org/sco/scome#SC_Agility</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Assets">http://generic.org/sco/scome#SC_Assets</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Cost">http://generic.org/sco/scome#SC_Cost</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Customer_Facing">http://generic.org/sco/scome#SC_Customer_Facing</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Equity_Facing">http://generic.org/sco/scome#SC_Equity_Facing</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Internal_Facing">http://generic.org/sco/scome#SC_Internal_Facing</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Performance_Dimension">http://generic.org/sco/scome#SC_Performance_Dimension</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Performance_Evaluation_System">http://generic.org/sco/scome#SC_Performance_Evaluation_System</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Reliability">http://generic.org/sco/scome#SC_Reliability</a></li>
+      <li><a href="http://generic.org/sco/scome#SC_Responsiveness">http://generic.org/sco/scome#SC_Responsiveness</a></li>
+      <li><a href="http://generic.org/sco/scome#Scale_Type">http://generic.org/sco/scome#Scale_Type</a></li>
+      <li><a href="http://generic.org/sco/scome#Secondary_Attribute">http://generic.org/sco/scome#Secondary_Attribute</a></li>
+      <li><a href="http://generic.org/sco/scome#Simple_Derived_Unit">http://generic.org/sco/scome#Simple_Derived_Unit</a></li>
+      <li><a href="http://generic.org/sco/scome#Target_Value">http://generic.org/sco/scome#Target_Value</a></li>
+      <li><a href="http://generic.org/sco/scome#Unit_Of_Measure">http://generic.org/sco/scome#Unit_Of_Measure</a></li>
+      <li><a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a></li>
+    </ul>
+    <div class="entity class" id="Allowed_Values">
+        <h3>
+          Allowed_Values<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Allowed_Values" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Allowed_Values</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Conjunto de valores aceptables para un determinado atributo mensurable</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Control_Parameter">http://generic.org/sco/scome#Control_Parameter</a><sup class="sup-c" title="class">c</sup><br/>
+                    (<a href="N862bf97a8e98435d8baa7b39eb9dde10">N862bf97a8e98435d8baa7b39eb9dde10</a><sup class="sup-c" title="class">c</sup> or <a href="N68e965c26f484ba0b0650afa5d5fd8eb">N68e965c26f484ba0b0650afa5d5fd8eb</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#areAllowedValuesOf">http://generic.org/sco/scome#areAllowedValuesOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#areAllowedValuesOf">http://generic.org/sco/scome#areAllowedValuesOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasUpperBound">http://generic.org/sco/scome#hasUpperBound</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasElementValue">http://generic.org/sco/scome#hasElementValue</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasLowerBound">http://generic.org/sco/scome#hasLowerBound</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Assesment_Activity">
+        <h3>
+          Assesment_Activity<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Assesment_Activity" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Assesment_Activity</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Actividad mediante la cual se valora un atributo mensurable
+asign�ndole un valor (�measure�) de acuerdo al
+procedimiento especificado por una m�trica</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#Task">http://generic.org/sco/scopro#Task</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#entails">http://generic.org/sco/scopro#entails</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Metric_Use">http://generic.org/sco/scome#Metric_Use</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Direct_Assessment">http://generic.org/sco/scome#Direct_Assessment</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Indirect_Assessment">http://generic.org/sco/scome#Indirect_Assessment</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Assessable_Attribute">
+        <h3>
+          Assessable_Attribute<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Assessable_Attribute" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Assessable_Attribute</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Propiedad evaluable de una entidad de una cadena de suministros</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    (<a href="N4fd61e4a96e14c39ba0dbd14e09cdeb9">N4fd61e4a96e14c39ba0dbd14e09cdeb9</a><sup class="sup-c" title="class">c</sup> and <a href="Nedd812d319a34669b00bee8190cec443">Nedd812d319a34669b00bee8190cec443</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasAssessmentMethod">http://generic.org/sco/scome#hasAssessmentMethod</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Metric">http://generic.org/sco/scome#Metric</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#description">http://generic.org/sco/scome#description</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasValueScale">http://generic.org/sco/scome#hasValueScale</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Performance_Attribute">http://generic.org/sco/scome#Performance_Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Secondary_Attribute">http://generic.org/sco/scome#Secondary_Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isQuantifiedBy">http://generic.org/sco/scome#isQuantifiedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasTimeFrame">http://generic.org/sco/scome#hasTimeFrame</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasValueScale">http://generic.org/sco/scome#hasValueScale</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scome#isAssessableAttributeOf">http://generic.org/sco/scome#isAssessableAttributeOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isTargetValueOf">http://generic.org/sco/scome#isTargetValueOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scome#isAssessmentMethodOf">http://generic.org/sco/scome#isAssessmentMethodOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scome#areAllowedValuesOf">http://generic.org/sco/scome#areAllowedValuesOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Atomic_Metric">
+        <h3>
+          Atomic_Metric<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Atomic_Metric" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Atomic_Metric</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>M�todo que no necesita ninguna otra m�trica para la asignaci�n de valores a un atributo mensurable</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Metric">http://generic.org/sco/scome#Metric</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Base_Unit">
+        <h3>
+          Base_Unit<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Base_Unit" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Base_Unit</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Unidad de medida que no se deriva de otra unidad</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Unit_Of_Measure">http://generic.org/sco/scome#Unit_Of_Measure</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Benefit_Equity">
+        <h3>
+          Benefit_Equity<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Benefit_Equity" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Benefit_Equity</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Grado de equidad en los beneficios que obtienen las organizaciones participantes de una cadena -monetarios o de otro tipo- con respecto a un par�metro que permite sentar una base para la comparaci�n</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isLinkedConceptOf">http://generic.org/sco/scome#isLinkedConceptOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#SC_Equity_Facing">http://generic.org/sco/scome#SC_Equity_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Categorical">
+        <h3>
+          Categorical<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Categorical" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Categorical</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Tipo de escala cuyos valores se vinculan a una clasificaci�n o categorizaci�n de una propiedad</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Scale_Type">http://generic.org/sco/scome#Scale_Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isScaleTypeOf">http://generic.org/sco/scome#isScaleTypeOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> (<a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup> and <a href="N8b06e4c5a3e449c98dfe23c7c4a4f218">N8b06e4c5a3e449c98dfe23c7c4a4f218</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Nominal">http://generic.org/sco/scome#Nominal</a><br/>
+                    <a href="http://generic.org/sco/scome#Ordinal">http://generic.org/sco/scome#Ordinal</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Complex_Derived_Unit">
+        <h3>
+          Complex_Derived_Unit<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Complex_Derived_Unit" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Complex_Derived_Unit</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Unidad de medida que se deriva del producto de dos o m�s unidades de medidas</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Derived_Unit">http://generic.org/sco/scome#Derived_Unit</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Composite_Metric">
+        <h3>
+          Composite_Metric<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Composite_Metric" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Composite_Metric</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>M�todo que necesita de otras m�tricas para la asignaci�n de valores a un atributo mensurable</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Metric">http://generic.org/sco/scome#Metric</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isPartOfMetric">http://generic.org/sco/scome#isPartOfMetric</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Contribution_Equity">
+        <h3>
+          Contribution_Equity<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Contribution_Equity" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Contribution_Equity</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Grado de equidad en los aportes -monetarios o de otro tipo- con respecto a un par�metro que permite sentar una base para la comparaci�n -que efect�an las organizaciones participantes de una cadena</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isLinkedConceptOf">http://generic.org/sco/scome#isLinkedConceptOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#SC_Equity_Facing">http://generic.org/sco/scome#SC_Equity_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Control_Parameter">
+        <h3>
+          Control_Parameter<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Control_Parameter" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Control_Parameter</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Par�metro que permite calificar los valores de un atributo mensurable</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Allowed_Values">http://generic.org/sco/scome#Allowed_Values</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Target_Value">http://generic.org/sco/scome#Target_Value</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Derived_Unit">
+        <h3>
+          Derived_Unit<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Derived_Unit" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Derived_Unit</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Unidad de medida que se deriva de otra/s unidad/es</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Unit_Of_Measure">http://generic.org/sco/scome#Unit_Of_Measure</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Simple_Derived_Unit">http://generic.org/sco/scome#Simple_Derived_Unit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Complex_Derived_Unit">http://generic.org/sco/scome#Complex_Derived_Unit</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#derivesFrom">http://generic.org/sco/scome#derivesFrom</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Direct_Assessment">
+        <h3>
+          Direct_Assessment<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Direct_Assessment" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Direct_Assessment</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Actividad de medici�n en la cual no se usan medidas de atributos mensurables</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assesment_Activity">http://generic.org/sco/scome#Assesment_Activity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#entails">http://generic.org/sco/scopro#entails</a> <span class="cardinality">some</span> (<a href="http://generic.org/sco/scome#Metric_Use">http://generic.org/sco/scome#Metric_Use</a><sup class="sup-c" title="class">c</sup> and <a href="N6f8d43516f6c4698b350de1ac70cf02f">N6f8d43516f6c4698b350de1ac70cf02f</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Indirect_Assessment">
+        <h3>
+          Indirect_Assessment<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Indirect_Assessment" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Indirect_Assessment</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Actividad de medici�n en la cual se usa una o m�s medidas de atributos mensurables</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assesment_Activity">http://generic.org/sco/scome#Assesment_Activity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#entails">http://generic.org/sco/scopro#entails</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Measure_Use">http://generic.org/sco/scome#Measure_Use</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scopro#entails">http://generic.org/sco/scopro#entails</a> <span class="cardinality">some</span> (<a href="http://generic.org/sco/scome#Metric_Use">http://generic.org/sco/scome#Metric_Use</a><sup class="sup-c" title="class">c</sup> and <a href="N7c01aa71b05644b1b504c391c4aebeda">N7c01aa71b05644b1b504c391c4aebeda</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Measure">
+        <h3>
+          Measure<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Measure" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Measure</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Resultado de una actividad de medici�n. Caracteriza a un atributo mensurable</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    (<a href="Nc4c69f8cfe0045e38d3960f744c44649">Nc4c69f8cfe0045e38d3960f744c44649</a><sup class="sup-c" title="class">c</sup> or <a href="Nd71f39575ebd4845a38c28948a8ad455">Nd71f39575ebd4845a38c28948a8ad455</a><sup class="sup-c" title="class">c</sup>)<br/>
+                    <a href="http://generic.org/sco/scome#Performance_Information">http://generic.org/sco/scome#Performance_Information</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasMeasuredValue">http://generic.org/sco/scome#hasMeasuredValue</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">min</span> 1<br/>
+                    <a href="http://generic.org/sco/scopro#hasResourceRole">http://generic.org/sco/scopro#hasResourceRole</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Measure_Output">http://generic.org/sco/scome#Measure_Output</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#timepoint">http://generic.org/sco/scome#timepoint</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#timeFBegin">http://generic.org/sco/scome#timeFBegin</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scome#timeFEnd">http://generic.org/sco/scome#timeFEnd</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scome#timepoint">http://generic.org/sco/scome#timepoint</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isQuantifiedBy">http://generic.org/sco/scome#isQuantifiedBy</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Measure_Creation">
+        <h3>
+          Measure_Creation<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Measure_Creation" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Measure_Creation</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Generaci�n de una medida durante una actividad de medici�n</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#Creation">http://generic.org/sco/scopro#Creation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#involves">http://generic.org/sco/scopro#involves</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Measure_Output">http://generic.org/sco/scome#Measure_Output</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Measure_Input">
+        <h3>
+          Measure_Input<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Measure_Input" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Measure_Input</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Rol de una medida que es requerida para la ejecuci�n de una actividad de medici�n indirecta</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#Input">http://generic.org/sco/scopro#Input</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#isInvolvedIn">http://generic.org/sco/scopro#isInvolvedIn</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Measure_Use">http://generic.org/sco/scome#Measure_Use</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scopro#isResourceRoleOf">http://generic.org/sco/scopro#isResourceRoleOf</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Measure_Output">
+        <h3>
+          Measure_Output<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Measure_Output" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Measure_Output</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Rol de una medida que se obtiene como resultado de una actividad de medici�n</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#Output">http://generic.org/sco/scopro#Output</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#isResourceRoleOf">http://generic.org/sco/scopro#isResourceRoleOf</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scopro#isInvolvedIn">http://generic.org/sco/scopro#isInvolvedIn</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Measure_Creation">http://generic.org/sco/scome#Measure_Creation</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Measure_Use">
+        <h3>
+          Measure_Use<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Measure_Use" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Measure_Use</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Empleo de una medida en una actividad de medici�n indirecta</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#Use">http://generic.org/sco/scopro#Use</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Metric">
+        <h3>
+          Metric<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Metric" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Metric</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>M�todo utilizado para la obtenci�n del valor de un atributo mensurable</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Performance_Information">http://generic.org/sco/scome#Performance_Information</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#definition">http://generic.org/sco/scome#definition</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Atomic_Metric">http://generic.org/sco/scome#Atomic_Metric</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Composite_Metric">http://generic.org/sco/scome#Composite_Metric</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#definition">http://generic.org/sco/scome#definition</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scome#isPartOfMetric">http://generic.org/sco/scome#isPartOfMetric</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scome#isAssessmentMethodOf">http://generic.org/sco/scome#isAssessmentMethodOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Metric_Input">
+        <h3>
+          Metric_Input<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Metric_Input" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Metric_Input</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Rol de una m�trica que es requerida para la ejecuci�n de una actividad de medici�n</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#Input">http://generic.org/sco/scopro#Input</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#isResourceRoleOf">http://generic.org/sco/scopro#isResourceRoleOf</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Metric">http://generic.org/sco/scome#Metric</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scopro#isInvolvedIn">http://generic.org/sco/scopro#isInvolvedIn</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Metric_Use">http://generic.org/sco/scome#Metric_Use</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Metric_Use">
+        <h3>
+          Metric_Use<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Metric_Use" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Metric_Use</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Empleo de una m�trica en una actividad de medici�n</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#Use">http://generic.org/sco/scopro#Use</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#involves">http://generic.org/sco/scopro#involves</a> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Metric_Input">http://generic.org/sco/scome#Metric_Input</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Numerical">
+        <h3>
+          Numerical<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Numerical" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Numerical</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Tipo de escala en la cual sus valores tienen un orden y cada par consecutivo representa un intervalo constante de una propiedad</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Scale_Type">http://generic.org/sco/scome#Scale_Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isScaleTypeOf">http://generic.org/sco/scome#isScaleTypeOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> (<a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup> and <a href="N69a3c5bcfe03436b9392528322ea0bee">N69a3c5bcfe03436b9392528322ea0bee</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Members</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Absolute">http://generic.org/sco/scome#Absolute</a><br/>
+                    <a href="http://generic.org/sco/scome#Interval">http://generic.org/sco/scome#Interval</a><br/>
+                    <a href="http://generic.org/sco/scome#Ratio">http://generic.org/sco/scome#Ratio</a><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Performance_Attribute">
+        <h3>
+          Performance_Attribute<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Performance_Attribute" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Performance_Attribute</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Propiedad evaluable de una entidad de una cadena de suministros que caracteriza su desempe�o</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isShownThrough">http://generic.org/sco/scome#isShownThrough</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Performance_Information">
+        <h3>
+          Performance_Information<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Performance_Information" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Performance_Information</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Recurso de informaci�n vinculado a la evaluaci�n del desempe�o de una entidad de una cadena de suministros</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#Information_Resource">http://generic.org/sco/scopro#Information_Resource</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Metric">http://generic.org/sco/scome#Metric</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Agility">
+        <h3>
+          SC_Agility<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Agility" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Agility</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Capacidad de una cadena de suministros de adaptarse para responder a cambios en los requerimientos</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isLinkedConceptOf">http://generic.org/sco/scome#isLinkedConceptOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#SC_Customer_Facing">http://generic.org/sco/scome#SC_Customer_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Assets">
+        <h3>
+          SC_Assets<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Assets" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Assets</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Efectividad de la gesti�n de los activos involucrados en la operaci�n de una cadena de suministros</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isLinkedConceptOf">http://generic.org/sco/scome#isLinkedConceptOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#SC_Internal_Facing">http://generic.org/sco/scome#SC_Internal_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Cost">
+        <h3>
+          SC_Cost<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Cost" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Cost</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Costos asociados a la operaci�n de una cadena de suministros</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isLinkedConceptOf">http://generic.org/sco/scome#isLinkedConceptOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#SC_Internal_Facing">http://generic.org/sco/scome#SC_Internal_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Customer_Facing">
+        <h3>
+          SC_Customer_Facing<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Customer_Facing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Customer_Facing</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Dimensi�n de desempe�o de una cadena de suministros que apunta a la satisfacci�n de los clientes finales</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Dimension">http://generic.org/sco/scome#SC_Performance_Dimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Equity_Facing">
+        <h3>
+          SC_Equity_Facing<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Equity_Facing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Equity_Facing</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>a excepci�n de los clientes finales. Se trata de una medida de dispersi�n con la cual se pretende evaluar la variabilidad en la relaci�n entre los conceptos de aportes y beneficios de los distintos actores</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Dimension">http://generic.org/sco/scome#SC_Performance_Dimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Internal_Facing">
+        <h3>
+          SC_Internal_Facing<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Internal_Facing" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Internal_Facing</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Dimensi�n de desempe�o de una cadena de suministros que se focaliza en los resultados de inter�s para el conjunto de participantes de la misma - con excepci�n de los clientes finales</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Dimension">http://generic.org/sco/scome#SC_Performance_Dimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Performance_Concept">
+        <h3>
+          SC_Performance_Concept<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Performance_Concept" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Performance_Concept</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Propiedad abstracta con la cual se puede caracterizar el desempe�o de una cadena de suministros</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isShownThrough">http://generic.org/sco/scome#isShownThrough</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Performance_Attribute">http://generic.org/sco/scome#Performance_Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Agility">http://generic.org/sco/scome#SC_Agility</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#SC_Assets">http://generic.org/sco/scome#SC_Assets</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#SC_Reliability">http://generic.org/sco/scome#SC_Reliability</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#SC_Responsiveness">http://generic.org/sco/scome#SC_Responsiveness</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Benefit_Equity">http://generic.org/sco/scome#Benefit_Equity</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#SC_Cost">http://generic.org/sco/scome#SC_Cost</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Contribution_Equity">http://generic.org/sco/scome#Contribution_Equity</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isShownThrough">http://generic.org/sco/scome#isShownThrough</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasLinkedConcept">http://generic.org/sco/scome#hasLinkedConcept</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Performance_Dimension">
+        <h3>
+          SC_Performance_Dimension<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Performance_Dimension" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Performance_Dimension</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Perspectiva desde la cual se analiza el desempe�o de una cadena de suministros</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasLinkedConcept">http://generic.org/sco/scome#hasLinkedConcept</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Equity_Facing">http://generic.org/sco/scome#SC_Equity_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#SC_Customer_Facing">http://generic.org/sco/scome#SC_Customer_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#SC_Internal_Facing">http://generic.org/sco/scome#SC_Internal_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasLinkedConcept">http://generic.org/sco/scome#hasLinkedConcept</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasPerformanceDimension">http://generic.org/sco/scome#hasPerformanceDimension</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Performance_Evaluation_System">
+        <h3>
+          SC_Performance_Evaluation_System<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Performance_Evaluation_System" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Performance_Evaluation_System</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>reglas y principios que tienen como finalidad la determinaci�n de valores de desempe�o de una cadena de suministros</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isPerformanceEvaulationSystemOf">http://generic.org/sco/scome#isPerformanceEvaulationSystemOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scopro#Supply_Chain">http://generic.org/sco/scopro#Supply_Chain</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasPerformanceDimension">http://generic.org/sco/scome#hasPerformanceDimension</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">min</span> 2 <a href="http://generic.org/sco/scome#SC_Performance_Dimension">http://generic.org/sco/scome#SC_Performance_Dimension</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasPerformanceDimension">http://generic.org/sco/scome#hasPerformanceDimension</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasPerformanceEvaulationSystem">http://generic.org/sco/scome#hasPerformanceEvaulationSystem</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Reliability">
+        <h3>
+          SC_Reliability<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Reliability" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Reliability</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Capacidad de una cadena de suministros de operar sin fallas</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isLinkedConceptOf">http://generic.org/sco/scome#isLinkedConceptOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#SC_Customer_Facing">http://generic.org/sco/scome#SC_Customer_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="SC_Responsiveness">
+        <h3>
+          SC_Responsiveness<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#SC_Responsiveness" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#SC_Responsiveness</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Capacidad de reacci�n de una cadena de suministros para responder a los requerimientos est�ndar de los clientes</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isLinkedConceptOf">http://generic.org/sco/scome#isLinkedConceptOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#SC_Customer_Facing">http://generic.org/sco/scome#SC_Customer_Facing</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Scale_Type">
+        <h3>
+          Scale_Type<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Scale_Type" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Scale_Type</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Naturaleza de las relaciones entre los valores pertenecientes a una escala</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Categorical">http://generic.org/sco/scome#Categorical</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Numerical">http://generic.org/sco/scome#Numerical</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasScaleType">http://generic.org/sco/scome#hasScaleType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Secondary_Attribute">
+        <h3>
+          Secondary_Attribute<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Secondary_Attribute" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Secondary_Attribute</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Propiedad evaluable de una entidad de una cadena de suministros que no caracteriza su desempe�o</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Simple_Derived_Unit">
+        <h3>
+          Simple_Derived_Unit<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Simple_Derived_Unit" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Simple_Derived_Unit</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Unidad de medida que se deriva de una �nica unidad base. Puede obtenerse por la adici�n de un prefijo a la unidad base para formar un m�ltiplo o subm�ltiplo decimal de la misma y/o por la modificaci�n de su exponente</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Derived_Unit">http://generic.org/sco/scome#Derived_Unit</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#dimensionalSize">http://generic.org/sco/scome#dimensionalSize</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#modifierPrefix">http://generic.org/sco/scome#modifierPrefix</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scome#dimensionalSize">http://generic.org/sco/scome#dimensionalSize</a><sup class="sup-dp" title="datatype property">dp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Target_Value">
+        <h3>
+          Target_Value<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Target_Value" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Target_Value</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Valor deseado de un atributo mensurable</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Control_Parameter">http://generic.org/sco/scome#Control_Parameter</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasTargetvalue">http://generic.org/sco/scome#hasTargetvalue</a><sup class="sup-fp" title="functional property">fp</sup> <span class="cardinality">some</span> (<a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup> or <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup>)<br/>
+                    <a href="http://generic.org/sco/scome#isTargetValueOf">http://generic.org/sco/scome#isTargetValueOf</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isTargetValueOf">http://generic.org/sco/scome#isTargetValueOf</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasTargetvalue">http://generic.org/sco/scome#hasTargetvalue</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Unit_Of_Measure">
+        <h3>
+          Unit_Of_Measure<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Unit_Of_Measure" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Unit_Of_Measure</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Magnitud est�ndar que se usa como referencia para la unidad en una escala num�rica</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Sub-classes</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Base_Unit">http://generic.org/sco/scome#Base_Unit</a><sup class="sup-c" title="class">c</sup><br/>
+                    <a href="http://generic.org/sco/scome#Derived_Unit">http://generic.org/sco/scome#Derived_Unit</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasUnitOfMeasure">http://generic.org/sco/scome#hasUnitOfMeasure</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scome#derivesFrom">http://generic.org/sco/scome#derivesFrom</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity class" id="Value_Scale">
+        <h3>
+          Value_Scale<sup title="class" class="sup-c">c</sup>
+          <span style="float:right; margin-right:10px; font-size:smaller;"><a href="#Value_Scale" title="fragment link to here">#</a> <a href="#classes" title="Classes Index">Classes</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#Value_Scale</code></td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>
+                    <p>Conjunto de posibles valores de una propiedad y las relaciones entre s�- las cuales se determinan por el tipo de escala asociado</p>
+                </td>
+            </tr>
+            <tr>
+                <th>Super-classes</th>
+                <td>
+                    (<a href="Ncc93205ddb7747caa5f9116c19f0325c">Ncc93205ddb7747caa5f9116c19f0325c</a><sup class="sup-c" title="class">c</sup> or <a href="Nf6427078e41a40128e3549fcb6410706">Nf6427078e41a40128e3549fcb6410706</a><sup class="sup-c" title="class">c</sup> or <a href="N0bd1350b069446f59c87e981af8ff935">N0bd1350b069446f59c87e981af8ff935</a><sup class="sup-c" title="class">c</sup> or <a href="Neec79076b9fb40549af42213b69ecf2a">Neec79076b9fb40549af42213b69ecf2a</a><sup class="sup-c" title="class">c</sup> or <a href="Nf9a45f60021e400b8f3eec56b096e574">Nf9a45f60021e400b8f3eec56b096e574</a><sup class="sup-c" title="class">c</sup>)<br/>
+                    (<a href="Ncc93205ddb7747caa5f9116c19f0325c">Ncc93205ddb7747caa5f9116c19f0325c</a><sup class="sup-c" title="class">c</sup> or <a href="Nf6427078e41a40128e3549fcb6410706">Nf6427078e41a40128e3549fcb6410706</a><sup class="sup-c" title="class">c</sup> or <a href="N0bd1350b069446f59c87e981af8ff935">N0bd1350b069446f59c87e981af8ff935</a><sup class="sup-c" title="class">c</sup> or <a href="Neec79076b9fb40549af42213b69ecf2a">Neec79076b9fb40549af42213b69ecf2a</a><sup class="sup-c" title="class">c</sup> or <a href="Nf9a45f60021e400b8f3eec56b096e574">Nf9a45f60021e400b8f3eec56b096e574</a><sup class="sup-c" title="class">c</sup>)<br/>
+                </td>
+            </tr>
+            <tr>
+                <th>Restrictions</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#valueType">http://generic.org/sco/scome#valueType</a><sup class="sup-dp" title="datatype property">dp</sup> <span class="cardinality">some</span> ()<br/>
+                    <a href="http://generic.org/sco/scome#hasScaleType">http://generic.org/sco/scome#hasScaleType</a><sup class="sup-op" title="object property">op</sup> <span class="cardinality">some</span> <a href="http://generic.org/sco/scome#Scale_Type">http://generic.org/sco/scome#Scale_Type</a><sup class="sup-c" title="class">c</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In domain of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#maxValue">http://generic.org/sco/scome#maxValue</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasUnitOfMeasure">http://generic.org/sco/scome#hasUnitOfMeasure</a><sup class="sup-op" title="object property">op</sup><br/>
+                    <a href="http://generic.org/sco/scome#minValue">http://generic.org/sco/scome#minValue</a><sup class="sup-fp" title="functional property">fp</sup><br/>
+                    <a href="http://generic.org/sco/scome#hasScaleType">http://generic.org/sco/scome#hasScaleType</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+            <tr>
+                <th>In range of</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasValueScale">http://generic.org/sco/scome#hasValueScale</a><sup class="sup-op" title="object property">op</sup><br/>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+<section id="objectproperties">
+    <h2>Object Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#areAllowedValuesOf">areAllowedValuesOf</a></li>
+        <li><a href="#derivesFrom">derivesFrom</a></li>
+        <li><a href="#hasAllowedValues">hasAllowedValues</a></li>
+        <li><a href="#hasAssessableAttribute">hasAssessableAttribute</a></li>
+        <li><a href="#hasAssessmentMethod">hasAssessmentMethod</a></li>
+        <li><a href="#hasLinkedConcept">hasLinkedConcept</a></li>
+        <li><a href="#hasPartMetric">hasPartMetric</a></li>
+        <li><a href="#hasPerformanceDimension">hasPerformanceDimension</a></li>
+        <li><a href="#hasPerformanceEvaulationSystem">hasPerformanceEvaulationSystem</a></li>
+        <li><a href="#hasScaleType">hasScaleType</a></li>
+        <li><a href="#hasTarget">hasTarget</a></li>
+        <li><a href="#hasUnitOfMeasure">hasUnitOfMeasure</a></li>
+        <li><a href="#hasValueScale">hasValueScale</a></li>
+        <li><a href="#isAssessableAttributeOf">isAssessableAttributeOf</a></li>
+        <li><a href="#isAssessmentMethodOf">isAssessmentMethodOf</a></li>
+        <li><a href="#isLinkedConceptOf">isLinkedConceptOf</a></li>
+        <li><a href="#isPartOfMetric">isPartOfMetric</a></li>
+        <li><a href="#isPerformanceDimensionOf">isPerformanceDimensionOf</a></li>
+        <li><a href="#isPerformanceEvaulationSystemOf">isPerformanceEvaulationSystemOf</a></li>
+        <li><a href="#isQuantifiedBy">isQuantifiedBy</a></li>
+        <li><a href="#isScaleTypeOf">isScaleTypeOf</a></li>
+        <li><a href="#isShownThrough">isShownThrough</a></li>
+        <li><a href="#isTargetValueOf">isTargetValueOf</a></li>
+        <li><a href="#isUnitOfMeasureOf">isUnitOfMeasureOf</a></li>
+        <li><a href="#quantifies">quantifies</a></li>
+    </ul>
+    <div class="entity property" id="areAllowedValuesOf">
+        <h3>areAllowedValuesOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#areAllowedValuesOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#areAllowedValuesOf</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#hasAllowedValues">http://generic.org/sco/scome#hasAllowedValues</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Allowed_Values">http://generic.org/sco/scome#Allowed_Values</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="derivesFrom">
+        <h3>derivesFrom<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#derivesFrom" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#derivesFrom</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Derived_Unit">http://generic.org/sco/scome#Derived_Unit</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Unit_Of_Measure">http://generic.org/sco/scome#Unit_Of_Measure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasAllowedValues">
+        <h3>hasAllowedValues<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasAllowedValues" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasAllowedValues</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasAssessableAttribute">
+        <h3>hasAssessableAttribute<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasAssessableAttribute" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasAssessableAttribute</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isAssessableAttributeOf">http://generic.org/sco/scome#isAssessableAttributeOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasAssessmentMethod">
+        <h3>hasAssessmentMethod<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasAssessmentMethod" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasAssessmentMethod</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isAssessmentMethodOf">http://generic.org/sco/scome#isAssessmentMethodOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasLinkedConcept">
+        <h3>hasLinkedConcept<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasLinkedConcept" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasLinkedConcept</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isLinkedConceptOf">http://generic.org/sco/scome#isLinkedConceptOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Dimension">http://generic.org/sco/scome#SC_Performance_Dimension</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasPartMetric">
+        <h3>hasPartMetric<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasPartMetric" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasPartMetric</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isPartOfMetric">http://generic.org/sco/scome#isPartOfMetric</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasPerformanceDimension">
+        <h3>hasPerformanceDimension<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasPerformanceDimension" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasPerformanceDimension</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isPerformanceDimensionOf">http://generic.org/sco/scome#isPerformanceDimensionOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Evaluation_System">http://generic.org/sco/scome#SC_Performance_Evaluation_System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Dimension">http://generic.org/sco/scome#SC_Performance_Dimension</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasPerformanceEvaulationSystem">
+        <h3>hasPerformanceEvaulationSystem<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasPerformanceEvaulationSystem" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasPerformanceEvaulationSystem</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isPerformanceEvaulationSystemOf">http://generic.org/sco/scome#isPerformanceEvaulationSystemOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#Supply_Chain">http://generic.org/sco/scopro#Supply_Chain</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Evaluation_System">http://generic.org/sco/scome#SC_Performance_Evaluation_System</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasScaleType">
+        <h3>hasScaleType<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasScaleType" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasScaleType</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isScaleTypeOf">http://generic.org/sco/scome#isScaleTypeOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Scale_Type">http://generic.org/sco/scome#Scale_Type</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasTarget">
+        <h3>hasTarget<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasTarget" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasTarget</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isTargetValueOf">http://generic.org/sco/scome#isTargetValueOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasUnitOfMeasure">
+        <h3>hasUnitOfMeasure<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasUnitOfMeasure" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasUnitOfMeasure</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#isUnitOfMeasureOf">http://generic.org/sco/scome#isUnitOfMeasureOf</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Unit_Of_Measure">http://generic.org/sco/scome#Unit_Of_Measure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasValueScale">
+        <h3>hasValueScale<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasValueScale" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasValueScale</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isAssessableAttributeOf">
+        <h3>isAssessableAttributeOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isAssessableAttributeOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isAssessableAttributeOf</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scopro#SC_Entity">http://generic.org/sco/scopro#SC_Entity</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isAssessmentMethodOf">
+        <h3>isAssessmentMethodOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isAssessmentMethodOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isAssessmentMethodOf</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Metric">http://generic.org/sco/scome#Metric</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isLinkedConceptOf">
+        <h3>isLinkedConceptOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isLinkedConceptOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isLinkedConceptOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isPartOfMetric">
+        <h3>isPartOfMetric<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isPartOfMetric" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isPartOfMetric</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Metric">http://generic.org/sco/scome#Metric</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Composite_Metric">http://generic.org/sco/scome#Composite_Metric</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isPerformanceDimensionOf">
+        <h3>isPerformanceDimensionOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isPerformanceDimensionOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isPerformanceDimensionOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isPerformanceEvaulationSystemOf">
+        <h3>isPerformanceEvaulationSystemOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isPerformanceEvaulationSystemOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isPerformanceEvaulationSystemOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isQuantifiedBy">
+        <h3>isQuantifiedBy<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isQuantifiedBy" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isQuantifiedBy</code></td>
+            </tr>
+            <tr>
+                <th>Inverse properties</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#quantifies">http://generic.org/sco/scome#quantifies</a><sup class="sup-op" title="object property">op</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isScaleTypeOf">
+        <h3>isScaleTypeOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isScaleTypeOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isScaleTypeOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isShownThrough">
+        <h3>isShownThrough<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isShownThrough" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isShownThrough</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#SC_Performance_Concept">http://generic.org/sco/scome#SC_Performance_Concept</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Performance_Attribute">http://generic.org/sco/scome#Performance_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isTargetValueOf">
+        <h3>isTargetValueOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isTargetValueOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isTargetValueOf</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Target_Value">http://generic.org/sco/scome#Target_Value</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="isUnitOfMeasureOf">
+        <h3>isUnitOfMeasureOf<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#isUnitOfMeasureOf" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#isUnitOfMeasureOf</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="quantifies">
+        <h3>quantifies<sup title="object property" class="sup-op">op</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#quantifies" title="fragment link to here">#</a>&nbsp;<a href="#objectproperties" title="Object Properties Index">OPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#quantifies</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="functionalproperties">
+    <h2>Functional Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#definition">definition</a></li>
+        <li><a href="#hasLowerBound">hasLowerBound</a></li>
+        <li><a href="#hasMeasuredValue">hasMeasuredValue</a></li>
+        <li><a href="#hasNormalizedValue">hasNormalizedValue</a></li>
+        <li><a href="#hasTargetvalue">hasTargetvalue</a></li>
+        <li><a href="#hasTimeFrame">hasTimeFrame</a></li>
+        <li><a href="#hasUpperBound">hasUpperBound</a></li>
+        <li><a href="#maxValue">maxValue</a></li>
+        <li><a href="#minValue">minValue</a></li>
+        <li><a href="#modifierPrefix">modifierPrefix</a></li>
+        <li><a href="#normalizationCriteria">normalizationCriteria</a></li>
+        <li><a href="#timeFBegin">timeFBegin</a></li>
+        <li><a href="#timeFEnd">timeFEnd</a></li>
+        <li><a href="#timepoint">timepoint</a></li>
+    </ul>
+    <div class="entity property" id="definition">
+        <h3>definition<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#definition" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#definition</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Metric">http://generic.org/sco/scome#Metric</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasLowerBound">
+        <h3>hasLowerBound<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasLowerBound" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasLowerBound</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Allowed_Values">http://generic.org/sco/scome#Allowed_Values</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasMeasuredValue">
+        <h3>hasMeasuredValue<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasMeasuredValue" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasMeasuredValue</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasNormalizedValue">
+        <h3>hasNormalizedValue<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasNormalizedValue" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasNormalizedValue</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasTargetvalue">
+        <h3>hasTargetvalue<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasTargetvalue" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasTargetvalue</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Target_Value">http://generic.org/sco/scome#Target_Value</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasTimeFrame">
+        <h3>hasTimeFrame<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasTimeFrame" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasTimeFrame</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Assessable_Attribute">http://generic.org/sco/scome#Assessable_Attribute</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasUpperBound">
+        <h3>hasUpperBound<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasUpperBound" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasUpperBound</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Allowed_Values">http://generic.org/sco/scome#Allowed_Values</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="maxValue">
+        <h3>maxValue<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#maxValue" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#maxValue</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="minValue">
+        <h3>minValue<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#minValue" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#minValue</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Value_Scale">http://generic.org/sco/scome#Value_Scale</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="modifierPrefix">
+        <h3>modifierPrefix<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#modifierPrefix" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#modifierPrefix</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Simple_Derived_Unit">http://generic.org/sco/scome#Simple_Derived_Unit</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="normalizationCriteria">
+        <h3>normalizationCriteria<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#normalizationCriteria" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#normalizationCriteria</code></td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="timeFBegin">
+        <h3>timeFBegin<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#timeFBegin" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#timeFBegin</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="timeFEnd">
+        <h3>timeFEnd<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#timeFEnd" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#timeFEnd</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="timepoint">
+        <h3>timepoint<sup title="functional property" class="sup-fp">fp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#timepoint" title="fragment link to here">#</a>&nbsp;<a href="#functionalproperties" title="Functional Properties Index">FPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#timepoint</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Measure">http://generic.org/sco/scome#Measure</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section id="datatypeproperties">
+    <h2>Datatype Properties <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <ul class="hlist">
+        <li><a href="#description">description</a></li>
+        <li><a href="#dimensionalSize">dimensionalSize</a></li>
+        <li><a href="#hasElementValue">hasElementValue</a></li>
+        <li><a href="#valueType">valueType</a></li>
+    </ul>
+    <div class="entity property" id="description">
+        <h3>description<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#description" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#description</code></td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="dimensionalSize">
+        <h3>dimensionalSize<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#dimensionalSize" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#dimensionalSize</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Simple_Derived_Unit">http://generic.org/sco/scome#Simple_Derived_Unit</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="hasElementValue">
+        <h3>hasElementValue<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#hasElementValue" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#hasElementValue</code></td>
+            </tr>
+            <tr>
+                <th>Domain(s)</th>
+                <td>
+                    <a href="http://generic.org/sco/scome#Allowed_Values">http://generic.org/sco/scome#Allowed_Values</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+            <tr>
+                <th>Range(s)</th>
+                <td>
+                    <a href="http://www.w3.org/2001/XMLSchema#float">xsd:float</a><sup class="sup-c" title="class">c</sup>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="entity property" id="valueType">
+        <h3>valueType<sup title="datatype property" class="sup-dp">dp</sup><span style="float:right; margin-right:10px; font-size:smaller;">
+            <a href="#valueType" title="fragment link to here">#</a>&nbsp;<a href="#datatypeproperties" title="Datatype Properties Index">DPs</a></span>
+        </h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td><code>http://generic.org/sco/scome#valueType</code></td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+  
+    <section id="namedindividuals">
+        <h2>Named Individuals <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+        <ul class="hlist">
+            <li><a href="#Absolute">Absolute</a></li>
+            <li><a href="#Interval">Interval</a></li>
+            <li><a href="#Nominal">Nominal</a></li>
+            <li><a href="#Ordinal">Ordinal</a></li>
+            <li><a href="#Ratio">Ratio</a></li>
+        </ul>
+            <div class="entity named_individual" id="Absolute">
+        <h3>Absolute<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://generic.org/sco/scome#Absolute
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://generic.org/sco/scome#Numerical">http://generic.org/sco/scome#Numerical</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Tipo de escala que establece una distancia espec�fica entre sus valores. Posee un punto cero absoluto - as� como - un valor preestablecido y fijo para la unidad
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Interval">
+        <h3>Interval<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://generic.org/sco/scome#Interval
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://generic.org/sco/scome#Numerical">http://generic.org/sco/scome#Numerical</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Tipo de escala que establece una distancia espec�fica entre sus valores. La escala de intervalo carece de un punto cero absoluto. Es decir, el valor cero se establece por convenci�n o conveniencia
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Nominal">
+        <h3>Nominal<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://generic.org/sco/scome#Nominal
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://generic.org/sco/scome#Categorical">http://generic.org/sco/scome#Categorical</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Tipo de escala cuyos valores constituyen clases o categor�as separadas de una propiedad sin un orden entre ellas
+                </td>
+            </tr>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Ordinal">
+        <h3>Ordinal<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://generic.org/sco/scome#Ordinal
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://generic.org/sco/scome#Categorical">http://generic.org/sco/scome#Categorical</a><br/>
+            </dd>
+        </table>
+    </div>
+            <div class="entity named_individual" id="Ratio">
+        <h3>Ratio<sup title="named individual" class="sup-ni">ni</sup></h3>
+        <table>
+            <tr>
+                <th>URI</th>
+                <td>
+                  <code>
+                      http://generic.org/sco/scome#Ratio
+                  
+                  </code>
+                </td>
+            </tr>
+            <dt>Class(es)</dt>
+            <dd>
+                <a href="http://generic.org/sco/scome#Numerical">http://generic.org/sco/scome#Numerical</a><br/>
+            </dd>
+            <tr>
+                <th>Description</th>
+                <td>
+                    Tipo de escala que establece una distancia espec�fica entre sus valores y que posee un punto cero absoluto. En el punto cero la caracter�stica o atributo que se mide es nulo
+                </td>
+            </tr>
+        </table>
+    </div>
+    </section>
+
+  <section id="namespaces">
+    <h2>Namespaces <span style="float:right; font-size:smaller;"><a href="">&uparrow;</a></span></h2>
+    <dl>
+        <dt>default (scome)</dt>
+        <dd><code>http://generic.org/sco/scome/full/0.1/</code></dd>
+        <dt>:</dt>
+        <dd><code>http://generic.org/sco/scome</code></dd>
+        <dt>dc</dt>
+        <dd><code>http://purl.org/dc/elements/1.1/</code></dd>
+        <dt>dcterms</dt>
+        <dd><code>https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#</code></dd>
+        <dt>owl</dt>
+        <dd><code>http://www.w3.org/2002/07/owl#</code></dd>
+        <dt>p1</dt>
+        <dd><code>http://www.owl-ontologies.com/assert.owl#</code></dd>
+        <dt>protege</dt>
+        <dd><code>http://protege.stanford.edu/plugins/owl/protege#</code></dd>
+        <dt>prov</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt>rdf</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt>rdfs</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt>sdo</dt>
+        <dd><code>http://schema.org/</code></dd>
+        <dt>skos</dt>
+        <dd><code>http://www.w3.org/2004/02/skos/core#</code></dd>
+        <dt>swrl</dt>
+        <dd><code>http://www.w3.org/2003/11/swrl#</code></dd>
+        <dt>swrlb</dt>
+        <dd><code>http://www.w3.org/2003/11/swrlb#</code></dd>
+        <dt>terms</dt>
+        <dd><code>http://purl.org/dc/terms/</code></dd>
+        <dt>vann</dt>
+        <dd><code>http://purl.org/vocab/vann/</code></dd>
+        <dt>xsd</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+        <dt>xsp</dt>
+        <dd><code>http://www.owl-ontologies.com/2005/08/07/xsp.owl#</code></dd>
+    </dl>
+</section>
+  <section id="legend">
+      <h2>Legend</h2>
+      <table class="entity">
+          <tr><td><sup class="sup-c" title="Classes">c</sup></td><td>Classes</td></tr>
+          <tr><td><sup class="sup-op" title="Object Properties">op</sup></td><td>Object Properties</td></tr>
+          <tr><td><sup class="sup-fp" title="Functional Properties">fp</sup></td><td>Functional Properties</td></tr>
+          <tr><td><sup class="sup-dp" title="Data Properties">dp</sup></td><td>Data Properties</td></tr>
+          <tr><td><sup class="sup-ap" title="Annotation Properties">dp</sup></td><td>Annotation Properties</td></tr>
+          <tr><td><sup class="sup-p" title="Properties">p</sup></td><td>Properties</td></tr>
+          <tr><td><sup class="sup-ni" title="Named Individuals">ni</sup></td><td>Named Individuals</td></tr>
+      </table>
+  </section>
+</body>
+</html>
