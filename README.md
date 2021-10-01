@@ -37,6 +37,7 @@
 	1. [Creating an AnyLogic simulation](#creating-an-anylogic-simulation)
 	2. [Preparing the AnyLogic simulation for Bonsai](#preparing-the-anylogic-simulation-for-bonsai)
 	3. [Attaching AnyLogic telemetry by querying ADT](#attaching-anylogic-telemetry-by-querying-adt)
+    4. [Exporting the AnyLogic Model for Bonsai](#exporting-the-anylogic-model-for-bonsai)
 10. [Python Simulation](#python-simulation)
 	1. [Creating a Python Simulation](#creating-a-python-simulation)
 	2. [Preparing the Python simulation for Bonsai](#preparing-the-python-simulation-for-bonsai)
@@ -884,9 +885,33 @@ We can also verify in ADT that our simulated device's twin no longer exists. <br
 
 
 #### Preparing The AnyLogic Simulation For Bonsai ####
-![image](https://user-images.githubusercontent.com/1761529/126746628-0d08b23a-9908-42b6-abc4-84e9f82e05c9.png)
+In order for an AnyLogic model/simulation to be subject to Microsoft Bonsai's RL Training, it must have an **RLExperiment** experiment. <br>
+![image](https://user-images.githubusercontent.com/12861152/132808019-f97afbfd-45b6-48e6-8687-240b7407e5fb.png) <br>
+RLExperiment is a type of experiment in AnyLogic that simplifies the wrapping of an AnyLogic model so that it can be easily trained in a RL training platform such as Bonsai. Without RLExperiment, you'd have to use a separate wrapper class in order to use the model for reinforcement learning. <br><br>
+<em>Note: By the time this tutorial is created, AnyLogic RLExperiment currently does not support local training. RLExperiment is only used for wrapping and exporting the model/simulation for Bonsai or any other RL Training platform.</em><br>
+![image](https://user-images.githubusercontent.com/12861152/133013076-a1eb3062-9c3f-4e78-a0b5-2043145b7244.png) <br><br>
+To use RLExperiment, simply add it to the AnyLogic model. <br>
+![image](https://user-images.githubusercontent.com/12861152/132809065-047af2c8-3a0f-4727-b20e-6616bf727699.png) <br>
+![image](https://user-images.githubusercontent.com/12861152/132809210-66f54890-9c13-4daf-92bf-72d69aa844e7.png) <br>
+![image](https://user-images.githubusercontent.com/12861152/132808832-d8b45acd-5e1c-4a8c-a5e1-85868c9cce48.png) <br>
+<em>** There is already an existing RLExperiment on this model. The above screenshots just show how to add one.</em> <br><br>
+
+To use RLExperiment, the Observation, Action and Configuration fields must be filled in. The **Observation** field comprises the data being passed to the Bonsai brain in order to make a decision. The **Action** field comprises the parameters that the Bonsai brain can manipulate after making a decision. Lastly, the **Configuration** field comprises the parameters that the Bonsai can set as the model's initial condition/state. <br>
+
+The fields' values are mapped from the **Top-level agent** which is being referenced as **root**. <br>
+
+![image](https://user-images.githubusercontent.com/1761529/126746628-0d08b23a-9908-42b6-abc4-84e9f82e05c9.png) <br>
 #### Attaching AnyLogic Telemetry By Querying ADT ####
 ![image](https://user-images.githubusercontent.com/1761529/126746710-f46365e5-986d-48cd-b051-aa91b73ee38d.png)
+
+#### Exporting the AnyLogic Model for Bonsai ####
+1. Right-click the model, select 'Export > Reinforcement Learning'. <br>
+![1](https://user-images.githubusercontent.com/12861152/132813112-f8cf3d96-63f1-441d-9ddf-9fdc9093d402.png)<br>
+2. Take note of the destination folder where the zip file will be exported. The zip file will be used later when training in Bonsai.<br>
+![2](https://user-images.githubusercontent.com/12861152/132813189-eda41e3b-016a-4f66-97e1-8d63264ec0ec.png)<br>
+3. Finish the export. <br>
+![3](https://user-images.githubusercontent.com/12861152/132813275-e52a359f-e8ec-43de-ac4c-34115790d02f.png)<br>
+
 ### Python Simulation ###
 #### Creating a Python Simulation ####
 #### Preparing the Python simulation for Bonsai ####
@@ -1133,8 +1158,141 @@ if __name__ == "__main__":
 ### Microsoft Bonsai Teaching ###
 #### Testing The Simulation ####
 #### Importing The Simulation ####
+<em> NOTE: The following only applies for AnyLogic Simulations. </em>
+1. Go to Bonsai Workspace and click 'Add Sim'. <br>
+![9-1](https://user-images.githubusercontent.com/12861152/132816367-9179cda1-ba4c-48f7-bec0-99aab9332986.png)<br>
+2. Select 'AnyLogic'. <br>
+![9-2](https://user-images.githubusercontent.com/12861152/132817216-3149acae-0d3c-44ff-b89d-3b3291da0b30.png)<br>
+3. Upload the [exported zip](#exporting-the-anylogic-model-for-bonsai) of the AnyLogic model and provide a name for the simulator. <br>
+![10](https://user-images.githubusercontent.com/12861152/132817746-a2c94017-da60-4495-bc11-6fcbd8ede880.png)<br>
+4. Copy the package statement. This will be used later in the inkling code. <br>
+![11](https://user-images.githubusercontent.com/12861152/132823960-050b712d-943b-4703-8ae6-c73d31179104.png)
+
 #### Creating The Brain ####
+1. Go to the Bonsai Workspace and click 'Create Brain'. <br>
+![6-1](https://user-images.githubusercontent.com/12861152/132813932-b7717172-7592-4099-90c4-6c9285d63f39.png)<br>
+2. Select 'Empty Brain' and enter details. <br>
+![6-2](https://user-images.githubusercontent.com/12861152/132814788-c8500fc2-ea02-4751-94dd-1f645517ca63.png)<br>
+![7](https://user-images.githubusercontent.com/12861152/132814881-f22d0578-8a8a-49b5-a10e-40b66018efda.png)<br>
+3. After the brain is created, go to the 'Teach' tab and paste the following inkling code. <br>
+![8](https://user-images.githubusercontent.com/12861152/132815079-64e12775-4303-4670-81df-fb9d017f0a0e.png)
+```python
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+inkling "2.0"
+using Math
+using Goal
+# SimState has the same properties as the Observation fields in the RLExperiment
+type SimState {
+    arrivalRate: number<0 .. 2.0>,
+    recentNProducts: number,
+    costPerProduct: number,
+    utilizationResourceA: number<0 .. 1>,
+    utilizationResourceB: number<0 .. 1>,
+    ratioFullQueueA: number<0 .. 1>,
+    ratioFullQueueB: number<0 .. 1>,
+    ratioCostIdleA: number<0 .. 1>,
+    ratioCostIdleB: number<0 .. 1>,
+    ratioCostWaiting: number<0 .. 1>,
+    ratioCostProcessing: number<0 .. 1>,
+    ratioCostMoving: number<0 .. 1>,
+
+    exceededCapacityFlag: number<0, 1, >,
+    simTimeHours: number<0 .. 24>
+}
+# The ObservableState is what the brain sees from the simulator.
+# In this case, it's just the arrival rate.
+type ObservableState {
+    arrivalRate: number
+}
+
+type Action {
+    numResourceA: number<1 .. 20>,
+    numResourceB: number<1 .. 20>,
+    conveyorSpeed: number<0.01 .. 1.0>,
+}
+type SimConfig {
+    arrivalRate: number,
+    sizeBufferQueues: number
+}
+simulator Simulator(action: Action, config: SimConfig): SimState {
+
+}
+# SimAction is the values translated for the sim.
+# We do not need ranges here.
+# These are the same as the ModelAction class.
+type SimAction {
+    numResourceA: number,
+    numResourceB: number,
+    conveyorSpeed: number,
+}
+
+function Terminal(obs: SimState) {
+    if (obs.exceededCapacityFlag == 1) {
+        return true
+    }
+
+
+    # The brain gets one chance at the answer
+    return obs.simTimeHours >= 6
+}
+function Reward(obs: SimState) {
+    # Large penalty for exceeding the buffer queue's capacity.
+    # Otherwise, try to maximize the cost per product value.
+    return -obs.costPerProduct - 1000 * obs.exceededCapacityFlag
+
+}
+graph (input: ObservableState): Action {
+
+    concept optimize(input): Action {
+        curriculum {
+            source Simulator
+            reward Reward
+            terminal Terminal
+            lesson `Vary Arrival Rate` {
+                # These map to the SimConfig values
+                scenario {
+                    arrivalRate: number<0.5 .. 2.0 step .05>,
+                    sizeBufferQueues: 45
+                }
+            }
+        }
+    }
+    output optimize
+}
+
+```
+4. Paste the [package statement](#importing-the-simulation) in the simulator object code. <br>
+![12](https://user-images.githubusercontent.com/12861152/132824478-09c91057-9582-48f0-9cc5-cf6a951c90a4.png)
+
+
 #### Teaching The Brain ####
+1. Go to the 'Train' tab and click the 'Train' button to begin training. <br>
+![13](https://user-images.githubusercontent.com/12861152/132826567-cf97f150-4397-4713-836d-dbe92d556d61.png) <br>
+2. Training should begin after all the simulator instances are running. On the bottom, a chart showing the values of different variables can be seen. <br>
+![14](https://user-images.githubusercontent.com/12861152/132826685-9c316d41-ff51-4560-9c70-4eca667ae50a.png)<br>
+3. You can add more charts using the 'Add chart' button. <br>
+![15](https://user-images.githubusercontent.com/12861152/132827328-1c76d7ea-b0f5-47f6-8bc5-ee267e0e6202.png)<br>
+4. Training usually takes a long time. After a few thousand iterations, the main graph should show the **brain performance** and **mean brain performance**.
+![16](https://user-images.githubusercontent.com/12861152/132827729-33320181-6faf-4697-bede-05a1ecbe9da7.png)<br>
+5. You may stop the training if you think the performance is good enough. <br>
+![17](https://user-images.githubusercontent.com/12861152/132827838-52fdd119-77ce-4326-a399-25a85e3b0dd8.png)
+
 #### Exporting The Brain ####
+Once the training is done, the brain can now be exported for use. The brain is usually exported as a docker image which can be run locally or in the cloud as a web app. The exported docker image, when run, can be exposed as a REST API.<br>
+1. Click 'Export brain' <br>
+![18](https://user-images.githubusercontent.com/12861152/132828761-1956fc58-a752-40f9-88e9-7e1a853bdf02.png)<br>
+2. Provide the brain's display name. There's no need to change the processor architecture. <br>
+![19](https://user-images.githubusercontent.com/12861152/132829235-57a1942f-cf89-4a8c-9223-085130db779c.png)<br>
+3. In the deployment instructions after export, copy the string following the 'docker pull' command. <br>
+![image](https://user-images.githubusercontent.com/12861152/132829427-d60c2229-d774-49f7-891a-130ddadd8593.png)<br>
 #### Running A Simulation Using The Brain ####
+<em> NOTE: The following only applies for AnyLogic Simulations. </em>
+
+1. Go to the Playback Experiment in AnyLogic and paste the string from the [exported brain](#exporting-the-brain) following 'https://'. <br>
+![image](https://user-images.githubusercontent.com/12861152/133013460-afe02fa2-5842-4f1d-b1b3-58a5e5d91484.png) <br>
+2. Run the Playback Experiment. <br>
+![image](https://user-images.githubusercontent.com/12861152/133013659-0c16eb99-1968-47e5-8a89-f24b4295c0ed.png)<br>
+![image](https://user-images.githubusercontent.com/12861152/133013767-c61c4057-2cae-43f5-ab54-929bd96f650f.png)<br>
+
 #### Other Scenarios For Using The Trained Brain ####
