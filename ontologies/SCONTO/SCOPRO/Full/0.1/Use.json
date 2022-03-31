@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Empleo de un recurso en un proceso en el cual no sufre transformaciones (modificación, eliminación, creación o transferencia)"
+  },
+  "displayName": {
+    "en": "Use"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+  "@context": "dtmi:dtdl:context;2"
+}

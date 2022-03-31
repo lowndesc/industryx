@@ -1,0 +1,61 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de entails Inverse of: entails"
+      },
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isEntailedBy",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre una utilización y el rol de recurso sobre el cual influye Inverse of: isInvolvedIn"
+      },
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "involves",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Manera en que un proceso afecta a un recurso que participa en una determinada actividad cumpliendo un rol en particular"
+  },
+  "displayName": {
+    "en": "Utilization"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}
