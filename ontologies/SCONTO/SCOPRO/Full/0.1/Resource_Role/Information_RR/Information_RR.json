@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Information_RR;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Función con la cual un recurso de información participa en un proceso"
+  },
+  "displayName": {
+    "en": "Information_RR"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
+  "@context": "dtmi:dtdl:context;2"
+}

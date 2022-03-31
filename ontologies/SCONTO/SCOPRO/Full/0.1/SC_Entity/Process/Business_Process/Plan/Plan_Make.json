@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Make;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_M_Process_Element;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso que evalúa las necesidades operativas y los recursos disponibles para desarrollar los procesos de producción de una unidad organizacional durante un período de tiempo específico. Se espera que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados"
+  },
+  "displayName": {
+    "en": "Plan_Make"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1",
+  "@context": "dtmi:dtdl:context;2"
+}

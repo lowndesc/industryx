@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Reference_Practice;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isReferencePracticeOfRGroup",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Reference_Group;1"
+    }
+  ],
+  "description": {
+    "en": "Procedimiento; técnica; herramienta; metodología o tecnología que ha demostrado producir buenos resultados en un grupo de referencia; que ha sido seleccionada por medio de un proceso sistemático y que es considerada como ejemplar para el logro del criterio adoptado"
+  },
+  "displayName": {
+    "en": "Reference_Practice"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scobe:Benchmark;1",
+  "@context": "dtmi:dtdl:context;2"
+}

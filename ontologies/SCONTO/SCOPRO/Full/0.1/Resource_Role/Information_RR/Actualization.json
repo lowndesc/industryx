@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Actualization;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Inversa de involves Inverse of: involves"
+      },
+      "name": "isInvolvedIn",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Modification;1"
+    }
+  ],
+  "description": {
+    "en": "Rol de la información que es requerida para la ejecución de un proceso, o alguna parte del mismo, y que como resultado de la ejecución sufre alguna modificación"
+  },
+  "displayName": {
+    "en": "Actualization"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Information_RR;1",
+  "@context": "dtmi:dtdl:context;2"
+}

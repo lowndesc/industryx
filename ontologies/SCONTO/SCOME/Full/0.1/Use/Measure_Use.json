@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Measure_Use;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Empleo de una medida en una actividad de medición indirecta"
+  },
+  "displayName": {
+    "en": "Measure_Use"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1",
+  "@context": "dtmi:dtdl:context;2"
+}

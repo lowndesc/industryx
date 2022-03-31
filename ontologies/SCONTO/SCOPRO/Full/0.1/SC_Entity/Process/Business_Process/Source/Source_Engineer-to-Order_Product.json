@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_EngineertoOrder_Product;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:S_EtO_Process_Element;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso que consiste en la adquisición de partes, ensambles, productos o servicios especializados que son diseñados, pedidos y/o construidos en base a los requerimientos o especificaciones técnicas de una orden de un cliente en\nparticular. Involucra la identificación y selección de las fuentes de suministros, la negociación con los posibles proveedores, la programación de la/s entregas,así como, la solicitud y recepción de los materiales"
+  },
+  "displayName": {
+    "en": "Source_Engineer-to-Order_Product"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source;1",
+  "@context": "dtmi:dtdl:context;2"
+}

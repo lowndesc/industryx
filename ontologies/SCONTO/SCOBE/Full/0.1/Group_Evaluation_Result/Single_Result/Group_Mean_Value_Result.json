@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Group_Mean_Value_Result;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Group_Mean_Value_Result"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scobe:Single_Result;1",
+  "@context": "dtmi:dtdl:context;2"
+}

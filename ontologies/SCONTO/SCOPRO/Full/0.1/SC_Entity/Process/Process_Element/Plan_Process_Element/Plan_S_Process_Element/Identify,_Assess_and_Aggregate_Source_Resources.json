@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Assess_and_Aggregate_Source_Resources;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "IAA_Source_Resources"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_S_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

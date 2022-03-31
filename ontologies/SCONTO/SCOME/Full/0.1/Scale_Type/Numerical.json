@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Numerical;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Tipo de escala en la cual sus valores tienen un orden y cada par consecutivo representa un intervalo constante de una propiedad"
+  },
+  "displayName": {
+    "en": "Numerical"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Scale_Type;1",
+  "@context": "dtmi:dtdl:context;2"
+}

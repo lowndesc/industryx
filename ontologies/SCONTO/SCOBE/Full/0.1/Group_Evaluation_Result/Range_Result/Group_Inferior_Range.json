@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Group_Inferior_Range;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Group_Inferior_Range"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scobe:Range_Result;1",
+  "@context": "dtmi:dtdl:context;2"
+}

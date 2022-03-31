@@ -1,0 +1,19 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Derived_Unit;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "derivesFrom",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Unit_Of_Measure;1"
+    }
+  ],
+  "description": {
+    "en": "Unidad de medida que se deriva de otra/s unidad/es"
+  },
+  "displayName": {
+    "en": "Derived_Unit"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Unit_Of_Measure;1",
+  "@context": "dtmi:dtdl:context;2"
+}

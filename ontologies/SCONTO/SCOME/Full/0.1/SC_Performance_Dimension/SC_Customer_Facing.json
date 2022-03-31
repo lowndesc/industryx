@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Customer_Facing;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Dimensión de desempeño de una cadena de suministros que apunta a la satisfacción de los clientes finales"
+  },
+  "displayName": {
+    "en": "SC_Customer_Facing"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Performance_Dimension;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Make;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Proceso que agrega valor a recursos por medio del cultivo, cría, extracción, u otro tipo de explotación de recursos naturales, a través de actividades de procesamiento físico, físico-químico, biotecnológico, etc. y/o de ensamblado"
+  },
+  "displayName": {
+    "en": "Make"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+  "@context": "dtmi:dtdl:context;2"
+}

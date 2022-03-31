@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Stage_Finished_Product;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Stage_Finished_Product"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

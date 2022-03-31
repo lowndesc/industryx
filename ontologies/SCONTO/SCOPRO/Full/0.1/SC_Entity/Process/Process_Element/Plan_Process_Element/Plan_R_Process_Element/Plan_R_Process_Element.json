@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_R_Process_Element;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Plan_R_Process_Element"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

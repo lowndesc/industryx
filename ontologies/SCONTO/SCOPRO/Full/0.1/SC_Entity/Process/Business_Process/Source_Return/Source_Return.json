@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Proceso que consiste en la gestión “in-situ” de la devolución de un producto, o lote del mismo, a un proveedor y el envío al lugar acordado"
+  },
+  "displayName": {
+    "en": "Source_Return"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+  "@context": "dtmi:dtdl:context;2"
+}

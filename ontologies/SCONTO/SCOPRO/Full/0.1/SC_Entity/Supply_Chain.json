@@ -1,0 +1,41 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Inversa de isProvidedBy Inverse of: isProvidedBy"
+      },
+      "minMultiplicity": 0,
+      "name": "provides",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre una cadena de suministros y uno de los mercados a los que pretende servir Inverse of: IsTargetOf"
+      },
+      "minMultiplicity": 0,
+      "name": "isTargetedAt",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Market;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre una CS y una de las perspectivas de organización que es miembro de la cadena Inverse of: isMemberOf"
+      },
+      "minMultiplicity": 0,
+      "name": "hasMember",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
+    }
+  ],
+  "description": {
+    "en": "Red de unidades organizacionales que transforman y/o agregan valor a los materiales, abarcando desde la provisión de materias primas hasta la distribución final de productos en mercados específicos"
+  },
+  "displayName": {
+    "en": "Supply_Chain"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+  "@context": "dtmi:dtdl:context;2"
+}

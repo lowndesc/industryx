@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Load_Product_and_Generate_Shipping_Docs;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Load_Product_and_Generate_Shipping_Docs"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

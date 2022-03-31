@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Assets;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isLinkedConceptOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Internal_Facing;1"
+    }
+  ],
+  "description": {
+    "en": "Efectividad de la gestión de los activos involucrados en la operación de una cadena de suministros"
+  },
+  "displayName": {
+    "en": "SC_Assets"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Performance_Concept;1",
+  "@context": "dtmi:dtdl:context;2"
+}

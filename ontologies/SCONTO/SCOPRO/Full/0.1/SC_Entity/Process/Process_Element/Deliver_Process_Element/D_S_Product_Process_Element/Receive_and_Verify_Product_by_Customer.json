@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_and_Verify_Product_by_Customer;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Receive_and_Verify_Product_by_Customer"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

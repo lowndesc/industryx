@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Proceso que consiste en acordar con un cliente las condiciones de devolución de un producto, o lote del mismo, y la recepción en el lugar convenido"
+  },
+  "displayName": {
+    "en": "Deliver_Return"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+  "@context": "dtmi:dtdl:context;2"
+}

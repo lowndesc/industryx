@@ -1,0 +1,47 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Benchmark;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isProducedBy",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Benchmarking_Project;1"
+    }
+  ],
+  "description": {
+    "en": "Punto de referencia contra el cual se compara el desempeño o las prácticas de cada una de las entidades de la cadena de suministros involucradas en un proyecto de “benchmarking”"
+  },
+  "displayName": {
+    "en": "Benchmark"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

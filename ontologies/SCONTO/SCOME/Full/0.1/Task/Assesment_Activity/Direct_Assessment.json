@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Direct_Assessment;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Actividad de medición en la cual no se usan medidas de atributos mensurables"
+  },
+  "displayName": {
+    "en": "Direct_Assessment"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Assesment_Activity;1",
+  "@context": "dtmi:dtdl:context;2"
+}

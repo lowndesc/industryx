@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Relación de agregación entre un proceso y uno de los procesos de los cual es parte Inverse of: isComprisedOfSubProcess"
+      },
+      "name": "isSubProcessOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+    }
+  ],
+  "description": {
+    "en": "Estructura lógica de actividades de agregado de valor, diseñada para la acción, enfocada en la satisfacción de los clientes finales y en la gestión de flujos relativos a productos, información, activos financieros, conocimiento e ideas"
+  },
+  "displayName": {
+    "en": "Business_Process"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+  "@context": "dtmi:dtdl:context;2"
+}

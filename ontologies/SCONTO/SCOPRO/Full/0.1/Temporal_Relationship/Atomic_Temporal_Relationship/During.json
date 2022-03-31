@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:During;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Relación temporal atómica entre dos procesos que dispone que el primero de los procesos comienza y termina durante la ejecución del segundo"
+  },
+  "displayName": {
+    "en": "During"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Temporal_Relationship;1",
+  "@context": "dtmi:dtdl:context;2"
+}

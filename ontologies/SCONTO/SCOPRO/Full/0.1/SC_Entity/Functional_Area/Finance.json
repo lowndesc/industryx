@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Finance;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Finance"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+  "@context": "dtmi:dtdl:context;2"
+}

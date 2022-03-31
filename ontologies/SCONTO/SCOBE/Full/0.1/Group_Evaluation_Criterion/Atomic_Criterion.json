@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Atomic_Criterion;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "hasTransformationRule",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Benchmarking_Transformation_Rule;1"
+    }
+  ],
+  "description": {
+    "en": "Característica de desempeño que no resulta de la composición de otros criterios de evaluación. Se utiliza directa o indirectamente para el análisis del conjunto de miembros de un grupo de “benchmarking”"
+  },
+  "displayName": {
+    "en": "Atomic_Criterion"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scobe:Group_Evaluation_Criterion;1",
+  "@context": "dtmi:dtdl:context;2"
+}

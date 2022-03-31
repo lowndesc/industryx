@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:FourthPL_Provider_Role;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre una perspectiva de la organización y uno de los procesos que ésta ejecuta Inverse of: isPerformedBy"
+      },
+      "minMultiplicity": 0,
+      "name": "performs",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1"
+    }
+  ],
+  "displayName": {
+    "en": "FourthPL_Provider_Role"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Service_Provider_Role;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Primary_Producer_Role;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Rol que asume una unidad organizacional que, en su participación en una dada cadena de suministros, realiza actividades vinculadas a la producción primaria, tales como la agricultura, ganadería, pesca, minería, extracción de combustibles fósiles, etc."
+  },
+  "displayName": {
+    "en": "Primary_Producer_Role"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1",
+  "@context": "dtmi:dtdl:context;2"
+}

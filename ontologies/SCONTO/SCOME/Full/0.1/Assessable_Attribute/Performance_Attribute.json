@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Performance_Attribute;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Propiedad evaluable de una entidad de una cadena de suministros que caracteriza su desempeño"
+  },
+  "displayName": {
+    "en": "Performance_Attribute"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Assessable_Attribute;1",
+  "@context": "dtmi:dtdl:context;2"
+}

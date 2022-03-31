@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Proceso que evalúa las necesidades operativas y los recursos disponibles en una cadena de suministros, o en alguna parte de ella, de manera de desarrollar un curso de acción que sea lo más adecuado posible para alcanzar los objetivos deseados"
+  },
+  "displayName": {
+    "en": "Plan"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,24 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "hasSourceFacility",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "hasDestinationFacility",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1"
+    }
+  ],
+  "description": {
+    "en": "Traslado de un recurso durante un proceso entre dos establecimientos"
+  },
+  "displayName": {
+    "en": "Transportation_"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
+  "@context": "dtmi:dtdl:context;2"
+}

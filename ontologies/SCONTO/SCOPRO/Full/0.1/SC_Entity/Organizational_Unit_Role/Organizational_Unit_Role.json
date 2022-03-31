@@ -1,0 +1,34 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre un rol de una organización y la unidad organizacional que tiene como rol dicha perspectiva Inverse of: hasOURole"
+      },
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isORoleOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de hasMember Inverse of: hasMember"
+      },
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isMemberOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1"
+    }
+  ],
+  "description": {
+    "en": "Funcionalidad que asume una unidad organizacional en su participación en una dada cadena de suministros en particular"
+  },
+  "displayName": {
+    "en": "Organizational_Unit_Role"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+  "@context": "dtmi:dtdl:context;2"
+}

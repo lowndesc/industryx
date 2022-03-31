@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Base_Unit;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Unidad de medida que no se deriva de otra unidad"
+  },
+  "displayName": {
+    "en": "Base_Unit"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Unit_Of_Measure;1",
+  "@context": "dtmi:dtdl:context;2"
+}

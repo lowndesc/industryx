@@ -1,0 +1,32 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "isPerformedBySubArea",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_SubArea;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "isPartOfPE",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación de agregación entre una tarea y una tarea compuesta de la cual es parte Inverse of: isComprisedOfST"
+      },
+      "name": "isPartOfCT",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Composite_Task;1"
+    }
+  ],
+  "description": {
+    "en": "Actividad o estructura lógica de actividades que es parte de un elemento de proceso en una CS"
+  },
+  "displayName": {
+    "en": "Task"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+  "@context": "dtmi:dtdl:context;2"
+}

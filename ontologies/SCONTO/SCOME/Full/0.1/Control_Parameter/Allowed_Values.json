@@ -1,0 +1,48 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Allowed_Values;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "areAllowedValuesOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Assessable_Attribute;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "es": "hasElementValue"
+      },
+      "name": "hasElementValue",
+      "schema": "float",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "es": "hasLowerBound"
+      },
+      "name": "hasLowerBound",
+      "schema": "float",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "es": "hasUpperBound"
+      },
+      "name": "hasUpperBound",
+      "schema": "float",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Conjunto de valores aceptables para un determinado atributo mensurable"
+  },
+  "displayName": {
+    "en": "Allowed_Values"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Control_Parameter;1",
+  "@context": "dtmi:dtdl:context;2"
+}

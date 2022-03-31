@@ -1,0 +1,65 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre un rol de recurso y el recurso Inverse of: hasResourceRole"
+      },
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isResourceRoleOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isResourceRProvidedBy",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isResourceRObtainedBy",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Función o comportamiento asociado con la participación de un recurso en un proceso específico"
+  },
+  "displayName": {
+    "en": "Resource_Role"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

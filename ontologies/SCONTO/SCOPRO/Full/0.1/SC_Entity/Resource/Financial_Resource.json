@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Financial_Resource;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+      },
+      "name": "hasResourceRole",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Financial_RR;1"
+    }
+  ],
+  "description": {
+    "en": "Medio de retribución monetario, tal como efectivo, depósito bancario, cheque, etc., que puede ser empleado para la adquisición de bienes y servicios, y que participa en uno o más procesos de una cadena de suministros"
+  },
+  "displayName": {
+    "en": "Financial_Resource"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+  "@context": "dtmi:dtdl:context;2"
+}

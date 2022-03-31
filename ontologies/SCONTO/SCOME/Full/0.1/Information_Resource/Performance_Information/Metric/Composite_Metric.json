@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Composite_Metric;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Método que necesita de otras métricas para la asignación de valores a un atributo mensurable"
+  },
+  "displayName": {
+    "en": "Composite_Metric"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Metric;1",
+  "@context": "dtmi:dtdl:context;2"
+}

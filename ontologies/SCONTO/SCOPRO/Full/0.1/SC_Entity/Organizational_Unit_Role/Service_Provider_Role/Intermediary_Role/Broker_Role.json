@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Broker_Role;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Broker_Role"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Intermediary_Role;1",
+  "@context": "dtmi:dtdl:context;2"
+}

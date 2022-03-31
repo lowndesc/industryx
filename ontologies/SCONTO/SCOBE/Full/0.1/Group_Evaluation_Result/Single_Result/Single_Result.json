@@ -1,0 +1,27 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Single_Result;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "hasRValue",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isReferenceValue",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Reference_Value;1"
+    }
+  ],
+  "description": {
+    "en": "Resultado del análisis de un grupo de “benchmarking” que constituye un valor puntual de un criterio de evaluación"
+  },
+  "displayName": {
+    "en": "Single_Result"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scobe:Group_Evaluation_Result;1",
+  "@context": "dtmi:dtdl:context;2"
+}

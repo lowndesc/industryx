@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Movement;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Traslado de un recurso durante un proceso entre dos localizaciones situadas dentro de un mismo establecimiento"
+  },
+  "displayName": {
+    "en": "Movement"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Production;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Production"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+  "@context": "dtmi:dtdl:context;2"
+}

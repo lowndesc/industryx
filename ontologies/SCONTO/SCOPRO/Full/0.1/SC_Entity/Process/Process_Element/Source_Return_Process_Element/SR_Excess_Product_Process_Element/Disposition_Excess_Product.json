@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Disposition_Excess_Product;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Disposition_Excess_Product"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Excess_Product_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

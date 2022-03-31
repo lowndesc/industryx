@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Purchasing;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Purchasing"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+  "@context": "dtmi:dtdl:context;2"
+}

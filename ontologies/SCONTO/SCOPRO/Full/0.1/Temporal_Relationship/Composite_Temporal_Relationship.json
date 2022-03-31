@@ -1,0 +1,76 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Composite_Temporal_Relationship;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasDuringAsPart",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:During;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasBeforAsPart",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Before;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasEqualAsPart",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Equal;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasMeetsAsPart",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Meets;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasOverlapsAsPart",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Overlaps;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isRestrainedBy Inverse of: isRestrainedBy"
+      },
+      "minMultiplicity": 0,
+      "name": "restrains",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre una relación temporal y el proceso respecto al cual se restringe el orden temporal de otro proceso Inverse of: isRelativeTo"
+      },
+      "minMultiplicity": 0,
+      "name": "withRespectTo",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre una relación temporal compuesta y una de sus partes Inverse of: isPartOfTempRelat"
+      },
+      "maxMultiplicity": 1,
+      "name": "hasTempRelatAsPart",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Overlaps;1"
+    }
+  ],
+  "description": {
+    "en": "Relación temporal entre dos procesos compuesta por otras relaciones temporales. La ejecución de uno de los procesos se restringe con respecto a la realización del otro. El primero de los procesos debe cumplir, con respecto al segundo, con alguna de las relaciones temporales que forman parte de la relación temporal compuesta."
+  },
+  "displayName": {
+    "en": "Composite_Temporal_Relationship"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1",
+  "@context": "dtmi:dtdl:context;2"
+}

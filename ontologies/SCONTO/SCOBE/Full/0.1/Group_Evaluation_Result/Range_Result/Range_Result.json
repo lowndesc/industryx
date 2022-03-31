@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Range_Result;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "hasRLowerBound",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "hasRUpperBound",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Resultado del análisis de un grupo de “benchmarking” que constituye un rango de valores de un criterio de evaluación"
+  },
+  "displayName": {
+    "en": "Range_Result"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scobe:Group_Evaluation_Result;1",
+  "@context": "dtmi:dtdl:context;2"
+}

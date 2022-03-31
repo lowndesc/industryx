@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Human_Resource;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+      },
+      "name": "hasResourceRole",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Human_RR;1"
+    }
+  ],
+  "description": {
+    "en": "Persona o grupo de personas que participan en uno o más procesos de una cadena de suministros"
+  },
+  "displayName": {
+    "en": "Human_Resource"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+  "@context": "dtmi:dtdl:context;2"
+}

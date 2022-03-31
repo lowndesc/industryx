@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Internal_Facing;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Dimensión de desempeño de una cadena de suministros que se focaliza en los resultados de interés para el conjunto de participantes de la misma - con excepción de los clientes finales"
+  },
+  "displayName": {
+    "en": "SC_Internal_Facing"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Performance_Dimension;1",
+  "@context": "dtmi:dtdl:context;2"
+}

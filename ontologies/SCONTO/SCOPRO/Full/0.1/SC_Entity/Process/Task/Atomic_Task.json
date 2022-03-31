@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Task;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+    }
+  ],
+  "description": {
+    "en": "Tarea que no se descompone en otras tareas"
+  },
+  "displayName": {
+    "en": "Atomic_Task"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Metric_Input;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isResourceRoleOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Metric;1"
+    },
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isInvolvedIn",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Metric_Use;1"
+    }
+  ],
+  "description": {
+    "en": "Rol de una métrica que es requerida para la ejecución de una actividad de medición"
+  },
+  "displayName": {
+    "en": "Metric_Input"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Input;1",
+  "@context": "dtmi:dtdl:context;2"
+}

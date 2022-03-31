@@ -1,0 +1,45 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre un proceso y una relación temporal que lo vincula con otro proceso Inverse of: restrains"
+      },
+      "name": "isRestrainedBy",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "isRelativeTo",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Inversa de performs Inverse of: performs"
+      },
+      "minMultiplicity": 0,
+      "name": "isPerformedBy",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
+    },
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación entre un proceso y una de las utilizaciones que origina Inverse of: isEntailedBy"
+      },
+      "minMultiplicity": 0,
+      "name": "entails",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1"
+    }
+  ],
+  "description": {
+    "en": "Actividad o conjunto de actividades interrelacionadas logicamente, que se realizan para alcanzar un resultado epecífico y predefinido a través de la utilización de recursos"
+  },
+  "displayName": {
+    "en": "Process"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Store;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+      },
+      "minMultiplicity": 0,
+      "name": "hasResourceRole",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Point_of_Purchase;1"
+    }
+  ],
+  "displayName": {
+    "en": "Store"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+  "@context": "dtmi:dtdl:context;2"
+}

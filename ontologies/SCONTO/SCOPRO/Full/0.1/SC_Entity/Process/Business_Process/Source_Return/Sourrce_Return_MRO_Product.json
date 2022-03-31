@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Sourrce_Return_MRO_Product;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Asociación de agregación entre un proceso de negocio y uno de los elementos de proceso que lo componen Inverse of: isPartOfBP"
+      },
+      "name": "isComprisedOfPE",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_MRO_Product_Process_Element;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso mediante el cual se retornan productos o activos al proveedor para su mantenimiento, reparación o revisión, tal como se defina en los planes de mantenimiento o por la ocurrencia o anticipación de fallas o riesgos. Generalmente se espera que los activos que se gestionan a través de este proceso sean reacondicionados y que retornen al servicio"
+  },
+  "displayName": {
+    "en": "Source_Return_MRO_Product"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return;1",
+  "@context": "dtmi:dtdl:context;2"
+}

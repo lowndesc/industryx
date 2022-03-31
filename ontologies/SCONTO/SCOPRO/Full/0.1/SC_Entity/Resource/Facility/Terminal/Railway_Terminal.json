@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Railway_Terminal;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Railway_Terminal"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Terminal;1",
+  "@context": "dtmi:dtdl:context;2"
+}

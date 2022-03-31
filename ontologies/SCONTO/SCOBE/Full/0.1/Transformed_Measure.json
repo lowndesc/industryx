@@ -1,0 +1,53 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Transformed_Measure;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "originalMeasure",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Measure;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "isTransformedWith",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Benchmarking_Transformation_Rule;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Medida de un atributo de desempeño compatiblizada para que sea comparable con un criterio atómico"
+  },
+  "displayName": {
+    "en": "Transformed_Measure"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

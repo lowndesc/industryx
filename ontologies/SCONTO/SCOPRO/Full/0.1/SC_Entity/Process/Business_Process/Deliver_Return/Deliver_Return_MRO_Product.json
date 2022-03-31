@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return_MRO_Product;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:DR_MRO_Product_Process_Element;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso mediante el cual se gestiona la recepción de productos o activos que son enviados por los clientes para su mantenimiento, reparación o revisión. Generalmente se espera que los activos que se gestionan a través de este\nproceso sean reacondicionados y que retornen al servicio"
+  },
+  "displayName": {
+    "en": "Deliver_Return_MRO_Product"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return;1",
+  "@context": "dtmi:dtdl:context;2"
+}

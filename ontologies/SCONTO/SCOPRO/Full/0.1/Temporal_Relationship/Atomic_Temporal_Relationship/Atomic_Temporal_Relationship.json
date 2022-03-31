@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Temporal_Relationship;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Relación temporal entre dos procesos mediante la cual el espacio de tiempo de ejecución de uno de ellos se restringe con respecto a la realización del otro. Una relación temporal atómica no está compuesta por otras relaciones temporales"
+  },
+  "displayName": {
+    "en": "Atomic_Temporal_Relationship"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1",
+  "@context": "dtmi:dtdl:context;2"
+}

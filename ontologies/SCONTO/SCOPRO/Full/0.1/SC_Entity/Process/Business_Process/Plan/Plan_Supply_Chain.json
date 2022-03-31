@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Supply_Chain;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_SC_Process_Element;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso que evalúa las necesidades operativas y los recursos disponibles en una cadena de suministros, de manera de desarrollar cursos de acción durante un período de tiempo específico. Se espera que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados"
+  },
+  "displayName": {
+    "en": "Plan_Supply_Chain"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1",
+  "@context": "dtmi:dtdl:context;2"
+}

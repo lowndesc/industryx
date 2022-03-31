@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:MtS_Process_Element;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "M-t-S_Process_Element"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Make_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

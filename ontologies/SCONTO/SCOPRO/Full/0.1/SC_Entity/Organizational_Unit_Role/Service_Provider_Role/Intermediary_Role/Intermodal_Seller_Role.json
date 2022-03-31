@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Intermodal_Seller_Role;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Intermodal_Seller_Role"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Intermediary_Role;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Prioritize_and_Aggregate_Production_Requirements;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "IPA_Production_Requirements"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_M_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

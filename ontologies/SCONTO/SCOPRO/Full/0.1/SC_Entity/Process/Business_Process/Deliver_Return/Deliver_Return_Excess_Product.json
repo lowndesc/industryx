@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return_Excess_Product;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:DR_Excess_Product_Process_Element;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso mediante el cual se gestiona la recepción de productos devueltos por los clientes por encontrarse en exceso, envejecidos u obsoletos, de acuerdo a los términos y condiciones pactadas"
+  },
+  "displayName": {
+    "en": "Deliver_Return_Excess_Product"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return;1",
+  "@context": "dtmi:dtdl:context;2"
+}

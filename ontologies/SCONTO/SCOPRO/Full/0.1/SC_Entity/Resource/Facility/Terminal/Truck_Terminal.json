@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Truck_Terminal;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Truck_Terminal"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Terminal;1",
+  "@context": "dtmi:dtdl:context;2"
+}

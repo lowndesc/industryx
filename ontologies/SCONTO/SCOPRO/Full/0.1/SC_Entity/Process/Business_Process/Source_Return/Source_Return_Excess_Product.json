@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return_Excess_Product;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Excess_Product_Process_Element;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso mediante el cual se retornan al proveedor productos en exceso, envejecidos u obsoletos, de acuerdo a los términos y condiciones pactadas. El propósito del retorno de inventarios en exceso es reubicarlo en una localización en donde se pueda vender el producto que es considerado excesivo en la ubicación en la que actualmente se encuentra"
+  },
+  "displayName": {
+    "en": "Source_Return_Excess_Product"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return;1",
+  "@context": "dtmi:dtdl:context;2"
+}

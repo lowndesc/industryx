@@ -1,0 +1,47 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Benchmarking_Transformation_Rule;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isTransformationRuleOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Atomic_Criterion;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Procedimiento para trasladar las medidas de atributos de desempeño a la escala correspondiente a un criterio atómico"
+  },
+  "displayName": {
+    "en": "Benchmarking_Transformation_Rule"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

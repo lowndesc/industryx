@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "isDependentSubOUOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isDependentOUOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+    }
+  ],
+  "description": {
+    "en": "Unidad organizacional que está subordinada a otra, de la cual es dependiente o semi-dependiente, pero que tiene su propia administración y funciones"
+  },
+  "displayName": {
+    "en": "Dependent_OU"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1",
+  "@context": "dtmi:dtdl:context;2"
+}

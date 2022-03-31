@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Request_Excess_Product_Return_Authorisation;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Request_Excess_Product_Return_Authorisation"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Excess_Product_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

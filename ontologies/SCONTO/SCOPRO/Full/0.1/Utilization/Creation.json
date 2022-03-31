@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Creation;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Generación de un recurso durante un proceso"
+  },
+  "displayName": {
+    "en": "Creation"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+  "@context": "dtmi:dtdl:context;2"
+}

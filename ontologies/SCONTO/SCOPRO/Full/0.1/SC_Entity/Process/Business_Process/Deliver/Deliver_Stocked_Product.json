@@ -1,0 +1,32 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Stocked_Product;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "isComposedOfPE_ShipProduct",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Ship_Product;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "isComposedOfPE_ReserveInventoryAndDetermineDeliveryDate",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Reserve_Inventory_and_Determine_Delivery_Date;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso de entrega de productos de tipo estándar que son abastecidos o fabricados en base a una agregación de órdenes de clientes, a la proyección de la demanda o a parámetros de reabastecimiento de inventario"
+  },
+  "displayName": {
+    "en": "Deliver_Stocked_Product"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver;1",
+  "@context": "dtmi:dtdl:context;2"
+}

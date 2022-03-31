@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Proceso asociado con la solicitud, entrega, recepción y transferencia de \nmaterias primas, subensambles, productos o servicios, que son adquiridos a una unidad organizacional de una cadena de suministros"
+  },
+  "displayName": {
+    "en": "Source"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+  "@context": "dtmi:dtdl:context;2"
+}

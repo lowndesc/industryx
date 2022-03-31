@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:MaketoStock;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:MtS_Process_Element;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso de manufactura con el que se generan productos estándar que no requieren de adaptaciones o particularizaciones de acuerdo a requerimientos de los clientes. El proceso puede completarse antes que los productos sean solicitados por los clientes y, generalmente, se realiza a partir de una programación basada en los pronósticos de ventas. No se necesita ninguna referencia o detalle de los requerimientos de los clientes durante el proceso, ni se requiere individualizar los productos"
+  },
+  "displayName": {
+    "en": "Make-to-Stock"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Make;1",
+  "@context": "dtmi:dtdl:context;2"
+}

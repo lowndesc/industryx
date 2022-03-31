@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Passive_Object;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Inversa de involves Inverse of: involves"
+      },
+      "name": "isInvolvedIn",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1"
+    }
+  ],
+  "description": {
+    "en": "Rol de un recurso material sobre el cual recaen las acciones del proceso que lo utiliza sin que sufra modificaciones físicas, físico-químicas ni de ubicación espacial"
+  },
+  "displayName": {
+    "en": "Passive_Object"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
+  "@context": "dtmi:dtdl:context;2"
+}

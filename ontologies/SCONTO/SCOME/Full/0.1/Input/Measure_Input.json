@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Measure_Input;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isResourceRoleOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Measure;1"
+    },
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isInvolvedIn",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Measure_Use;1"
+    }
+  ],
+  "description": {
+    "en": "Rol de una medida que es requerida para la ejecución de una actividad de medición indirecta"
+  },
+  "displayName": {
+    "en": "Measure_Input"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Input;1",
+  "@context": "dtmi:dtdl:context;2"
+}

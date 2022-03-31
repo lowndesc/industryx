@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Payment;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Rol de un recurso financiero que es desembolsado o emitido durante la ejecución de un proceso"
+  },
+  "displayName": {
+    "en": "Payment"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Financial_RR;1",
+  "@context": "dtmi:dtdl:context;2"
+}

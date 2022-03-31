@@ -1,0 +1,41 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Control_Parameter;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Parámetro que permite calificar los valores de un atributo mensurable"
+  },
+  "displayName": {
+    "en": "Control_Parameter"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

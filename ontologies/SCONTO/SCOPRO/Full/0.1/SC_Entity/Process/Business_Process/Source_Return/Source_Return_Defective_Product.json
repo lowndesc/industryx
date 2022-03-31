@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return_Defective_Product;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+      },
+      "name": "isComprisedOfSubProcess",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Def_Product_Process_Element;1"
+    }
+  ],
+  "description": {
+    "en": "Proceso mediante el cual se devuelven productos defectuosos al proveedor, se define su disposición y se acuerda la compensación a recibir, de acuerdo a lo que indique la garantía, las políticas de retiro de producto no conforme del\nmercado, u otras políticas similares. Se pueden considerar productos defectuosos aquéllos que no cumplen con las especificaciones (incluyendo no conformidad de la orden, tal como el retraso en la entrega o envío inapropiado)"
+  },
+  "displayName": {
+    "en": "Source_Return_Defective_Product"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return;1",
+  "@context": "dtmi:dtdl:context;2"
+}

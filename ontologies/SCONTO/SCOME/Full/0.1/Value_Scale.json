@@ -1,0 +1,96 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Value_Scale;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "valueType",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Enum",
+        "dtmi:dtdl:property:enumValues;2": [
+          {
+            "enumValue": "Continuous",
+            "name": "Continuous"
+          },
+          {
+            "enumValue": "Discrete",
+            "name": "Discrete"
+          },
+          {
+            "enumValue": "Linguistic",
+            "name": "Linguistic"
+          }
+        ],
+        "valueSchema": "string"
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "minValue",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "es": "maxValue"
+      },
+      "name": "maxValue",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasUnitOfMeasure",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Unit_Of_Measure;1"
+    },
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "es": "hasScaleType"
+      },
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasScaleType",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Scale_Type;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Conjunto de posibles valores de una propiedad y las relaciones entre sí- las cuales se determinan por el tipo de escala asociado"
+  },
+  "displayName": {
+    "en": "Value_Scale"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

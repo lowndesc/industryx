@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Prioritize_and_Aggregate_Suply_Cahin_Requirements;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "IAA_Supply_Chain_Requirements"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_SC_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

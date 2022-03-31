@@ -1,0 +1,32 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Metric;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "definition",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "name": "isPartOfMetric",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Composite_Metric;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isAssessmentMethodOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Assessable_Attribute;1"
+    }
+  ],
+  "description": {
+    "en": "Método utilizado para la obtención del valor de un atributo mensurable"
+  },
+  "displayName": {
+    "en": "Metric"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Performance_Information;1",
+  "@context": "dtmi:dtdl:context;2"
+}

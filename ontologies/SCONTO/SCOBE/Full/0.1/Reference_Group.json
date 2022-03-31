@@ -1,0 +1,66 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Reference_Group;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Property",
+      "name": "numberOfRGEntities",
+      "schema": "integer",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isDeterminedBy",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Group_Evaluation_Result;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isTargetGroupOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Benchmarking_Group;1"
+    },
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "hasReferencePractice",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Reference_Practice;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Subconjunto del grupo de “benchmarking” que se adopta como referencia para identificar buenas prácticas"
+  },
+  "displayName": {
+    "en": "Reference_Group"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Secondary_Attribute;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Propiedad evaluable de una entidad de una cadena de suministros que no caracteriza su desempeño"
+  },
+  "displayName": {
+    "en": "Secondary_Attribute"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Assessable_Attribute;1",
+  "@context": "dtmi:dtdl:context;2"
+}

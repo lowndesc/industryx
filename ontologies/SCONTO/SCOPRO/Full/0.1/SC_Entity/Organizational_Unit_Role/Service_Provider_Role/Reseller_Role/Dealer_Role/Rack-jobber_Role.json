@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Rackjobber_Role;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Rack-jobber_Role"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Dealer_Role;1",
+  "@context": "dtmi:dtdl:context;2"
+}

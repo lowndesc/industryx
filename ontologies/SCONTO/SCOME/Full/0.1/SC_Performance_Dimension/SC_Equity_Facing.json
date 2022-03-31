@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Equity_Facing;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Dimensión de desempeño de una cadena de suministros que se enfoca en el logro de un balance entre los aportes y los beneficios que obtienen las organizaciones participantes en la cadena"
+  },
+  "displayName": {
+    "en": "SC_Equity_Facing"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Performance_Dimension;1",
+  "@context": "dtmi:dtdl:context;2"
+}

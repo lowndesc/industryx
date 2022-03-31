@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Input;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Inversa de involves Inverse of: involves"
+      },
+      "name": "isInvolvedIn",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Elimination;1"
+    }
+  ],
+  "description": {
+    "en": "Rol de un recurso material que participa en un proceso incorporándose en otro bien o transformándose"
+  },
+  "displayName": {
+    "en": "Material_Input"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
+  "@context": "dtmi:dtdl:context;2"
+}

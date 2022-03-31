@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Agility;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isLinkedConceptOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Customer_Facing;1"
+    }
+  ],
+  "description": {
+    "en": "Capacidad de una cadena de suministros de adaptarse para responder a cambios en los requerimientos"
+  },
+  "displayName": {
+    "en": "SC_Agility"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Performance_Concept;1",
+  "@context": "dtmi:dtdl:context;2"
+}

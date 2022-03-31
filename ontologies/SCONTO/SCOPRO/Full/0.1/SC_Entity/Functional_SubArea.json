@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_SubArea;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "subAreaPerforms",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isFuntionalSubAreaOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1"
+    }
+  ],
+  "description": {
+    "en": "Agrupación de actividades que forman parte de un área funcional y que se ocupan de un tipo de tareas en común dentro del área funcional de la cual forman parte"
+  },
+  "displayName": {
+    "en": "Functional_SubArea"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+  "@context": "dtmi:dtdl:context;2"
+}

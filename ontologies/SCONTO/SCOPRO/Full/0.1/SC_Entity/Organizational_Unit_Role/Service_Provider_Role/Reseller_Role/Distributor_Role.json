@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Distributor_Role;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Distributor_Role"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Reseller_Role;1",
+  "@context": "dtmi:dtdl:context;2"
+}

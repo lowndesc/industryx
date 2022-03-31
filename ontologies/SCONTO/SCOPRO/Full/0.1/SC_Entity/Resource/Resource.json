@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Medio físico o conceptual que brinda soporte a la ejecución de un proceso, tal como equipamiento, materias primas, información, etc."
+  },
+  "displayName": {
+    "en": "Resource"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+  "@context": "dtmi:dtdl:context;2"
+}

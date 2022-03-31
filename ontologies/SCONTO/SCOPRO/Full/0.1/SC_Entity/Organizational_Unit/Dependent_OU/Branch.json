@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Branch;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Branch"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1",
+  "@context": "dtmi:dtdl:context;2"
+}

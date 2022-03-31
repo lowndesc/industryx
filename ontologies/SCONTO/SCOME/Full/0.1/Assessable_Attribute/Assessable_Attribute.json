@@ -1,0 +1,84 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Assessable_Attribute;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "displayName": {
+        "es": "hasValueScale"
+      },
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasValueScale",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Value_Scale;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "isAssessableAttributeOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "isQuantifiedBy",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Measure;1"
+    },
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "hasAssessmentMethod",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Metric;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "es": "hasTimeFrame"
+      },
+      "name": "hasTimeFrame",
+      "schema": "string",
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "name": "description",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Propiedad evaluable de una entidad de una cadena de suministros"
+  },
+  "displayName": {
+    "en": "Assessable_Attribute"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

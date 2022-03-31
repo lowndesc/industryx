@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_Product_from_Source_or_Make;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Receive_Product_from_Source_or_Make"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

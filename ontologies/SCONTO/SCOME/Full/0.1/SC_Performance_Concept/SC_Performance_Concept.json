@@ -1,0 +1,47 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Performance_Concept;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isShownThrough",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Performance_Attribute;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Propiedad abstracta con la cual se puede caracterizar el desempeño de una cadena de suministros"
+  },
+  "displayName": {
+    "en": "SC_Performance_Concept"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Complex_Derived_Unit;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Unidad de medida que se deriva del producto de dos o más unidades de medidas"
+  },
+  "displayName": {
+    "en": "Complex_Derived_Unit"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Derived_Unit;1",
+  "@context": "dtmi:dtdl:context;2"
+}

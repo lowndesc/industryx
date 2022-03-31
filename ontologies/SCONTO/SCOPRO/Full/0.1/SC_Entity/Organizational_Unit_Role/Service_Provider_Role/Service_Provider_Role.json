@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Service_Provider_Role;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Rol que asume una unidad organizacional que, en su participación en una cadena de suministros específica, sólo realiza actividades relacionadas con el transporte, comercialización, almacenamiento, etc., que le agregan valor a un producto sin transformarlo de manera física o físico-química"
+  },
+  "displayName": {
+    "en": "Service_Provider_Role"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1",
+  "@context": "dtmi:dtdl:context;2"
+}

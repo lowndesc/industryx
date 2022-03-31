@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Indirect_Assessment;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "entails",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Measure_Use;1"
+    }
+  ],
+  "description": {
+    "en": "Actividad de medición en la cual se usa una o más medidas de atributos mensurables"
+  },
+  "displayName": {
+    "en": "Indirect_Assessment"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Assesment_Activity;1",
+  "@context": "dtmi:dtdl:context;2"
+}

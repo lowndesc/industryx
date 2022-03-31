@@ -1,0 +1,22 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Output;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "Inversa de involves Inverse of: involves"
+      },
+      "name": "isInvolvedIn",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Creation;1"
+    }
+  ],
+  "description": {
+    "en": "Rol de la información que resulta de la realización de un proceso y que no existía antes de la ejecución del mismo"
+  },
+  "displayName": {
+    "en": "Output"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Information_RR;1",
+  "@context": "dtmi:dtdl:context;2"
+}

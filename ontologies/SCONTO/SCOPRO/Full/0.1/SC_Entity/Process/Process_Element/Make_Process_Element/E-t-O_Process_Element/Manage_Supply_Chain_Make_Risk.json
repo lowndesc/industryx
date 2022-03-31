@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_Supply_Chain_Make_Risk;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Manage_Supply_Chain_Make_Risk"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

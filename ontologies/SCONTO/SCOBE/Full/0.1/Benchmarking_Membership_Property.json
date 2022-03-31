@@ -1,0 +1,67 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Benchmarking_Membership_Property;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isMembershipPropertyOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Benchmarking_Group;1"
+    },
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isEquivalentProperty",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Secondary_Attribute;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasMembershipValue",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Membership_Property_Value;1"
+    },
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasBValueScale",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Value_Scale;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Propiedad de los elementos de un grupo de “benchmarking”"
+  },
+  "displayName": {
+    "en": "Benchmarking_Membership_Property"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

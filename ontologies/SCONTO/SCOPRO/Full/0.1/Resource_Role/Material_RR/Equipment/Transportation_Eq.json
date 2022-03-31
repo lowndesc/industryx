@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation_Eq;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Transportation_Eq"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Equipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

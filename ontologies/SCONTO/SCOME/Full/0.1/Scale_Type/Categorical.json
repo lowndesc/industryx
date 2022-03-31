@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Categorical;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Tipo de escala cuyos valores se vinculan a una clasificación o categorización de una propiedad"
+  },
+  "displayName": {
+    "en": "Categorical"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:Scale_Type;1",
+  "@context": "dtmi:dtdl:context;2"
+}

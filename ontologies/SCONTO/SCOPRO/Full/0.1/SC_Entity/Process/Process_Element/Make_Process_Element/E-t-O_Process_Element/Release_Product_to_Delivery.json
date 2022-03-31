@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Release_Product_to_Delivery;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Release_Product_to_Delivery"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

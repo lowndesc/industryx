@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Group;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Business_Group"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1",
+  "@context": "dtmi:dtdl:context;2"
+}

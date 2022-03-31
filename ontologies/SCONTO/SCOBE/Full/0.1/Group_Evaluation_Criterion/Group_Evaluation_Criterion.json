@@ -1,0 +1,54 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scobe:Group_Evaluation_Criterion;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "maxMultiplicity": 1,
+      "minMultiplicity": 0,
+      "name": "hasGECValueScale",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:Value_Scale;1"
+    },
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "hasCriterionResult",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scobe:Group_Evaluation_Result;1"
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "External IDs"
+      },
+      "name": "externalIds",
+      "dtmi:dtdl:property:schema;2": {
+        "@type": "Map",
+        "dtmi:dtdl:property:mapKey;2": {
+          "name": "externalIdName",
+          "schema": "string"
+        },
+        "dtmi:dtdl:property:mapValue;2": {
+          "name": "externalIdValue",
+          "schema": "string"
+        }
+      },
+      "writable": true
+    },
+    {
+      "@type": "Property",
+      "displayName": {
+        "en": "name"
+      },
+      "name": "name",
+      "schema": "string",
+      "writable": true
+    }
+  ],
+  "description": {
+    "en": "Característica de desempeño que se utiliza para la evaluación y análisis de los miembros de un grupo de “benchmarking”"
+  },
+  "displayName": {
+    "en": "Group_Evaluation_Criterion"
+  },
+  "@context": "dtmi:dtdl:context;2"
+}

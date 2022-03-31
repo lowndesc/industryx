@@ -1,0 +1,12 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver;1",
+  "@type": "Interface",
+  "description": {
+    "en": "Proceso que consiste en la gestión de órdenes de clientes, incluyendo la recepción de los pedidos y su validación, las actividades vinculadas a la entrega de los productos y la facturación"
+  },
+  "displayName": {
+    "en": "Deliver"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+  "@context": "dtmi:dtdl:context;2"
+}

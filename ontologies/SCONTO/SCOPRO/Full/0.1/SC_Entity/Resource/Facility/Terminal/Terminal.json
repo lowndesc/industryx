@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Terminal;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "description": {
+        "en": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+      },
+      "minMultiplicity": 0,
+      "name": "hasResourceRole",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Vehicle_Terminal;1"
+    }
+  ],
+  "displayName": {
+    "en": "Terminal"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+  "@context": "dtmi:dtdl:context;2"
+}

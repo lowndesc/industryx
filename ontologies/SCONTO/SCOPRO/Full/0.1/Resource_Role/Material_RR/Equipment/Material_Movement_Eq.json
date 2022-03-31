@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Movement_Eq;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Material_Movement_Eq"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Equipment;1",
+  "@context": "dtmi:dtdl:context;2"
+}

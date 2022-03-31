@@ -1,0 +1,9 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Schedule_Production_Activities;1",
+  "@type": "Interface",
+  "displayName": {
+    "en": "Schedule_Production_Activities"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+  "@context": "dtmi:dtdl:context;2"
+}

@@ -1,0 +1,20 @@
+{
+  "@id": "dtmi:digitaltwins:org:purl:sconto:scome:Contribution_Equity;1",
+  "@type": "Interface",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "minMultiplicity": 0,
+      "name": "isLinkedConceptOf",
+      "target": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Equity_Facing;1"
+    }
+  ],
+  "description": {
+    "en": "Grado de equidad en los aportes -monetarios o de otro tipo- con respecto a un parámetro que permite sentar una base para la comparación -que efectúan las organizaciones participantes de una cadena"
+  },
+  "displayName": {
+    "en": "Contribution_Equity"
+  },
+  "extends": "dtmi:digitaltwins:org:purl:sconto:scome:SC_Performance_Concept;1",
+  "@context": "dtmi:dtdl:context;2"
+}
