@@ -1,0 +1,4178 @@
+{
+	"digitalTwinsFileInfo": {
+		"fileVersion": "1.0.0"
+	},
+	"digitalTwinsGraph": {
+		"digitalTwins": [
+			{
+				"$dtId": "CM_Co",
+				"$etag": "W/\"1fdd22a8-5d2d-4bf9-b9f0-275d221e64aa\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1"
+				}
+			},
+			{
+				"$dtId": "Planning",
+				"$etag": "W/\"152113a9-ae9e-428a-9024-f981c9d7efc4\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Sales;1"
+				}
+			},
+			{
+				"$dtId": "ABC_Co",
+				"$etag": "W/\"91a7b56c-11dd-432f-a51b-517b1edfa629\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1"
+				}
+			},
+			{
+				"$dtId": "XYC_contract_producer",
+				"$etag": "W/\"25450350-679c-49fb-adc6-95932a88450a\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Secondary_Producer_Role;1"
+				}
+			},
+			{
+				"$dtId": "Production",
+				"$etag": "W/\"275fe661-5c44-4918-88ed-0f67f59a4f37\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production;1"
+				}
+			},
+			{
+				"$dtId": "Purchasing",
+				"$etag": "W/\"4066eb09-76d3-43b0-a4a5-fa56545046f8\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Purchasing;1"
+				}
+			},
+			{
+				"$dtId": "Logistics",
+				"$etag": "W/\"2d2ca04e-83a4-4c8e-b0d2-91778867f793\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Logistics;1"
+				}
+			},
+			{
+				"$dtId": "ContractMFG",
+				"$etag": "W/\"27d8ed84-1334-421d-8d20-960d127b0bf9\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production;1"
+				}
+			},
+			{
+				"$dtId": "Receive_Scheduled_Order",
+				"$etag": "W/\"ff0cbb3e-e949-42a2-944b-a9cb5077711c\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_Enter_and_Validate_Order;1"
+				}
+			},
+			{
+				"$dtId": "CM_Logistics",
+				"$etag": "W/\"556adb07-ab6e-4134-af5d-35031a3798b2\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Logistics;1"
+				}
+			},
+			{
+				"$dtId": "Reserve_Inventory",
+				"$etag": "W/\"cc35674c-4317-4fe5-b59b-81d0e7917f06\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Reserve_Inventory_and_Determine_Delivery_Date;1"
+				}
+			},
+			{
+				"$dtId": "Procure_Materials",
+				"$etag": "W/\"2ce3d933-b839-4879-96a6-00ae0b3870df\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Assess_and_Aggregate_Source_Resources;1"
+				}
+			},
+			{
+				"$dtId": "Make_Product",
+				"$etag": "W/\"652ad4d0-0103-44ea-a82e-65ffcbd06998\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_Product_from_Source_or_Make;1"
+				}
+			},
+			{
+				"$dtId": "3PL_Co",
+				"$etag": "W/\"dba7f1a7-2c91-4b23-8437-8868a04509f1\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1"
+				}
+			},
+			{
+				"$dtId": "3PL_Provider",
+				"$etag": "W/\"228cdbb1-7914-462c-996f-bcb4b859c3d4\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:ThirdPL_Provider_Role;1"
+				}
+			},
+			{
+				"$dtId": "Pick_Product",
+				"$etag": "W/\"e6570619-3967-4489-b931-4e1a1288ae81\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Pick_Product;1"
+				}
+			},
+			{
+				"$dtId": "Create_Shipment",
+				"$etag": "W/\"ba1045fb-b4a0-41fc-946d-7c6ae0d773a2\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Load_Product_and_Generate_Shipping_Docs;1"
+				}
+			},
+			{
+				"$dtId": "Deliver_Order",
+				"$etag": "W/\"d2c79587-bfc1-4e3c-a31c-8f11c5fe6071\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Ship_Product;1"
+				}
+			},
+			{
+				"$dtId": "XYC_Source_M2O",
+				"$etag": "W/\"c39c72ce-74b9-41fe-9c1b-2b7365b16628\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_MaketoOrder_Product;1"
+				}
+			},
+			{
+				"$dtId": "Confirm_Delivery",
+				"$etag": "W/\"75d17e57-1674-4c0b-9b01-8482f71ab97d\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_and_Verify_Product_by_Customer;1"
+				}
+			},
+			{
+				"$dtId": "XYC_M2O",
+				"$etag": "W/\"a220d5e6-f1f5-4f78-b6af-6a189fabddcd\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:MaketoOrder;1"
+				}
+			},
+			{
+				"$dtId": "XYC_Deliver_M2O",
+				"$etag": "W/\"269ccd0a-6c4f-4319-b122-dc6ddefc11fe\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_MaketoOrder_Product;1"
+				}
+			},
+			{
+				"$dtId": "XYC_distributor",
+				"$etag": "W/\"f6be5847-bad7-46cd-a411-ba5f695eaa49\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Distributor_Role;1"
+				}
+			},
+			{
+				"$dtId": "during",
+				"$etag": "W/\"cdea4ef8-f4cb-41be-b0c4-3bea052a79e7\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:During;1"
+				}
+			},
+			{
+				"$dtId": "before",
+				"$etag": "W/\"6bc6096e-c210-43e8-a21a-5c62db084d0d\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Before;1"
+				}
+			},
+			{
+				"$dtId": "during_2",
+				"$etag": "W/\"c54008f1-06ca-4bf4-9192-5fb35f284777\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:During;1"
+				}
+			},
+			{
+				"$dtId": "before_2",
+				"$etag": "W/\"57484a96-1224-497b-b6f4-27c741471a9b\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Before;1"
+				}
+			},
+			{
+				"$dtId": "meets",
+				"$etag": "W/\"d510e860-7c8e-4b64-8e62-0f175e15d65c\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Meets;1"
+				}
+			},
+			{
+				"$dtId": "meets_2",
+				"$etag": "W/\"f6d60c54-33e8-4d52-9bd4-b1c2ff396e0f\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Meets;1"
+				}
+			},
+			{
+				"$dtId": "O2D",
+				"$etag": "W/\"1e0b6629-940f-498a-935d-c793e53acd64\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
+				}
+			},
+			{
+				"$dtId": "3PL_Logistics",
+				"$etag": "W/\"1a853185-e1f3-4134-b17f-dc1be66d772f\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Logistics;1"
+				}
+			},
+			{
+				"$dtId": "Line_1",
+				"$etag": "W/\"317ee4c1-7bd2-48a3-9fa5-d9f9d6ed50d6\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production_Site;1"
+				}
+			},
+			{
+				"$dtId": "Factory",
+				"$etag": "W/\"6f820a5b-1494-4b36-8cc6-73cddbf6ac04\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Plant;1"
+				}
+			},
+			{
+				"$dtId": "Line_2",
+				"$etag": "W/\"c4e5421f-0181-4204-a88b-da78f20d2b0a\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production_Site;1"
+				}
+			},
+			{
+				"$dtId": "CDC",
+				"$etag": "W/\"49c6cebc-01cb-4a58-b631-c1c299faaf31\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Distribution_Center;1"
+				}
+			},
+			{
+				"$dtId": "Storage",
+				"$etag": "W/\"1a01fd2a-4a95-4bed-9d85-e40fc386c3bf\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Point_of_Storage;1"
+				}
+			},
+			{
+				"$dtId": "Ferrero_SC",
+				"$etag": "W/\"2cb193cf-482b-421b-a079-a1144dc5770d\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1"
+				}
+			},
+			{
+				"$dtId": "use_Line_1",
+				"$etag": "W/\"f73652d0-6680-419b-9728-de836ed7104a\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1"
+				}
+			},
+			{
+				"$dtId": "use_Storage",
+				"$etag": "W/\"c5335244-6012-4271-a9ed-97fc358b5e24\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1"
+				}
+			}
+		],
+		"relationships": [
+			{
+				"$relationshipId": "833b550e-7540-4edb-9acf-c6a425c0e7b9",
+				"$sourceId": "CM_Co",
+				"$targetId": "CM_Logistics",
+				"$relationshipName": "hasFunctionalArea",
+				"$etag": "W/\"d14ba57a-bd2e-4dce-8550-5ae7ffefe9ae\""
+			},
+			{
+				"$relationshipId": "7159eaae-2b47-4bf5-a6c4-6dec38e417c5",
+				"$sourceId": "CM_Co",
+				"$targetId": "ContractMFG",
+				"$relationshipName": "hasFunctionalArea",
+				"$etag": "W/\"c0d4af4a-44b2-4583-af0e-4570fc209e83\""
+			},
+			{
+				"$relationshipId": "de2f76d4-6195-49f9-9a83-1e3d36f892a4",
+				"$sourceId": "Planning",
+				"$targetId": "Receive_Scheduled_Order",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"b9971f41-287f-4dde-8d8b-aa95625677df\""
+			},
+			{
+				"$relationshipId": "3e2f2526-c5c1-48c8-b458-40fbdceef209",
+				"$sourceId": "Planning",
+				"$targetId": "Reserve_Inventory",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"1830cb21-79f4-41d4-a49c-f21695496407\""
+			},
+			{
+				"$relationshipId": "87914a4e-54b7-41ab-913f-0ea2bfd95e28",
+				"$sourceId": "ABC_Co",
+				"$targetId": "Production",
+				"$relationshipName": "hasFunctionalArea",
+				"$etag": "W/\"d6c28813-580d-4a09-9d2d-79f8f331a148\""
+			},
+			{
+				"$relationshipId": "09cda1d8-0b0f-42e8-9a93-a333264ad932",
+				"$sourceId": "ABC_Co",
+				"$targetId": "Logistics",
+				"$relationshipName": "hasFunctionalArea",
+				"$etag": "W/\"b9c59a00-a811-408d-9c07-ed285199eeb0\""
+			},
+			{
+				"$relationshipId": "7d8538f9-4656-478d-8700-6f5bffed2902",
+				"$sourceId": "ABC_Co",
+				"$targetId": "Planning",
+				"$relationshipName": "hasFunctionalArea",
+				"$etag": "W/\"b8e2f573-29be-4db1-b053-3b7a7531d5a0\""
+			},
+			{
+				"$relationshipId": "c9f1163d-4b9a-479a-a148-350fbb0e1905",
+				"$sourceId": "ABC_Co",
+				"$targetId": "Purchasing",
+				"$relationshipName": "hasFunctionalArea",
+				"$etag": "W/\"cce0ec2f-6b9e-4a71-b32b-a411ebaceb03\""
+			},
+			{
+				"$relationshipId": "053dbe64-988f-4048-a3df-0f1d24065f9d",
+				"$sourceId": "XYC_contract_producer",
+				"$targetId": "CM_Co",
+				"$relationshipName": "isORoleOf",
+				"$etag": "W/\"9aa2fbb6-c6d3-4a46-88e4-9a1cbad108fe\""
+			},
+			{
+				"$relationshipId": "26ea6f17-ae3a-431c-987a-941cd9133c6d",
+				"$sourceId": "Production",
+				"$targetId": "Make_Product",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"a3d1b386-067c-4456-9c67-b146e09091ae\""
+			},
+			{
+				"$relationshipId": "7170e475-5400-4609-a490-e31dd0fc7ee8",
+				"$sourceId": "Purchasing",
+				"$targetId": "Procure_Materials",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"342c8e35-1ed2-4b1c-ad59-7873e13665aa\""
+			},
+			{
+				"$relationshipId": "17a0292e-9934-439d-afb7-cdb7ff571c6b",
+				"$sourceId": "Logistics",
+				"$targetId": "Pick_Product",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"ca7d6f27-858c-4184-9812-5b6fd0d7624e\""
+			},
+			{
+				"$relationshipId": "49b75d46-58a2-4edd-a502-1b4e96db76bd",
+				"$sourceId": "Logistics",
+				"$targetId": "Procure_Materials",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"0506e165-4490-4823-aca9-4ce738661585\""
+			},
+			{
+				"$relationshipId": "6c02d596-97f8-4a18-a2fb-280615914d55",
+				"$sourceId": "Logistics",
+				"$targetId": "Make_Product",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"fe05eeba-8ce3-4325-a24e-71ff6f73283d\""
+			},
+			{
+				"$relationshipId": "80525117-6c9f-4acc-b715-4313c3a90f6f",
+				"$sourceId": "Logistics",
+				"$targetId": "Reserve_Inventory",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"fe90ed74-2644-4c1d-be9e-7e98fcfee3a4\""
+			},
+			{
+				"$relationshipId": "93d312d5-cc76-4b57-bb47-538d2b0db380",
+				"$sourceId": "Logistics",
+				"$targetId": "Create_Shipment",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"46fd86c5-8898-4454-8cff-e6748a526762\""
+			},
+			{
+				"$relationshipId": "43dd5ab3-2138-4d39-8662-9664cbc79b09",
+				"$sourceId": "ContractMFG",
+				"$targetId": "Make_Product",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"e0125c93-3aae-4398-8649-70bb2bd6c6c4\""
+			},
+			{
+				"$relationshipId": "e63f52f4-e264-4b68-9af9-76ba36672c37",
+				"$sourceId": "Receive_Scheduled_Order",
+				"$targetId": "during",
+				"$relationshipName": "isRestrainedBy",
+				"$etag": "W/\"e7b8e299-2b91-40cf-93ce-6ed0c0bed481\""
+			},
+			{
+				"$relationshipId": "f9ac1e8b-0d50-4214-b2a9-fb47d4153f20",
+				"$sourceId": "Receive_Scheduled_Order",
+				"$targetId": "XYC_Source_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"cad7099c-9241-4360-8fc6-8a01d786b2a6\""
+			},
+			{
+				"$relationshipId": "784a113c-33c1-473e-8d7e-6cf6b07c0e98",
+				"$sourceId": "CM_Logistics",
+				"$targetId": "Pick_Product",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"43d295fe-58b2-45a6-9a40-8572c11f4f77\""
+			},
+			{
+				"$relationshipId": "9e1f172a-872b-4854-84e9-9c14ebd20df8",
+				"$sourceId": "CM_Logistics",
+				"$targetId": "Create_Shipment",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"da0a2969-f359-4f2a-ba73-ef5dee1d889b\""
+			},
+			{
+				"$relationshipId": "89f08abd-7f98-45b4-903d-c9911fb7aa3f",
+				"$sourceId": "Reserve_Inventory",
+				"$targetId": "during",
+				"$relationshipName": "isRestrainedBy",
+				"$etag": "W/\"1bb1525a-6dd4-44ce-93d4-63472968a667\""
+			},
+			{
+				"$relationshipId": "953e4b4c-f2d6-4620-b1d9-fbc11f6b554b",
+				"$sourceId": "Reserve_Inventory",
+				"$targetId": "before",
+				"$relationshipName": "isRestrainedBy",
+				"$etag": "W/\"414bc484-a6de-4b8e-a8f2-ef734a191851\""
+			},
+			{
+				"$relationshipId": "1dcb3e78-ec03-4d52-ba1b-f35971412109",
+				"$sourceId": "Reserve_Inventory",
+				"$targetId": "XYC_Source_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"1d2eb77a-a7df-4f58-bae3-6ae842cc48ef\""
+			},
+			{
+				"$relationshipId": "bb1fb2af-6fec-4a57-88be-f8d194089f5e",
+				"$sourceId": "Procure_Materials",
+				"$targetId": "before",
+				"$relationshipName": "isRelativeTo",
+				"$etag": "W/\"c0f2bb34-dab9-44e4-bdf9-c3dcd66ff470\""
+			},
+			{
+				"$relationshipId": "b668eeb4-16c4-41bb-939c-b912a5dc8960",
+				"$sourceId": "Procure_Materials",
+				"$targetId": "during_2",
+				"$relationshipName": "isRestrainedBy",
+				"$etag": "W/\"81a8cf7e-394c-404c-b879-e424bf65096f\""
+			},
+			{
+				"$relationshipId": "18219913-377c-4d11-a01d-6a5a5a19e517",
+				"$sourceId": "Procure_Materials",
+				"$targetId": "XYC_Source_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"b8216c1a-80e8-4ba1-b436-46b59fda9133\""
+			},
+			{
+				"$relationshipId": "0d91bee2-5c07-4d0c-9303-38a3fcef1606",
+				"$sourceId": "Make_Product",
+				"$targetId": "during_2",
+				"$relationshipName": "isRestrainedBy",
+				"$etag": "W/\"abd4db01-b910-4ef3-8303-3383a42dc612\""
+			},
+			{
+				"$relationshipId": "e71e8fa2-f436-491d-b589-3a554e36ea3f",
+				"$sourceId": "Make_Product",
+				"$targetId": "XYC_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"e69c4d7d-c2eb-429c-bf7e-abf130d0e79e\""
+			},
+			{
+				"$relationshipId": "6bf92733-8225-429c-945d-6aa597a570af",
+				"$sourceId": "3PL_Co",
+				"$targetId": "3PL_Logistics",
+				"$relationshipName": "hasFunctionalArea",
+				"$etag": "W/\"a91043ed-0a14-4811-bfcd-cd0a7bb4656a\""
+			},
+			{
+				"$relationshipId": "7e66f717-c873-44d1-8cc9-357a4a29d0c6",
+				"$sourceId": "3PL_Provider",
+				"$targetId": "3PL_Co",
+				"$relationshipName": "isORoleOf",
+				"$etag": "W/\"d42f3e64-b01f-4113-93d3-e0cad3708757\""
+			},
+			{
+				"$relationshipId": "35d96ed8-33fa-4390-a5f5-bc50d987c226",
+				"$sourceId": "Pick_Product",
+				"$targetId": "during_2",
+				"$relationshipName": "isRestrainedBy",
+				"$etag": "W/\"9b7afa63-7d10-45c0-b757-665693bee913\""
+			},
+			{
+				"$relationshipId": "242f88a1-e8d0-4d66-adfa-f4dc6d3ba203",
+				"$sourceId": "Pick_Product",
+				"$targetId": "before_2",
+				"$relationshipName": "isRestrainedBy",
+				"$etag": "W/\"90503694-7048-4a67-8263-ab281097391e\""
+			},
+			{
+				"$relationshipId": "52832022-1794-4196-81c8-2330736afc7e",
+				"$sourceId": "Pick_Product",
+				"$targetId": "XYC_Deliver_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"bc895589-b24c-4d76-a681-ff8c4f40c710\""
+			},
+			{
+				"$relationshipId": "4ecf285a-0be9-490b-8bbb-cd13e0632810",
+				"$sourceId": "Create_Shipment",
+				"$targetId": "before_2",
+				"$relationshipName": "isRelativeTo",
+				"$etag": "W/\"1df25888-5ff5-412e-93c4-a37426c376e1\""
+			},
+			{
+				"$relationshipId": "d18a4d21-8e4d-4cd2-bb93-0259d25acabb",
+				"$sourceId": "Create_Shipment",
+				"$targetId": "meets",
+				"$relationshipName": "isRestrainedBy",
+				"$etag": "W/\"8dada4ea-301e-4f0b-b118-3e27e131cf7c\""
+			},
+			{
+				"$relationshipId": "533863bb-8fa5-4e7d-b4b8-076be8948cdf",
+				"$sourceId": "Create_Shipment",
+				"$targetId": "XYC_Deliver_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"f5a87705-c712-4e24-b0db-0d7235829ea4\""
+			},
+			{
+				"$relationshipId": "b3737b26-d524-4284-b534-a5524c31cd6e",
+				"$sourceId": "Deliver_Order",
+				"$targetId": "meets_2",
+				"$relationshipName": "isRelativeTo",
+				"$etag": "W/\"a262c371-06a0-4502-a4f7-b3f649477032\""
+			},
+			{
+				"$relationshipId": "f8127bd6-b46e-4132-bbfc-b11657dac7d5",
+				"$sourceId": "Deliver_Order",
+				"$targetId": "XYC_Deliver_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"0583f1d2-ccdf-450b-b470-13a638e6bcb6\""
+			},
+			{
+				"$relationshipId": "0b21644b-53d9-473e-b6c2-06717f811733",
+				"$sourceId": "XYC_Source_M2O",
+				"$targetId": "O2D",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"d796dfbd-f2dc-41be-9d09-a6ff7ca29ea1\""
+			},
+			{
+				"$relationshipId": "0dd76eb5-8b66-42bb-8725-d97916ca1804",
+				"$sourceId": "Confirm_Delivery",
+				"$targetId": "meets",
+				"$relationshipName": "isRelativeTo",
+				"$etag": "W/\"d80459c5-4a8b-4823-97aa-1692c57f208c\""
+			},
+			{
+				"$relationshipId": "812e4e5e-1044-441c-b06d-8595536d6d47",
+				"$sourceId": "Confirm_Delivery",
+				"$targetId": "meets_2",
+				"$relationshipName": "isRestrainedBy",
+				"$etag": "W/\"6f4826b4-18df-43f4-b0f6-0d03525840ab\""
+			},
+			{
+				"$relationshipId": "6821928c-334e-461d-89b8-e9f084ed46db",
+				"$sourceId": "Confirm_Delivery",
+				"$targetId": "XYC_Deliver_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"7f6e7077-58a7-423b-800b-c746a164e458\""
+			},
+			{
+				"$relationshipId": "dd06e173-e016-43b3-a65b-690f21244e5b",
+				"$sourceId": "XYC_M2O",
+				"$targetId": "XYC_contract_producer",
+				"$relationshipName": "isPerformedBy",
+				"$etag": "W/\"d72d8a0c-01b7-49e6-b6f4-51dcf068981e\""
+			},
+			{
+				"$relationshipId": "25c979b6-1a05-4127-8e7e-87236bda5075",
+				"$sourceId": "XYC_M2O",
+				"$targetId": "use_Line_1",
+				"$relationshipName": "entails",
+				"$etag": "W/\"3644a31d-6634-4123-b546-96b8441bf19c\""
+			},
+			{
+				"$relationshipId": "26f1af3d-d9a0-4af5-9b3e-eef23340a73f",
+				"$sourceId": "XYC_Deliver_M2O",
+				"$targetId": "O2D",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"3c8084e3-cec7-4d84-a927-64813394a741\""
+			},
+			{
+				"$relationshipId": "3ca040ca-b51b-4a0d-a8a3-e9c33c6dc58f",
+				"$sourceId": "XYC_Deliver_M2O",
+				"$targetId": "3PL_Provider",
+				"$relationshipName": "isPerformedBy",
+				"$etag": "W/\"cb012b46-5a29-42a0-859d-d6becd41b749\""
+			},
+			{
+				"$relationshipId": "eb0144be-a35f-4905-bb69-064aff3decf3",
+				"$sourceId": "XYC_Deliver_M2O",
+				"$targetId": "use_Storage",
+				"$relationshipName": "entails",
+				"$etag": "W/\"0fad0189-7033-4da0-b27d-87d8ced2a1d8\""
+			},
+			{
+				"$relationshipId": "9d3f6ec1-64f6-44be-b8c5-7d7487b186ad",
+				"$sourceId": "XYC_Deliver_M2O",
+				"$targetId": "XYC_distributor",
+				"$relationshipName": "isPerformedBy",
+				"$etag": "W/\"ec280af3-ce95-4fed-924d-e6c370bdea6d\""
+			},
+			{
+				"$relationshipId": "1562ee70-d525-48ec-a874-e8e19cdea647",
+				"$sourceId": "XYC_distributor",
+				"$targetId": "3PL_Co",
+				"$relationshipName": "isORoleOf",
+				"$etag": "W/\"1e5e28d4-4e67-4032-bfad-37419381527d\""
+			},
+			{
+				"$relationshipId": "471c90c4-0af1-4e87-ad6d-fa8ec955d7e2",
+				"$sourceId": "O2D",
+				"$targetId": "XYC_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"ad5f9651-5a8d-4f34-bdf8-fb2732c74f30\""
+			},
+			{
+				"$relationshipId": "1f08f285-b733-499e-8c61-d0d585896d2a",
+				"$sourceId": "3PL_Logistics",
+				"$targetId": "Confirm_Delivery",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"eaf3934f-c337-4209-8996-ed0dce7159fa\""
+			},
+			{
+				"$relationshipId": "1a892527-67e8-427d-9bfd-23146b0475c3",
+				"$sourceId": "3PL_Logistics",
+				"$targetId": "Deliver_Order",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"149282e9-bfb2-410f-b4e5-c7fb891a8a24\""
+			},
+			{
+				"$relationshipId": "0275c035-62f6-4865-9003-49b7ba40395d",
+				"$sourceId": "Factory",
+				"$targetId": "Line_1",
+				"$relationshipName": "hasResourceRole",
+				"$etag": "W/\"01bcc2e4-0f68-4a95-a26e-f4b673cd56d4\""
+			},
+			{
+				"$relationshipId": "abdd204e-5a8e-40a7-916f-3adc86016465",
+				"$sourceId": "Factory",
+				"$targetId": "Line_2",
+				"$relationshipName": "hasResourceRole",
+				"$etag": "W/\"69e709e6-244e-493a-a7d9-1933662672a7\""
+			},
+			{
+				"$relationshipId": "b2651203-bcaf-45e9-853b-b40fa029a631",
+				"$sourceId": "CDC",
+				"$targetId": "Storage",
+				"$relationshipName": "hasResourceRole",
+				"$etag": "W/\"170749ed-e9b9-42f6-b7d1-a464afb0e1a6\""
+			},
+			{
+				"$relationshipId": "d11b385a-06a6-47aa-9c39-e3234a072479",
+				"$sourceId": "Ferrero_SC",
+				"$targetId": "XYC_distributor",
+				"$relationshipName": "hasMember",
+				"$etag": "W/\"a2656416-e539-4a7b-871e-5d9bafcb58bc\""
+			},
+			{
+				"$relationshipId": "722d6d1f-c5be-47d2-91ff-df1a186e08fd",
+				"$sourceId": "Ferrero_SC",
+				"$targetId": "3PL_Provider",
+				"$relationshipName": "hasMember",
+				"$etag": "W/\"ab1f0eef-439c-4a17-9a15-ad4826f41def\""
+			},
+			{
+				"$relationshipId": "8ac6fd65-9069-4519-8943-3296d0523aaf",
+				"$sourceId": "Ferrero_SC",
+				"$targetId": "XYC_contract_producer",
+				"$relationshipName": "hasMember",
+				"$etag": "W/\"a42a6fd6-d852-4345-a0b4-2d31dfa5bd8f\""
+			},
+			{
+				"$relationshipId": "ddd9ed4b-2dbe-4912-8a28-037e75cacc32",
+				"$sourceId": "use_Line_1",
+				"$targetId": "Line_1",
+				"$relationshipName": "involves",
+				"$etag": "W/\"a30a4181-b8f1-4d65-bf9d-c34f5a4996bb\""
+			},
+			{
+				"$relationshipId": "0a152b7b-776c-4d33-8a74-123754bd4c33",
+				"$sourceId": "use_Storage",
+				"$targetId": "Storage",
+				"$relationshipName": "involves",
+				"$etag": "W/\"d0ecc21d-9e5b-4302-b9c7-067310c1bc7e\""
+			}
+		]
+	},
+	"digitalTwinsModels": [
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "External IDs"
+					},
+					"name": "externalIds",
+					"dtmi:dtdl:property:schema;2": {
+						"@type": "Map",
+						"dtmi:dtdl:property:mapKey;2": {
+							"name": "externalIdName",
+							"schema": "string"
+						},
+						"dtmi:dtdl:property:mapValue;2": {
+							"name": "externalIdValue",
+							"schema": "string"
+						}
+					},
+					"writable": true
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "name"
+					},
+					"name": "name",
+					"schema": "string",
+					"writable": true
+				}
+			],
+			"description": {
+				"es": "Elemento concreto o abstracto que es parte funcional o estructural de una cadena de suministros"
+			},
+			"displayName": {
+				"en": "SC_Entity"
+			},
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre un rol de una organización y la unidad organizacional que tiene como rol dicha perspectiva Inverse of: hasOURole"
+					},
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isORoleOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de hasMember Inverse of: hasMember"
+					},
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isMemberOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1"
+				}
+			],
+			"description": {
+				"es": "Funcionalidad que asume una unidad organizacional en su participación en una dada cadena de suministros en particular"
+			},
+			"displayName": {
+				"en": "Organizational_Unit_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Customer_Role;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol que asume una unidad organizacional que, en su participación en una determinada cadena de suministros, realiza actividades vinculadas con la compra de bienes para uso, consumo o explotación"
+			},
+			"displayName": {
+				"en": "Customer_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de isProvidedBy Inverse of: isProvidedBy"
+					},
+					"minMultiplicity": 0,
+					"name": "provides",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre una cadena de suministros y uno de los mercados a los que pretende servir Inverse of: IsTargetOf"
+					},
+					"minMultiplicity": 0,
+					"name": "isTargetedAt",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Market;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre una CS y una de las perspectivas de organización que es miembro de la cadena Inverse of: isMemberOf"
+					},
+					"minMultiplicity": 0,
+					"name": "hasMember",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
+				}
+			],
+			"description": {
+				"es": "Red de unidades organizacionales que transforman y/o agregan valor a los materiales, abarcando desde la provisión de materias primas hasta la distribución final de productos en mercados específicos"
+			},
+			"displayName": {
+				"en": "Supply_Chain"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Market;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"minMultiplicity": 0,
+					"name": "hasElement",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Customer_Role;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isTargetAt Inverse of: isTargetedAt"
+					},
+					"name": "IsTargetOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1"
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "External IDs"
+					},
+					"name": "externalIds",
+					"dtmi:dtdl:property:schema;2": {
+						"@type": "Map",
+						"dtmi:dtdl:property:mapKey;2": {
+							"name": "externalIdName",
+							"schema": "string"
+						},
+						"dtmi:dtdl:property:mapValue;2": {
+							"name": "externalIdValue",
+							"schema": "string"
+						}
+					},
+					"writable": true
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "name"
+					},
+					"name": "name",
+					"schema": "string",
+					"writable": true
+				}
+			],
+			"displayName": {
+				"en": "Market"
+			},
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de entails Inverse of: entails"
+					},
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isEntailedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre una utilización y el rol de recurso sobre el cual influye Inverse of: isInvolvedIn"
+					},
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "involves",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1"
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "External IDs"
+					},
+					"name": "externalIds",
+					"dtmi:dtdl:property:schema;2": {
+						"@type": "Map",
+						"dtmi:dtdl:property:mapKey;2": {
+							"name": "externalIdName",
+							"schema": "string"
+						},
+						"dtmi:dtdl:property:mapValue;2": {
+							"name": "externalIdValue",
+							"schema": "string"
+						}
+					},
+					"writable": true
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "name"
+					},
+					"name": "name",
+					"schema": "string",
+					"writable": true
+				}
+			],
+			"description": {
+				"es": "Manera en que un proceso afecta a un recurso que participa en una determinada actividad cumpliendo un rol en particular"
+			},
+			"displayName": {
+				"en": "Utilization"
+			},
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Creation;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Generación de un recurso durante un proceso"
+			},
+			"displayName": {
+				"en": "Creation"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Elimination;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Remoción o consumo de un recurso durante un proceso"
+			},
+			"displayName": {
+				"en": "Elimination"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Modification;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Alteración de las propiedades de un recurso durante un proceso"
+			},
+			"displayName": {
+				"en": "Modification"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Empleo de un recurso en un proceso en el cual no sufre transformaciones (modificación, eliminación, creación o transferencia)"
+			},
+			"displayName": {
+				"en": "Use"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre un proceso y una relación temporal que lo vincula con otro proceso Inverse of: restrains"
+					},
+					"name": "isRestrainedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "isRelativeTo",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de performs Inverse of: performs"
+					},
+					"minMultiplicity": 0,
+					"name": "isPerformedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre un proceso y una de las utilizaciones que origina Inverse of: isEntailedBy"
+					},
+					"minMultiplicity": 0,
+					"name": "entails",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1"
+				}
+			],
+			"description": {
+				"es": "Actividad o conjunto de actividades interrelacionadas logicamente, que se realizan para alcanzar un resultado epecífico y predefinido a través de la utilización de recursos"
+			},
+			"displayName": {
+				"en": "Process"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre un rol de recurso y el recurso Inverse of: hasResourceRole"
+					},
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isResourceRoleOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isResourceRProvidedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isResourceRObtainedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "External IDs"
+					},
+					"name": "externalIds",
+					"dtmi:dtdl:property:schema;2": {
+						"@type": "Map",
+						"dtmi:dtdl:property:mapKey;2": {
+							"name": "externalIdName",
+							"schema": "string"
+						},
+						"dtmi:dtdl:property:mapValue;2": {
+							"name": "externalIdValue",
+							"schema": "string"
+						}
+					},
+					"writable": true
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "name"
+					},
+					"name": "name",
+					"schema": "string",
+					"writable": true
+				}
+			],
+			"description": {
+				"es": "Función o comportamiento asociado con la participación de un recurso en un proceso específico"
+			},
+			"displayName": {
+				"en": "Resource_Role"
+			},
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Traslado de un recurso entre dos localizaciones durante un proceso"
+			},
+			"displayName": {
+				"en": "Material_Transfer"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Movement;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Traslado de un recurso durante un proceso entre dos localizaciones situadas dentro de un mismo establecimiento"
+			},
+			"displayName": {
+				"en": "Movement"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Medio físico o conceptual que brinda soporte a la ejecución de un proceso, tal como equipamiento, materias primas, información, etc."
+			},
+			"displayName": {
+				"en": "Resource"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "isSourceFacilityOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "isDestinationFacilityOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1"
+				}
+			],
+			"description": {
+				"es": "Sitio donde se desarrollan actividades de una cadena de suministros"
+			},
+			"displayName": {
+				"en": "Facility"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "hasSourceFacility",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "hasDestinationFacility",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1"
+				}
+			],
+			"description": {
+				"es": "Traslado de un recurso durante un proceso entre dos establecimientos"
+			},
+			"displayName": {
+				"en": "Transportation_"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "External IDs"
+					},
+					"name": "externalIds",
+					"dtmi:dtdl:property:schema;2": {
+						"@type": "Map",
+						"dtmi:dtdl:property:mapKey;2": {
+							"name": "externalIdName",
+							"schema": "string"
+						},
+						"dtmi:dtdl:property:mapValue;2": {
+							"name": "externalIdValue",
+							"schema": "string"
+						}
+					},
+					"writable": true
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "name"
+					},
+					"name": "name",
+					"schema": "string",
+					"writable": true
+				}
+			],
+			"description": {
+				"es": "Relación de orden parcial del tiempo de ejecucion de dos procesos, cualquiera sea su nivel de complejidad"
+			},
+			"displayName": {
+				"en": "Temporal_Relationship"
+			},
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Temporal_Relationship;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Relación temporal entre dos procesos mediante la cual el espacio de tiempo de ejecución de uno de ellos se restringe con respecto a la realización del otro. Una relación temporal atómica no está compuesta por otras relaciones temporales"
+			},
+			"displayName": {
+				"en": "Atomic_Temporal_Relationship"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:During;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Relación temporal atómica entre dos procesos que dispone que el primero de los procesos comienza y termina durante la ejecución del segundo"
+			},
+			"displayName": {
+				"en": "During"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Temporal_Relationship;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Before;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Relación temporal atómica entre dos procesos que prescribe que el primero de los procesos debe terminar antes que comience el segundo"
+			},
+			"displayName": {
+				"en": "Before"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Temporal_Relationship;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Equal;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Relación temporal atómica entre dos procesos que indica que el primero de los procesos se ejecuta al mismo tiempo que el segundo"
+			},
+			"displayName": {
+				"en": "Equal"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Temporal_Relationship;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Meets;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Relación temporal atómica entre dos procesos que determina que el primero de los procesos termina justo cuando comienza el segundo"
+			},
+			"displayName": {
+				"en": "Meets"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Temporal_Relationship;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Overlaps;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Relación temporal atómica entre dos procesos que establece que el primero de los procesos comienza antes que el segundo y termina durante su transcurso"
+			},
+			"displayName": {
+				"en": "Overlaps"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Temporal_Relationship;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Composite_Temporal_Relationship;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "hasDuringAsPart",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:During;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "hasBeforAsPart",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Before;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "hasEqualAsPart",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Equal;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "hasMeetsAsPart",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Meets;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "hasOverlapsAsPart",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Overlaps;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isRestrainedBy Inverse of: isRestrainedBy"
+					},
+					"minMultiplicity": 0,
+					"name": "restrains",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre una relación temporal y el proceso respecto al cual se restringe el orden temporal de otro proceso Inverse of: isRelativeTo"
+					},
+					"minMultiplicity": 0,
+					"name": "withRespectTo",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre una relación temporal compuesta y una de sus partes Inverse of: isPartOfTempRelat"
+					},
+					"maxMultiplicity": 1,
+					"name": "hasTempRelatAsPart",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Overlaps;1"
+				}
+			],
+			"description": {
+				"es": "Relación temporal entre dos procesos compuesta por otras relaciones temporales. La ejecución de uno de los procesos se restringe con respecto a la realización del otro. El primero de los procesos debe cumplir, con respecto al segundo, con alguna de las relaciones temporales que forman parte de la relación temporal compuesta."
+			},
+			"displayName": {
+				"en": "Composite_Temporal_Relationship"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "isPerformedBySubArea",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_SubArea;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "isPartOfPE",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación de agregación entre una tarea y una tarea compuesta de la cual es parte Inverse of: isComprisedOfST"
+					},
+					"name": "isPartOfCT",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Composite_Task;1"
+				}
+			],
+			"description": {
+				"es": "Actividad o estructura lógica de actividades que es parte de un elemento de proceso en una CS"
+			},
+			"displayName": {
+				"en": "Task"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isFunctionalAreaOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "hasFuntionalSubArea",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_SubArea;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "areaPerforms",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Agrupación de actividades que, dentro de una unidad organizacional, se ocupa de un tipo de tareas en particular, como contabilidad, marketing o producción"
+			},
+			"displayName": {
+				"en": "Functional_Area"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_SubArea;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "subAreaPerforms",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isFuntionalSubAreaOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1"
+				}
+			],
+			"description": {
+				"es": "Agrupación de actividades que forman parte de un área funcional y que se ocupan de un tipo de tareas en común dentro del área funcional de la cual forman parte"
+			},
+			"displayName": {
+				"en": "Functional_SubArea"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Occurrence;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "materializesProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+				}
+			],
+			"description": {
+				"es": "Actividad o conjunto de actividades interrelacionadas que materializan un proceso"
+			},
+			"displayName": {
+				"en": "Process_Occurrence"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre un producto y una de las cadenas de suministros que lo proveen Inverse of: provides"
+					},
+					"name": "isProvidedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1"
+				}
+			],
+			"description": {
+				"es": "Recurso físico que participa en uno o más procesos de una cadena de\nsuministros"
+			},
+			"displayName": {
+				"en": "Material_Resource"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Financial_RR;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Función con la cual un recurso financiero participa en un proceso"
+			},
+			"displayName": {
+				"en": "Financial_RR"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Financial_Resource;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Financial_RR;1"
+				}
+			],
+			"description": {
+				"es": "Medio de retribución monetario, tal como efectivo, depósito bancario, cheque, etc., que puede ser empleado para la adquisición de bienes y servicios, y que participa en uno o más procesos de una cadena de suministros"
+			},
+			"displayName": {
+				"en": "Financial_Resource"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Human_RR;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de involves Inverse of: involves"
+					},
+					"name": "isInvolvedIn",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1"
+				}
+			],
+			"description": {
+				"es": "Función con la cual una persona o un grupo de personas participa en un proceso"
+			},
+			"displayName": {
+				"en": "Human_RR"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Human_Resource;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Human_RR;1"
+				}
+			],
+			"description": {
+				"es": "Persona o grupo de personas que participan en uno o más procesos de una cadena de suministros"
+			},
+			"displayName": {
+				"en": "Human_Resource"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Information_RR;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Función con la cual un recurso de información participa en un proceso"
+			},
+			"displayName": {
+				"en": "Information_RR"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Information_Resource;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Information_RR;1"
+				}
+			],
+			"description": {
+				"es": "Datos, información o conocimientos que participan en uno o más procesos\nde una cadena de suministros"
+			},
+			"displayName": {
+				"en": "Information_Resource"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Capital_Asset;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Capital_Asset"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Defective_Product;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Defective_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Función con la cual un recurso material participa en un proceso"
+			},
+			"displayName": {
+				"en": "Material_RR"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility_RR;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"en": "Inversa de involves Inverse of: involves"
+					},
+					"name": "isInvolvedIn",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1"
+				}
+			],
+			"description": {
+				"es": "Función con la cual un establecimiento participa en un proceso"
+			},
+			"displayName": {
+				"en": "Facility_RR"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Crossdocking_Point;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de un establecimiento que se utiliza en un proceso para realizar la transferencia de la carga de un vehículo a otro sin apelar a un\nalmacenamiento intermedio"
+			},
+			"displayName": {
+				"en": "Cross-docking_Point"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Crossdocking_Facility;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"minMultiplicity": 0,
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Crossdocking_Point;1"
+				}
+			],
+			"displayName": {
+				"es": "Cross-docking_Facility"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Point_of_Storage;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de un establecimiento que se utiliza en un proceso para realizar el almacenamiento de materiales"
+			},
+			"displayName": {
+				"en": "Point_of_Storage"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Distribution_Center;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"minMultiplicity": 0,
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Point_of_Storage;1"
+				}
+			],
+			"displayName": {
+				"en": "Distribution_Center"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Production_Site;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de un establecimiento que se utiliza en un proceso como lugar de emplazamiento de un ambiente productivo"
+			},
+			"displayName": {
+				"en": "Production_Site"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plant;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"minMultiplicity": 0,
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Production_Site;1"
+				}
+			],
+			"displayName": {
+				"en": "Plant"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Point_of_Purchase;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de un establecimiento que se utiliza en un proceso para realizar transacciones comerciales de compra"
+			},
+			"displayName": {
+				"en": "Point_of_Puchase"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Store;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"minMultiplicity": 0,
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Point_of_Purchase;1"
+				}
+			],
+			"displayName": {
+				"en": "Store"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Warehouse;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"minMultiplicity": 0,
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Point_of_Storage;1"
+				}
+			],
+			"displayName": {
+				"en": "Warehouse"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Terminal;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
+					},
+					"minMultiplicity": 0,
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Vehicle_Terminal;1"
+				}
+			],
+			"displayName": {
+				"en": "Terminal"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Multimodal_Terminal;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Multimodal_Terminal"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Terminal;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Port_Terminal;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Port_Terminal"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Terminal;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Railway_Terminal;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Railway_Terminal"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Terminal;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Vehicle_Terminal;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de un establecimiento que se utiliza en un proceso como punto de inicio y/o finalización del recorrido de un transporte"
+			},
+			"displayName": {
+				"en": "Vehicle_Terminal"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Truck_Terminal;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Truck_Terminal"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Terminal;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Atomic_Task;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+				}
+			],
+			"description": {
+				"es": "Tarea que no se descompone en otras tareas"
+			},
+			"displayName": {
+				"en": "Atomic_Task"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Composite_Task;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isPartOfCT Inverse of: isPartOfCT"
+					},
+					"name": "isComprisedOfST",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				}
+			],
+			"description": {
+				"es": "Tarea que posee como componentes a otras tareas"
+			},
+			"displayName": {
+				"en": "Composite_Task"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Relación de agregación entre un proceso y uno de los procesos de los cual es parte Inverse of: isComprisedOfSubProcess"
+					},
+					"name": "isSubProcessOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "isPartOfBP",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación de agregación entre un elemento de proceso y una de las tareas que lo componen Inverse of: isPartOfPE"
+					},
+					"name": "isComprisedOfTask",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				}
+			],
+			"description": {
+				"es": "Actividad o estructura lógica de actividades que es un componente de un proceso de negocio"
+			},
+			"displayName": {
+				"en": "Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Relación de agregación entre un proceso y uno de los procesos de los cual es parte Inverse of: isComprisedOfSubProcess"
+					},
+					"name": "isSubProcessOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1"
+				}
+			],
+			"description": {
+				"es": "Estructura lógica de actividades de agregado de valor, diseñada para la acción, enfocada en la satisfacción de los clientes finales y en la gestión de flujos relativos a productos, información, activos financieros, conocimiento e ideas"
+			},
+			"displayName": {
+				"en": "Business_Process"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Source_Return_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Def_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "SR_Def_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_MRO_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "SR_MRO_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Excess_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "SR_Excess_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Disposition_Excess_Product;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Disposition_Excess_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Excess_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Excess_Product_Condition;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Identify_Excess_Product_Condition"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Excess_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Request_Excess_Product_Return_Authorisation;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Request_Excess_Product_Return_Authorisation"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Excess_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Source_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:S_EtO_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "S_E-t-O_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:S_MtO_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "S_M-t-O_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:S_S_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "S_S_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Plan_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_S_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Plan_S_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Assess_and_Aggregate_Source_Resources;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IAA_Source_Resources"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_S_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Prioritize_and_Aggregate_Product_Requirements;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IPA_Product_Requirements"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_S_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_SC_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Plan_SC_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Prioritize_and_Aggregate_Suply_Cahin_Requirements;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IAA_Supply_Chain_Requirements"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_SC_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Prioritize_and_Aggregate_Suppy_Chain_Resources;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IPA_Suppy_Chain_Resources"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_SC_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_R_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Plan_R_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Assess_and_Aggregate_Return_Resources;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IAA_Return_Resources"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_R_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Prioritize_and_Aggregate_Return_Requirements;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IPA_Return_Requirements"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_R_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_M_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Plan_M_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Assess_and_Aggregate_Production_Resources;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IAA_Production_Resources"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_M_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Prioritize_and_Aggregate_Production_Requirements;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IPA_Production_Requirements"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_M_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_D_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Plan_D_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Assess_and_Aggregate_Delivery_Resources;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IAA_Delivery_Resources"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_D_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Prioritize_and_Aggregate_Delivery_Requirements;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "IPA_Delivery_Requirements"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_D_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Make_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Make_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:MtO_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "M-t-O_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Make_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:MtS_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "M-t-S_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Make_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "E-t-O_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Make_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Finalize_Production_Engineering;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Finalize_Production_Engineering"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Issue_Sourced_or_InProcess_Product;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Issue_Sourced_or_In-Process_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_Make_Equipements_and_Facilities;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Manage_Make_Equipements_and_Facilities"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_Make_Information;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Manage_Make_Information"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_Make_Regulatory_Environment;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Manage_Make_Regulatory_Environment"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_Production_Network;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Manage_Production_Network"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_Production_Performance;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Manage_Production_Performance"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_Production_Rules;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Manage_Production_Rules"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_Supply_Chain_Make_Risk;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Manage_Supply_Chain_Make_Risk"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_WIP_InProcess_Product;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Manage_WIP_In-Process_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Manage_WIP_Transportation;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Manage_WIP_Transportation"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Package;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Package"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Produce_and_Test;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Produce_and_Test"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Release_Product_to_Delivery;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Release_Product_to_Delivery"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Schedule_Production_Activities;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Schedule_Production_Activities"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Stage_Finished_Product;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Stage_Finished_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Waste_Disposal;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Waste_Disposal"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Deliver_Return_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:DR_Def_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "DR_Def_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:DR_Excess_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "DR_Excess_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:DR_MRO_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "DR_MRO_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Deliver_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:D_EtO_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "D_E-t-O_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:D_MtO_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "D_M-t-O_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:D_R_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "D_R_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "D_S_Product_Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Load_Product_and_Generate_Shipping_Docs;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Load_Product_and_Generate_Shipping_Docs"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Pick_Product;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Pick_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_and_Verify_Product_by_Customer;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Receive_and_Verify_Product_by_Customer"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_Enter_and_Validate_Order;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Receive_Enter_and_Validate_Order"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_Product_from_Source_or_Make;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Receive_Product_from_Source_or_Make"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Reserve_Inventory_and_Determine_Delivery_Date;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Reserve_Inventory_and_Determine_Delivery_Date"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Ship_Product;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Ship_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Proceso que consiste en la gestión “in-situ” de la devolución de un producto, o lote del mismo, a un proveedor y el envío al lugar acordado"
+			},
+			"displayName": {
+				"en": "Source_Return"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return_Defective_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Def_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso mediante el cual se devuelven productos defectuosos al proveedor, se define su disposición y se acuerda la compensación a recibir, de acuerdo a lo que indique la garantía, las políticas de retiro de producto no conforme del\nmercado, u otras políticas similares. Se pueden considerar productos defectuosos aquéllos que no cumplen con las especificaciones (incluyendo no conformidad de la orden, tal como el retraso en la entrega o envío inapropiado)"
+			},
+			"displayName": {
+				"en": "Source_Return_Defective_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return_Excess_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_Excess_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso mediante el cual se retornan al proveedor productos en exceso, envejecidos u obsoletos, de acuerdo a los términos y condiciones pactadas. El propósito del retorno de inventarios en exceso es reubicarlo en una localización en donde se pueda vender el producto que es considerado excesivo en la ubicación en la que actualmente se encuentra"
+			},
+			"displayName": {
+				"en": "Source_Return_Excess_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Sourrce_Return_MRO_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación de agregación entre un proceso de negocio y uno de los elementos de proceso que lo componen Inverse of: isPartOfBP"
+					},
+					"name": "isComprisedOfPE",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:SR_MRO_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso mediante el cual se retornan productos o activos al proveedor para su mantenimiento, reparación o revisión, tal como se defina en los planes de mantenimiento o por la ocurrencia o anticipación de fallas o riesgos. Generalmente se espera que los activos que se gestionan a través de este proceso sean reacondicionados y que retornen al servicio"
+			},
+			"displayName": {
+				"en": "Source_Return_MRO_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Return;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Proceso asociado con la solicitud, entrega, recepción y transferencia de \nmaterias primas, subensambles, productos o servicios, que son adquiridos a una unidad organizacional de una cadena de suministros"
+			},
+			"displayName": {
+				"en": "Source"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_EngineertoOrder_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:S_EtO_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso que consiste en la adquisición de partes, ensambles, productos o servicios especializados que son diseñados, pedidos y/o construidos en base a los requerimientos o especificaciones técnicas de una orden de un cliente en\nparticular. Involucra la identificación y selección de las fuentes de suministros, la negociación con los posibles proveedores, la programación de la/s entregas,así como, la solicitud y recepción de los materiales"
+			},
+			"displayName": {
+				"en": "Source_Engineer-to-Order_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_MaketoOrder_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:S_MtO_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso que consiste en solicitar y recibir productos o materiales (y posiblemente configurarlos) sólo cuando son necesarios para poder satisfacer una orden de un cliente. Los recursos adquiridos mediante este proceso son habituales y/o estándares, pero se individualizan y se vinculan a órdenes específicas de producción o de los clientes"
+			},
+			"displayName": {
+				"en": "Source_Make-to-Order_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_Stocked_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:S_S_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso que consiste en solicitar, recibir y transferir materiales sin procesar, subensambles, productos y/o servicios, basándose en requerimientos de demanda agregada. Los recursos adquiridos mediante este proceso son\ngenéricos y no están vinculados a órdenes específicas de producción o de los clientes. El propósito de este proceso es mantener un nivel predeterminado de inventario de los productos adquiridos"
+			},
+			"displayName": {
+				"en": "Source_Stocked_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Source;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Proceso que evalúa las necesidades operativas y los recursos disponibles en una cadena de suministros, o en alguna parte de ella, de manera de desarrollar un curso de acción que sea lo más adecuado posible para alcanzar los objetivos deseados"
+			},
+			"displayName": {
+				"en": "Plan"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Deliver;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_D_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso que evalúa las necesidades operativas y los recursos disponibles para desarrollar los procesos de entrega de una unidad organizacional durante un período de tiempo específico. Se prevé que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados"
+			},
+			"displayName": {
+				"en": "Plan_Deliver"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Make;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_M_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso que evalúa las necesidades operativas y los recursos disponibles para desarrollar los procesos de producción de una unidad organizacional durante un período de tiempo específico. Se espera que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados"
+			},
+			"displayName": {
+				"en": "Plan_Make"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Return;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_R_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso que evalúa las necesidades operativas y los recursos disponibles para gestionar los procesos de retorno en una unidad organizacional durante un período de tiempo específico. Se espera que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados"
+			},
+			"displayName": {
+				"en": "Plan_Return"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Source;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_S_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso que evalúa las necesidades operativas y los recursos disponibles para desarrollar los procesos de abastecimiento de una unidad organizacional durante un período de tiempo específico. Se prevé que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados"
+			},
+			"displayName": {
+				"en": "Plan_Source"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_Supply_Chain;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan_SC_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso que evalúa las necesidades operativas y los recursos disponibles en una cadena de suministros, de manera de desarrollar cursos de acción durante un período de tiempo específico. Se espera que dichos cursos de acción sean lo más adecuados posible para alcanzar los objetivos deseados"
+			},
+			"displayName": {
+				"en": "Plan_Supply_Chain"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Make;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Proceso que agrega valor a recursos por medio del cultivo, cría, extracción, u otro tipo de explotación de recursos naturales, a través de actividades de procesamiento físico, físico-químico, biotecnológico, etc. y/o de ensamblado"
+			},
+			"displayName": {
+				"en": "Make"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:EngineertoOrder;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:EtO_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso de desarrollo, diseño, validación y elaboración de productos o servicios basados en los requerimientos de una orden de un cliente en particular. Las instrucciones de trabajo, las recetas y/o las rutas de los materiales deben definirse por completo o refinarse. Los productos son parcial o totalmente diseñados, rediseñados, manufacturados y/o ensamblados con\nuna lista de materiales o receta que incluye una o más partes o ingredientes hechos a medida"
+			},
+			"displayName": {
+				"en": "Engineer-to-Order"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Make;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:MaketoOrder;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:MtO_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso de manufactura con el que se generan productos que deben ser completados, ensamblados, configurados o elaborados, en respuesta a la orden de un cliente y de acuerdo a sus requerimientos. El proceso incluye la programación de las operaciones de producción, pero no involucra nuevos desarrollos ingenieriles. El proceso incluye la especificación del producto y la reserva de los recursos necesarios para obtenerlo"
+			},
+			"displayName": {
+				"en": "Make-to-Order"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Make;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:MaketoStock;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:MtS_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso de manufactura con el que se generan productos estándar que no requieren de adaptaciones o particularizaciones de acuerdo a requerimientos de los clientes. El proceso puede completarse antes que los productos sean solicitados por los clientes y, generalmente, se realiza a partir de una programación basada en los pronósticos de ventas. No se necesita ninguna referencia o detalle de los requerimientos de los clientes durante el proceso, ni se requiere individualizar los productos"
+			},
+			"displayName": {
+				"en": "Make-to-Stock"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Make;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Proceso que consiste en acordar con un cliente las condiciones de devolución de un producto, o lote del mismo, y la recepción en el lugar convenido"
+			},
+			"displayName": {
+				"en": "Deliver_Return"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return_Defective_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:DR_Def_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso mediante el cual se gestiona la recepción de productos defectuosos remitidos por los clientes, se determina su disposición y su apropiado reemplazo. Se pueden considerar productos defectuosos aquéllos que no cumplen con las especificaciones (incluyendo no conformidad de la orden, tal como el retraso en la entrega o envío inapropiado)"
+			},
+			"displayName": {
+				"en": "Deliver_Return_Defective_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return_Excess_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:DR_Excess_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso mediante el cual se gestiona la recepción de productos devueltos por los clientes por encontrarse en exceso, envejecidos u obsoletos, de acuerdo a los términos y condiciones pactadas"
+			},
+			"displayName": {
+				"en": "Deliver_Return_Excess_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return_MRO_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:DR_MRO_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso mediante el cual se gestiona la recepción de productos o activos que son enviados por los clientes para su mantenimiento, reparación o revisión. Generalmente se espera que los activos que se gestionan a través de este\nproceso sean reacondicionados y que retornen al servicio"
+			},
+			"displayName": {
+				"en": "Deliver_Return_MRO_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Return;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Proceso que consiste en la gestión de órdenes de clientes, incluyendo la recepción de los pedidos y su validación, las actividades vinculadas a la entrega de los productos y la facturación"
+			},
+			"displayName": {
+				"en": "Deliver"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_EngineertoOrder_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:D_EtO_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso de entrega donde se acuerda, se da respuesta y se asignan recursos a una orden de un cliente que tiene requerimientos o especificaciones únicas"
+			},
+			"displayName": {
+				"en": "Deliver_Engineer-to-Order_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_MaketoOrder_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:D_MtO_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso de entrega de productos que son abastecidos, configurados, elaborados y/o ensamblados a partir de materiales estándar sin procesar, partes, ingredientes o subensambles, en respuesta a una orden en particular de un cliente"
+			},
+			"displayName": {
+				"en": "Deliver_Make-to-Order_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Retail_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:D_R_Product_Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Proceso para adquirir bienes terminados, localizarlos en posiciones de stock, venderlos, cobrarlos y entregarlos, en un negocio donde se comercializan productos o servicios usando un procedimiento de punto de venta con capacidad de cobro"
+			},
+			"displayName": {
+				"en": "Deliver_Retail_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_Stocked_Product;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:D_S_Product_Process_Element;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "isComposedOfPE_ShipProduct",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Ship_Product;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "isComposedOfPE_ReserveInventoryAndDetermineDeliveryDate",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Reserve_Inventory_and_Determine_Delivery_Date;1"
+				}
+			],
+			"description": {
+				"es": "Proceso de entrega de productos de tipo estándar que son abastecidos o fabricados en base a una agregación de órdenes de clientes, a la proyección de la demanda o a parámetros de reabastecimiento de inventario"
+			},
+			"displayName": {
+				"en": "Deliver_Stocked_Product"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "providesResourceR",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "obtainsResourceR",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de orgUnitPerspective Inverse of: isORoleOf"
+					},
+					"name": "hasOURole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "hasFunctionalArea",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"en": " Inverse of: isDependentOUOf"
+					},
+					"name": "hasDependentOU",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1"
+				}
+			],
+			"description": {
+				"es": "Empresa, organización, compañía, o alguna parte de ellas, que tiene administración y funciones propias"
+			},
+			"displayName": {
+				"en": "Organizational_Unit"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Primary_Producer_Role;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol que asume una unidad organizacional que, en su participación en una dada cadena de suministros, realiza actividades vinculadas a la producción primaria, tales como la agricultura, ganadería, pesca, minería, extracción de combustibles fósiles, etc."
+			},
+			"displayName": {
+				"en": "Primary_Producer_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Secondary_Producer_Role;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol que asume una unidad organizacional que, en su participación en una cadena de suministros en particular, realiza actividades productivas donde se transforman materias primas y/o productos intermedios en productos de mayor valor"
+			},
+			"displayName": {
+				"en": "Secondary_Producer_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Service_Provider_Role;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol que asume una unidad organizacional que, en su participación en una cadena de suministros específica, sólo realiza actividades relacionadas con el transporte, comercialización, almacenamiento, etc., que le agregan valor a un producto sin transformarlo de manera física o físico-química"
+			},
+			"displayName": {
+				"en": "Service_Provider_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Carrier_Role;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre una perspectiva de la organización y uno de los procesos que ésta ejecuta Inverse of: isPerformedBy"
+					},
+					"minMultiplicity": 0,
+					"name": "performs",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver;1"
+				}
+			],
+			"displayName": {
+				"en": "Carrier_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Service_Provider_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:FourthPL_Provider_Role;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre una perspectiva de la organización y uno de los procesos que ésta ejecuta Inverse of: isPerformedBy"
+					},
+					"minMultiplicity": 0,
+					"name": "performs",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Plan;1"
+				}
+			],
+			"displayName": {
+				"en": "FourthPL_Provider_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Service_Provider_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:ThirdPL_Provider_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "ThirdPL_Provider_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Service_Provider_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Reseller_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Reseller_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Service_Provider_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Distributor_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Distributor_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Reseller_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Dealer_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Dealer_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Reseller_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Rackjobber_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Rack-jobber_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Dealer_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Retailer_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Retailer_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Dealer_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Wholesaler_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Wholesaler_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Dealer_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Intermediary_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Intermediary_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Service_Provider_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Broker_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Broker_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Intermediary_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Freight_Forwarder_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Freight_Forwarder_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Intermediary_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Intermodal_Seller_Role;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Intermodal_Seller_Role"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Intermediary_Role;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "isDependentSubOUOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isDependentOUOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+				}
+			],
+			"description": {
+				"es": "Unidad organizacional que está subordinada a otra, de la cual es dependiente o semi-dependiente, pero que tiene su propia administración y funciones"
+			},
+			"displayName": {
+				"en": "Dependent_OU"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Unidad organizacional autónoma de la que dependen, de existir, todas las divisiones, filiales, sucursales, u otros componentes organizacionales, principales o secundarios de un negocio"
+			},
+			"displayName": {
+				"en": "Independent_OU"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Group;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Business_Group"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Company;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Company"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Corporation;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Corporation"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Enterprise;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Enterprise"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Society;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Society"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Branch;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Branch"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Unit;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Business_Unit"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Subsidiary;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Subsidiary"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Finance;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Finance"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Logistics;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Logistics"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Marketing;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Marketing"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Production;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Production"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Purchasing;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Purchasing"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Reserch_and_Development;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Research_and_Development"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Sales;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Sales"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Load;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de involves Inverse of: involves"
+					},
+					"name": "isInvolvedIn",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1"
+				}
+			],
+			"description": {
+				"es": "Rol de un recurso material que es trasladado durante un proceso"
+			},
+			"displayName": {
+				"en": "Load"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Input;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de involves Inverse of: involves"
+					},
+					"name": "isInvolvedIn",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Elimination;1"
+				}
+			],
+			"description": {
+				"es": "Rol de un recurso material que participa en un proceso incorporándose en otro bien o transformándose"
+			},
+			"displayName": {
+				"en": "Material_Input"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Output;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de un recurso material que se obtiene como resultado de la ejecución de un proceso, ya sea por su creación a partir de otros materiales o por la modificación del mismo"
+			},
+			"displayName": {
+				"en": "Material_Output"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Passive_Object;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de involves Inverse of: involves"
+					},
+					"name": "isInvolvedIn",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1"
+				}
+			],
+			"description": {
+				"es": "Rol de un recurso material sobre el cual recaen las acciones del proceso que lo utiliza sin que sufra modificaciones físicas, físico-químicas ni de ubicación espacial"
+			},
+			"displayName": {
+				"en": "Passive_Object"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Equipment;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de involves Inverse of: involves"
+					},
+					"name": "isInvolvedIn",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1"
+				}
+			],
+			"description": {
+				"es": "Rol de un recurso material que posibilita la realización de un proceso aportando medios mecánicos, electrónicos y/o informáticos para su\nejecución"
+			},
+			"displayName": {
+				"en": "Equipment"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Movement_Eq;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Material_Movement_Eq"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Equipment;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Production_Eq;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Production_Eq"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Equipment;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation_Eq;1",
+			"@type": "Interface",
+			"displayName": {
+				"en": "Transportation_Eq"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Equipment;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Actualization;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de involves Inverse of: involves"
+					},
+					"name": "isInvolvedIn",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Modification;1"
+				}
+			],
+			"description": {
+				"es": "Rol de la información que es requerida para la ejecución de un proceso, o alguna parte del mismo, y que como resultado de la ejecución sufre alguna modificación"
+			},
+			"displayName": {
+				"en": "Actualization"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Information_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Input;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de la información que es requerida para la ejecución de un proceso, o alguna parte del mismo. En el proceso la información se elimina o no sufre modificaciones"
+			},
+			"displayName": {
+				"en": "Input"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Information_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Output;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de involves Inverse of: involves"
+					},
+					"name": "isInvolvedIn",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Creation;1"
+				}
+			],
+			"description": {
+				"es": "Rol de la información que resulta de la realización de un proceso y que no existía antes de la ejecución del mismo"
+			},
+			"displayName": {
+				"en": "Output"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Information_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Executor;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de una persona o grupo de personas que se encargan de realizar un proceso o parte del mismo"
+			},
+			"displayName": {
+				"en": "Executor"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Human_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Responsible;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de una persona o grupo de personas que tiene la obligación y la capacidad de tomar decisiones, modificar un proceso y velar por su buen desempeño"
+			},
+			"displayName": {
+				"en": "Responsible"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Human_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Supervisor;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de una persona o grupo de personas que en un proceso monitorean y regulan a los recursos humanos que se encargan de ejecutar dicho proceso"
+			},
+			"displayName": {
+				"en": "Supervisor"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Human_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Payment;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de un recurso financiero que es desembolsado o emitido durante la ejecución de un proceso"
+			},
+			"displayName": {
+				"en": "Payment"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Financial_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Proceeds;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de recurso financiero que se recibe durante un proceso"
+			},
+			"displayName": {
+				"en": "Proceeds"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Financial_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		}
+	]
+}
