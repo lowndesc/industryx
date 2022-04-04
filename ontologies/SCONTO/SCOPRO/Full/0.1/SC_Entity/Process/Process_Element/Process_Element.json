@@ -1,43 +1,101 @@
 {
-  "@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
-  "@type": "Interface",
-  "contents": [
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "Relación de agregación entre un proceso y uno de los procesos de los cual es parte Inverse of: isComprisedOfSubProcess"
-      },
-      "name": "isSubProcessOf",
-      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
-      },
-      "name": "isComprisedOfSubProcess",
-      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
-    },
-    {
-      "@type": "Relationship",
-      "name": "isPartOfBP",
-      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
-    },
-    {
-      "@type": "Relationship",
-      "description": {
-        "en": "Asociación de agregación entre un elemento de proceso y una de las tareas que lo componen Inverse of: isPartOfPE"
-      },
-      "name": "isComprisedOfTask",
-      "target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
-    }
-  ],
-  "description": {
-    "en": "Actividad o estructura lógica de actividades que es un componente de un proceso de negocio"
-  },
-  "displayName": {
-    "en": "Process_Element"
-  },
-  "extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
-  "@context": "dtmi:dtdl:context;2"
+	"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
+	"@type": "Interface",
+	"contents": [
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "Relación de agregación entre un proceso y uno de los procesos de los cual es parte Inverse of: isComprisedOfSubProcess"
+			},
+			"name": "isSubProcessOf",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+			},
+			"name": "isComprisedOfSubProcess",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+		},
+		{
+			"@type": "Relationship",
+			"name": "isPartOfBP",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "Asociación de agregación entre un elemento de proceso y una de las tareas que lo componen Inverse of: isPartOfPE"
+			},
+			"name": "isComprisedOfTask",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "Before"
+			},
+			"name": "before",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "Meets"
+			},
+			"name": "meets",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "Overlaps"
+			},
+			"name": "overlaps",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "Equals"
+			},
+			"name": "equals",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "During"
+			},
+			"name": "during",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "Begins With"
+			},
+			"name": "beginsWith",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+		},
+		{
+			"@type": "Relationship",
+			"description": {
+				"es": "endsWith"
+			},
+			"name": "endsWith",
+			"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+		}
+	],
+	"description": {
+		"es": "Actividad o estructura lógica de actividades que es un componente de un proceso de negocio"
+	},
+	"displayName": {
+		"en": "Process_Element"
+	},
+	"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+	"@context": [
+		"dtmi:dtdl:context;2"
+	]
 }

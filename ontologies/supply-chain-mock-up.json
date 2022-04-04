@@ -6,273 +6,231 @@
 		"digitalTwins": [
 			{
 				"$dtId": "CM_Co",
-				"$etag": "W/\"1fdd22a8-5d2d-4bf9-b9f0-275d221e64aa\"",
+				"$etag": "W/\"de28dc89-4bb9-4a15-a453-13a68913a1e4\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1"
 				}
 			},
 			{
 				"$dtId": "Planning",
-				"$etag": "W/\"152113a9-ae9e-428a-9024-f981c9d7efc4\"",
+				"$etag": "W/\"a00eb205-ef04-4eb8-a48f-8e0207255773\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Sales;1"
 				}
 			},
 			{
 				"$dtId": "ABC_Co",
-				"$etag": "W/\"91a7b56c-11dd-432f-a51b-517b1edfa629\"",
+				"$etag": "W/\"0e61e6be-514d-4018-b944-c8086e297cfb\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1"
 				}
 			},
 			{
-				"$dtId": "XYC_contract_producer",
-				"$etag": "W/\"25450350-679c-49fb-adc6-95932a88450a\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Secondary_Producer_Role;1"
-				}
-			},
-			{
 				"$dtId": "Production",
-				"$etag": "W/\"275fe661-5c44-4918-88ed-0f67f59a4f37\"",
+				"$etag": "W/\"ddc8866f-e385-4f33-9dbf-0631109704b5\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production;1"
 				}
 			},
 			{
+				"$dtId": "XYC_contract_producer",
+				"$etag": "W/\"45f360de-faa3-485d-8e84-c8f1cea063e7\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Secondary_Producer_Role;1"
+				}
+			},
+			{
 				"$dtId": "Purchasing",
-				"$etag": "W/\"4066eb09-76d3-43b0-a4a5-fa56545046f8\"",
+				"$etag": "W/\"5bfba2b7-570d-473a-ab1f-0db6c11b818e\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Purchasing;1"
 				}
 			},
 			{
 				"$dtId": "Logistics",
-				"$etag": "W/\"2d2ca04e-83a4-4c8e-b0d2-91778867f793\"",
+				"$etag": "W/\"f1a18f7b-b797-4846-8c82-3c2e37c82f40\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Logistics;1"
 				}
 			},
 			{
-				"$dtId": "ContractMFG",
-				"$etag": "W/\"27d8ed84-1334-421d-8d20-960d127b0bf9\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production;1"
-				}
-			},
-			{
 				"$dtId": "Receive_Scheduled_Order",
-				"$etag": "W/\"ff0cbb3e-e949-42a2-944b-a9cb5077711c\"",
+				"$etag": "W/\"97e5e1dd-3086-4f45-92c0-197f497645bf\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_Enter_and_Validate_Order;1"
 				}
 			},
 			{
+				"$dtId": "ContractMFG",
+				"$etag": "W/\"3e4a56aa-77c8-4402-a5b9-c7cea88fc82e\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production;1"
+				}
+			},
+			{
 				"$dtId": "CM_Logistics",
-				"$etag": "W/\"556adb07-ab6e-4134-af5d-35031a3798b2\"",
+				"$etag": "W/\"55f9304d-0a56-461e-8feb-ba86f4031edd\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Logistics;1"
 				}
 			},
 			{
 				"$dtId": "Reserve_Inventory",
-				"$etag": "W/\"cc35674c-4317-4fe5-b59b-81d0e7917f06\"",
+				"$etag": "W/\"427f9f9a-03ac-4be0-a9e8-e13d3db27e27\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Reserve_Inventory_and_Determine_Delivery_Date;1"
 				}
 			},
 			{
 				"$dtId": "Procure_Materials",
-				"$etag": "W/\"2ce3d933-b839-4879-96a6-00ae0b3870df\"",
+				"$etag": "W/\"c59bb335-322e-40de-8572-9256e93eca9c\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Identify_Assess_and_Aggregate_Source_Resources;1"
 				}
 			},
 			{
 				"$dtId": "Make_Product",
-				"$etag": "W/\"652ad4d0-0103-44ea-a82e-65ffcbd06998\"",
+				"$etag": "W/\"9f9d2c0d-ae94-4880-b442-86b85fdf582d\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_Product_from_Source_or_Make;1"
 				}
 			},
 			{
 				"$dtId": "3PL_Co",
-				"$etag": "W/\"dba7f1a7-2c91-4b23-8437-8868a04509f1\"",
+				"$etag": "W/\"38e91467-ea99-4496-869e-fe59becce209\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Independent_OU;1"
 				}
 			},
 			{
 				"$dtId": "3PL_Provider",
-				"$etag": "W/\"228cdbb1-7914-462c-996f-bcb4b859c3d4\"",
+				"$etag": "W/\"fbda954b-f5c4-4798-9fca-6224f59b2fa1\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:ThirdPL_Provider_Role;1"
 				}
 			},
 			{
 				"$dtId": "Pick_Product",
-				"$etag": "W/\"e6570619-3967-4489-b931-4e1a1288ae81\"",
+				"$etag": "W/\"a32ec598-0a5d-421b-aa0e-c193c91bcc61\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Pick_Product;1"
 				}
 			},
 			{
-				"$dtId": "Create_Shipment",
-				"$etag": "W/\"ba1045fb-b4a0-41fc-946d-7c6ae0d773a2\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Load_Product_and_Generate_Shipping_Docs;1"
-				}
-			},
-			{
 				"$dtId": "Deliver_Order",
-				"$etag": "W/\"d2c79587-bfc1-4e3c-a31c-8f11c5fe6071\"",
+				"$etag": "W/\"3e4dbd80-6060-4be3-87be-b72bf87b4c1e\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Ship_Product;1"
 				}
 			},
 			{
+				"$dtId": "Create_Shipment",
+				"$etag": "W/\"6b47ceff-8c8a-4a3c-b30c-db4e2ab57e3a\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Load_Product_and_Generate_Shipping_Docs;1"
+				}
+			},
+			{
 				"$dtId": "XYC_Source_M2O",
-				"$etag": "W/\"c39c72ce-74b9-41fe-9c1b-2b7365b16628\"",
+				"$etag": "W/\"fe2b2ac6-58bb-4166-a49e-f99a77c16265\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Source_MaketoOrder_Product;1"
 				}
 			},
 			{
 				"$dtId": "Confirm_Delivery",
-				"$etag": "W/\"75d17e57-1674-4c0b-9b01-8482f71ab97d\"",
+				"$etag": "W/\"0b936910-5533-41ec-bbe7-a841d3bf6b33\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Receive_and_Verify_Product_by_Customer;1"
 				}
 			},
 			{
 				"$dtId": "XYC_M2O",
-				"$etag": "W/\"a220d5e6-f1f5-4f78-b6af-6a189fabddcd\"",
+				"$etag": "W/\"4ae31a3e-7e65-44f8-979e-97455686280c\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:MaketoOrder;1"
 				}
 			},
 			{
 				"$dtId": "XYC_Deliver_M2O",
-				"$etag": "W/\"269ccd0a-6c4f-4319-b122-dc6ddefc11fe\"",
+				"$etag": "W/\"c677ed9b-eaf9-4e10-bb21-aed6bc34692d\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Deliver_MaketoOrder_Product;1"
 				}
 			},
 			{
 				"$dtId": "XYC_distributor",
-				"$etag": "W/\"f6be5847-bad7-46cd-a411-ba5f695eaa49\"",
+				"$etag": "W/\"41ddf7ac-3845-4e70-886c-81c79bba0ae4\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Distributor_Role;1"
 				}
 			},
 			{
-				"$dtId": "during",
-				"$etag": "W/\"cdea4ef8-f4cb-41be-b0c4-3bea052a79e7\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:During;1"
-				}
-			},
-			{
-				"$dtId": "before",
-				"$etag": "W/\"6bc6096e-c210-43e8-a21a-5c62db084d0d\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Before;1"
-				}
-			},
-			{
-				"$dtId": "during_2",
-				"$etag": "W/\"c54008f1-06ca-4bf4-9192-5fb35f284777\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:During;1"
-				}
-			},
-			{
-				"$dtId": "before_2",
-				"$etag": "W/\"57484a96-1224-497b-b6f4-27c741471a9b\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Before;1"
-				}
-			},
-			{
-				"$dtId": "meets",
-				"$etag": "W/\"d510e860-7c8e-4b64-8e62-0f175e15d65c\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Meets;1"
-				}
-			},
-			{
-				"$dtId": "meets_2",
-				"$etag": "W/\"f6d60c54-33e8-4d52-9bd4-b1c2ff396e0f\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Meets;1"
-				}
-			},
-			{
 				"$dtId": "O2D",
-				"$etag": "W/\"1e0b6629-940f-498a-935d-c793e53acd64\"",
+				"$etag": "W/\"65c7c49b-a85b-4466-b96c-de6700c374ea\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
 				}
 			},
 			{
+				"$dtId": "Line_2",
+				"$etag": "W/\"5f1447d9-d193-4486-8c48-5c3d8b7c1d38\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production_Site;1"
+				}
+			},
+			{
 				"$dtId": "3PL_Logistics",
-				"$etag": "W/\"1a853185-e1f3-4134-b17f-dc1be66d772f\"",
+				"$etag": "W/\"ece70e40-ba33-4a03-9431-bcbb07f47e6f\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Logistics;1"
 				}
 			},
 			{
 				"$dtId": "Line_1",
-				"$etag": "W/\"317ee4c1-7bd2-48a3-9fa5-d9f9d6ed50d6\"",
+				"$etag": "W/\"1a11d152-e480-4108-8c2d-a5305116c901\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production_Site;1"
 				}
 			},
 			{
 				"$dtId": "Factory",
-				"$etag": "W/\"6f820a5b-1494-4b36-8cc6-73cddbf6ac04\"",
+				"$etag": "W/\"08afd58f-072e-446b-ac24-e3a973f82d98\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Plant;1"
 				}
 			},
 			{
-				"$dtId": "Line_2",
-				"$etag": "W/\"c4e5421f-0181-4204-a88b-da78f20d2b0a\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Production_Site;1"
-				}
-			},
-			{
-				"$dtId": "CDC",
-				"$etag": "W/\"49c6cebc-01cb-4a58-b631-c1c299faaf31\"",
-				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Distribution_Center;1"
-				}
-			},
-			{
 				"$dtId": "Storage",
-				"$etag": "W/\"1a01fd2a-4a95-4bed-9d85-e40fc386c3bf\"",
+				"$etag": "W/\"a43e50bd-ec74-4178-a69d-aca725d3a124\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Point_of_Storage;1"
 				}
 			},
 			{
-				"$dtId": "Ferrero_SC",
-				"$etag": "W/\"2cb193cf-482b-421b-a079-a1144dc5770d\"",
+				"$dtId": "CDC",
+				"$etag": "W/\"482b448e-6b4e-4a5e-81e3-63bf67be2fc6\"",
 				"$metadata": {
-					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1"
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Distribution_Center;1"
 				}
 			},
 			{
 				"$dtId": "use_Line_1",
-				"$etag": "W/\"f73652d0-6680-419b-9728-de836ed7104a\"",
+				"$etag": "W/\"fd999256-da89-4931-b90d-a63a0f3de6ad\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1"
 				}
 			},
 			{
+				"$dtId": "Ferrero_SC",
+				"$etag": "W/\"4fca0cea-e02a-4e26-a6f4-bc819e9554fc\"",
+				"$metadata": {
+					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1"
+				}
+			},
+			{
 				"$dtId": "use_Storage",
-				"$etag": "W/\"c5335244-6012-4271-a9ed-97fc358b5e24\"",
+				"$etag": "W/\"c196a6de-a64c-40d1-af2c-555a9a3cc43a\"",
 				"$metadata": {
 					"$model": "dtmi:digitaltwins:org:purl:sconto:scopro:Use;1"
 				}
@@ -284,427 +242,392 @@
 				"$sourceId": "CM_Co",
 				"$targetId": "CM_Logistics",
 				"$relationshipName": "hasFunctionalArea",
-				"$etag": "W/\"d14ba57a-bd2e-4dce-8550-5ae7ffefe9ae\""
+				"$etag": "W/\"44bc14f1-5735-49b4-896d-363de210527c\""
 			},
 			{
 				"$relationshipId": "7159eaae-2b47-4bf5-a6c4-6dec38e417c5",
 				"$sourceId": "CM_Co",
 				"$targetId": "ContractMFG",
 				"$relationshipName": "hasFunctionalArea",
-				"$etag": "W/\"c0d4af4a-44b2-4583-af0e-4570fc209e83\""
-			},
-			{
-				"$relationshipId": "de2f76d4-6195-49f9-9a83-1e3d36f892a4",
-				"$sourceId": "Planning",
-				"$targetId": "Receive_Scheduled_Order",
-				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"b9971f41-287f-4dde-8d8b-aa95625677df\""
+				"$etag": "W/\"865a42ea-a86a-4668-aea6-e1e78c517ad8\""
 			},
 			{
 				"$relationshipId": "3e2f2526-c5c1-48c8-b458-40fbdceef209",
 				"$sourceId": "Planning",
 				"$targetId": "Reserve_Inventory",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"1830cb21-79f4-41d4-a49c-f21695496407\""
+				"$etag": "W/\"a873694c-604b-454d-9035-bcdde13f34ac\""
+			},
+			{
+				"$relationshipId": "de2f76d4-6195-49f9-9a83-1e3d36f892a4",
+				"$sourceId": "Planning",
+				"$targetId": "Receive_Scheduled_Order",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"563f5a71-6d5e-4f63-8463-fee8eeeb5d3f\""
 			},
 			{
 				"$relationshipId": "87914a4e-54b7-41ab-913f-0ea2bfd95e28",
 				"$sourceId": "ABC_Co",
 				"$targetId": "Production",
 				"$relationshipName": "hasFunctionalArea",
-				"$etag": "W/\"d6c28813-580d-4a09-9d2d-79f8f331a148\""
-			},
-			{
-				"$relationshipId": "09cda1d8-0b0f-42e8-9a93-a333264ad932",
-				"$sourceId": "ABC_Co",
-				"$targetId": "Logistics",
-				"$relationshipName": "hasFunctionalArea",
-				"$etag": "W/\"b9c59a00-a811-408d-9c07-ed285199eeb0\""
-			},
-			{
-				"$relationshipId": "7d8538f9-4656-478d-8700-6f5bffed2902",
-				"$sourceId": "ABC_Co",
-				"$targetId": "Planning",
-				"$relationshipName": "hasFunctionalArea",
-				"$etag": "W/\"b8e2f573-29be-4db1-b053-3b7a7531d5a0\""
+				"$etag": "W/\"0c427fd4-bcd2-4aae-918c-4dbd0ba4432d\""
 			},
 			{
 				"$relationshipId": "c9f1163d-4b9a-479a-a148-350fbb0e1905",
 				"$sourceId": "ABC_Co",
 				"$targetId": "Purchasing",
 				"$relationshipName": "hasFunctionalArea",
-				"$etag": "W/\"cce0ec2f-6b9e-4a71-b32b-a411ebaceb03\""
+				"$etag": "W/\"2bcca57a-67ed-42a8-98ee-fba9f00a8d1b\""
 			},
 			{
-				"$relationshipId": "053dbe64-988f-4048-a3df-0f1d24065f9d",
-				"$sourceId": "XYC_contract_producer",
-				"$targetId": "CM_Co",
-				"$relationshipName": "isORoleOf",
-				"$etag": "W/\"9aa2fbb6-c6d3-4a46-88e4-9a1cbad108fe\""
+				"$relationshipId": "09cda1d8-0b0f-42e8-9a93-a333264ad932",
+				"$sourceId": "ABC_Co",
+				"$targetId": "Logistics",
+				"$relationshipName": "hasFunctionalArea",
+				"$etag": "W/\"f7854d85-8a3e-47d1-85d0-66267a5bb295\""
+			},
+			{
+				"$relationshipId": "7d8538f9-4656-478d-8700-6f5bffed2902",
+				"$sourceId": "ABC_Co",
+				"$targetId": "Planning",
+				"$relationshipName": "hasFunctionalArea",
+				"$etag": "W/\"9576656a-9f0c-45e3-8175-b621726e9e7b\""
 			},
 			{
 				"$relationshipId": "26ea6f17-ae3a-431c-987a-941cd9133c6d",
 				"$sourceId": "Production",
 				"$targetId": "Make_Product",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"a3d1b386-067c-4456-9c67-b146e09091ae\""
+				"$etag": "W/\"e93ebf34-5815-485b-aa4f-1b6e72c714e0\""
+			},
+			{
+				"$relationshipId": "053dbe64-988f-4048-a3df-0f1d24065f9d",
+				"$sourceId": "XYC_contract_producer",
+				"$targetId": "CM_Co",
+				"$relationshipName": "isORoleOf",
+				"$etag": "W/\"6f06f488-35f9-458b-82c7-3fdd4869a591\""
 			},
 			{
 				"$relationshipId": "7170e475-5400-4609-a490-e31dd0fc7ee8",
 				"$sourceId": "Purchasing",
 				"$targetId": "Procure_Materials",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"342c8e35-1ed2-4b1c-ad59-7873e13665aa\""
+				"$etag": "W/\"1022ee2b-8c04-4212-9d35-9ea94e517fc9\""
 			},
 			{
 				"$relationshipId": "17a0292e-9934-439d-afb7-cdb7ff571c6b",
 				"$sourceId": "Logistics",
 				"$targetId": "Pick_Product",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"ca7d6f27-858c-4184-9812-5b6fd0d7624e\""
+				"$etag": "W/\"c260dee8-5faa-477d-aea8-09d31c457c04\""
 			},
 			{
 				"$relationshipId": "49b75d46-58a2-4edd-a502-1b4e96db76bd",
 				"$sourceId": "Logistics",
 				"$targetId": "Procure_Materials",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"0506e165-4490-4823-aca9-4ce738661585\""
+				"$etag": "W/\"d5e3bbc0-bcd8-43be-b21e-d19d79872672\""
 			},
 			{
 				"$relationshipId": "6c02d596-97f8-4a18-a2fb-280615914d55",
 				"$sourceId": "Logistics",
 				"$targetId": "Make_Product",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"fe05eeba-8ce3-4325-a24e-71ff6f73283d\""
+				"$etag": "W/\"aea8a42d-f0f1-41a7-a679-1178b2752cc5\""
 			},
 			{
 				"$relationshipId": "80525117-6c9f-4acc-b715-4313c3a90f6f",
 				"$sourceId": "Logistics",
 				"$targetId": "Reserve_Inventory",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"fe90ed74-2644-4c1d-be9e-7e98fcfee3a4\""
+				"$etag": "W/\"0578532c-a1bd-4ac9-bd49-68bb15dc492b\""
 			},
 			{
 				"$relationshipId": "93d312d5-cc76-4b57-bb47-538d2b0db380",
 				"$sourceId": "Logistics",
 				"$targetId": "Create_Shipment",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"46fd86c5-8898-4454-8cff-e6748a526762\""
-			},
-			{
-				"$relationshipId": "43dd5ab3-2138-4d39-8662-9664cbc79b09",
-				"$sourceId": "ContractMFG",
-				"$targetId": "Make_Product",
-				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"e0125c93-3aae-4398-8649-70bb2bd6c6c4\""
-			},
-			{
-				"$relationshipId": "e63f52f4-e264-4b68-9af9-76ba36672c37",
-				"$sourceId": "Receive_Scheduled_Order",
-				"$targetId": "during",
-				"$relationshipName": "isRestrainedBy",
-				"$etag": "W/\"e7b8e299-2b91-40cf-93ce-6ed0c0bed481\""
+				"$etag": "W/\"88428dc8-8525-44d4-84d8-a5240ed8d819\""
 			},
 			{
 				"$relationshipId": "f9ac1e8b-0d50-4214-b2a9-fb47d4153f20",
 				"$sourceId": "Receive_Scheduled_Order",
 				"$targetId": "XYC_Source_M2O",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"cad7099c-9241-4360-8fc6-8a01d786b2a6\""
+				"$etag": "W/\"f806f1fe-419d-4202-ab6b-6bee011456f2\""
+			},
+			{
+				"$relationshipId": "d6e00c06-5da3-4055-a1f9-95d3342be509",
+				"$sourceId": "Receive_Scheduled_Order",
+				"$targetId": "Reserve_Inventory",
+				"$relationshipName": "during",
+				"$etag": "W/\"a6951fce-5c20-47a4-b8bd-65a1429111f1\""
+			},
+			{
+				"$relationshipId": "43dd5ab3-2138-4d39-8662-9664cbc79b09",
+				"$sourceId": "ContractMFG",
+				"$targetId": "Make_Product",
+				"$relationshipName": "areaPerforms",
+				"$etag": "W/\"e362f074-39dd-4bc5-8e43-95531fe97923\""
 			},
 			{
 				"$relationshipId": "784a113c-33c1-473e-8d7e-6cf6b07c0e98",
 				"$sourceId": "CM_Logistics",
 				"$targetId": "Pick_Product",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"43d295fe-58b2-45a6-9a40-8572c11f4f77\""
+				"$etag": "W/\"a1eea7b0-763b-4f0e-9f8d-9ac8996a3be0\""
 			},
 			{
 				"$relationshipId": "9e1f172a-872b-4854-84e9-9c14ebd20df8",
 				"$sourceId": "CM_Logistics",
 				"$targetId": "Create_Shipment",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"da0a2969-f359-4f2a-ba73-ef5dee1d889b\""
-			},
-			{
-				"$relationshipId": "89f08abd-7f98-45b4-903d-c9911fb7aa3f",
-				"$sourceId": "Reserve_Inventory",
-				"$targetId": "during",
-				"$relationshipName": "isRestrainedBy",
-				"$etag": "W/\"1bb1525a-6dd4-44ce-93d4-63472968a667\""
-			},
-			{
-				"$relationshipId": "953e4b4c-f2d6-4620-b1d9-fbc11f6b554b",
-				"$sourceId": "Reserve_Inventory",
-				"$targetId": "before",
-				"$relationshipName": "isRestrainedBy",
-				"$etag": "W/\"414bc484-a6de-4b8e-a8f2-ef734a191851\""
+				"$etag": "W/\"4ebfdd06-bc03-4066-be42-5d50fd865a4a\""
 			},
 			{
 				"$relationshipId": "1dcb3e78-ec03-4d52-ba1b-f35971412109",
 				"$sourceId": "Reserve_Inventory",
 				"$targetId": "XYC_Source_M2O",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"1d2eb77a-a7df-4f58-bae3-6ae842cc48ef\""
+				"$etag": "W/\"25492bff-6b66-4cb4-860a-c9649929e1a0\""
 			},
 			{
-				"$relationshipId": "bb1fb2af-6fec-4a57-88be-f8d194089f5e",
-				"$sourceId": "Procure_Materials",
-				"$targetId": "before",
-				"$relationshipName": "isRelativeTo",
-				"$etag": "W/\"c0f2bb34-dab9-44e4-bdf9-c3dcd66ff470\""
-			},
-			{
-				"$relationshipId": "b668eeb4-16c4-41bb-939c-b912a5dc8960",
-				"$sourceId": "Procure_Materials",
-				"$targetId": "during_2",
-				"$relationshipName": "isRestrainedBy",
-				"$etag": "W/\"81a8cf7e-394c-404c-b879-e424bf65096f\""
+				"$relationshipId": "54b3deeb-aea1-488f-b7cc-379ae627f6a1",
+				"$sourceId": "Reserve_Inventory",
+				"$targetId": "Procure_Materials",
+				"$relationshipName": "before",
+				"$etag": "W/\"2e1b22ea-62c5-4ff5-8ba3-5c9580c69a2d\""
 			},
 			{
 				"$relationshipId": "18219913-377c-4d11-a01d-6a5a5a19e517",
 				"$sourceId": "Procure_Materials",
 				"$targetId": "XYC_Source_M2O",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"b8216c1a-80e8-4ba1-b436-46b59fda9133\""
+				"$etag": "W/\"748bde1d-caa3-474b-8179-02b1ff1ccf65\""
 			},
 			{
-				"$relationshipId": "0d91bee2-5c07-4d0c-9303-38a3fcef1606",
-				"$sourceId": "Make_Product",
-				"$targetId": "during_2",
-				"$relationshipName": "isRestrainedBy",
-				"$etag": "W/\"abd4db01-b910-4ef3-8303-3383a42dc612\""
+				"$relationshipId": "5ca4099c-ba23-4af1-b08e-e5e9b9cdd753",
+				"$sourceId": "Procure_Materials",
+				"$targetId": "Pick_Product",
+				"$relationshipName": "during",
+				"$etag": "W/\"4ca856ed-20e9-4198-ad01-7f4cfe42862c\""
+			},
+			{
+				"$relationshipId": "6ef3dfd3-dc55-405a-ad27-54c5ce45899e",
+				"$sourceId": "Procure_Materials",
+				"$targetId": "Make_Product",
+				"$relationshipName": "during",
+				"$etag": "W/\"200d3611-5634-476a-aa07-63bd2c30bd02\""
 			},
 			{
 				"$relationshipId": "e71e8fa2-f436-491d-b589-3a554e36ea3f",
 				"$sourceId": "Make_Product",
 				"$targetId": "XYC_M2O",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"e69c4d7d-c2eb-429c-bf7e-abf130d0e79e\""
+				"$etag": "W/\"ae967adf-1018-47bd-b38a-4fe40a15da9c\""
+			},
+			{
+				"$relationshipId": "594cbdd8-1e07-4f6e-b41f-d2faeedb954e",
+				"$sourceId": "Make_Product",
+				"$targetId": "Create_Shipment",
+				"$relationshipName": "before",
+				"$etag": "W/\"414e84c1-48da-4b40-9b46-e1044fc17776\""
 			},
 			{
 				"$relationshipId": "6bf92733-8225-429c-945d-6aa597a570af",
 				"$sourceId": "3PL_Co",
 				"$targetId": "3PL_Logistics",
 				"$relationshipName": "hasFunctionalArea",
-				"$etag": "W/\"a91043ed-0a14-4811-bfcd-cd0a7bb4656a\""
+				"$etag": "W/\"7b0720b1-9a46-48f3-8ef7-e096db27138c\""
 			},
 			{
 				"$relationshipId": "7e66f717-c873-44d1-8cc9-357a4a29d0c6",
 				"$sourceId": "3PL_Provider",
 				"$targetId": "3PL_Co",
 				"$relationshipName": "isORoleOf",
-				"$etag": "W/\"d42f3e64-b01f-4113-93d3-e0cad3708757\""
-			},
-			{
-				"$relationshipId": "35d96ed8-33fa-4390-a5f5-bc50d987c226",
-				"$sourceId": "Pick_Product",
-				"$targetId": "during_2",
-				"$relationshipName": "isRestrainedBy",
-				"$etag": "W/\"9b7afa63-7d10-45c0-b757-665693bee913\""
-			},
-			{
-				"$relationshipId": "242f88a1-e8d0-4d66-adfa-f4dc6d3ba203",
-				"$sourceId": "Pick_Product",
-				"$targetId": "before_2",
-				"$relationshipName": "isRestrainedBy",
-				"$etag": "W/\"90503694-7048-4a67-8263-ab281097391e\""
+				"$etag": "W/\"edaacd8c-ae55-49b9-a4f7-b9785fbe6df4\""
 			},
 			{
 				"$relationshipId": "52832022-1794-4196-81c8-2330736afc7e",
 				"$sourceId": "Pick_Product",
 				"$targetId": "XYC_Deliver_M2O",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"bc895589-b24c-4d76-a681-ff8c4f40c710\""
+				"$etag": "W/\"a3425bff-ca21-49ab-b6e4-7fbb1732124b\""
 			},
 			{
-				"$relationshipId": "4ecf285a-0be9-490b-8bbb-cd13e0632810",
-				"$sourceId": "Create_Shipment",
-				"$targetId": "before_2",
-				"$relationshipName": "isRelativeTo",
-				"$etag": "W/\"1df25888-5ff5-412e-93c4-a37426c376e1\""
-			},
-			{
-				"$relationshipId": "d18a4d21-8e4d-4cd2-bb93-0259d25acabb",
-				"$sourceId": "Create_Shipment",
-				"$targetId": "meets",
-				"$relationshipName": "isRestrainedBy",
-				"$etag": "W/\"8dada4ea-301e-4f0b-b118-3e27e131cf7c\""
-			},
-			{
-				"$relationshipId": "533863bb-8fa5-4e7d-b4b8-076be8948cdf",
-				"$sourceId": "Create_Shipment",
-				"$targetId": "XYC_Deliver_M2O",
-				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"f5a87705-c712-4e24-b0db-0d7235829ea4\""
-			},
-			{
-				"$relationshipId": "b3737b26-d524-4284-b534-a5524c31cd6e",
-				"$sourceId": "Deliver_Order",
-				"$targetId": "meets_2",
-				"$relationshipName": "isRelativeTo",
-				"$etag": "W/\"a262c371-06a0-4502-a4f7-b3f649477032\""
+				"$relationshipId": "752c2601-2e32-4087-bd18-0ba75d788bcf",
+				"$sourceId": "Pick_Product",
+				"$targetId": "Create_Shipment",
+				"$relationshipName": "before",
+				"$etag": "W/\"34f8cf63-c10f-4e20-ab2d-c6356c5cd5c7\""
 			},
 			{
 				"$relationshipId": "f8127bd6-b46e-4132-bbfc-b11657dac7d5",
 				"$sourceId": "Deliver_Order",
 				"$targetId": "XYC_Deliver_M2O",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"0583f1d2-ccdf-450b-b470-13a638e6bcb6\""
+				"$etag": "W/\"3dabbe20-91cd-4934-8edf-7dea35683a81\""
+			},
+			{
+				"$relationshipId": "533863bb-8fa5-4e7d-b4b8-076be8948cdf",
+				"$sourceId": "Create_Shipment",
+				"$targetId": "XYC_Deliver_M2O",
+				"$relationshipName": "isSubProcessOf",
+				"$etag": "W/\"5c896fba-ad86-470c-8e6d-f90410ae5f4c\""
+			},
+			{
+				"$relationshipId": "4ed8a738-6ddc-4085-be3f-c71f40adc2e3",
+				"$sourceId": "Create_Shipment",
+				"$targetId": "Confirm_Delivery",
+				"$relationshipName": "meets",
+				"$etag": "W/\"5c8ca75f-dbdb-4927-a5ef-4b16cfcdc57e\""
 			},
 			{
 				"$relationshipId": "0b21644b-53d9-473e-b6c2-06717f811733",
 				"$sourceId": "XYC_Source_M2O",
 				"$targetId": "O2D",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"d796dfbd-f2dc-41be-9d09-a6ff7ca29ea1\""
-			},
-			{
-				"$relationshipId": "0dd76eb5-8b66-42bb-8725-d97916ca1804",
-				"$sourceId": "Confirm_Delivery",
-				"$targetId": "meets",
-				"$relationshipName": "isRelativeTo",
-				"$etag": "W/\"d80459c5-4a8b-4823-97aa-1692c57f208c\""
-			},
-			{
-				"$relationshipId": "812e4e5e-1044-441c-b06d-8595536d6d47",
-				"$sourceId": "Confirm_Delivery",
-				"$targetId": "meets_2",
-				"$relationshipName": "isRestrainedBy",
-				"$etag": "W/\"6f4826b4-18df-43f4-b0f6-0d03525840ab\""
+				"$etag": "W/\"b3fb3ed4-6588-4e88-a0ea-a32442bcbbd1\""
 			},
 			{
 				"$relationshipId": "6821928c-334e-461d-89b8-e9f084ed46db",
 				"$sourceId": "Confirm_Delivery",
 				"$targetId": "XYC_Deliver_M2O",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"7f6e7077-58a7-423b-800b-c746a164e458\""
+				"$etag": "W/\"2758eacc-2901-49cb-9360-9d01d702b8b5\""
+			},
+			{
+				"$relationshipId": "0792de94-1961-487d-a348-d672bedb83ae",
+				"$sourceId": "Confirm_Delivery",
+				"$targetId": "Deliver_Order",
+				"$relationshipName": "meets",
+				"$etag": "W/\"56e6346e-618d-46e4-808a-d0bd205b892f\""
 			},
 			{
 				"$relationshipId": "dd06e173-e016-43b3-a65b-690f21244e5b",
 				"$sourceId": "XYC_M2O",
 				"$targetId": "XYC_contract_producer",
 				"$relationshipName": "isPerformedBy",
-				"$etag": "W/\"d72d8a0c-01b7-49e6-b6f4-51dcf068981e\""
+				"$etag": "W/\"31a3cb4f-4609-4061-84ea-53029b1c1683\""
 			},
 			{
 				"$relationshipId": "25c979b6-1a05-4127-8e7e-87236bda5075",
 				"$sourceId": "XYC_M2O",
 				"$targetId": "use_Line_1",
 				"$relationshipName": "entails",
-				"$etag": "W/\"3644a31d-6634-4123-b546-96b8441bf19c\""
+				"$etag": "W/\"aab48aca-11a9-4b7d-b759-8a13918224a4\""
 			},
 			{
 				"$relationshipId": "26f1af3d-d9a0-4af5-9b3e-eef23340a73f",
 				"$sourceId": "XYC_Deliver_M2O",
 				"$targetId": "O2D",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"3c8084e3-cec7-4d84-a927-64813394a741\""
-			},
-			{
-				"$relationshipId": "3ca040ca-b51b-4a0d-a8a3-e9c33c6dc58f",
-				"$sourceId": "XYC_Deliver_M2O",
-				"$targetId": "3PL_Provider",
-				"$relationshipName": "isPerformedBy",
-				"$etag": "W/\"cb012b46-5a29-42a0-859d-d6becd41b749\""
-			},
-			{
-				"$relationshipId": "eb0144be-a35f-4905-bb69-064aff3decf3",
-				"$sourceId": "XYC_Deliver_M2O",
-				"$targetId": "use_Storage",
-				"$relationshipName": "entails",
-				"$etag": "W/\"0fad0189-7033-4da0-b27d-87d8ced2a1d8\""
+				"$etag": "W/\"31846634-b966-4571-832c-5ae343fa9441\""
 			},
 			{
 				"$relationshipId": "9d3f6ec1-64f6-44be-b8c5-7d7487b186ad",
 				"$sourceId": "XYC_Deliver_M2O",
 				"$targetId": "XYC_distributor",
 				"$relationshipName": "isPerformedBy",
-				"$etag": "W/\"ec280af3-ce95-4fed-924d-e6c370bdea6d\""
+				"$etag": "W/\"518dfd5e-18f9-42c8-a0b5-6936ada38002\""
+			},
+			{
+				"$relationshipId": "3ca040ca-b51b-4a0d-a8a3-e9c33c6dc58f",
+				"$sourceId": "XYC_Deliver_M2O",
+				"$targetId": "3PL_Provider",
+				"$relationshipName": "isPerformedBy",
+				"$etag": "W/\"09835c10-006a-42bd-81fe-ed293400f115\""
+			},
+			{
+				"$relationshipId": "eb0144be-a35f-4905-bb69-064aff3decf3",
+				"$sourceId": "XYC_Deliver_M2O",
+				"$targetId": "use_Storage",
+				"$relationshipName": "entails",
+				"$etag": "W/\"390faa88-aa98-487d-8e47-1f3d587be8aa\""
 			},
 			{
 				"$relationshipId": "1562ee70-d525-48ec-a874-e8e19cdea647",
 				"$sourceId": "XYC_distributor",
 				"$targetId": "3PL_Co",
 				"$relationshipName": "isORoleOf",
-				"$etag": "W/\"1e5e28d4-4e67-4032-bfad-37419381527d\""
+				"$etag": "W/\"b55f91b4-c3be-4cab-9e7a-364a70da6a5b\""
 			},
 			{
 				"$relationshipId": "471c90c4-0af1-4e87-ad6d-fa8ec955d7e2",
 				"$sourceId": "O2D",
 				"$targetId": "XYC_M2O",
 				"$relationshipName": "isSubProcessOf",
-				"$etag": "W/\"ad5f9651-5a8d-4f34-bdf8-fb2732c74f30\""
+				"$etag": "W/\"78f46a11-e762-4667-a59f-486b97c6c5e0\""
 			},
 			{
 				"$relationshipId": "1f08f285-b733-499e-8c61-d0d585896d2a",
 				"$sourceId": "3PL_Logistics",
 				"$targetId": "Confirm_Delivery",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"eaf3934f-c337-4209-8996-ed0dce7159fa\""
+				"$etag": "W/\"cac59689-1f42-42b2-b709-9b69c991fd96\""
 			},
 			{
 				"$relationshipId": "1a892527-67e8-427d-9bfd-23146b0475c3",
 				"$sourceId": "3PL_Logistics",
 				"$targetId": "Deliver_Order",
 				"$relationshipName": "areaPerforms",
-				"$etag": "W/\"149282e9-bfb2-410f-b4e5-c7fb891a8a24\""
-			},
-			{
-				"$relationshipId": "0275c035-62f6-4865-9003-49b7ba40395d",
-				"$sourceId": "Factory",
-				"$targetId": "Line_1",
-				"$relationshipName": "hasResourceRole",
-				"$etag": "W/\"01bcc2e4-0f68-4a95-a26e-f4b673cd56d4\""
+				"$etag": "W/\"c26a42df-e181-424c-8106-6e79591db623\""
 			},
 			{
 				"$relationshipId": "abdd204e-5a8e-40a7-916f-3adc86016465",
 				"$sourceId": "Factory",
 				"$targetId": "Line_2",
 				"$relationshipName": "hasResourceRole",
-				"$etag": "W/\"69e709e6-244e-493a-a7d9-1933662672a7\""
+				"$etag": "W/\"ed94cee8-3b13-4217-a419-ef8da5e8b553\""
+			},
+			{
+				"$relationshipId": "0275c035-62f6-4865-9003-49b7ba40395d",
+				"$sourceId": "Factory",
+				"$targetId": "Line_1",
+				"$relationshipName": "hasResourceRole",
+				"$etag": "W/\"11c84d90-652c-4076-b26e-98e833fc42ae\""
 			},
 			{
 				"$relationshipId": "b2651203-bcaf-45e9-853b-b40fa029a631",
 				"$sourceId": "CDC",
 				"$targetId": "Storage",
 				"$relationshipName": "hasResourceRole",
-				"$etag": "W/\"170749ed-e9b9-42f6-b7d1-a464afb0e1a6\""
-			},
-			{
-				"$relationshipId": "d11b385a-06a6-47aa-9c39-e3234a072479",
-				"$sourceId": "Ferrero_SC",
-				"$targetId": "XYC_distributor",
-				"$relationshipName": "hasMember",
-				"$etag": "W/\"a2656416-e539-4a7b-871e-5d9bafcb58bc\""
-			},
-			{
-				"$relationshipId": "722d6d1f-c5be-47d2-91ff-df1a186e08fd",
-				"$sourceId": "Ferrero_SC",
-				"$targetId": "3PL_Provider",
-				"$relationshipName": "hasMember",
-				"$etag": "W/\"ab1f0eef-439c-4a17-9a15-ad4826f41def\""
-			},
-			{
-				"$relationshipId": "8ac6fd65-9069-4519-8943-3296d0523aaf",
-				"$sourceId": "Ferrero_SC",
-				"$targetId": "XYC_contract_producer",
-				"$relationshipName": "hasMember",
-				"$etag": "W/\"a42a6fd6-d852-4345-a0b4-2d31dfa5bd8f\""
+				"$etag": "W/\"d9b2e859-a33b-4d68-9ff5-e706e0bd479a\""
 			},
 			{
 				"$relationshipId": "ddd9ed4b-2dbe-4912-8a28-037e75cacc32",
 				"$sourceId": "use_Line_1",
 				"$targetId": "Line_1",
 				"$relationshipName": "involves",
-				"$etag": "W/\"a30a4181-b8f1-4d65-bf9d-c34f5a4996bb\""
+				"$etag": "W/\"2d9ac6d0-c654-42c1-a7e8-f1f3354b57b1\""
+			},
+			{
+				"$relationshipId": "8ac6fd65-9069-4519-8943-3296d0523aaf",
+				"$sourceId": "Ferrero_SC",
+				"$targetId": "XYC_contract_producer",
+				"$relationshipName": "hasMember",
+				"$etag": "W/\"b41e9b53-9080-4c03-9cb4-c7b5140d5a10\""
+			},
+			{
+				"$relationshipId": "d11b385a-06a6-47aa-9c39-e3234a072479",
+				"$sourceId": "Ferrero_SC",
+				"$targetId": "XYC_distributor",
+				"$relationshipName": "hasMember",
+				"$etag": "W/\"4b3b08e3-66e5-4a1f-9f92-1a350994ba65\""
+			},
+			{
+				"$relationshipId": "722d6d1f-c5be-47d2-91ff-df1a186e08fd",
+				"$sourceId": "Ferrero_SC",
+				"$targetId": "3PL_Provider",
+				"$relationshipName": "hasMember",
+				"$etag": "W/\"ab359e7d-557f-4733-ae37-ea7c0d7f5545\""
 			},
 			{
 				"$relationshipId": "0a152b7b-776c-4d33-8a74-123754bd4c33",
 				"$sourceId": "use_Storage",
 				"$targetId": "Storage",
 				"$relationshipName": "involves",
-				"$etag": "W/\"d0ecc21d-9e5b-4302-b9c7-067310c1bc7e\""
+				"$etag": "W/\"35822ffc-3ee8-4d5d-b423-f6314d3d330b\""
 			}
 		]
 	},
@@ -748,6 +671,96 @@
 			"displayName": {
 				"en": "SC_Entity"
 			},
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "providesResourceR",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "obtainsResourceR",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de orgUnitPerspective Inverse of: isORoleOf"
+					},
+					"name": "hasOURole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "hasFunctionalArea",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"en": " Inverse of: isDependentOUOf"
+					},
+					"name": "hasDependentOU",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1"
+				}
+			],
+			"description": {
+				"es": "Empresa, organización, compañía, o alguna parte de ellas, que tiene administración y funciones propias"
+			},
+			"displayName": {
+				"en": "Organizational_Unit"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de isProvidedBy Inverse of: isProvidedBy"
+					},
+					"minMultiplicity": 0,
+					"name": "provides",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre una cadena de suministros y uno de los mercados a los que pretende servir Inverse of: IsTargetOf"
+					},
+					"minMultiplicity": 0,
+					"name": "isTargetedAt",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Market;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre una CS y una de las perspectivas de organización que es miembro de la cadena Inverse of: isMemberOf"
+					},
+					"minMultiplicity": 0,
+					"name": "hasMember",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
+				}
+			],
+			"description": {
+				"es": "Red de unidades organizacionales que transforman y/o agregan valor a los materiales, abarcando desde la provisión de materias primas hasta la distribución final de productos en mercados específicos"
+			},
+			"displayName": {
+				"en": "Supply_Chain"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
 			"@context": [
 				"dtmi:dtdl:context;2"
 			]
@@ -803,44 +816,47 @@
 			]
 		},
 		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1",
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Medio físico o conceptual que brinda soporte a la ejecución de un proceso, tal como equipamiento, materias primas, información, etc."
+			},
+			"displayName": {
+				"en": "Resource"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1",
 			"@type": "Interface",
 			"contents": [
 				{
 					"@type": "Relationship",
 					"description": {
-						"es": "Inversa de isProvidedBy Inverse of: isProvidedBy"
+						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
 					},
-					"minMultiplicity": 0,
-					"name": "provides",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1"
+					"name": "hasResourceRole",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1"
 				},
 				{
 					"@type": "Relationship",
 					"description": {
-						"es": "Asociación entre una cadena de suministros y uno de los mercados a los que pretende servir Inverse of: IsTargetOf"
+						"es": "Asociación entre un producto y una de las cadenas de suministros que lo proveen Inverse of: provides"
 					},
-					"minMultiplicity": 0,
-					"name": "isTargetedAt",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Market;1"
-				},
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "Asociación entre una CS y una de las perspectivas de organización que es miembro de la cadena Inverse of: isMemberOf"
-					},
-					"minMultiplicity": 0,
-					"name": "hasMember",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
+					"name": "isProvidedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1"
 				}
 			],
 			"description": {
-				"es": "Red de unidades organizacionales que transforman y/o agregan valor a los materiales, abarcando desde la provisión de materias primas hasta la distribución final de productos en mercados específicos"
+				"es": "Recurso físico que participa en uno o más procesos de una cadena de\nsuministros"
 			},
 			"displayName": {
-				"en": "Supply_Chain"
+				"en": "Material_Resource"
 			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
 			"@context": [
 				"dtmi:dtdl:context;2"
 			]
@@ -894,6 +910,120 @@
 			],
 			"displayName": {
 				"en": "Market"
+			},
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre un proceso y una relación temporal que lo vincula con otro proceso Inverse of: restrains"
+					},
+					"name": "isRestrainedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "isRelativeTo",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Inversa de performs Inverse of: performs"
+					},
+					"minMultiplicity": 0,
+					"name": "isPerformedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre un proceso y una de las utilizaciones que origina Inverse of: isEntailedBy"
+					},
+					"minMultiplicity": 0,
+					"name": "entails",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1"
+				}
+			],
+			"description": {
+				"es": "Actividad o conjunto de actividades interrelacionadas logicamente, que se realizan para alcanzar un resultado epecífico y predefinido a través de la utilización de recursos"
+			},
+			"displayName": {
+				"en": "Process"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación entre un rol de recurso y el recurso Inverse of: hasResourceRole"
+					},
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isResourceRoleOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isResourceRProvidedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isResourceRObtainedBy",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "External IDs"
+					},
+					"name": "externalIds",
+					"dtmi:dtdl:property:schema;2": {
+						"@type": "Map",
+						"dtmi:dtdl:property:mapKey;2": {
+							"name": "externalIdName",
+							"schema": "string"
+						},
+						"dtmi:dtdl:property:mapValue;2": {
+							"name": "externalIdValue",
+							"schema": "string"
+						}
+					},
+					"writable": true
+				},
+				{
+					"@type": "Property",
+					"displayName": {
+						"en": "name"
+					},
+					"name": "name",
+					"schema": "string",
+					"writable": true
+				}
+			],
+			"description": {
+				"es": "Función o comportamiento asociado con la participación de un recurso en un proceso específico"
+			},
+			"displayName": {
+				"en": "Resource_Role"
 			},
 			"@context": [
 				"dtmi:dtdl:context;2"
@@ -1019,214 +1149,6 @@
 			]
 		},
 		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
-			"@type": "Interface",
-			"contents": [
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "Asociación entre un proceso y una relación temporal que lo vincula con otro proceso Inverse of: restrains"
-					},
-					"name": "isRestrainedBy",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1"
-				},
-				{
-					"@type": "Relationship",
-					"name": "isRelativeTo",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1"
-				},
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "Inversa de performs Inverse of: performs"
-					},
-					"minMultiplicity": 0,
-					"name": "isPerformedBy",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
-				},
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "Asociación entre un proceso y una de las utilizaciones que origina Inverse of: isEntailedBy"
-					},
-					"minMultiplicity": 0,
-					"name": "entails",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1"
-				}
-			],
-			"description": {
-				"es": "Actividad o conjunto de actividades interrelacionadas logicamente, que se realizan para alcanzar un resultado epecífico y predefinido a través de la utilización de recursos"
-			},
-			"displayName": {
-				"en": "Process"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
-			"@type": "Interface",
-			"contents": [
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "Asociación entre un rol de recurso y el recurso Inverse of: hasResourceRole"
-					},
-					"maxMultiplicity": 1,
-					"minMultiplicity": 0,
-					"name": "isResourceRoleOf",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1"
-				},
-				{
-					"@type": "Relationship",
-					"maxMultiplicity": 1,
-					"minMultiplicity": 0,
-					"name": "isResourceRProvidedBy",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
-				},
-				{
-					"@type": "Relationship",
-					"maxMultiplicity": 1,
-					"minMultiplicity": 0,
-					"name": "isResourceRObtainedBy",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
-				},
-				{
-					"@type": "Property",
-					"displayName": {
-						"en": "External IDs"
-					},
-					"name": "externalIds",
-					"dtmi:dtdl:property:schema;2": {
-						"@type": "Map",
-						"dtmi:dtdl:property:mapKey;2": {
-							"name": "externalIdName",
-							"schema": "string"
-						},
-						"dtmi:dtdl:property:mapValue;2": {
-							"name": "externalIdValue",
-							"schema": "string"
-						}
-					},
-					"writable": true
-				},
-				{
-					"@type": "Property",
-					"displayName": {
-						"en": "name"
-					},
-					"name": "name",
-					"schema": "string",
-					"writable": true
-				}
-			],
-			"description": {
-				"es": "Función o comportamiento asociado con la participación de un recurso en un proceso específico"
-			},
-			"displayName": {
-				"en": "Resource_Role"
-			},
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
-			"@type": "Interface",
-			"description": {
-				"es": "Traslado de un recurso entre dos localizaciones durante un proceso"
-			},
-			"displayName": {
-				"en": "Material_Transfer"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Movement;1",
-			"@type": "Interface",
-			"description": {
-				"es": "Traslado de un recurso durante un proceso entre dos localizaciones situadas dentro de un mismo establecimiento"
-			},
-			"displayName": {
-				"en": "Movement"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
-			"@type": "Interface",
-			"description": {
-				"es": "Medio físico o conceptual que brinda soporte a la ejecución de un proceso, tal como equipamiento, materias primas, información, etc."
-			},
-			"displayName": {
-				"en": "Resource"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
-			"@type": "Interface",
-			"contents": [
-				{
-					"@type": "Relationship",
-					"name": "isSourceFacilityOf",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1"
-				},
-				{
-					"@type": "Relationship",
-					"name": "isDestinationFacilityOf",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1"
-				}
-			],
-			"description": {
-				"es": "Sitio donde se desarrollan actividades de una cadena de suministros"
-			},
-			"displayName": {
-				"en": "Facility"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1",
-			"@type": "Interface",
-			"contents": [
-				{
-					"@type": "Relationship",
-					"name": "hasSourceFacility",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1"
-				},
-				{
-					"@type": "Relationship",
-					"name": "hasDestinationFacility",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1"
-				}
-			],
-			"description": {
-				"es": "Traslado de un recurso durante un proceso entre dos establecimientos"
-			},
-			"displayName": {
-				"en": "Transportation_"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
 			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Temporal_Relationship;1",
 			"@type": "Interface",
 			"contents": [
@@ -1265,6 +1187,86 @@
 			"displayName": {
 				"en": "Temporal_Relationship"
 			},
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Traslado de un recurso entre dos localizaciones durante un proceso"
+			},
+			"displayName": {
+				"en": "Material_Transfer"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Utilization;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Movement;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Traslado de un recurso durante un proceso entre dos localizaciones situadas dentro de un mismo establecimiento"
+			},
+			"displayName": {
+				"en": "Movement"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "hasSourceFacility",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "hasDestinationFacility",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1"
+				}
+			],
+			"description": {
+				"es": "Traslado de un recurso durante un proceso entre dos establecimientos"
+			},
+			"displayName": {
+				"en": "Transportation_"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Transfer;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "isSourceFacilityOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "isDestinationFacilityOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Transportation;1"
+				}
+			],
+			"description": {
+				"es": "Sitio donde se desarrollan actividades de una cadena de suministros"
+			},
+			"displayName": {
+				"en": "Facility"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
 			"@context": [
 				"dtmi:dtdl:context;2"
 			]
@@ -1432,6 +1434,135 @@
 			]
 		},
 		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_SubArea;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"name": "subAreaPerforms",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isFuntionalSubAreaOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1"
+				}
+			],
+			"description": {
+				"es": "Agrupación de actividades que forman parte de un área funcional y que se ocupan de un tipo de tareas en común dentro del área funcional de la cual forman parte"
+			},
+			"displayName": {
+				"en": "Functional_SubArea"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Relación de agregación entre un proceso y uno de los procesos de los cual es parte Inverse of: isComprisedOfSubProcess"
+					},
+					"name": "isSubProcessOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				},
+				{
+					"@type": "Relationship",
+					"name": "isPartOfBP",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Asociación de agregación entre un elemento de proceso y una de las tareas que lo componen Inverse of: isPartOfPE"
+					},
+					"name": "isComprisedOfTask",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Before"
+					},
+					"name": "before",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Meets"
+					},
+					"name": "meets",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Overlaps"
+					},
+					"name": "overlaps",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Equals"
+					},
+					"name": "equals",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "During"
+					},
+					"name": "during",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "Begins With"
+					},
+					"name": "beginsWith",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "endsWith"
+					},
+					"name": "endsWith",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1"
+				}
+			],
+			"description": {
+				"es": "Actividad o estructura lógica de actividades que es un componente de un proceso de negocio"
+			},
+			"displayName": {
+				"en": "Process_Element"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
 			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1",
 			"@type": "Interface",
 			"contents": [
@@ -1461,6 +1592,38 @@
 				"en": "Task"
 			},
 			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Composite_Task;1",
+			"@type": "Interface",
+			"contents": [
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isPartOfCT Inverse of: isPartOfCT"
+					},
+					"name": "isComprisedOfST",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				},
+				{
+					"@type": "Relationship",
+					"description": {
+						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
+					},
+					"name": "isComprisedOfSubProcess",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
+				}
+			],
+			"description": {
+				"es": "Tarea que posee como componentes a otras tareas"
+			},
+			"displayName": {
+				"en": "Composite_Task"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1",
 			"@context": [
 				"dtmi:dtdl:context;2"
 			]
@@ -1499,34 +1662,6 @@
 			]
 		},
 		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_SubArea;1",
-			"@type": "Interface",
-			"contents": [
-				{
-					"@type": "Relationship",
-					"name": "subAreaPerforms",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
-				},
-				{
-					"@type": "Relationship",
-					"maxMultiplicity": 1,
-					"minMultiplicity": 0,
-					"name": "isFuntionalSubAreaOf",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1"
-				}
-			],
-			"description": {
-				"es": "Agrupación de actividades que forman parte de un área funcional y que se ocupan de un tipo de tareas en común dentro del área funcional de la cual forman parte"
-			},
-			"displayName": {
-				"en": "Functional_SubArea"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
 			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Occurrence;1",
 			"@type": "Interface",
 			"contents": [
@@ -1550,33 +1685,15 @@
 			]
 		},
 		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1",
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
 			"@type": "Interface",
-			"contents": [
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "inversa de isResourceRoleOf Inverse of: isResourceRoleOf"
-					},
-					"name": "hasResourceRole",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1"
-				},
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "Asociación entre un producto y una de las cadenas de suministros que lo proveen Inverse of: provides"
-					},
-					"name": "isProvidedBy",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Supply_Chain;1"
-				}
-			],
 			"description": {
-				"es": "Recurso físico que participa en uno o más procesos de una cadena de\nsuministros"
+				"es": "Función con la cual un recurso material participa en un proceso"
 			},
 			"displayName": {
-				"en": "Material_Resource"
+				"en": "Material_RR"
 			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource;1",
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
 			"@context": [
 				"dtmi:dtdl:context;2"
 			]
@@ -1723,20 +1840,6 @@
 				"en": "Defective_Product"
 			},
 			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_Resource;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Material_RR;1",
-			"@type": "Interface",
-			"description": {
-				"es": "Función con la cual un recurso material participa en un proceso"
-			},
-			"displayName": {
-				"en": "Material_RR"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1",
 			"@context": [
 				"dtmi:dtdl:context;2"
 			]
@@ -1932,6 +2035,20 @@
 			]
 		},
 		{
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Vehicle_Terminal;1",
+			"@type": "Interface",
+			"description": {
+				"es": "Rol de un establecimiento que se utiliza en un proceso como punto de inicio y/o finalización del recorrido de un transporte"
+			},
+			"displayName": {
+				"en": "Vehicle_Terminal"
+			},
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility_RR;1",
+			"@context": [
+				"dtmi:dtdl:context;2"
+			]
+		},
+		{
 			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Terminal;1",
 			"@type": "Interface",
 			"contents": [
@@ -1987,20 +2104,6 @@
 			]
 		},
 		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Vehicle_Terminal;1",
-			"@type": "Interface",
-			"description": {
-				"es": "Rol de un establecimiento que se utiliza en un proceso como punto de inicio y/o finalización del recorrido de un transporte"
-			},
-			"displayName": {
-				"en": "Vehicle_Terminal"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Facility_RR;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
 			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Truck_Terminal;1",
 			"@type": "Interface",
 			"displayName": {
@@ -2031,83 +2134,6 @@
 				"en": "Atomic_Task"
 			},
 			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Composite_Task;1",
-			"@type": "Interface",
-			"contents": [
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "inversa de isPartOfCT Inverse of: isPartOfCT"
-					},
-					"name": "isComprisedOfST",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
-				},
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
-					},
-					"name": "isComprisedOfSubProcess",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
-				}
-			],
-			"description": {
-				"es": "Tarea que posee como componentes a otras tareas"
-			},
-			"displayName": {
-				"en": "Composite_Task"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Process_Element;1",
-			"@type": "Interface",
-			"contents": [
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "Relación de agregación entre un proceso y uno de los procesos de los cual es parte Inverse of: isComprisedOfSubProcess"
-					},
-					"name": "isSubProcessOf",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
-				},
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "inversa de isSubProcessOf Inverse of: isSubProcessOf"
-					},
-					"name": "isComprisedOfSubProcess",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
-				},
-				{
-					"@type": "Relationship",
-					"name": "isPartOfBP",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Business_Process;1"
-				},
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "Asociación de agregación entre un elemento de proceso y una de las tareas que lo componen Inverse of: isPartOfPE"
-					},
-					"name": "isComprisedOfTask",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Task;1"
-				}
-			],
-			"description": {
-				"es": "Actividad o estructura lógica de actividades que es un componente de un proceso de negocio"
-			},
-			"displayName": {
-				"en": "Process_Element"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Process;1",
 			"@context": [
 				"dtmi:dtdl:context;2"
 			]
@@ -3439,48 +3465,29 @@
 			]
 		},
 		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1",
+			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1",
 			"@type": "Interface",
 			"contents": [
 				{
 					"@type": "Relationship",
-					"name": "providesResourceR",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1"
-				},
-				{
-					"@type": "Relationship",
-					"name": "obtainsResourceR",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Resource_Role;1"
-				},
-				{
-					"@type": "Relationship",
-					"description": {
-						"es": "inversa de orgUnitPerspective Inverse of: isORoleOf"
-					},
-					"name": "hasOURole",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit_Role;1"
-				},
-				{
-					"@type": "Relationship",
-					"name": "hasFunctionalArea",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Functional_Area;1"
-				},
-				{
-					"@type": "Relationship",
-					"description": {
-						"en": " Inverse of: isDependentOUOf"
-					},
-					"name": "hasDependentOU",
+					"name": "isDependentSubOUOf",
 					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1"
+				},
+				{
+					"@type": "Relationship",
+					"maxMultiplicity": 1,
+					"minMultiplicity": 0,
+					"name": "isDependentOUOf",
+					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
 				}
 			],
 			"description": {
-				"es": "Empresa, organización, compañía, o alguna parte de ellas, que tiene administración y funciones propias"
+				"es": "Unidad organizacional que está subordinada a otra, de la cual es dependiente o semi-dependiente, pero que tiene su propia administración y funciones"
 			},
 			"displayName": {
-				"en": "Organizational_Unit"
+				"en": "Dependent_OU"
 			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:SC_Entity;1",
+			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1",
 			"@context": [
 				"dtmi:dtdl:context;2"
 			]
@@ -3688,34 +3695,6 @@
 				"en": "Intermodal_Seller_Role"
 			},
 			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Intermediary_Role;1",
-			"@context": [
-				"dtmi:dtdl:context;2"
-			]
-		},
-		{
-			"@id": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1",
-			"@type": "Interface",
-			"contents": [
-				{
-					"@type": "Relationship",
-					"name": "isDependentSubOUOf",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Dependent_OU;1"
-				},
-				{
-					"@type": "Relationship",
-					"maxMultiplicity": 1,
-					"minMultiplicity": 0,
-					"name": "isDependentOUOf",
-					"target": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1"
-				}
-			],
-			"description": {
-				"es": "Unidad organizacional que está subordinada a otra, de la cual es dependiente o semi-dependiente, pero que tiene su propia administración y funciones"
-			},
-			"displayName": {
-				"en": "Dependent_OU"
-			},
-			"extends": "dtmi:digitaltwins:org:purl:sconto:scopro:Organizational_Unit;1",
 			"@context": [
 				"dtmi:dtdl:context;2"
 			]
