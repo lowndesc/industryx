@@ -74,15 +74,16 @@ In this tutorial, you will create a sandbox environment in which you can further
 
 Before you begin, you may want to clone this entire repository to your local machine, to make some of the steps below more straightforward. This is a collaborative tutorial and sample. Please use the Issues feature of Github to notify others and get help if you run into issues with the instructions or and of the code samples. Issues can be addressed by anyone on the team. Please feel free to submit improvements to the repository, but please document any changes.
 ### Prerequisites ###
-- An Avanade or Accenture domain account
-- Authorization to create a sandbox obtained from chris.lowndes@avanade.com
+- Authorization to use a sandbox obtained from chris.lowndes@avanade.com (if using a provided Sandbox environmment)
+- An Avanade or Accenture domain account (if using a provided Sandbox environmment)
+- An Azure subscription for which you have global admin access (if not using a provided Sandbox environmment)
 - (Optional) An MXCHIP AZ3166 multi-sensor device 
 
 ### Create Sandbox Resource Group ###
 #### Access Azure Cloud Shell ####
 To create your own sandbox environment, you will execute various commands in the Azure Cloud Shell. To access the Azure Cloud Shell, follow these steps:
 1. Navigate to the Azure Portal at https://portal.azure.com
-2. Login to the Azure Portal using your usual Avanade or Accenture credentials
+2. Login to the Azure Portal using your usual Avanade or Accenture credentials or global admin credentials for the subscription
 3. Once logged in, in the main search bar, type 'subscriptions'
 4. In the list of subscriptions, choose the subscription with ID as provided by the facilitator
 5. Once switched to the required subscription, select the Cloud Shell button shown circled in red ![image](https://user-images.githubusercontent.com/1761529/125626161-ff2fb4be-a621-4662-a97b-e7d09ee7dd74.png)
